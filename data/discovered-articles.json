@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-10-11T19:14:54.651596+00:00",
+  "generated_at": "2026-10-11T20:05:27.838122+00:00",
   "source_count": 63,
-  "candidate_urls_checked": 624,
+  "candidate_urls_checked": 596,
   "new_articles_total": 66,
   "pending_editorial_review": 35,
   "stale_archive_count": 31,
@@ -1100,7 +1100,7 @@
       "feed_type": "rss",
       "recent_items_from_feed": 8,
       "recent_items_in_queue": 8,
-      "candidate_urls_checked": 50,
+      "candidate_urls_checked": 22,
       "new_article_pages_registered": 0,
       "result": "recent_items_found"
     },
