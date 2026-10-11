@@ -38,12 +38,17 @@ for article in queue.get("articles", []):
     # frequently leak through broad sitemap discovery.
     parsed_url = urlsplit(url)
     path = parsed_url.path.lower().rstrip("/")
+    # A feed endpoint, domain homepage, or utility URL is never a news article.
+    # These leaked into the queue when a publisher's feed exposed generic metadata.
+    if path in ("", "/") or path.endswith(("/rss.xml", "/feed.xml", "/atom.xml", "/sitemap.xml", "/index.xml")):
+        continue
     bad_path_parts = (
         "/tdb_templates/", "/wp-content/", "/wp-admin/", "/wp-json/",
         "/tag/", "/tags/", "/category/", "/categories/", "/author/",
         "/authors/", "/page/", "/search", "/privacy", "/cookie",
         "/terms", "/contact", "/about", "/subscribe", "/login",
-        "/register", "/account", "/feed", "/sitemap",
+        "/register", "/account", "/feed", "/rss", "/sitemap",
+        "/service/", "/services/", "/arquivo-central", "/acesso-ao-arquivo",
     )
     title_key = "".join(ch.lower() if ch.isalnum() else " " for ch in title).split()
     title_text = " ".join(title_key)
