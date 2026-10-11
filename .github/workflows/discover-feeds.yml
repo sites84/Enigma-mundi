@@ -48,5 +48,5 @@ jobs:
           git commit -m "chore: refresh source feed status"
           # Another config commit may land while discovery is running.
           # Rebase the report commit onto the latest main before pushing.
-          git pull --rebase origin main
+          git pull --rebase -X theirs origin main
           git push
