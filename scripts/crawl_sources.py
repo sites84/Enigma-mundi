@@ -201,7 +201,7 @@ def article_metadata(url, site_id, site_name, robots_cache):
         description = (parser.meta.get("og:description") or parser.meta.get("description") or
                        parser.meta.get("twitter:description") or "").strip()
         raw_html = body.decode("utf-8", "replace")
-        schema_article = bool(re.search(r'"@type"\\s*:\\s*"(?:Article|NewsArticle|BlogPosting|ReportageNewsArticle)"', raw_html, re.I))
+        schema_article = bool(re.search(r'"@type"\s*:\s*"(?:Article|NewsArticle|BlogPosting|ReportageNewsArticle)"', raw_html, re.I))
         generic_titles = {
             "home", "homepage", "subscribe", "subscriptions", "links", "contact",
             "about", "privacy policy", "terms of use", "bookstore", "sitemap",
