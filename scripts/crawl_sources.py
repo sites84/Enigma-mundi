@@ -55,6 +55,7 @@ class PageParser(HTMLParser):
         self.in_title = False
         self.meta = {}
         self.canonical = None
+        self.feed_urls = []
 
     def handle_starttag(self, tag, attrs):
         attrs = {k.lower(): (v or "") for k, v in attrs}
@@ -68,8 +69,13 @@ class PageParser(HTMLParser):
             value = attrs.get("content", "").strip()
             if key and value:
                 self.meta[key] = value
-        elif tag == "link" and "canonical" in attrs.get("rel", "").lower().split():
-            self.canonical = attrs.get("href")
+        elif tag == "link":
+            rel = attrs.get("rel", "").lower().split()
+            if "canonical" in rel:
+                self.canonical = attrs.get("href")
+            if "alternate" in rel and ("rss" in attrs.get("type", "").lower() or "atom" in attrs.get("type", "").lower() or "xml" in attrs.get("type", "").lower()):
+                if attrs.get("href"):
+                    self.feed_urls.append(attrs["href"])
 
     def handle_endtag(self, tag):
         if tag.lower() == "title":
@@ -194,9 +200,8 @@ def article_metadata(url, site_id, site_name, robots_cache):
                 parser.meta.get("parsely-pub-date") or parser.meta.get("publish-date") or "")
         description = (parser.meta.get("og:description") or parser.meta.get("description") or
                        parser.meta.get("twitter:description") or "").strip()
-        schema_article = bool(parser.schema_types.intersection({
-            "article", "newsarticle", "blogposting", "reportagenewsarticle"
-        }))
+        raw_html = body.decode("utf-8", "replace")
+        schema_article = bool(re.search(r'"@type"\\s*:\\s*"(?:Article|NewsArticle|BlogPosting|ReportageNewsArticle)"', raw_html, re.I))
         generic_titles = {
             "home", "homepage", "subscribe", "subscriptions", "links", "contact",
             "about", "privacy policy", "terms of use", "bookstore", "sitemap",
@@ -350,15 +355,34 @@ def main():
         candidates = []
         feed_entries = []
         feed_url = (source.get("feed_url") or "").strip()
+        feed_candidates = []
         if feed_url and source.get("feed_type") == "rss":
-            feed_entries, feed_error = parse_feed_entries(feed_url, source, robots_cache)
+            feed_candidates.append(feed_url)
+        # Discover alternate RSS/Atom links from the homepage; also try one common feed path.
+        try:
+            if allowed_by_robots(site_url, site_url, robots_cache):
+                home_final, _, home_body, _ = fetch(site_url)
+                home_parser = PageParser()
+                home_parser.feed(home_body.decode("utf-8", "replace"))
+                feed_candidates.extend(urllib.parse.urljoin(home_final, u) for u in home_parser.feed_urls)
+        except Exception as exc:
+            errors.append({"source_id": source.get("id"), "error": "homepage feed discovery: " + str(exc)[:150]})
+        if not feed_candidates and source.get("feed_type") != "rss":
+            feed_candidates.append(urllib.parse.urljoin(site_url.rstrip("/") + "/", "feed/"))
+        for candidate_feed in list(dict.fromkeys(feed_candidates))[:2]:
+            entries, feed_error = parse_feed_entries(candidate_feed, source, robots_cache)
             if feed_error:
-                errors.append({"source_id": source.get("id"), "error": feed_error})
-            for entry in feed_entries:
-                normalized = normalize_url(entry.get("url", ""))
-                if normalized and normalized not in known_urls:
-                    articles.append(entry)
-                    known_urls.add(normalized)
+                if candidate_feed == feed_url or not feed_url:
+                    errors.append({"source_id": source.get("id"), "error": feed_error})
+                continue
+            if entries:
+                feed_url = candidate_feed
+                feed_entries.extend(entries)
+                for entry in entries:
+                    normalized = normalize_url(entry.get("url", ""))
+                    if normalized and normalized not in known_urls:
+                        articles.append(entry)
+                        known_urls.add(normalized)
         try:
             for sitemap_url in sitemap_candidates(site_url):
                 candidates.extend(parse_sitemap(sitemap_url, parsed.hostname, robots_cache))
