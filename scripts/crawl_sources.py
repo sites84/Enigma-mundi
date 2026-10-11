@@ -29,7 +29,8 @@ USER_AGENT = "EnigmaMundiBot/1.0 (+https://github.com/sites84/Enigma-mundi)"
 TIMEOUT = 12
 MAX_BYTES = 2_000_000
 MAX_SITEMAP_URLS = 400
-MAX_LINKS_PER_SITE = 250
+MAX_LINKS_PER_SITE = 50
+MAX_PAGE_FETCHES_PER_SOURCE = 20
 FRESHNESS_DAYS = 90
 DELAY_SECONDS = 0.6
 SKIP_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".pdf", ".zip", ".mp4", ".mp3", ".css", ".js")
@@ -382,9 +383,15 @@ def main():
         candidates = list(dict.fromkeys(candidates))[:MAX_LINKS_PER_SITE]
         total_candidates += len(candidates)
         new_count = 0
+        # RSS is the preferred source for dated recent articles. Only inspect a small
+        # sample of sitemap/homepage URLs per source to avoid multi-hour crawls.
+        page_fetches = 0
         for url in candidates:
             if url in known_urls:
                 continue
+            if page_fetches >= MAX_PAGE_FETCHES_PER_SOURCE:
+                break
+            page_fetches += 1
             metadata = article_metadata(url, source.get("id"), source.get("name"), robots_cache)
             if metadata:
                 articles.append(metadata)
@@ -401,7 +408,7 @@ def main():
             "result": "recent_items_found" if recent_count else ("errors" if any(e.get("source_id") == source.get("id") for e in errors) else "no_recent_items_detected")
         })
         print(f"  RSS recentes: {len(feed_entries)}; URLs candidatas: {len(candidates)}; novas páginas registradas: {new_count}", flush=True)
-        time.sleep(DELAY_SECONDS)
+        # Keep per-source pacing without sleeping after every unsuccessful candidate.
 
     # Keep newest discoveries first; preserve history, with a generous cap.
     articles.sort(key=lambda a: a.get("discovered_at", ""), reverse=True)
