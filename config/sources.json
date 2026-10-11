@@ -18,7 +18,8 @@
       "category": "arquivos_oficiais",
       "feed_type": "rss",
       "enabled": false,
-      "site_url": "https://fbi.gov"
+      "site_url": "https://fbi.gov",
+      "allow_homepage_discovery": false
     },
     {
       "id": "cia_foia",
@@ -36,7 +37,8 @@
       "category": "arquivos_oficiais",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://nationalarchives.gov.uk"
+      "site_url": "https://nationalarchives.gov.uk",
+      "allow_homepage_discovery": false
     },
     {
       "id": "nsa_documents",
