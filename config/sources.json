@@ -275,20 +275,20 @@
     {
       "id": "society_psychical_research",
       "name": "Society for Psychical Research",
-      "feed_url": "https://spr.ac.uk",
+      "feed_url": "https://www.spr.ac.uk/home/",
       "category": "sobrenatural",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://spr.ac.uk"
+      "site_url": "https://www.spr.ac.uk/home/"
     },
     {
       "id": "rhine_research",
       "name": "Rhine Research Center",
-      "feed_url": "https://rhine.org",
+      "feed_url": "https://www.rhineonline.org/",
       "category": "sobrenatural",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://rhine.org"
+      "site_url": "https://www.rhineonline.org/"
     },
     {
       "id": "parapsychology_foundation",
