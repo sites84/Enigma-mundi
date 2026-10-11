@@ -10,6 +10,8 @@ from __future__ import annotations
 
 import json
 import re
+import email.utils
+import html
 import time
 import urllib.error
 import urllib.parse
@@ -27,7 +29,8 @@ USER_AGENT = "EnigmaMundiBot/1.0 (+https://github.com/sites84/Enigma-mundi)"
 TIMEOUT = 12
 MAX_BYTES = 2_000_000
 MAX_SITEMAP_URLS = 400
-MAX_LINKS_PER_SITE = 80
+MAX_LINKS_PER_SITE = 250
+FRESHNESS_DAYS = 90
 DELAY_SECONDS = 0.6
 SKIP_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".pdf", ".zip", ".mp4", ".mp3", ".css", ".js")
 SKIP_PARTS = ("/tag/", "/tags/", "/author/", "/authors/", "/category/", "/categories/", "/page/", "/search", "/login", "/signup", "/privacy", "/contact", "/about", "/feed", "/rss", "/subscribe", "/subscription", "/membership", "/donate", "/support", "/shop", "/bookstore", "/books", "/store", "/links", "/sitemap", "/newsletter", "/advertise", "/submit", "/pitch", "/careers", "/jobs", "/events", "/calendar")
@@ -229,6 +232,73 @@ def article_metadata(url, site_id, site_name, robots_cache):
         return None
 
 
+
+def parse_feed_entries(feed_url, source, robots_cache):
+    """Read RSS/Atom entries with their original publication dates."""
+    if not allowed_by_robots(feed_url, feed_url, robots_cache):
+        return [], "feed disallowed by robots.txt"
+    try:
+        final_url, content_type, body, status = fetch(feed_url)
+        root = ET.fromstring(body)
+    except Exception as exc:
+        return [], f"feed unavailable: {str(exc)[:160]}"
+    entries = []
+    for node in list(root.iter()):
+        tag = node.tag.rsplit("}", 1)[-1].lower()
+        if tag not in ("item", "entry"):
+            continue
+        fields = {}
+        for child in list(node):
+            key = child.tag.rsplit("}", 1)[-1].lower()
+            text_value = (child.text or "").strip()
+            if key == "link":
+                href = child.attrib.get("href", "").strip()
+                if href and (child.attrib.get("rel", "alternate") == "alternate"):
+                    fields["link"] = href
+                elif text_value and not fields.get("link"):
+                    fields["link"] = text_value
+            elif key in ("title", "description", "summary", "published", "pubdate", "date", "updated", "encoded"):
+                fields.setdefault(key, text_value)
+        link = normalize_url(urllib.parse.urljoin(final_url, fields.get("link", "")))
+        if not link:
+            continue
+        host = urllib.parse.urlsplit(source.get("site_url", "")).hostname
+        if host and urllib.parse.urlsplit(link).hostname != host:
+            continue
+        title = html.unescape(re.sub(r"<[^>]+>", "", fields.get("title", "")).strip())
+        desc = html.unescape(re.sub(r"<[^>]+>", " ", fields.get("description") or fields.get("summary") or fields.get("encoded") or "").strip())
+        raw_date = fields.get("published") or fields.get("pubdate") or fields.get("date") or fields.get("updated") or ""
+        parsed_date = None
+        if raw_date:
+            try:
+                parsed_date = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+            except ValueError:
+                try:
+                    parsed_date = email.utils.parsedate_to_datetime(raw_date)
+                except (TypeError, ValueError, OverflowError):
+                    parsed_date = None
+        if parsed_date and parsed_date.tzinfo is None:
+            parsed_date = parsed_date.replace(tzinfo=timezone.utc)
+        if not title or len(title) < 12 or not parsed_date:
+            continue
+        parsed_date = parsed_date.astimezone(timezone.utc)
+        age_days = (datetime.now(timezone.utc) - parsed_date).days
+        if age_days < 0 or age_days > FRESHNESS_DAYS:
+            continue
+        if len(desc) < 25:
+            desc = title
+        entries.append({
+            "source_id": source.get("id"), "source_name": source.get("name"),
+            "url": link, "title": title[:300], "description": desc[:1000],
+            "published_at": parsed_date.isoformat(), "has_article_schema": True,
+            "discovered_at": datetime.now(timezone.utc).isoformat(),
+            "http_status": status, "content_type": content_type.split(";", 1)[0],
+            "status": "discovered",
+            "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial.",
+        })
+    return entries, None
+
+
 def main():
     config = json.loads(SOURCES_PATH.read_text(encoding="utf-8"))
     sources = config.get("sources", [])
@@ -261,6 +331,7 @@ def main():
             rejected_legacy += 1
     known_urls = {normalize_url(a.get("url", "")) for a in articles if a.get("url")}
     errors = []
+    source_results = []
     robots_cache = {}
     total_candidates = 0
 
@@ -276,6 +347,17 @@ def main():
             continue
         print(f"[{index}/{len(sources)}] {source.get('name', source.get('id'))}", flush=True)
         candidates = []
+        feed_entries = []
+        feed_url = (source.get("feed_url") or "").strip()
+        if feed_url and source.get("feed_type") == "rss":
+            feed_entries, feed_error = parse_feed_entries(feed_url, source, robots_cache)
+            if feed_error:
+                errors.append({"source_id": source.get("id"), "error": feed_error})
+            for entry in feed_entries:
+                normalized = normalize_url(entry.get("url", ""))
+                if normalized and normalized not in known_urls:
+                    articles.append(entry)
+                    known_urls.add(normalized)
         try:
             for sitemap_url in sitemap_candidates(site_url):
                 candidates.extend(parse_sitemap(sitemap_url, parsed.hostname, robots_cache))
@@ -309,7 +391,16 @@ def main():
                 known_urls.add(metadata["url"])
                 new_count += 1
             time.sleep(DELAY_SECONDS)
-        print(f"  URLs candidatas: {len(candidates)}; novas registradas: {new_count}", flush=True)
+        recent_count = sum(1 for a in articles if a.get("source_id") == source.get("id") and a.get("status") == "discovered" and a.get("published_at"))
+        source_results.append({
+            "source_id": source.get("id"), "source_name": source.get("name"),
+            "site_url": site_url, "configured_feed": feed_url or None,
+            "feed_type": source.get("feed_type"), "recent_items_from_feed": len(feed_entries),
+            "recent_items_in_queue": recent_count, "candidate_urls_checked": len(candidates),
+            "new_article_pages_registered": new_count,
+            "result": "recent_items_found" if recent_count else ("errors" if any(e.get("source_id") == source.get("id") for e in errors) else "no_recent_items_detected")
+        })
+        print(f"  RSS recentes: {len(feed_entries)}; URLs candidatas: {len(candidates)}; novas páginas registradas: {new_count}", flush=True)
         time.sleep(DELAY_SECONDS)
 
     # Keep newest discoveries first; preserve history, with a generous cap.
@@ -326,6 +417,7 @@ def main():
         "legacy_records_rejected_by_quality_filter": rejected_legacy,
         "articles": articles[:10000],
         "source_errors": errors[-500:],
+        "source_results": source_results,
         "notice": "Fila de descoberta apenas. Nenhum artigo foi reescrito ou publicado automaticamente.",
     }
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
