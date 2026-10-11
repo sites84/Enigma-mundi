@@ -51,12 +51,12 @@ for article in queue.get("articles", []):
         "image_url": None
     })
 
-posts.sort(key=lambda item: (item["published_at"], item["url"]))
+posts.sort(key=lambda item: (item["published_at"], item["url"]), reverse=True)
 payload = {
     "version": 1,
     "generated_at": now.isoformat(),
     "time_window_days": 90,
-    "sort_order": "chronological_ascending",
+    "sort_order": "chronological_descending",
     "post_count": len(posts),
     "posts": posts
 }
