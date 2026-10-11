@@ -1,0 +1,41 @@
+name: Discover and validate source feeds
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: discover-source-feeds
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Discover RSS and Atom feeds
+        run: python scripts/discover_feeds.py
+
+      - name: Commit source status report when changed
+        run: |
+          if git diff --quiet -- data/source-status.json; then
+            echo "Source status did not change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/source-status.json
+          git commit -m "chore: refresh source feed status"
+          git push
