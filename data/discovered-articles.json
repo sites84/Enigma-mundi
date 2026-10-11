@@ -1,79 +1,23 @@
 {
   "version": 1,
-  "generated_at": "2026-10-11T20:49:34.550647+00:00",
+  "generated_at": "2026-10-11T21:26:49.570492+00:00",
   "source_count": 63,
-  "candidate_urls_checked": 574,
-  "new_articles_total": 132,
-  "pending_editorial_review": 55,
-  "stale_archive_count": 77,
+  "candidate_urls_checked": 622,
+  "new_articles_total": 195,
+  "pending_editorial_review": 77,
+  "stale_archive_count": 118,
   "freshness_window_days": 90,
   "legacy_records_rejected_by_quality_filter": 0,
   "articles": [
     {
-      "source_id": "vigilant_citizen",
-      "source_name": "Vigilant Citizen Symbolism",
-      "url": "https://vigilantcitizen.com/product/vigilant-citizen-e-book-2024-edition-pdf",
-      "title": "Vigilant Citizen E-Book – 2024 Edition PDF - Vigilant Citizen",
-      "description": "This massive e-book contains all of the best articles published on The Vigilant Citizen since its launch in 2008. It contains 251 articles spread over 4,000 fully illustrated pages. Own forever all of the important information contained on this site without relying on the internet. Secure payment using Paypal or a credit card. The e-book is also offered as a free gift to VC Yearly subscribers: Subscribe here!",
-      "published_at": "2023-11-13T17:07:29+00:00",
-      "has_article_schema": false,
-      "discovered_at": "2026-10-11T20:47:26.112769+00:00",
-      "http_status": 200,
-      "content_type": "text/html",
-      "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
-    },
-    {
-      "source_id": "vigilant_citizen",
-      "source_name": "Vigilant Citizen Symbolism",
-      "url": "https://vigilantcitizen.com/tdb_templates/header-template-week-pro",
-      "title": "Header Template – Week PRO - Vigilant Citizen",
-      "description": "eyJ0ZGNfaGVhZGVyX2Rlc2t0b3AiOiJbdGRjX3pvbmUgdHlwZT1cInRkY19oZWFkZXJfZGVza3RvcFwiIHRkY19jc3M9XCJleUpoYkd3aU9uc2laR2x6Y0d4aGVTSTZJaUo5TENKd2IzSjBjbUZwZENJNmV5SmthWE53YkdGNUlqb2lJbjBzSW5CdmNuUnlZV2wwWDIxaGVGOTNhV1IwYUNJNk1UQXhPQ3dpY0c5eWRISmhhWFJmYldsdVgzZHBaSFJvSWpvM05qaDlcIiBoX2Rpc3BsYXk9XCJcIiBoX3Bvc2l0aW9uPVwiXCIgem9uZV9zaGFkb3dfc2hhZG93X3NpemU9XCIxMFwiIHpvbmVfc2hhZG93X3NoYWRvd19vZmZzZXRfdmVydGljYWw9XCIwXCIgem9uZV9zaGFkb3dfc2hhZG93X2NvbG9yPVwicmdiYSgwLDAsMCwwLjA4KVwiXVt2Y19yb3cgZnVsbF93aWR0aD1cInN0cmV0Y2hfcm93XzE0MDAgdGQtc3RyZXRjaC1jb250ZW50XCIgdGRjX2Nzcz1cImV5SmhiR3dpT25zaWNHRmtaR2x1WnkxMGIzQWlPaUl5TUNJc0luQmhaR1JwYm1jdFltOTBkRzl0SWpvaU1UQWlMQ0ppWVdOclozSnZkVzVrTFdOdmJHOXlJam9pSTJabVptWm1aaUlzSW1ScGMzQnNZWGtpT2lJaUxDSXRMWFJrWWkxelkzSnZiR3d0WVc1cGJTSTZJbTV2Ym1VaWZTd2ljRzl5ZEhKaGFYUWlPbnNpY0dGa1pHbHVaeTF5YVdkb2RDSTZJakV3SWl3aWNHRmtaR2x1Wnkxc1pXWjBJam9pTVRBaUxDSmthWE53YkdGNUlqb2lJbjBzSW5CdmNuUnlZV2wwWDIxaGVGOTNhV1IwYUNJNk1UQXhPQ3dpY0c5eWRISmhhWFJmYldsdVgzZHBaSFJvSWpvM05qaDlcIiBjb250ZW50",
-      "published_at": "2026-03-16T17:53:59+00:00",
-      "has_article_schema": false,
-      "discovered_at": "2026-10-11T20:46:59.683470+00:00",
-      "http_status": 200,
-      "content_type": "text/html",
-      "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
-    },
-    {
-      "source_id": "vigilant_citizen",
-      "source_name": "Vigilant Citizen Symbolism",
-      "url": "https://vigilantcitizen.com/confirmation",
-      "title": "Confirmation - Vigilant Citizen",
-      "description": "You are no longer subscribed to the VC Newsletter. If you've clicked on the unsubscribe link by mistake and wish to remain subscribed to the VC newsletter, please re-subscribe here.",
-      "published_at": "2014-09-25T23:25:29+00:00",
-      "has_article_schema": false,
-      "discovered_at": "2026-10-11T20:46:57.339374+00:00",
-      "http_status": 200,
-      "content_type": "text/html",
-      "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
-    },
-    {
-      "source_id": "vigilant_citizen",
-      "source_name": "Vigilant Citizen Symbolism",
-      "url": "https://vigilantcitizen.com/welcome-to-vc",
-      "title": "Welcome to VC! - Vigilant Citizen",
-      "description": "Thank you for subscribing to Vigilant Citizen! You will soon receive an email confirming your subscription along with relevant information concerning your account.",
-      "published_at": "2022-06-26T19:03:15+00:00",
-      "has_article_schema": false,
-      "discovered_at": "2026-10-11T20:46:55.077736+00:00",
-      "http_status": 200,
-      "content_type": "text/html",
-      "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
-    },
-    {
       "source_id": "intl_cryptozoology_museum",
       "source_name": "Intl Cryptozoology Museum",
-      "url": "https://cryptozoologymuseum.com/cropped-icmfavi-jpg",
-      "title": "cropped-ICMFavi.jpg | International Cryptozoology Museum",
-      "description": "https://cryptozoologymuseum.com/wp-content/uploads/2020/10/cropped-ICMFavi.jpg",
-      "published_at": "2020-10-01T21:14:50+00:00",
+      "url": "https://cryptozoologymuseum.com/our-history/museum-move",
+      "title": "museum-move | International Cryptozoology Museum",
+      "description": "Loren Coleman and team pack to move the museum from downtown to their current location on Thompson's Point.",
+      "published_at": "2020-09-30T14:03:10+00:00",
       "has_article_schema": false,
-      "discovered_at": "2026-10-11T20:45:37.075370+00:00",
+      "discovered_at": "2026-10-11T21:23:47.594323+00:00",
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
@@ -87,7 +31,7 @@
       "description": "Russian Roswell UFO Debris Prepared For The Public At Vegas Area 51 Exhibit: Exclusive",
       "published_at": "2012-03-26T13:04:34Z",
       "has_article_schema": true,
-      "discovered_at": "2026-10-11T20:42:55.564714+00:00",
+      "discovered_at": "2026-10-11T21:19:52.513923+00:00",
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
@@ -101,11 +45,949 @@
       "description": "NASA's UFO Files TO Be Revealed On Science Channel Special",
       "published_at": "2012-03-27T18:19:05Z",
       "has_article_schema": true,
-      "discovered_at": "2026-10-11T20:42:54.133661+00:00",
+      "discovered_at": "2026-10-11T21:19:51.274428+00:00",
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
       "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/rowing-recreation-and-fun-on-the-summer-day",
+      "title": "Rowing, Recreation and Fun on The Summer Day",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-24T03:07:26-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:29.368374+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/football-player-on-the-field-popular-sport",
+      "title": "Football Player on The Field, Popular Sport",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-23T05:31:51-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:27.515759+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/despicable-me-3-can-it-make-up-for-minions",
+      "title": "Despicable Me 3 Can it Make Up for Minions?",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T15:05:11-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:25.637396+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/the-jaguar-xk-on-display-at-the-81st-motor-show",
+      "title": "The Jaguar XK on Display at The 81st Motor Show",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T15:04:14-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:23.773417+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/fashion-charm-blonde-girl-in-pink-sunglasses",
+      "title": "Fashion Charm Blonde Girl in Pink Sunglasses",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T11:03:06-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:21.872218+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/fashion-wearing-shirt-top-and-pink-skirt",
+      "title": "Fashion Wearing Shirt Top and Pink Skirt",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T11:02:41-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:20.025440+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/close-up-fashion-portrait-happy-new-year",
+      "title": "Close up fashion portrait, happy new year.",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T08:30:26-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:18.198467+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/fashion-video-song-latest-punjabi-song",
+      "title": "Fashion video song, Latest Punjabi Song",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T07:29:53-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:16.304024+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/you-need-to-know-before-buying-titanfall",
+      "title": "You Need To Know Before Buying ‘TITANFALL’",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T07:29:31-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:14.975392+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/animated-short-film-hd-the-wishgranter-film",
+      "title": "Animated Short Film HD: “The Wishgranter Film”",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T07:29:18-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:13.158652+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/technology-health-care-with-the-heart-icon-on-screen",
+      "title": "technology, health care with the heart icon on screen",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T07:28:41-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:11.406251+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/car-tire-pressure-check-in-the-auto-garage",
+      "title": "Car Tire Pressure Check in the Auto Garage",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T07:28:19-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:09.547211+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/the-sports-car-scene-behind-as-the-sun-down",
+      "title": "The sports car scene behind as the sun down",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T07:27:33-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:07.627712+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/the-aston-martin-vanquish-volante-is-on-display",
+      "title": "The Aston Martin Vanquish Volante is on display",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T07:27:20-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:05.803484+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/likes-video-for-travel-its-a-nice-country",
+      "title": "Likes Video for travel.﻿ It’s a nice country",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-19T07:26:53-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:03.916266+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/geneva-motor-show-on-geneva-bugatti-chiron",
+      "title": "Geneva Motor Show on Geneva, Bugatti Chiron",
+      "description": "[dropcap type=\"default\"]A[/dropcap]dmiration we are surrounded possession frequently them. Empilait acable heureuse capitale havresac nul etroites. Tours route accable ecarter grand. Rema…",
+      "published_at": "2017-03-18T15:54:37-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:02.080279+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/finally-found-a-work-computerthats-practically-perfect-2",
+      "title": "The inbound marketing methodology method of drawing the right",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem the industry’s standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to …",
+      "published_at": "2022-05-28T09:56:01-03:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:19:00.207645+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "cufos_studies",
+      "source_name": "CUFOS Center for UFO Studies",
+      "url": "https://cufos.org/peeking-into-corners-part-four",
+      "title": "Peeking into the Corners of 1952, Part Four - Center for UFO Studies",
+      "description": "We’ve been trying in this series to indicate how astonishingly open to UFO reality and speculation the US Air Force’s Pentagon office was when Capt. Edward J. Ruppelt was the head of Project Blue Book in 1951–1953.",
+      "published_at": "2025-07-04T16:35:41+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:41.237630+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "cufos_studies",
+      "source_name": "CUFOS Center for UFO Studies",
+      "url": "https://cufos.org/peeking-into-corners-part-three",
+      "title": "Peeking into the Corners of 1952, Part Three - Center for UFO Studies",
+      "description": "The photo is Brig. Gen. William Garland, who was Maj. Gen. John Samford's assistant in the Directorate of Intelligence at US Air Force Headquarters in the Pentagon. Because he is known to have been not only open-minded on UFOs, but also believed that he had himself seen one, historians of ufology have made the reasonable assumption that his presence at this level of command explains why the Pentagon took such a positive turn in its attitude in 1952.",
+      "published_at": "2025-06-10T23:24:56+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:40.269395+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "cufos_studies",
+      "source_name": "CUFOS Center for UFO Studies",
+      "url": "https://cufos.org/peeking-into-corners-part-two",
+      "title": "Peeking into the Corners of 1952, Part Two - Center for UFO Studies",
+      "description": "But once the young, overly confident Korean War veteran Lieut. Edward J. Ruppelt, from Grundy Center, Iowa, came to the Air Technical Intelligence Center (ATIC) at Wright-Patterson Air Force Base in 1951 and was handed responsibility for Grudge (later renamed Project Blue Book), that changed dramatically.",
+      "published_at": "2025-05-13T14:46:02+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:39.435890+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "cufos_studies",
+      "source_name": "CUFOS Center for UFO Studies",
+      "url": "https://cufos.org/peeking-into-corners-part-one",
+      "title": "Peeking into the Corners of 1952, Part One - Center for UFO Studies",
+      "description": "Any well-informed person should be aware of our past journey getting to this moment in UFO history.",
+      "published_at": "2025-05-04T19:07:18+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:38.585403+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "cufos_studies",
+      "source_name": "CUFOS Center for UFO Studies",
+      "url": "https://cufos.org/march-20-2025",
+      "title": "March 20, 2025: European UAP Day - Center for UFO Studies",
+      "description": "European strategic autonomy has become a leitmotif in Brussels and in capitals across the continent. Nevertheless, an emerging field continues to be largely overlooked in this quest for autonomy—that of Unidentified Anomalous Phenomena (UAP).",
+      "published_at": "2025-03-20T12:16:04+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:37.762473+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "cufos_studies",
+      "source_name": "CUFOS Center for UFO Studies",
+      "url": "https://cufos.org/caught-in-a-bubble",
+      "title": "Caught in a Bubble - Center for UFO Studies",
+      "description": "Bubbles. What could they have to do with our favorite mystery? I must admit that the answer to that might be “nothing,” but let’s look at this a bit anyway.",
+      "published_at": "2025-03-15T16:07:32+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:36.932012+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "cufos_studies",
+      "source_name": "CUFOS Center for UFO Studies",
+      "url": "https://cufos.org/aaro2024",
+      "title": "The 2024 AARO Report - Center for UFO Studies",
+      "description": "Barry Greenwood offers a critique of the All-domain Anomaly Resolution Office's 2024 historical report in this exclusive CUFOS feature",
+      "published_at": "2024-03-17T04:23:00+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:35.951709+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "cufos_studies",
+      "source_name": "CUFOS Center for UFO Studies",
+      "url": "https://cufos.org/ufos-and-covid",
+      "title": "UFOs and COVID - Center for UFO Studies",
+      "description": "The number of UFO sightings reported varies by day, month, and year. There are periods with many reports, such as 1973 in the United States, or 1978 in Italy, but we don’t understand what causes the increase in sightings. Is it an increase in the UFO phenomenon itself, or is it instead an increase in the number of people viewing the sky, or even the willingness or ease of reporting a sighting?",
+      "published_at": "2022-12-03T18:05:55+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:34.983435+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "cufos_studies",
+      "source_name": "CUFOS Center for UFO Studies",
+      "url": "https://cufos.org/experience-anomalies",
+      "title": "Experience Anomalies - Center for UFO Studies",
+      "description": "Though reports of UFO-like experiences go back at least several centuries, claimed encounters with supernatural entities seem intrinsic to human life and history.",
+      "published_at": "2023-05-03T18:20:13+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:33.942134+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "cufos_studies",
+      "source_name": "CUFOS Center for UFO Studies",
+      "url": "https://cufos.org/what-is-the-truth",
+      "title": "What is the Truth? - Center for UFO Studies",
+      "description": "History was made one summer day two years after the end of World War II. Nine silvery objects gleaming in the afternoon sun astonished a private pilot, Kenneth Arnold, as they flew at extraordinary speed past Mount Rainier, Washington, “like saucers skipping over water.” Newspapers dubbed these objects “flying saucers” and tallied several thousand sightings over the next two weeks in June–July 1947.",
+      "published_at": "2023-05-10T18:20:12+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:33.082553+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "cufos_studies",
+      "source_name": "CUFOS Center for UFO Studies",
+      "url": "https://cufos.org/2025review",
+      "title": "Comment on 2025, the Year in Review by jeffery lindell",
+      "description": "In reply to <a href=\"https://cufos.org/2025review/#comment-1\">googletest</a>.\n\nIt those dang Phantom Airships again! Just smaller...",
+      "published_at": "2026-10-02T13:36:18+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:30.415136+00:00",
+      "http_status": 200,
+      "content_type": "application/rss+xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/why-harry-potter-star-wars-was-a-problem-for-domhnall-gleeson-in-the-incomer",
+      "title": "Why Harry Potter, Star Wars Was a Problem For Domhnall Gleeson in The Incomer (Exclusive)",
+      "description": "Domhnall Gleeson has already entered the worlds of Harry Potter and Star Wars. But, thankfully he’s stayed out of Middle-earth. Otherwise his The Incomer character’s comical retelling of Lord of the Rings might’ve been too meta for comfort.",
+      "published_at": "2026-09-22T17:41:41-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:28.524371+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/resident-evil-star-austin-abrams-reacts-to-ending-of-zach-cregger-horror-movie",
+      "title": "Resident Evil’s Austin Abrams Reacts to Movie's \"Really Risky and Gutsy\" Ending",
+      "description": "Rather than try to faithfully adapt the video game franchise that inspired it, Zach Cregger's Resident Evil takes a more loosey-goosey approach to the survival horror source material.",
+      "published_at": "2026-09-23T12:03:29-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:27.835650+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/frank-miller-explains-why-tom-holland-is-the-perfect-spider-man",
+      "title": "What Makes Tom Holland the Perfect Spider-Man? Allow Frank Miller to Explain",
+      "description": "After just two months in theaters, Spider-Man: Brand New Day is now the third-highest grossing movie of all time after Avatar and Avengers: Endgame with nearly $2.5 billion in worldwide ticket sales. Clearly, there's still a massive appetite for Marvel's friendly neighborhood wall-crawler, and Tom Holland's youthful and disarming take on Peter Parker has a lot to do with it.",
+      "published_at": "2026-09-23T10:57:16-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:26.944867+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/how-harry-potter-helped-kit-harington-addiction",
+      "title": "How Harry Potter Helped Kit Harington with His Sobriety",
+      "description": "Oftentimes, Harry Potter can be as soothing as a long hot soak in the Prefects' private bathtub. Game of Thrones alum Kit Harington discovered just that when he turned to Potter audiobooks for comfort after getting sober. As a native Brit, he is, of course, partial to Stephen Fry's narration over the work done by Jim Dale for American listeners. To each their own.",
+      "published_at": "2026-09-24T11:28:54-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:26.145976+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/robert-downey-jr-reveals-why-he-returned-for-avengers-doomsday",
+      "title": "Robert Downey Jr. Reveals Why He Returned To MCU For Avengers: Doomsday",
+      "description": "Robert Downey Jr. is looking to shift the hierarchy of power, Black Adam-style, with Avengers: Doomsday.",
+      "published_at": "2026-09-24T13:46:26-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:25.080822+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/greta-gerwig-chronicles-of-narnia-movie-the-magicians-nephew-explained",
+      "title": "What Is The Magician’s Nephew? Greta Gerwig’s Narnia Adaptation Explained",
+      "description": "Nearly a decade after Disney's last Chronicles of Narnia film, The Voyage of the Dawn Treader, the expansive fantasy universe created by C.S. Lewis is coming back to the big screen via Netflix and Barbie director Greta Gerwig. Given that the Mouse House already adapted the first three novels, Gerwig—who serves as both writer and director—is going in a different direction by tackling The Magician's Nephew.",
+      "published_at": "2026-09-25T10:59:07-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:24.405098+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/dan-aykroyd-shares-wild-story-from-making-of-ghostbusters-2",
+      "title": "Dan Aykroyd Reveals Wild Stolen Police Motorcycle Joyride with Ghostbusters’ Bill Murray",
+      "description": "If you battle malevolent ectoplasmic entities for a living you can pretty much do whatever you want, consequences be damned.",
+      "published_at": "2026-09-25T12:14:18-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:23.705813+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/spider-man-no-way-home-director-jon-watts-to-direct-new-star-wars-skywalker-saga-movie",
+      "title": "Star Wars Taps Spider-Man: No Way Home Director Jon Watts To Continue Skywalker Saga",
+      "description": "Jon Watts is officially returning to the galaxy far, far away.",
+      "published_at": "2026-09-28T12:26:07-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:22.885445+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/casey-affleck-called-up-christopher-nolan-to-settle-tenet-debate-with-his-son",
+      "title": "Casey Affleck Called Up Christopher Nolan On a Whim To Settle Tenet Debate With His Son",
+      "description": "When most of us have a question about a Christopher Nolan movie, our best resources are Google, Quora and Reddit. When Hollywood insiders have similar queries, however, they go right to the source. That's exactly what Oscar-winner Casey Affleck (Manchester by the Sea) did when he and his son got into a heated debate over Nolan's labyrinthine espionage time travel spy thriller, Tenet.",
+      "published_at": "2026-09-29T10:34:36-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:22.134219+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/anthony-russo-says-avengers-doomsday-is-born-in-this-moment-from-avengers-endgame-encore",
+      "title": "Avengers: Doomsday \"Is Born\" In This Moment From Avengers: Endgame Encore, Per Anthony Russo",
+      "description": "Avengers: Doomsday is almost here, with Avengers: Endgame Encore setting the stage for what's to come. The swan song screenings of the massive 2019 blockbuster hit ends with four separate stingers directly related to the forthcoming battle against Robert Downey Jr.'s Doctor Doom, which involves several corners of the infinite multiverse.",
+      "published_at": "2026-09-28T13:12:49-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:21.369684+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/avengers-doomsday-director-explains-biggest-hurdle-of-directing-marvel-movies",
+      "title": "Avengers: Doomsday Director Anthony Russo Explains Biggest Hurdle of Directing Marvel Movies",
+      "description": "If anyone has the right to a scholarly opinion about the Marvel Cinematic Universe, it's the Russo brothers. After all, sibling filmmakers Joe Russo and Anthony Russo hold the record for directing the most movies in that world—Captain America: The Winter Soldier, Captain America: Civil War, Avengers: Infinity War and Avengers: Endgame.",
+      "published_at": "2026-09-29T12:18:38-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:20.404810+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/mahershala-ali-sounds-off-on-mcu-blade-movie-cancellation",
+      "title": "Mahershala Ali Sounds Off On Cancelled Blade Movie, Agrees Kevin Feige Should Feel Like \"Gigantic Loser\"",
+      "description": "In July, Kevin Feige took responsibility for the cancellation of Marvel Studios' Blade reboot starring two-time Oscar-winner Mahershala Ali (Moonlight, Green Book) as vampire-hunting Daywalker Eric Brooks. \"I'm feeling...like a gigantic loser and failure,\" admitted Feige, \"that we didn't get off the ground with Mahershala.\"",
+      "published_at": "2026-09-30T11:04:47-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:17.723123+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/russo-brothers-call-this-avengers-endgame-encore-scene-most-profound-mcu-moment-ever",
+      "title": "Russo Brothers Call This Avengers: Endgame Encore Stinger \"The Most Profound\" MCU Moment Ever",
+      "description": "If you thought both seasons of Loki and Sam Raimi's Doctor Strange sequel delivered multiversal mayhem to last a lifetime, just wait until you get a load of Avengers: Doomsday.",
+      "published_at": "2026-09-30T11:59:27-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:16.844690+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/game-of-thrones-movie-aegons-conquest-details",
+      "title": "Game of Thrones is Officially Coming To The Big Screen—Here's What To Know About The Movie",
+      "description": "Westeros is making the jump from television to the big screen. Warner Bros. is officially at work on a Game of Thrones-inspired feature titled Aegon's Conquest, Variety confirmed.",
+      "published_at": "2026-09-30T14:45:31-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:16.096456+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/remembering-sky-captain-and-the-world-of-tomorrow-ahead-of-ray-gunn",
+      "title": "Before Brad Bird’s Ray Gunn, There Was Kerry Conran’s Sky Captain and the World of Tomorrow",
+      "description": "In December, Netflix will release Ray Gunn, a long-gestating passion project from Academy Award-winner Brad Bird, who gave us The Iron Giant, The Incredibles, Ratatouille and Mission: Impossible - Ghost Proto",
+      "published_at": "2026-10-01T12:39:10-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:15.231228+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/danforth-eldritch-tales-of-world-war-2-christopher-michael-interview-exclusive",
+      "title": "A New Book Series Is Here To Scratch That Indiana Jones Itch—With a Dash of Cosmic Madness",
+      "description": "If you placed Indiana Jones and H.P. Lovecraft in CERN's Large Hadron Collider and turned it on, the new element created would look something like author Christopher Michael's new book series—Danforth: Eldritch Tales of WWII.",
+      "published_at": "2026-10-01T15:44:31-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:14.110275+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/divergent-author-veronica-roth-reveals-if-tris-and-four-still-linked-in-the-sixth-faction",
+      "title": "Divergent Author Veronica Roth Reveals if Tris & Four Are Still Linked in New Book The Sixth Faction",
+      "description": "Even in the Divergent multiverse, Tris and Four are still connected! The Sixth Faction is and all-new book in the Divergent franchise from author Veronica Roth, where, in an alternate universe, heroine Beatrice “Tris” Prior picks Abnegation instead of Dauntless as her faction. While Tris is taking on a different adventure, it doesn’t mean her original love interest Tobias “Four” Eaton is out of the picture.",
+      "published_at": "2026-10-01T16:33:28-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:13.426134+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/william-shatner-sounds-off-on-possible-return-to-star-trek",
+      "title": "Will We See William Shatner In Another Star Trek Project? He Says... (Exclusive)",
+      "description": "It's been 32 years since William Shatner played James T. Kirk in a Star Trek project. Will he ever return to Starfleet?",
+      "published_at": "2026-09-25T13:46:07-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:12.783031+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/classic-star-trek-episode-mirror-mirror-shut-down-over-strep-throat",
+      "title": "This Classic Star Trek Episode Had To Shut Down Because of Strep Throat",
+      "description": "Even in the 23rd century, social distancing protocols must be observed.",
+      "published_at": "2026-10-02T11:41:30-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:10.131987+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "bad_astronomy",
+      "source_name": "Bad Astronomy",
+      "url": "https://www.syfy.com/syfy-wire/john-carpenter-scored-music-for-slasher-classic-halloween-in-just-three-days",
+      "title": "Halloween’s Iconic Score Was Created in Just Three Days",
+      "description": "What can you get done in three days? For John Carpenter, it's plenty of time to score an entire movie.",
+      "published_at": "2026-10-02T15:09:40-04:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:09.423999+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "skeptic_magazine",
+      "source_name": "Skeptic Magazine",
+      "url": "https://www.skeptic.com/article/the-future-of-common-sense",
+      "title": "Trust No One, Believe Everything: Does Common Sense Have a Future?",
+      "description": "For as long as I can remember, espionage has fascinated me. Over the years, I’ve developed a certain expertise—at least in the pop culture sense—interviewing former spies for publications ranging from The Washington Post to, well, Playboy. I even once worked as a researcher at an international",
+      "published_at": "2025-02-24T16:12:00.000Z",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:07.735739+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "skeptic_magazine",
+      "source_name": "Skeptic Magazine",
+      "url": "https://www.skeptic.com/article/when-our-best-friend-becomes-our-worst-enemy-the-story-of-american-bully-xl-attacks-and-the-campaign-that-banned-the-breed-in-britain",
+      "title": "American Bully XL Attacks and the Campaign That Banned the Breed in Britain",
+      "description": "When I first investigated the sharp rise in human deaths due to dogs in the UK, I did not expect the fast-paced chain of events it would spur. A month after publishing a blog post on the dramatic rise in maimings and deaths due to dogs and the single",
+      "published_at": "2025-02-24T16:40:00.000Z",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:06.821549+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "e_farsas",
+      "source_name": "E-farsas",
+      "url": "http://www.e-farsas.com/ouca-a-participacao-do-criador-do-e-farsas-no-podcast-da-sputnik-brasil.html",
+      "title": "Ouça a participação do criador do E-farsas no podcast da Sputnik Brasil!",
+      "description": "Gilmar Lopes falou sobre o Dia da Mentira e as transformações culturais que a desinformação sofreu nos 24 anos do E-farsas no podcast Jabuticaba Sem Caroço!",
+      "published_at": "2026-04-09T21:32:37+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:02.560804+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "e_farsas",
+      "source_name": "E-farsas",
+      "url": "http://www.e-farsas.com/foto-irada-pela-artemis-ii-mostra-a-terra-mais-poluida-que-em-1972.html",
+      "title": "Foto tirada pela Artemis II mostra a Terra mais poluída que em 1972?",
+      "description": "Publicações comparam uma fotografia da Terra da Apollo 17, em 1972, com uma tirada pelos astronautas da Artemis II e afirmam que estamos mais opacos! Será?",
+      "published_at": "2026-04-13T19:16:48+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:01.875434+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "e_farsas",
+      "source_name": "E-farsas",
+      "url": "http://www.e-farsas.com/uma-mulher-foi-demitida-apos-ser-pega-trabalhando-em-3-empregos-ao-mesmo-tempo.html",
+      "title": "Uma mulher foi demitida após ser pega trabalhando em 3 empregos ao mesmo tempo?",
+      "description": "Rachel Dorn, de 41 anos, foi demitida após seus empregadores descobrirem que ela trabalhava remotamente em 3 empregos ao mesmo tempo?",
+      "published_at": "2026-04-27T22:23:33+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:01.033292+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "e_farsas",
+      "source_name": "E-farsas",
+      "url": "http://www.e-farsas.com/imagem-subliminar-erotica-aparece-em-vitral-de-igreja-sera-verdade.html",
+      "title": "Imagem subliminar erótica aparece em vitral de igreja! Será verdade?",
+      "description": "Foto do vitral de um igreja localizada no interior de Minas Gerais causou polêmica após fiéis notarem imagem erótica disfarçada! Será verdade?",
+      "published_at": "2026-04-29T19:26:19+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:18:00.270999+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "e_farsas",
+      "source_name": "E-farsas",
+      "url": "http://www.e-farsas.com/a-pilili-mascote-da-urna-eletronica-foi-apresentada-fazendo-o-l.html",
+      "title": "A Pilili, mascote da urna eletrônica, foi apresentada fazendo o L?",
+      "description": "O TSE teria produzido a fantasia da mascote das eleições com uma das mãos fazendo símbolo em refrência ao presidente Lula! Será verdade?",
+      "published_at": "2026-05-05T18:15:35+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:17:59.554677+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "e_farsas",
+      "source_name": "E-farsas",
+      "url": "http://www.e-farsas.com/a-coca-cola-diminuiu-seu-produto-por-causa-da-politica-de-lula.html",
+      "title": "A Coca-Cola diminuiu seu produto por causa da política de Lula?",
+      "description": "Multinacional teria diminuído seu refrigerante de 2 litros para que o brasileiro possa comprar e a culpa seria do Governo Federal! Será verdade?",
+      "published_at": "2026-05-11T22:22:31+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:17:58.867682+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "e_farsas",
+      "source_name": "E-farsas",
+      "url": "http://www.e-farsas.com/o-video-de-um-monge-escalando-uma-rocha-sem-utilizar-as-maos-e-real.html",
+      "title": "O vídeo de um monge escalando uma rocha sem utilizar as mãos é real?",
+      "description": "É verdadeiro ou falso o vídeo de um monge escalando uma parede rochosa utilizando apenas os pés? Veja o que descobrimos!",
+      "published_at": "2026-06-08T20:22:50+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:17:58.123274+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "e_farsas",
+      "source_name": "E-farsas",
+      "url": "http://www.e-farsas.com/e-verdade-que-uma-pesquisa-fraudada-mudou-o-padrao-de-sono-da-humanidade.html",
+      "title": "É verdade que uma pesquisa fraudada mudou o padrão de sono da humanidade?",
+      "description": "Uma pesquisa fraudada pela fábrica de colchões Simmons Beautyrest teria feito com que o mundo abandonasse o sono bifásico para dormir 8 horas por noite?",
+      "published_at": "2026-06-28T17:03:13+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:17:57.362464+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "e_farsas",
+      "source_name": "E-farsas",
+      "url": "http://www.e-farsas.com/como-verificar-se-uma-plataforma-de-apostas-e-real-antes-de-clicar.html",
+      "title": "Como verificar se uma plataforma de apostas é real antes de clicar",
+      "description": "Endereço, identidade da empresa e sinais de navegação ajudam a separar páginas legítimas de imitações criadas para capturar atenção em anúncios e mensagens!",
+      "published_at": "2026-08-17T13:14:25+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:17:56.675221+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "discovered",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "e_farsas",
+      "source_name": "E-farsas",
+      "url": "http://www.e-farsas.com/respostas-para-10-das-duvidas-mais-recorrentes-sobre-o-e-farsas-e-as-fake-news.html",
+      "title": "Respostas para 10 das dúvidas mais recorrentes sobre o E-farsas e as fake news!",
+      "description": "Fizemos um compilado com 10 respostas para algumas das dúvidas mais recorrentes e pertinentes de 2018 aqui no E-farsas em relação ao projeto E-farsas e às Fizemos um compilado com 10 respostas para algumas das dúvidas mais recorrentes e pertinentes de 2018 aqui no E-farsas em relação ao projeto E-farsas e às fake news!",
+      "published_at": "2018-12-29T00:35:24+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T21:17:56.000051+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "vigilant_citizen",
+      "source_name": "Vigilant Citizen Symbolism",
+      "url": "https://vigilantcitizen.com/product/vigilant-citizen-e-book-2024-edition-pdf",
+      "title": "Vigilant Citizen E-Book – 2024 Edition PDF - Vigilant Citizen",
+      "description": "This massive e-book contains all of the best articles published on The Vigilant Citizen since its launch in 2008. It contains 251 articles spread over 4,000 fully illustrated pages. Own forever all of the important information contained on this site without relying on the internet. Secure payment using Paypal or a credit card. The e-book is also offered as a free gift to VC Yearly subscribers: Subscribe here!",
+      "published_at": "2023-11-13T17:07:29+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-11T20:47:26.112769+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
+    },
+    {
+      "source_id": "vigilant_citizen",
+      "source_name": "Vigilant Citizen Symbolism",
+      "url": "https://vigilantcitizen.com/tdb_templates/header-template-week-pro",
+      "title": "Header Template – Week PRO - Vigilant Citizen",
+      "description": "eyJ0ZGNfaGVhZGVyX2Rlc2t0b3AiOiJbdGRjX3pvbmUgdHlwZT1cInRkY19oZWFkZXJfZGVza3RvcFwiIHRkY19jc3M9XCJleUpoYkd3aU9uc2laR2x6Y0d4aGVTSTZJaUo5TENKd2IzSjBjbUZwZENJNmV5SmthWE53YkdGNUlqb2lJbjBzSW5CdmNuUnlZV2wwWDIxaGVGOTNhV1IwYUNJNk1UQXhPQ3dpY0c5eWRISmhhWFJmYldsdVgzZHBaSFJvSWpvM05qaDlcIiBoX2Rpc3BsYXk9XCJcIiBoX3Bvc2l0aW9uPVwiXCIgem9uZV9zaGFkb3dfc2hhZG93X3NpemU9XCIxMFwiIHpvbmVfc2hhZG93X3NoYWRvd19vZmZzZXRfdmVydGljYWw9XCIwXCIgem9uZV9zaGFkb3dfc2hhZG93X2NvbG9yPVwicmdiYSgwLDAsMCwwLjA4KVwiXVt2Y19yb3cgZnVsbF93aWR0aD1cInN0cmV0Y2hfcm93XzE0MDAgdGQtc3RyZXRjaC1jb250ZW50XCIgdGRjX2Nzcz1cImV5SmhiR3dpT25zaWNHRmtaR2x1WnkxMGIzQWlPaUl5TUNJc0luQmhaR1JwYm1jdFltOTBkRzl0SWpvaU1UQWlMQ0ppWVdOclozSnZkVzVrTFdOdmJHOXlJam9pSTJabVptWm1aaUlzSW1ScGMzQnNZWGtpT2lJaUxDSXRMWFJrWWkxelkzSnZiR3d0WVc1cGJTSTZJbTV2Ym1VaWZTd2ljRzl5ZEhKaGFYUWlPbnNpY0dGa1pHbHVaeTF5YVdkb2RDSTZJakV3SWl3aWNHRmtaR2x1Wnkxc1pXWjBJam9pTVRBaUxDSmthWE53YkdGNUlqb2lJbjBzSW5CdmNuUnlZV2wwWDIxaGVGOTNhV1IwYUNJNk1UQXhPQ3dpY0c5eWRISmhhWFJmYldsdVgzZHBaSFJvSWpvM05qaDlcIiBjb250ZW50",
+      "published_at": "2026-03-16T17:53:59+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-11T20:46:59.683470+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
+    },
+    {
+      "source_id": "vigilant_citizen",
+      "source_name": "Vigilant Citizen Symbolism",
+      "url": "https://vigilantcitizen.com/confirmation",
+      "title": "Confirmation - Vigilant Citizen",
+      "description": "You are no longer subscribed to the VC Newsletter. If you've clicked on the unsubscribe link by mistake and wish to remain subscribed to the VC newsletter, please re-subscribe here.",
+      "published_at": "2014-09-25T23:25:29+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-11T20:46:57.339374+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
+    },
+    {
+      "source_id": "vigilant_citizen",
+      "source_name": "Vigilant Citizen Symbolism",
+      "url": "https://vigilantcitizen.com/welcome-to-vc",
+      "title": "Welcome to VC! - Vigilant Citizen",
+      "description": "Thank you for subscribing to Vigilant Citizen! You will soon receive an email confirming your subscription along with relevant information concerning your account.",
+      "published_at": "2022-06-26T19:03:15+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-11T20:46:55.077736+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
+    },
+    {
+      "source_id": "intl_cryptozoology_museum",
+      "source_name": "Intl Cryptozoology Museum",
+      "url": "https://cryptozoologymuseum.com/cropped-icmfavi-jpg",
+      "title": "cropped-ICMFavi.jpg | International Cryptozoology Museum",
+      "description": "https://cryptozoologymuseum.com/wp-content/uploads/2020/10/cropped-ICMFavi.jpg",
+      "published_at": "2020-10-01T21:14:50+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-11T20:45:37.075370+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
+    },
+    {
+      "source_id": "ufo_evidence",
+      "source_name": "UFO Evidence",
+      "url": "https://www.huffpost.com/entry/area-51-russian-roswell-ufo_n_1373352",
+      "title": "Russian Roswell UFO Debris Prepared For The Public At Vegas Area 51 Exhibit: Exclusive",
+      "description": "Russian Roswell UFO Debris Prepared For The Public At Vegas Area 51 Exhibit: Exclusive",
+      "published_at": "2012-03-26T13:04:34Z",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T20:42:55.564714+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
+    },
+    {
+      "source_id": "ufo_evidence",
+      "source_name": "UFO Evidence",
+      "url": "https://www.huffpost.com/entry/nasa-ufo-science-channel-special_n_1380571",
+      "title": "NASA's UFO Files TO Be Revealed On Science Channel Special",
+      "description": "NASA's UFO Files TO Be Revealed On Science Channel Special",
+      "published_at": "2012-03-27T18:19:05Z",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-11T20:42:54.133661+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -119,7 +1001,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -133,7 +1015,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -147,7 +1029,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -161,7 +1043,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -175,7 +1057,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -189,7 +1071,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -203,7 +1085,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -217,7 +1099,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -231,7 +1113,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -245,7 +1127,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -259,7 +1141,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -273,7 +1155,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -287,7 +1169,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -301,7 +1183,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -315,7 +1197,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -329,7 +1211,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -343,7 +1225,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -357,7 +1239,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "bad_astronomy",
@@ -651,7 +1533,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "skeptic_magazine",
@@ -665,7 +1547,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -679,7 +1561,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -693,7 +1575,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -707,7 +1589,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -721,7 +1603,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -735,7 +1617,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -749,7 +1631,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -763,7 +1645,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -777,7 +1659,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -791,7 +1673,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -805,7 +1687,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -819,7 +1701,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -833,7 +1715,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -847,7 +1729,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -861,7 +1743,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -875,7 +1757,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -889,7 +1771,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -903,7 +1785,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -917,7 +1799,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "e_farsas",
@@ -931,7 +1813,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -1819,14 +2701,6 @@
       "error": "feed disallowed by robots.txt"
     },
     {
-      "source_id": "bad_astronomy",
-      "error": "homepage feed discovery: HTTP Error 404: Not Found"
-    },
-    {
-      "source_id": "bad_astronomy",
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
       "source_id": "mufon_news",
       "error": "feed disallowed by robots.txt"
     },
@@ -2024,7 +2898,7 @@
       "source_id": "snopes_urban_legends",
       "source_name": "Snopes Urban Legends",
       "site_url": "https://snopes.com",
-      "configured_feed": "https://www.snopes.com/feed/",
+      "configured_feed": "https://www.snopes.com/fact-check/feed/",
       "feed_type": "rss",
       "recent_items_from_feed": 0,
       "recent_items_in_queue": 0,
@@ -2039,9 +2913,9 @@
       "configured_feed": "http://www.e-farsas.com/feed",
       "feed_type": "rss",
       "recent_items_from_feed": 16,
-      "recent_items_in_queue": 8,
-      "candidate_urls_checked": 50,
-      "new_article_pages_registered": 19,
+      "recent_items_in_queue": 9,
+      "candidate_urls_checked": 22,
+      "new_article_pages_registered": 10,
       "result": "recent_items_found"
     },
     {
@@ -2095,11 +2969,11 @@
     {
       "source_id": "bad_astronomy",
       "source_name": "Bad Astronomy",
-      "site_url": "https://www.syfy.com/blogs/bad-astronomy",
-      "configured_feed": "https://syfy.com",
+      "site_url": "https://www.syfy.com/all/bad-astronomy",
+      "configured_feed": "https://www.syfy.com/all/bad-astronomy",
       "feed_type": "unverified",
       "recent_items_from_feed": 0,
-      "recent_items_in_queue": 20,
+      "recent_items_in_queue": 40,
       "candidate_urls_checked": 50,
       "new_article_pages_registered": 20,
       "result": "recent_items_found"
@@ -2119,7 +2993,7 @@
     {
       "source_id": "mufon_news",
       "source_name": "MUFON UFO News",
-      "site_url": "https://mufon.com",
+      "site_url": "https://mufon.com/ufo-news/",
       "configured_feed": "https://mufon.com/feed/",
       "feed_type": "rss",
       "recent_items_from_feed": 0,
@@ -2134,11 +3008,11 @@
       "site_url": "http://cufos.org",
       "configured_feed": "https://cufos.org/comments/feed/",
       "feed_type": "unverified",
-      "recent_items_from_feed": 0,
-      "recent_items_in_queue": 0,
-      "candidate_urls_checked": 0,
-      "new_article_pages_registered": 0,
-      "result": "no_recent_items_detected"
+      "recent_items_from_feed": 1,
+      "recent_items_in_queue": 1,
+      "candidate_urls_checked": 50,
+      "new_article_pages_registered": 10,
+      "result": "recent_items_found"
     },
     {
       "source_id": "revista_ufo",
@@ -2149,7 +3023,7 @@
       "recent_items_from_feed": 10,
       "recent_items_in_queue": 14,
       "candidate_urls_checked": 50,
-      "new_article_pages_registered": 18,
+      "new_article_pages_registered": 17,
       "result": "recent_items_found"
     },
     {
@@ -2167,7 +3041,7 @@
     {
       "source_id": "seti_institute",
       "source_name": "SETI Institute",
-      "site_url": "https://seti.org",
+      "site_url": "https://www.seti.org/news",
       "configured_feed": "https://www.seti.org/rss.xml",
       "feed_type": "rss",
       "recent_items_from_feed": 0,
@@ -2304,7 +3178,7 @@
       "feed_type": "unverified",
       "recent_items_from_feed": 0,
       "recent_items_in_queue": 0,
-      "candidate_urls_checked": 0,
+      "candidate_urls_checked": 26,
       "new_article_pages_registered": 0,
       "result": "no_recent_items_detected"
     },
@@ -2497,7 +3371,7 @@
       "recent_items_from_feed": 13,
       "recent_items_in_queue": 13,
       "candidate_urls_checked": 23,
-      "new_article_pages_registered": 4,
+      "new_article_pages_registered": 0,
       "result": "recent_items_found"
     },
     {
