@@ -7,6 +7,7 @@ on:
     paths:
       - "config/sources.json"
       - "scripts/crawl_sources.py"
+      - "scripts/build_recent_posts.py"
       - ".github/workflows/crawl-sources.yml"
   schedule:
     - cron: "47 7 * * *"
