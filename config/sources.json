@@ -24,11 +24,12 @@
     {
       "id": "cia_foia",
       "name": "CIA FOIA Reading Room",
-      "feed_url": "https://cia.gov",
+      "feed_url": "https://www.cia.gov/readingroom/",
       "category": "arquivos_oficiais",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://cia.gov"
+      "site_url": "https://www.cia.gov/readingroom/",
+      "allow_homepage_discovery": true
     },
     {
       "id": "uk_national_archives",
@@ -279,11 +280,12 @@
     {
       "id": "society_psychical_research",
       "name": "Society for Psychical Research",
-      "feed_url": "https://www.spr.ac.uk/home/",
+      "feed_url": "https://www.spr.ac.uk/",
       "category": "sobrenatural",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://www.spr.ac.uk/home/"
+      "site_url": "https://www.spr.ac.uk/",
+      "allow_homepage_discovery": true
     },
     {
       "id": "rhine_research",
@@ -324,11 +326,12 @@
     {
       "id": "instituto_psicologia_paranormal",
       "name": "Inst. Psicologia Paranormal",
-      "feed_url": "http://parapsicologia.org.ar",
+      "feed_url": "https://www.alipsi.com.ar/",
       "category": "sobrenatural",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "http://parapsicologia.org.ar"
+      "site_url": "https://www.alipsi.com.ar/",
+      "allow_homepage_discovery": true
     },
     {
       "id": "assap_scientific",
