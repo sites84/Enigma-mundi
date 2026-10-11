@@ -28,8 +28,9 @@
     const excerpt = escapeHtml(post.excerpt || post.description || "A reportagem completa será disponibilizada em breve.");
     const category = escapeHtml(post.category_label || post.category || "Investigação");
     const date = escapeHtml(dateLabel(post.published_at || post.date));
+    const source = escapeHtml(post.source_name || "Fonte externa");
     const image = safeUrl(post.image_url || post.cover_image);
-    const link = safeUrl(post.url || post.path);
+    const link = safeUrl(post.source_url || post.url || post.path);
     const imageMarkup = image
       ? `<img src="${escapeHtml(image)}" alt="${title}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove();this.parentElement.classList.add('image-placeholder');this.parentElement.textContent='◉'">`
       : '<div class="image-placeholder" aria-hidden="true">◉</div>';
@@ -37,9 +38,9 @@
       ? `<a href="${escapeHtml(link)}" class="post-title">${title}</a>`
       : `<h3 class="post-title">${title}</h3>`;
     const readMarkup = link
-      ? `<a class="read-more" href="${escapeHtml(link)}">Ler reportagem <span aria-hidden="true">↗</span></a>`
-      : '<span class="read-more">Em breve</span>';
-    return `<article class="post-card"><div class="post-image">${imageMarkup}<span class="post-category">${category}</span></div><div class="post-body"><div class="post-meta"><span>ENIGMA MUNDI</span><time>${date}</time></div>${titleMarkup}<p class="post-excerpt">${excerpt}</p>${readMarkup}</div></article>`;
+      ? `<a class="read-more" href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Ler na fonte original <span aria-hidden="true">↗</span></a>`
+      : '<span class="read-more">Em preparação</span>';
+    return `<article class="post-card"><div class="post-image">${imageMarkup}<span class="post-category">${category}</span></div><div class="post-body"><div class="post-meta"><span>${source}</span><time>${date}</time></div>${titleMarkup}<p class="post-excerpt">${excerpt}</p>${readMarkup}</div></article>`;
   }
 
   async function loadPosts() {
@@ -49,13 +50,13 @@
       const payload = await response.json();
       const posts = (Array.isArray(payload) ? payload : payload.posts || [])
         .filter(post => post && post.status !== "draft")
-        .sort((a, b) => new Date(b.published_at || b.date || 0) - new Date(a.published_at || a.date || 0));
+        .sort((a, b) => new Date(a.published_at || a.date || 0) - new Date(b.published_at || b.date || 0));
       if (!posts.length) {
         status.textContent = "";
         grid.innerHTML = '<div class="empty-state"><strong>O arquivo está sendo preparado.</strong><br>As primeiras reportagens aparecerão aqui após a ativação e validação das fontes.</div>';
         return;
       }
-      status.textContent = `${posts.length} ${posts.length === 1 ? "matéria publicada" : "matérias publicadas"}`;
+      status.textContent = `${posts.length} ${posts.length === 1 ? "item de curadoria" : "itens de curadoria"}`;
       grid.innerHTML = posts.map(renderPost).join("");
     } catch (error) {
       console.error("Não foi possível carregar as publicações:", error);
