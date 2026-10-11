@@ -208,13 +208,50 @@ def article_metadata(url, site_id, site_name, robots_cache):
         canonical = normalize_url(urllib.parse.urljoin(final_url, parser.canonical)) if parser.canonical else normalize_url(final_url)
         if not title or not canonical:
             return None
+        raw_html = body.decode("utf-8", "replace")
+        # Extract structured article metadata too: many publishers expose the
+        # real publication date only in JSON-LD, not in HTML meta tags.
+        jsonld_blocks = re.findall(
+            r'<script[^>]+type=["\\']application/ld\\+json["\\'][^>]*>(.*?)</script>',
+            raw_html, re.I | re.S
+        )
+        jsonld_items = []
+        def walk_jsonld(value):
+            if isinstance(value, dict):
+                jsonld_items.append(value)
+                for child in value.values():
+                    walk_jsonld(child)
+            elif isinstance(value, list):
+                for child in value:
+                    walk_jsonld(child)
+        for block in jsonld_blocks:
+            try:
+                walk_jsonld(json.loads(html.unescape(block)))
+            except (ValueError, TypeError):
+                continue
+        article_types = {"article", "newsarticle", "blogposting", "reportagenewsarticle", "report"}
+        article_nodes = [node for node in jsonld_items
+                         if any(str(t).lower().rsplit("/", 1)[-1] in article_types
+                                for t in (node.get("@type") if isinstance(node.get("@type"), list)
+                                          else [node.get("@type")]))]
+        def first_jsonld(*keys):
+            for node in article_nodes or jsonld_items:
+                for key in keys:
+                    value = node.get(key)
+                    if isinstance(value, str) and value.strip():
+                        return value.strip()
+            return ""
         date = (parser.meta.get("article:published_time") or parser.meta.get("schema:datepublished") or
                 parser.meta.get("datepublished") or parser.meta.get("date") or parser.meta.get("pubdate") or
-                parser.meta.get("parsely-pub-date") or parser.meta.get("publish-date") or "")
+                parser.meta.get("parsely-pub-date") or parser.meta.get("publish-date") or
+                first_jsonld("datePublished", "dateCreated", "dateModified"))
         description = (parser.meta.get("og:description") or parser.meta.get("description") or
-                       parser.meta.get("twitter:description") or "").strip()
-        raw_html = body.decode("utf-8", "replace")
-        schema_article = bool(re.search(r'"@type"\s*:\s*"(?:Article|NewsArticle|BlogPosting|ReportageNewsArticle)"', raw_html, re.I))
+                       parser.meta.get("twitter:description") or first_jsonld("description")).strip()
+        title = title or first_jsonld("headline", "name")
+        schema_article = bool(article_nodes) or bool(re.search(
+            r'"@type"\\s*:\\s*"(?:Article|NewsArticle|BlogPosting|ReportageNewsArticle)"',
+            raw_html, re.I
+        ))
         generic_titles = {
             "home", "homepage", "subscribe", "subscriptions", "links", "contact",
             "about", "privacy policy", "terms of use", "bookstore", "sitemap",
