@@ -182,15 +182,34 @@ def article_metadata(url, site_id, site_name, robots_cache):
         canonical = normalize_url(urllib.parse.urljoin(final_url, parser.canonical)) if parser.canonical else normalize_url(final_url)
         if not title or not canonical:
             return None
-        date = (parser.meta.get("article:published_time") or parser.meta.get("datepublished") or
-                parser.meta.get("date") or parser.meta.get("pubdate") or "")
-        description = (parser.meta.get("og:description") or parser.meta.get("description") or "").strip()
+        date = (parser.meta.get("article:published_time") or parser.meta.get("schema:datepublished") or
+                parser.meta.get("datepublished") or parser.meta.get("date") or parser.meta.get("pubdate") or
+                parser.meta.get("parsely-pub-date") or parser.meta.get("publish-date") or "")
+        description = (parser.meta.get("og:description") or parser.meta.get("description") or
+                       parser.meta.get("twitter:description") or "").strip()
+        schema_article = bool(parser.schema_types.intersection({
+            "article", "newsarticle", "blogposting", "reportagenewsarticle"
+        }))
+        generic_titles = {
+            "home", "homepage", "subscribe", "subscriptions", "links", "contact",
+            "about", "privacy policy", "terms of use", "bookstore", "sitemap",
+            "pitch an article", "search results", "login", "sign in"
+        }
+        title_key = re.sub(r"[^a-z0-9 ]+", "", title.lower()).strip()
+        # Require meaningful metadata and evidence that the page is an article.
+        if title_key in generic_titles or len(title) < 18 or len(description) < 35:
+            return None
+        if not date and not schema_article:
+            return None
+        editorial_status = "discovered" if date else "needs_date_review"
         return {
             "source_id": site_id, "source_name": site_name, "url": canonical,
             "title": title[:300], "description": description[:1000],
-            "published_at": date[:80] or None, "discovered_at": datetime.now(timezone.utc).isoformat(),
+            "published_at": date[:80] or None, "has_article_schema": schema_article,
+            "discovered_at": datetime.now(timezone.utc).isoformat(),
             "http_status": status, "content_type": content_type.split(";", 1)[0],
-            "status": "discovered", "notes": "Aguardando verificação editorial; não publicado.",
+            "status": editorial_status,
+            "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado.",
         }
     except Exception:
         return None
@@ -203,8 +222,20 @@ def main():
         existing = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
     except (FileNotFoundError, json.JSONDecodeError):
         existing = {"version": 1, "articles": [], "source_errors": []}
-    articles = existing.get("articles", [])
-    known_urls = {normalize_url(a.get("url", "")) for a in articles}
+    # Revalidate legacy queue entries; older runs admitted generic pages and undated archives.
+    articles = []
+    rejected_legacy = 0
+    for item in existing.get("articles", []):
+        title = str(item.get("title", "")).strip()
+        description = str(item.get("description", "")).strip()
+        status = item.get("status")
+        date = item.get("published_at")
+        schema_flag = bool(item.get("has_article_schema"))
+        if title and len(title) >= 18 and len(description) >= 35 and (date or schema_flag) and status in ("discovered", "needs_date_review"):
+            articles.append(item)
+        else:
+            rejected_legacy += 1
+    known_urls = {normalize_url(a.get("url", "")) for a in articles if a.get("url")}
     errors = []
     robots_cache = {}
     total_candidates = 0
@@ -222,7 +253,10 @@ def main():
         print(f"[{index}/{len(sources)}] {source.get('name', source.get('id'))}", flush=True)
         candidates = []
         try:
-            candidates.extend(parse_sitemap(site_url, parsed.hostname, robots_cache))
+            for sitemap_url in sitemap_candidates(site_url):
+                candidates.extend(parse_sitemap(sitemap_url, parsed.hostname, robots_cache))
+                if len(candidates) >= MAX_LINKS_PER_SITE:
+                    break
         except Exception as exc:
             errors.append({"source_id": source.get("id"), "error": str(exc)[:200]})
         # Also scan the homepage for article links so sites without sitemaps work.
@@ -262,7 +296,8 @@ def main():
         "source_count": len(sources),
         "candidate_urls_checked": total_candidates,
         "new_articles_total": len(articles),
-        "pending_editorial_review": sum(1 for a in articles if a.get("status") == "discovered"),
+        "pending_editorial_review": sum(1 for a in articles if a.get("status") in ("discovered", "needs_date_review")),
+        "legacy_records_rejected_by_quality_filter": rejected_legacy,
         "articles": articles[:10000],
         "source_errors": errors[-500:],
         "notice": "Fila de descoberta apenas. Nenhum artigo foi reescrito ou publicado automaticamente.",
