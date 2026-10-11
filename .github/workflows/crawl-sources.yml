@@ -1,0 +1,49 @@
+name: Discover articles across configured sources
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "config/sources.json"
+      - "scripts/crawl_sources.py"
+      - ".github/workflows/crawl-sources.yml"
+  schedule:
+    - cron: "47 7 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: crawl-editorial-sources
+  cancel-in-progress: false
+
+jobs:
+  discover-articles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Discover new article URLs without requiring RSS
+        run: python scripts/crawl_sources.py
+
+      - name: Commit discovery queue when changed
+        run: |
+          git add -N data/discovered-articles.json
+          if git diff --quiet -- data/discovered-articles.json; then
+            echo "Discovery queue did not change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/discovered-articles.json
+          git commit -m "chore: refresh discovered article queue"
+          git pull --rebase -X theirs origin main
+          git push
