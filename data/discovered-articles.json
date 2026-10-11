@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-10-11T17:34:20.245901+00:00",
+  "generated_at": "2026-10-11T18:16:00.245726+00:00",
   "source_count": 63,
-  "candidate_urls_checked": 780,
+  "candidate_urls_checked": 907,
   "new_articles_total": 57,
   "pending_editorial_review": 26,
   "stale_archive_count": 31,
@@ -752,6 +752,10 @@
     }
   ],
   "source_errors": [
+    {
+      "source_id": "bad_astronomy",
+      "error": "HTTP Error 404: Not Found"
+    },
     {
       "source_id": "about_urban_legends",
       "error": "HTTP Error 403: Forbidden"
