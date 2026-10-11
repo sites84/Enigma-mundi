@@ -91,7 +91,16 @@ def extract_title(root):
 
 
 def discover(source):
-    base = source.get("site_url") or source.get("feed_url") or ""
+    # Prefer the configured feed endpoint, because site_url is often just
+    # the homepage. If it is not a feed, fall back to discovering one from
+    # the site's homepage.
+    configured_feed = (source.get("feed_url") or "").strip()
+    site_url = (source.get("site_url") or "").strip()
+    bases = []
+    for candidate in (configured_feed, site_url):
+        if candidate and candidate not in bases:
+            bases.append(candidate)
+    base = bases[0] if bases else ""
     result = {
         "id": source.get("id"),
         "name": source.get("name"),
@@ -105,35 +114,61 @@ def discover(source):
         "error": None,
     }
     try:
-        parsed = urlparse(base)
-        if parsed.scheme not in ("http", "https") or not parsed.netloc:
-            raise ValueError("URL base inválida")
-        candidates = [base]
-        final_url, content_type, body, status = request_url(base)
-        result["http_status"] = status
-        if "xml" in content_type or "rss" in content_type or "atom" in content_type:
-            feed = validate_feed(final_url)
-            if feed:
-                result.update(status="valid", feed_url=feed["url"], feed_type=feed["type"], feed_title=feed["title"])
-                return result
-        parser = AlternateFeedParser()
-        try:
-            parser.feed(body.decode("utf-8", errors="replace"))
-        except Exception:
-            pass
-        candidates.extend(urljoin(final_url, item) for item in parser.urls)
-        root = f"{urlparse(final_url).scheme}://{urlparse(final_url).netloc}"
-        candidates.extend(urljoin(root, path) for path in FALLBACK_PATHS)
-        seen = set()
-        for candidate in candidates:
-            if candidate in seen:
+        last_http_error = None
+        last_unreachable = None
+        for base in bases:
+            parsed = urlparse(base)
+            if parsed.scheme not in ("http", "https") or not parsed.netloc:
                 continue
-            seen.add(candidate)
-            feed = validate_feed(candidate)
+            # First validate the configured endpoint directly. This is crucial
+            # when feed_url already points to /feed, /rss.xml, or another feed.
+            feed = validate_feed(base)
             if feed:
-                result.update(status="valid", feed_url=feed["url"], feed_type=feed["type"], feed_title=feed["title"], http_status=feed["http_status"])
+                result.update(status="valid", feed_url=feed["url"], feed_type=feed["type"],
+                              feed_title=feed["title"], http_status=feed["http_status"])
                 return result
-        result["status"] = "no_feed_found"
+            try:
+                final_url, content_type, body, status = request_url(base)
+                result["http_status"] = status
+            except HTTPError as exc:
+                last_http_error = exc
+                continue
+            except (URLError, TimeoutError, ValueError, OSError) as exc:
+                last_unreachable = exc
+                continue
+            if "xml" in content_type or "rss" in content_type or "atom" in content_type:
+                feed = validate_feed(final_url)
+                if feed:
+                    result.update(status="valid", feed_url=feed["url"], feed_type=feed["type"],
+                                  feed_title=feed["title"], http_status=feed["http_status"])
+                    return result
+            parser = AlternateFeedParser()
+            try:
+                parser.feed(body.decode("utf-8", errors="replace"))
+            except Exception:
+                pass
+            candidates = [urljoin(final_url, item) for item in parser.urls]
+            root = f"{urlparse(final_url).scheme}://{urlparse(final_url).netloc}"
+            candidates.extend(urljoin(root, path) for path in FALLBACK_PATHS)
+            seen = set()
+            for candidate in candidates:
+                if candidate == base or candidate in seen:
+                    continue
+                seen.add(candidate)
+                feed = validate_feed(candidate)
+                if feed:
+                    result.update(status="valid", feed_url=feed["url"], feed_type=feed["type"],
+                                  feed_title=feed["title"], http_status=feed["http_status"])
+                    return result
+        if last_http_error is not None and last_unreachable is None:
+            result["status"] = "http_error"
+            result["http_status"] = last_http_error.code
+            result["error"] = str(last_http_error)[:240]
+        elif last_unreachable is not None and result["http_status"] is None:
+            result["status"] = "unreachable"
+            result["error"] = str(last_unreachable)[:240]
+        else:
+            result["status"] = "no_feed_found"
     except HTTPError as exc:
         result["status"] = "http_error"
         result["http_status"] = exc.code
