@@ -57,7 +57,7 @@
       "category": "arquivos_oficiais",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://www.gov.br",
+      "site_url": "https://www.gov.br/arquivonacional/pt-br",
       "allow_homepage_discovery": false
     },
     {
@@ -130,7 +130,7 @@
       "category": "fact_checking",
       "feed_type": "rss",
       "enabled": false,
-      "site_url": "https://www.e-farsas.com/feed"
+      "site_url": "https://www.e-farsas.com"
     },
     {
       "id": "boatos_org",
@@ -175,7 +175,7 @@
       "category": "fact_checking",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://syfy.com",
+      "site_url": "https://www.syfy.com/blogs/bad-astronomy",
       "allow_homepage_discovery": false
     },
     {
