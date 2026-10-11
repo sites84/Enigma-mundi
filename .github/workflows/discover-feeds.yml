@@ -46,4 +46,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/source-status.json
           git commit -m "chore: refresh source feed status"
+          # Another config commit may land while discovery is running.
+          # Rebase the report commit onto the latest main before pushing.
+          git pull --rebase origin main
           git push
