@@ -1,11 +1,13 @@
 {
   "version": 1,
-  "generated_at": "2026-10-11T17:00:45.846235+00:00",
+  "generated_at": "2026-10-11T17:34:20.245901+00:00",
   "source_count": 63,
-  "candidate_urls_checked": 813,
+  "candidate_urls_checked": 780,
   "new_articles_total": 57,
-  "pending_editorial_review": 57,
-  "legacy_records_rejected_by_quality_filter": 328,
+  "pending_editorial_review": 26,
+  "stale_archive_count": 31,
+  "freshness_window_days": 90,
+  "legacy_records_rejected_by_quality_filter": 0,
   "articles": [
     {
       "source_id": "vigilant_citizen",
@@ -17,8 +19,8 @@
       "discovered_at": "2026-10-11T08:33:16.288413+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -30,8 +32,8 @@
       "discovered_at": "2026-10-11T08:33:10.914329+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -43,8 +45,8 @@
       "discovered_at": "2026-10-11T08:33:07.660485+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -56,8 +58,8 @@
       "discovered_at": "2026-10-11T08:33:04.359439+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -69,8 +71,8 @@
       "discovered_at": "2026-10-11T08:32:57.879126+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -82,8 +84,8 @@
       "discovered_at": "2026-10-11T08:32:54.940570+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -95,8 +97,8 @@
       "discovered_at": "2026-10-11T08:32:51.820164+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -108,8 +110,8 @@
       "discovered_at": "2026-10-11T08:32:48.851537+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -134,8 +136,8 @@
       "discovered_at": "2026-10-11T08:32:42.920861+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -147,8 +149,8 @@
       "discovered_at": "2026-10-11T08:32:39.672169+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -160,8 +162,8 @@
       "discovered_at": "2026-10-11T08:32:36.363811+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -173,8 +175,8 @@
       "discovered_at": "2026-10-11T08:32:33.256457+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -199,8 +201,8 @@
       "discovered_at": "2026-10-11T08:32:26.773109+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -212,8 +214,8 @@
       "discovered_at": "2026-10-11T08:32:23.416772+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -225,8 +227,8 @@
       "discovered_at": "2026-10-11T08:32:20.143752+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -251,8 +253,8 @@
       "discovered_at": "2026-10-11T08:32:13.521617+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -264,8 +266,8 @@
       "discovered_at": "2026-10-11T08:32:10.331171+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -277,8 +279,8 @@
       "discovered_at": "2026-10-11T08:32:07.000826+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -290,8 +292,8 @@
       "discovered_at": "2026-10-11T08:32:03.702339+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -316,8 +318,8 @@
       "discovered_at": "2026-10-11T08:31:57.082894+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -329,8 +331,8 @@
       "discovered_at": "2026-10-11T08:31:53.895188+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -342,8 +344,8 @@
       "discovered_at": "2026-10-11T08:31:50.696232+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "vigilant_citizen",
@@ -459,8 +461,8 @@
       "discovered_at": "2026-10-11T08:26:20.796468+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "ufo_evidence",
@@ -472,8 +474,8 @@
       "discovered_at": "2026-10-11T08:26:19.347724+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -667,8 +669,8 @@
       "discovered_at": "2026-10-11T08:25:27.664986+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -680,8 +682,8 @@
       "discovered_at": "2026-10-11T08:25:25.603904+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "revista_ufo",
@@ -693,8 +695,8 @@
       "discovered_at": "2026-10-11T08:25:23.573715+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "cufos_studies",
@@ -706,8 +708,8 @@
       "discovered_at": "2026-10-11T08:25:16.907260+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "cufos_studies",
@@ -719,8 +721,8 @@
       "discovered_at": "2026-10-11T08:25:15.429006+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "skeptic_magazine",
@@ -732,8 +734,8 @@
       "discovered_at": "2026-10-11T08:24:10.737569+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "skeptic_magazine",
@@ -745,8 +747,8 @@
       "discovered_at": "2026-10-11T08:24:09.217165+00:00",
       "http_status": 200,
       "content_type": "text/html",
-      "status": "discovered",
-      "notes": "Aguardando verificação editorial; não publicado."
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     }
   ],
   "source_errors": [
