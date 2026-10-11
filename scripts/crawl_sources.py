@@ -212,7 +212,7 @@ def article_metadata(url, site_id, site_name, robots_cache):
         # Extract structured article metadata too: many publishers expose the
         # real publication date only in JSON-LD, not in HTML meta tags.
         jsonld_blocks = re.findall(
-            r'<script[^>]+type=["\\']application/ld\\+json["\\'][^>]*>(.*?)</script>',
+            r"<script[^>]+type=[\"']application/ld\\+json[\"'][^>]*>(.*?)</script>",
             raw_html, re.I | re.S
         )
         jsonld_items = []
