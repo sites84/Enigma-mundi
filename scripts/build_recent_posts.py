@@ -48,7 +48,7 @@ for article in queue.get("articles", []):
         "/authors/", "/page/", "/search", "/privacy", "/cookie",
         "/terms", "/contact", "/about", "/subscribe", "/login",
         "/register", "/account", "/feed", "/rss", "/sitemap",
-        "/service/", "/services/", "/arquivo-central", "/acesso-ao-arquivo",
+        "/service/", "/services/", "/servicos/", "/arquivo-central", "/acesso-ao-arquivo",
     )
     title_key = "".join(ch.lower() if ch.isalnum() else " " for ch in title).split()
     title_text = " ".join(title_key)
@@ -56,6 +56,7 @@ for article in queue.get("articles", []):
         "footer template", "header template", "single post template",
         "404 not found", "page not found", "privacy policy", "cookie policy",
         "terms of use", "search results", "log in", "sign in",
+        "obter acesso ao arquivo central", "access the archive", "service unavailable",
     )
     if any(part in path + "/" for part in bad_path_parts) or any(phrase in title_text for phrase in bad_title_phrases):
         continue
