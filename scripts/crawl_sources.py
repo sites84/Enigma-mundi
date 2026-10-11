@@ -30,7 +30,7 @@ MAX_SITEMAP_URLS = 400
 MAX_LINKS_PER_SITE = 80
 DELAY_SECONDS = 0.6
 SKIP_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".pdf", ".zip", ".mp4", ".mp3", ".css", ".js")
-SKIP_PARTS = ("/tag/", "/tags/", "/author/", "/authors/", "/category/", "/categories/", "/page/", "/search", "/login", "/signup", "/privacy", "/contact", "/about", "/feed", "/rss")
+SKIP_PARTS = ("/tag/", "/tags/", "/author/", "/authors/", "/category/", "/categories/", "/page/", "/search", "/login", "/signup", "/privacy", "/contact", "/about", "/feed", "/rss", "/subscribe", "/subscription", "/membership", "/donate", "/support", "/shop", "/bookstore", "/books", "/store", "/links", "/sitemap", "/newsletter", "/advertise", "/submit", "/pitch", "/careers", "/jobs", "/events", "/calendar")
 
 
 def fetch(url: str):
@@ -83,7 +83,10 @@ def normalize_url(url):
     path = re.sub(r"/{2,}", "/", parsed.path or "/")
     if path != "/":
         path = path.rstrip("/")
-    return urllib.parse.urlunsplit((parsed.scheme.lower(), parsed.netloc.lower(), path, parsed.query, ""))
+    query_items = urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)
+    query_items = [(k, v) for k, v in query_items if k.lower() not in {"fbclid", "gclid", "mc_cid", "mc_eid", "ref", "source"} and not k.lower().startswith("utm_")]
+    query = urllib.parse.urlencode(sorted(query_items))
+    return urllib.parse.urlunsplit((parsed.scheme.lower(), parsed.netloc.lower(), path, query, ""))
 
 
 def likely_article(url, base_host):
@@ -99,7 +102,7 @@ def likely_article(url, base_host):
     if not segments:
         return False
     # Avoid common utility and pagination paths; accept typical article slugs.
-    if len(segments) == 1 and len(segments[0]) < 12 and not re.search(r"\\d{4}", segments[0]):
+    if len(segments) == 1 and len(segments[0]) < 12 and not re.search(r"\d{4}", segments[0]):
         return False
     return True
 
@@ -202,6 +205,17 @@ def article_metadata(url, site_id, site_name, robots_cache):
         if not date and not schema_article:
             return None
         editorial_status = "discovered" if date else "needs_date_review"
+        age_days = None
+        if date:
+            try:
+                parsed_date = datetime.fromisoformat(date.replace("Z", "+00:00"))
+                if parsed_date.tzinfo is None:
+                    parsed_date = parsed_date.replace(tzinfo=timezone.utc)
+                age_days = (datetime.now(timezone.utc) - parsed_date.astimezone(timezone.utc)).days
+                if age_days > 90:
+                    editorial_status = "stale_archive"
+            except (ValueError, TypeError):
+                editorial_status = "needs_date_review"
         return {
             "source_id": site_id, "source_name": site_name, "url": canonical,
             "title": title[:300], "description": description[:1000],
@@ -231,7 +245,17 @@ def main():
         status = item.get("status")
         date = item.get("published_at")
         schema_flag = bool(item.get("has_article_schema"))
-        if title and len(title) >= 18 and len(description) >= 35 and (date or schema_flag) and status in ("discovered", "needs_date_review"):
+        if title and len(title) >= 18 and len(description) >= 35 and (date or schema_flag) and status in ("discovered", "needs_date_review", "stale_archive"):
+            if date:
+                try:
+                    parsed_date = datetime.fromisoformat(str(date).replace("Z", "+00:00"))
+                    if parsed_date.tzinfo is None:
+                        parsed_date = parsed_date.replace(tzinfo=timezone.utc)
+                    if (datetime.now(timezone.utc) - parsed_date.astimezone(timezone.utc)).days > 90:
+                        item["status"] = "stale_archive"
+                        item["notes"] = "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
+                except (ValueError, TypeError):
+                    item["status"] = "needs_date_review"
             articles.append(item)
         else:
             rejected_legacy += 1
@@ -297,6 +321,8 @@ def main():
         "candidate_urls_checked": total_candidates,
         "new_articles_total": len(articles),
         "pending_editorial_review": sum(1 for a in articles if a.get("status") in ("discovered", "needs_date_review")),
+        "stale_archive_count": sum(1 for a in articles if a.get("status") == "stale_archive"),
+        "freshness_window_days": 90,
         "legacy_records_rejected_by_quality_filter": rejected_legacy,
         "articles": articles[:10000],
         "source_errors": errors[-500:],
