@@ -127,6 +127,10 @@ def discover(source):
                 result.update(status="valid", feed_url=feed["url"], feed_type=feed["type"],
                               feed_title=feed["title"], http_status=feed["http_status"])
                 return result
+            # Some sources must not inherit a generic RSS feed from the site's
+            # homepage when that feed is unrelated to the configured source.
+            if source.get("allow_homepage_discovery") is False:
+                continue
             try:
                 final_url, content_type, body, status = request_url(base)
                 result["http_status"] = status
