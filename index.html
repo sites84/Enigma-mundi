@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="Enigma Mundi — reportagens, arquivos, lendas e investigações sobre os grandes mistérios do mundo.">
+  <title>Enigma Mundi — O mundo ainda guarda segredos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <div class="topline"><span>JORNALISMO DE INVESTIGAÇÃO • MISTÉRIOS SEM FRONTEIRAS</span><span id="today-label">ENIGMA MUNDI</span></div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Enigma Mundi, página inicial">
+      <span class="brand-mark" aria-hidden="true">E<span>M</span></span>
+      <span class="brand-copy"><strong>ENIGMA MUNDI</strong><small>O mundo ainda guarda segredos</small></span>
+    </a>
+    <nav aria-label="Navegação principal"><a class="active" href="/">Início</a><a href="#ultimas">Últimas matérias</a><a href="#sobre">Sobre o projeto</a></nav>
+    <a class="header-link" href="#ultimas">Explorar <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <div class="eyebrow"><span class="pulse"></span> INVESTIGUE O DESCONHECIDO</div>
+        <h1>O mundo é mais<br>estranho do que <em>parece.</em></h1>
+        <p>Arquivos esquecidos, fenômenos inexplicados, lendas que atravessam gerações e histórias que desafiam respostas fáceis.</p>
+        <a class="primary-link" href="#ultimas">Leia as últimas matérias <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" role="img" aria-label="Paisagem escura e enigmática com montanhas encobertas por névoa">
+        <div class="art-orb"></div><div class="art-moon"></div><div class="art-ridge ridge-back"></div><div class="art-ridge ridge-front"></div>
+        <div class="art-caption"><span>ARQUIVO Nº 001</span><span>O DESCONHECIDO NOS CERCA</span></div>
+      </div>
+      <div class="hero-index"><span>01 / 04</span><span class="index-line"></span><span>INVESTIGAÇÃO CONTÍNUA</span></div>
+    </section>
+
+    <section class="latest section-wrap" id="ultimas">
+      <div class="section-heading"><div><div class="eyebrow">O QUE ESTÁ ACONTECENDO</div><h2>Últimas matérias<span class="heading-dot">.</span></h2></div><span class="sort-note">MAIS RECENTES PRIMEIRO <span aria-hidden="true">↘</span></span></div>
+      <div id="status-message" class="status-message" role="status">Carregando publicações…</div>
+      <div id="post-grid" class="post-grid" aria-live="polite"></div>
+      <noscript><p class="empty-state">Ative o JavaScript para visualizar as publicações mais recentes.</p></noscript>
+    </section>
+
+    <section class="manifesto" id="sobre">
+      <div class="manifesto-symbol" aria-hidden="true">◉</div>
+      <div><div class="eyebrow">CURIOSIDADE COM RESPONSABILIDADE</div><h2>Questionar é o começo.<br><em>Investigar é o caminho.</em></h2></div>
+      <p>Histórias extraordinárias merecem curiosidade e apuração. Separamos documentos, relatos, hipóteses e evidências — porque o mistério fica mais interessante quando os fatos são levados a sério.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="/">ENIGMA MUNDI</a><span>Histórias do limite entre o conhecido e o inexplicado.</span><span>© <span id="year"></span> Enigma Mundi</span></footer>
+</body>
+</html>
