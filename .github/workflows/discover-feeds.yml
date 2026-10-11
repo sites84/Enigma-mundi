@@ -36,6 +36,8 @@ jobs:
 
       - name: Commit source status report when changed
         run: |
+          # Include a newly created, untracked report in the diff check.
+          git add -N data/source-status.json
           if git diff --quiet -- data/source-status.json; then
             echo "Source status did not change."
             exit 0
