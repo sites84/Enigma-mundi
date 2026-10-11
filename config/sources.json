@@ -54,7 +54,8 @@
       "category": "arquivos_oficiais",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://www.gov.br"
+      "site_url": "https://www.gov.br",
+      "allow_homepage_discovery": false
     },
     {
       "id": "darpa_news",
@@ -171,7 +172,8 @@
       "category": "fact_checking",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://syfy.com"
+      "site_url": "https://syfy.com",
+      "allow_homepage_discovery": false
     },
     {
       "id": "james_randi_foundation",
