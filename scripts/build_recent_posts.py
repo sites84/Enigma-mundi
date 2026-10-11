@@ -3,6 +3,7 @@
 import json
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 queue = json.loads((ROOT / "data/discovered-articles.json").read_text(encoding="utf-8"))
@@ -32,6 +33,26 @@ for article in queue.get("articles", []):
     title = str(article.get("title", "")).strip()
     excerpt = str(article.get("description", "")).strip()
     if len(title) < 12 or not excerpt:
+        continue
+    # Reject templates, utility pages and common non-editorial sections that
+    # frequently leak through broad sitemap discovery.
+    parsed_url = urlsplit(url)
+    path = parsed_url.path.lower().rstrip("/")
+    bad_path_parts = (
+        "/tdb_templates/", "/wp-content/", "/wp-admin/", "/wp-json/",
+        "/tag/", "/tags/", "/category/", "/categories/", "/author/",
+        "/authors/", "/page/", "/search", "/privacy", "/cookie",
+        "/terms", "/contact", "/about", "/subscribe", "/login",
+        "/register", "/account", "/feed", "/sitemap",
+    )
+    title_key = "".join(ch.lower() if ch.isalnum() else " " for ch in title).split()
+    title_text = " ".join(title_key)
+    bad_title_phrases = (
+        "footer template", "header template", "single post template",
+        "404 not found", "page not found", "privacy policy", "cookie policy",
+        "terms of use", "search results", "log in", "sign in",
+    )
+    if any(part in path + "/" for part in bad_path_parts) or any(phrase in title_text for phrase in bad_title_phrases):
         continue
     seen.add(url)
     posts.append({
