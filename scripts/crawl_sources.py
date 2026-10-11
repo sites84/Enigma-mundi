@@ -27,12 +27,12 @@ SOURCES_PATH = ROOT / "config" / "sources.json"
 OUTPUT_PATH = ROOT / "data" / "discovered-articles.json"
 USER_AGENT = "EnigmaMundiBot/1.0 (+https://github.com/sites84/Enigma-mundi)"
 TIMEOUT = 12
-MAX_BYTES = 2_000_000
-MAX_SITEMAP_URLS = 400
-MAX_LINKS_PER_SITE = 50
-MAX_PAGE_FETCHES_PER_SOURCE = 20
+MAX_BYTES = 3_000_000
+MAX_SITEMAP_URLS = 1500
+MAX_LINKS_PER_SITE = 300
+MAX_PAGE_FETCHES_PER_SOURCE = 50
 FRESHNESS_DAYS = 90
-DELAY_SECONDS = 0.6
+DELAY_SECONDS = 0.2
 SKIP_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".pdf", ".zip", ".mp4", ".mp3", ".css", ".js")
 SKIP_PARTS = ("/tag/", "/tags/", "/author/", "/authors/", "/category/", "/categories/", "/page/", "/search", "/login", "/signup", "/privacy", "/contact", "/about", "/feed", "/rss", "/subscribe", "/subscription", "/membership", "/donate", "/support", "/shop", "/bookstore", "/books", "/store", "/links", "/sitemap", "/newsletter", "/advertise", "/submit", "/pitch", "/careers", "/jobs", "/events", "/calendar")
 
@@ -165,16 +165,29 @@ def parse_sitemap(url, base_host, robots_cache, seen_sitemaps=None, depth=0):
     except Exception:
         return []
     tag = root.tag.rsplit("}", 1)[-1].lower()
-    locs = [el.text.strip() for el in root.iter() if el.tag.rsplit("}", 1)[-1].lower() == "loc" and el.text]
+    entries = []
+    for node in list(root):
+        values = {}
+        for child in list(node):
+            key = child.tag.rsplit("}", 1)[-1].lower()
+            if key in ("loc", "lastmod") and child.text:
+                values[key] = child.text.strip()
+        if values.get("loc"):
+            entries.append(values)
     results = []
     if tag == "sitemapindex":
-        for child in locs[:12]:
-            results.extend(parse_sitemap(child, base_host, robots_cache, seen_sitemaps, depth + 1))
+        # Prefer recently modified sitemap partitions rather than the first
+        # alphabetically/chronologically listed archives.
+        entries.sort(key=lambda item: item.get("lastmod", ""), reverse=True)
+        for item in entries[:30]:
+            results.extend(parse_sitemap(item["loc"], base_host, robots_cache, seen_sitemaps, depth + 1))
             if len(results) >= MAX_SITEMAP_URLS:
                 break
     else:
-        for loc in locs:
-            normalized = normalize_url(loc)
+        # Most publishers expose <lastmod>; prioritize recent pages before older archive URLs.
+        entries.sort(key=lambda item: item.get("lastmod", ""), reverse=True)
+        for item in entries:
+            normalized = normalize_url(item["loc"])
             if normalized and likely_article(normalized, base_host) and allowed_by_robots(final_url, normalized, robots_cache):
                 results.append(normalized)
             if len(results) >= MAX_SITEMAP_URLS:
@@ -356,9 +369,10 @@ def main():
         feed_entries = []
         feed_url = (source.get("feed_url") or "").strip()
         feed_candidates = []
-        if feed_url and source.get("feed_type") == "rss":
+        # Test configured endpoints even when their type is unverified, but never
+        # assume a homepage is a feed. Then discover declared feeds and common paths.
+        if feed_url and urllib.parse.urlsplit(feed_url).path not in ("", "/"):
             feed_candidates.append(feed_url)
-        # Discover alternate RSS/Atom links from the homepage; also try one common feed path.
         try:
             if allowed_by_robots(site_url, site_url, robots_cache):
                 home_final, _, home_body, _ = fetch(site_url)
@@ -367,9 +381,11 @@ def main():
                 feed_candidates.extend(urllib.parse.urljoin(home_final, u) for u in home_parser.feed_urls)
         except Exception as exc:
             errors.append({"source_id": source.get("id"), "error": "homepage feed discovery: " + str(exc)[:150]})
-        if not feed_candidates and source.get("feed_type") != "rss":
-            feed_candidates.append(urllib.parse.urljoin(site_url.rstrip("/") + "/", "feed/"))
-        for candidate_feed in list(dict.fromkeys(feed_candidates))[:2]:
+        site_root = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, "/", "", ""))
+        for feed_path in ("feed/", "feed", "rss/", "rss.xml", "feed.xml", "atom.xml", "index.xml", "feeds/posts/default"):
+            feed_candidates.append(urllib.parse.urljoin(site_root, feed_path))
+        feed_candidates = list(dict.fromkeys(normalize_url(u) for u in feed_candidates if normalize_url(u)))
+        for candidate_feed in feed_candidates[:8]:
             entries, feed_error = parse_feed_entries(candidate_feed, source, robots_cache)
             if feed_error:
                 if candidate_feed == feed_url or not feed_url:
