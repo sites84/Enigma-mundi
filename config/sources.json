@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "URLs supplied by the project owner. Most feed_url values are website homepages, not verified RSS/Atom endpoints. Do not enable automatic ingestion until each endpoint has been checked.",
+  "note": "RSS/Atom endpoints validated for XML parsing and HTTP 200 are recorded only when they match the source's purpose. Some valid feeds were intentionally excluded because their feed title/content was generic or mismatched. All sources remain disabled until editorial relevance and ingestion are tested.",
   "sources": [
     {
       "id": "the_black_vault",
@@ -14,9 +14,9 @@
     {
       "id": "fbi_vault",
       "name": "FBI Vault",
-      "feed_url": "https://fbi.gov",
+      "feed_url": "https://www.fbi.gov/news/stories/RSS",
       "category": "arquivos_oficiais",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://fbi.gov"
     },
@@ -59,9 +59,9 @@
     {
       "id": "darpa_news",
       "name": "DARPA News",
-      "feed_url": "https://darpa.mil",
+      "feed_url": "https://www.darpa.mil/rss.xml",
       "category": "arquivos_oficiais",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://darpa.mil"
     },
@@ -86,18 +86,18 @@
     {
       "id": "national_security_archive",
       "name": "National Security Archive",
-      "feed_url": "https://gwu.edu",
+      "feed_url": "https://nsarchive.gwu.edu/",
       "category": "arquivos_oficiais",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://gwu.edu"
+      "site_url": "https://nsarchive.gwu.edu/"
     },
     {
       "id": "skeptical_inquirer",
       "name": "Skeptical Inquirer",
-      "feed_url": "https://skepticalinquirer.org",
+      "feed_url": "https://skepticalinquirer.org/feed/",
       "category": "fact_checking",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://skepticalinquirer.org"
     },
@@ -113,9 +113,9 @@
     {
       "id": "snopes_urban_legends",
       "name": "Snopes Urban Legends",
-      "feed_url": "https://snopes.com",
+      "feed_url": "https://www.snopes.com/feed/",
       "category": "fact_checking",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://snopes.com"
     },
@@ -124,16 +124,16 @@
       "name": "E-farsas",
       "feed_url": "https://www.e-farsas.com/feed",
       "category": "fact_checking",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://www.e-farsas.com/feed"
     },
     {
       "id": "boatos_org",
       "name": "Boatos.org",
-      "feed_url": "https://boatos.org",
+      "feed_url": "https://www.boatos.org/feed",
       "category": "fact_checking",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://boatos.org"
     },
@@ -149,18 +149,18 @@
     {
       "id": "metabunk",
       "name": "Metabunk",
-      "feed_url": "https://metabunk.org",
+      "feed_url": "https://www.metabunk.org/home/index.rss",
       "category": "fact_checking",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://metabunk.org"
     },
     {
       "id": "skeptic_magazine",
       "name": "Skeptic Magazine",
-      "feed_url": "https://skeptic.com",
+      "feed_url": "https://www.skeptic.com/rss/",
       "category": "fact_checking",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://skeptic.com"
     },
@@ -185,9 +185,9 @@
     {
       "id": "mufon_news",
       "name": "MUFON UFO News",
-      "feed_url": "https://mufon.com",
+      "feed_url": "https://mufon.com/feed/",
       "category": "ufologia",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://mufon.com"
     },
@@ -203,9 +203,9 @@
     {
       "id": "revista_ufo",
       "name": "Revista UFO Brasil",
-      "feed_url": "https://ufo.com.br",
+      "feed_url": "https://ufo.com.br/feed/",
       "category": "ufologia",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://ufo.com.br"
     },
@@ -221,9 +221,9 @@
     {
       "id": "seti_institute",
       "name": "SETI Institute",
-      "feed_url": "https://seti.org",
+      "feed_url": "https://www.seti.org/rss.xml",
       "category": "ufologia",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://seti.org"
     },
@@ -248,9 +248,9 @@
     {
       "id": "fenomenum",
       "name": "Fenomenum Brasil",
-      "feed_url": "https://fenomenum.com.br",
+      "feed_url": "https://fenomenum.com.br/feed/",
       "category": "ufologia",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://fenomenum.com.br"
     },
@@ -293,9 +293,9 @@
     {
       "id": "parapsychology_foundation",
       "name": "Parapsychology Foundation",
-      "feed_url": "https://parapsychology.org",
+      "feed_url": "https://parapsychology.org/feed/",
       "category": "sobrenatural",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://parapsychology.org"
     },
@@ -374,9 +374,9 @@
     {
       "id": "intl_cryptozoology_museum",
       "name": "Intl Cryptozoology Museum",
-      "feed_url": "https://cryptozoologymuseum.com",
+      "feed_url": "https://cryptozoologymuseum.com/feed/",
       "category": "criptozoologia_lendas",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://cryptozoologymuseum.com"
     },
@@ -419,9 +419,9 @@
     {
       "id": "scary_for_kids",
       "name": "Scary For Kids Legends",
-      "feed_url": "https://scaryforkids.com",
+      "feed_url": "http://feeds.feedburner.com/ScaryForKids",
       "category": "criptozoologia_lendas",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://scaryforkids.com"
     },
@@ -437,18 +437,18 @@
     {
       "id": "cryptomundo_monsters",
       "name": "Cryptomundo Monster Hunting",
-      "feed_url": "https://cryptomundo.com",
+      "feed_url": "https://cryptomundo.com/feed/",
       "category": "criptozoologia_lendas",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://cryptomundo.com"
     },
     {
       "id": "yokai_japanese_monsters",
       "name": "Yokai Japanese Monsters",
-      "feed_url": "https://yokai.com",
+      "feed_url": "https://yokai.com/feed/",
       "category": "criptozoologia_lendas",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://yokai.com"
     },
@@ -464,9 +464,9 @@
     {
       "id": "vigilant_citizen",
       "name": "Vigilant Citizen Symbolism",
-      "feed_url": "https://vigilantcitizen.com",
+      "feed_url": "https://vigilantcitizen.com/feed/",
       "category": "conspiracoes",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://vigilantcitizen.com"
     },
@@ -482,27 +482,27 @@
     {
       "id": "conspiracy_watch_info",
       "name": "Conspiracy Watch",
-      "feed_url": "https://conspiracywatch.info",
+      "feed_url": "https://www.conspiracywatch.info/feed",
       "category": "conspiracoes",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://conspiracywatch.info"
     },
     {
       "id": "bavarian_illuminati_info",
       "name": "Bavarian Illuminati History",
-      "feed_url": "https://bavarian-illuminati.info",
+      "feed_url": "https://www.bavarian-illuminati.info/feed",
       "category": "conspiracoes",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://bavarian-illuminati.info"
     },
     {
       "id": "global_research_ca",
       "name": "Global Research Geopolitics",
-      "feed_url": "https://globalresearch.ca",
+      "feed_url": "https://www.globalresearch.ca/feed",
       "category": "conspiracoes",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://globalresearch.ca"
     },
