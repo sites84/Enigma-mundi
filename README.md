@@ -32,3 +32,21 @@ O inventário em `config/sources.json` registra os domínios fornecidos. Nem tod
 ## Desenvolvimento local
 
 A primeira versão da interface é estática e não exige dependências. Abra `index.html` no navegador ou publique o repositório no GitHub Pages.
+
+## Coleta diária sem dependência de RSS
+
+O workflow `.github/workflows/crawl-sources.yml` roda diariamente e também pode ser iniciado manualmente em GitHub Actions. O script `scripts/crawl_sources.py` procura artigos em sitemaps XML e links HTML da página inicial, respeitando as regras de `robots.txt` quando consegue lê-las. Ele registra URLs e metadados em `data/discovered-articles.json`, com deduplicação por URL normalizada.
+
+Esta etapa é **somente descoberta**. Não reescreve nem publica artigos. Isso é intencional: a geração editorial precisa de um provedor de IA configurado via GitHub Secrets, verificação de fontes, deduplicação editorial e validação do conteúdo antes de permitir publicação. Erros de acesso são registrados para diagnóstico; sites com JavaScript, bloqueios ou estruturas especiais podem exigir adaptadores específicos.
+
+## Estrutura editorial dos artigos
+
+Cada artigo produzido deverá conter:
+- Reportagem original em português, sem copiar extensamente a matéria de origem.
+- Atribuição e links para a fonte original e para as referências consultadas.
+- Separação explícita entre fatos documentados, relatos, hipóteses e especulação.
+- Uma seção **“O que pode ser?”**, específica para o caso, com explicações científicas plausíveis, evidências que apoiam ou contradizem cada hipótese e limites do que é possível concluir.
+- Referências verificáveis para alegações científicas. Se não houver evidência suficiente, o texto deve declarar a incerteza em vez de inventar uma explicação.
+- Imagens e vídeos apenas quando houver URL, licença e condições de uso verificáveis; não copiar mídia de terceiros automaticamente.
+
+A publicação automática só deve ser ativada depois de validar a fila de descoberta, a extração de texto, a checagem de fatos e a renderização dos artigos. Nenhuma fonte precisa ter `enabled: true` para entrar na fila de descoberta; esse campo deve controlar a publicação, não impedir a investigação técnica da fonte.
