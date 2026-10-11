@@ -117,7 +117,7 @@
     {
       "id": "snopes_urban_legends",
       "name": "Snopes Urban Legends",
-      "feed_url": "https://www.snopes.com/feed/",
+      "feed_url": "https://www.snopes.com/fact-check/feed/",
       "category": "fact_checking",
       "feed_type": "rss",
       "enabled": false,
@@ -171,11 +171,11 @@
     {
       "id": "bad_astronomy",
       "name": "Bad Astronomy",
-      "feed_url": "https://syfy.com",
+      "feed_url": "https://www.syfy.com/all/bad-astronomy",
       "category": "fact_checking",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://www.syfy.com/blogs/bad-astronomy",
+      "site_url": "https://www.syfy.com/all/bad-astronomy",
       "allow_homepage_discovery": false
     },
     {
@@ -194,7 +194,7 @@
       "category": "ufologia",
       "feed_type": "rss",
       "enabled": false,
-      "site_url": "https://mufon.com"
+      "site_url": "https://mufon.com/ufo-news/"
     },
     {
       "id": "cufos_studies",
@@ -230,7 +230,7 @@
       "category": "ufologia",
       "feed_type": "rss",
       "enabled": false,
-      "site_url": "https://seti.org"
+      "site_url": "https://www.seti.org/news"
     },
     {
       "id": "project_blue_book",
