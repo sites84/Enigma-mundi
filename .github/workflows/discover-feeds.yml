@@ -2,6 +2,12 @@ name: Discover and validate source feeds
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "config/sources.json"
+      - "scripts/discover_feeds.py"
+      - ".github/workflows/discover-feeds.yml"
   schedule:
     - cron: "23 6 * * *"
 
