@@ -201,9 +201,9 @@
     {
       "id": "cufos_studies",
       "name": "CUFOS Center for UFO Studies",
-      "feed_url": "http://cufos.org",
+      "feed_url": "https://cufos.org/feed/",
       "category": "ufologia",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "http://cufos.org"
     },
@@ -328,9 +328,9 @@
     {
       "id": "instituto_psicologia_paranormal",
       "name": "Inst. Psicologia Paranormal",
-      "feed_url": "https://www.alipsi.com.ar/",
+      "feed_url": "https://www.alipsi.com.ar/feed/",
       "category": "sobrenatural",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://www.alipsi.com.ar/",
       "allow_homepage_discovery": true
@@ -527,9 +527,9 @@
     {
       "id": "david_icke_official",
       "name": "David Icke Official Feed",
-      "feed_url": "https://davidicke.com",
+      "feed_url": "https://davidicke.com/feed/",
       "category": "conspiracoes",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
       "site_url": "https://davidicke.com"
     },
