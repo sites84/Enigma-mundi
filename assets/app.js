@@ -50,7 +50,7 @@
       const payload = await response.json();
       const posts = (Array.isArray(payload) ? payload : payload.posts || [])
         .filter(post => post && post.status !== "draft")
-        .sort((a, b) => new Date(a.published_at || a.date || 0) - new Date(b.published_at || b.date || 0));
+        .sort((a, b) => new Date(b.published_at || b.date || 0) - new Date(a.published_at || a.date || 0));
       if (!posts.length) {
         status.textContent = "";
         grid.innerHTML = '<div class="empty-state"><strong>O arquivo está sendo preparado.</strong><br>As primeiras reportagens aparecerão aqui após a ativação e validação das fontes.</div>';

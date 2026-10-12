@@ -32,7 +32,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Discover new article URLs without requiring RSS
+      - name: Validate RSS and Atom feeds for all 63 configured sources
+        run: python scripts/discover_feeds.py
+
+      - name: Discover new article URLs using validated feeds and sitemaps
         run: python scripts/crawl_sources.py
 
       - name: Build chronological posts from the last 90 days
@@ -40,14 +43,14 @@ jobs:
 
       - name: Commit discovery queue and posts when changed
         run: |
-          git add -N data/discovered-articles.json data/posts.json
-          if git diff --quiet -- data/discovered-articles.json data/posts.json; then
-            echo "Discovery queue and posts did not change."
+          git add -N data/source-status.json data/discovered-articles.json data/posts.json
+          if git diff --quiet -- data/source-status.json data/discovered-articles.json data/posts.json; then
+            echo "Feed status, discovery queue and posts did not change."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/discovered-articles.json data/posts.json
-          git commit -m "chore: refresh discovered article queue"
+          git add data/source-status.json data/discovered-articles.json data/posts.json
+          git commit -m "chore: validate all sources and refresh editorial queue"
           git pull --rebase -X theirs origin main
           git push

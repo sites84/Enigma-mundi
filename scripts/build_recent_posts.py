@@ -79,14 +79,25 @@ for article in queue.get("articles", []):
     })
 
 posts.sort(key=lambda item: (item["published_at"], item["url"]), reverse=True)
+source_post_counts = {}
+for item in posts:
+    source_id = item.get("id", "").split("-", 1)[0]
+    source_post_counts[source_id] = source_post_counts.get(source_id, 0) + 1
+
 payload = {
     "version": 1,
     "generated_at": now.isoformat(),
     "time_window_days": 90,
     "sort_order": "chronological_descending",
+    "configured_source_count": len(sources),
+    "source_count_with_posts": len(source_post_counts),
+    "source_post_counts": source_post_counts,
     "post_count": len(posts),
     "posts": posts
 }
 out = ROOT / "data/posts.json"
 out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print(f"Posts recentes gerados: {len(posts)}; janela: {cutoff.date()} a {now.date()}")
+print(
+    f"Posts recentes gerados: {len(posts)}; fontes configuradas: {len(sources)}; "
+    f"fontes representadas: {len(source_post_counts)}; janela: {cutoff.date()} a {now.date()}"
+)

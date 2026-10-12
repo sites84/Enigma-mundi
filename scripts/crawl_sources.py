@@ -396,6 +396,25 @@ def parse_feed_entries(feed_url, source, robots_cache):
 def main():
     config = json.loads(SOURCES_PATH.read_text(encoding="utf-8"))
     sources = config.get("sources", [])
+
+    # The validator checks all configured publishers immediately before crawling.
+    # Consume its per-source feed URLs instead of only trusting stale config URLs.
+    status_path = ROOT / "data" / "source-status.json"
+    try:
+        status_report = json.loads(status_path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        status_report = {}
+    validated_feeds = {
+        item.get("id"): item
+        for item in status_report.get("sources", [])
+        if item.get("status") == "valid"
+        and item.get("feed_url")
+        and item.get("feed_type") in ("rss", "atom")
+    }
+    print(
+        f"Feeds RSS/Atom validados nesta execução: {len(validated_feeds)}/{len(sources)} fontes",
+        flush=True,
+    )
     try:
         existing = json.loads(OUTPUT_PATH.read_text(encoding="utf-8"))
     except (FileNotFoundError, json.JSONDecodeError):
@@ -442,12 +461,19 @@ def main():
         print(f"[{index}/{len(sources)}] {source.get('name', source.get('id'))}", flush=True)
         candidates = []
         feed_entries = []
-        feed_url = (source.get("feed_url") or "").strip()
+        configured_feed_url = (source.get("feed_url") or "").strip()
+        validated_feed = validated_feeds.get(source.get("id"), {})
+        # The just-validated feed is tried first. Previously, discovered feeds lived
+        # only in source-status.json and were ignored by this crawler; that caused
+        # valid feeds to contribute zero items unless the URL was hard-coded.
+        feed_url = (validated_feed.get("feed_url") or configured_feed_url).strip()
         feed_candidates = []
-        # Test configured endpoints even when their type is unverified, but never
-        # assume a homepage is a feed. Then discover declared feeds and common paths.
-        if feed_url and urllib.parse.urlsplit(feed_url).path not in ("", "/"):
-            feed_candidates.append(feed_url)
+        if validated_feed.get("feed_url"):
+            feed_candidates.append(validated_feed["feed_url"])
+        if (configured_feed_url
+                and urllib.parse.urlsplit(configured_feed_url).path not in ("", "/")
+                and configured_feed_url not in feed_candidates):
+            feed_candidates.append(configured_feed_url)
         try:
             if allowed_by_robots(site_url, site_url, robots_cache):
                 home_final, _, home_body, _ = fetch(site_url)
@@ -516,8 +542,12 @@ def main():
         recent_count = sum(1 for a in articles if a.get("source_id") == source.get("id") and a.get("status") == "discovered" and a.get("published_at"))
         source_results.append({
             "source_id": source.get("id"), "source_name": source.get("name"),
-            "site_url": site_url, "configured_feed": feed_url or None,
-            "feed_type": source.get("feed_type"), "recent_items_from_feed": len(feed_entries),
+            "site_url": site_url, "configured_feed": configured_feed_url or None,
+            "validated_feed": validated_feed.get("feed_url"),
+            "validated_feed_status": validated_feed.get("status", "not_validated"),
+            "feed_used": feed_url or None,
+            "feed_type": validated_feed.get("feed_type") or source.get("feed_type"),
+            "recent_items_from_feed": len(feed_entries),
             "recent_items_in_queue": recent_count, "candidate_urls_checked": len(candidates),
             "new_article_pages_registered": new_count,
             "result": "recent_items_found" if recent_count else ("errors" if any(e.get("source_id") == source.get("id") for e in errors) else "no_recent_items_detected")
@@ -544,7 +574,14 @@ def main():
     }
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Total registrado na fila: {len(payload['articles'])}; erros de fonte nesta execução: {len(errors)}")
+    with_feed = sum(1 for item in source_results if item.get("feed_used"))
+    with_recent = sum(1 for item in source_results if item.get("recent_items_in_queue", 0))
+    print(
+        f"Fontes processadas: {len(source_results)}/{len(sources)}; "
+        f"feeds usados: {with_feed}; fontes com itens recentes: {with_recent}; "
+        f"fila total: {len(payload['articles'])}; erros: {len(errors)}",
+        flush=True,
+    )
 
 
 if __name__ == "__main__":
