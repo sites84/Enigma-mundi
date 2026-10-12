@@ -78,6 +78,128 @@ for article in queue.get("articles", []):
         "image_url": article.get("image_url") or None
     })
 
+
+# Preserve previously resolved images and credits across daily rebuilds.
+previous_path = ROOT / "data/posts.json"
+try:
+    previous_payload = json.loads(previous_path.read_text(encoding="utf-8"))
+    previous_by_url = {p.get("url"): p for p in previous_payload.get("posts", []) if p.get("url")}
+except (OSError, json.JSONDecodeError):
+    previous_by_url = {}
+
+for post in posts:
+    previous = previous_by_url.get(post["url"], {})
+    for field in ("image_url", "image_alt", "image_credit", "image_license", "image_source_url"):
+        if not post.get(field) and previous.get(field):
+            post[field] = previous[field]
+
+# Fill remaining image gaps with Wikimedia Commons, which provides reusable
+# media plus attribution/license metadata. A filename/title relevance threshold
+# prevents arbitrary unrelated pictures from being attached to stories.
+import html
+import re
+import time
+import urllib.parse
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+STOP_WORDS = {
+    "the", "and", "for", "with", "from", "that", "this", "have", "has", "was",
+    "were", "are", "into", "about", "after", "before", "over", "under", "new",
+    "says", "said", "why", "how", "what", "when", "where", "who", "its", "their",
+    "his", "her", "our", "your", "not", "but", "will", "could", "would", "should",
+    "uma", "umas", "uns", "as", "os", "que", "para", "por", "com", "sem", "sobre",
+    "entre", "como", "quando", "onde", "porque", "mais", "menos", "novo", "nova",
+    "diz", "disse", "segundo", "pode", "podem", "ser", "foi", "são", "dos", "das",
+    "the", "into", "its", "their", "his", "her", "and", "or", "of", "in", "on",
+}
+def image_tokens(value):
+    words = re.findall(r"[a-z0-9]{3,}", str(value or "").lower())
+    return {w for w in words if w not in STOP_WORDS and not w.isdigit()}
+
+def commons_lookup(post):
+    title = post.get("title", "")
+    tokens = image_tokens(title)
+    if not tokens:
+        return None
+    # Search using the meaningful words, not the entire headline punctuation.
+    query_words = sorted(tokens, key=lambda word: (-len(word), word))[:7]
+    query = " ".join(query_words)
+    params = {
+        "action": "query", "format": "json", "generator": "search",
+        "gsrnamespace": "6", "gsrsearch": query, "gsrlimit": "8",
+        "prop": "imageinfo", "iiprop": "url|extmetadata",
+        "iiurlwidth": "1200",
+        "iiextmetadatafilter": "LicenseShortName|UsageTerms|Artist|Credit|ImageDescription",
+    }
+    api_url = "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode(params)
+    request = urllib.request.Request(api_url, headers={
+        "User-Agent": "EnigmaMundiEditorialBot/1.0 (public editorial project; image attribution enabled)"
+    })
+    try:
+        with urllib.request.urlopen(request, timeout=15) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except Exception:
+        return None
+    pages = (data.get("query") or {}).get("pages") or {}
+    best = None
+    best_score = 0
+    for page in pages.values():
+        info_list = page.get("imageinfo") or []
+        if not info_list:
+            continue
+        info = info_list[0]
+        meta = info.get("extmetadata") or {}
+        license_name = html.unescape((meta.get("LicenseShortName") or {}).get("value", "")).strip()
+        usage_terms = html.unescape((meta.get("UsageTerms") or {}).get("value", "")).strip()
+        license_text = (license_name + " " + usage_terms).lower()
+        # Only use public-domain or Creative Commons files with a declared license.
+        if not license_name or not any(x in license_text for x in ("cc0", "public domain", "cc by", "cc-by", "cc by-sa", "cc-by-sa")):
+            continue
+        file_title = page.get("title", "").replace("File:", "").replace("_", " ")
+        description = html.unescape((meta.get("ImageDescription") or {}).get("value", ""))
+        artist = html.unescape((meta.get("Artist") or {}).get("value", ""))
+        credit = html.unescape((meta.get("Credit") or {}).get("value", ""))
+        candidate_tokens = image_tokens(file_title + " " + description)
+        overlap = tokens & candidate_tokens
+        # Require at least two meaningful matches, or one long distinctive term.
+        score = len(overlap) + sum(0.75 for word in overlap if len(word) >= 8)
+        if len(overlap) < 2 and not any(len(word) >= 9 for word in overlap):
+            continue
+        image_url = info.get("thumburl") or info.get("url")
+        if not image_url or not image_url.startswith("https://"):
+            continue
+        if score > best_score:
+            best_score = score
+            best = {
+                "image_url": image_url,
+                "image_alt": title[:250],
+                "image_credit": re.sub(r"<[^>]+>", "", artist or credit)[:300],
+                "image_license": license_name[:100],
+                "image_source_url": info.get("descriptionurl") or "",
+            }
+    return best
+
+missing = [p for p in posts if not p.get("image_url")]
+print(f"Busca complementar no Wikimedia Commons: {len(missing)} posts sem imagem; até 5 consultas simultâneas.", flush=True)
+resolved = 0
+with ThreadPoolExecutor(max_workers=5) as pool:
+    futures = {pool.submit(commons_lookup, post): post for post in missing}
+    for future in as_completed(futures):
+        post = futures[future]
+        try:
+            match = future.result()
+        except Exception:
+            match = None
+        if match:
+            post.update(match)
+            resolved += 1
+        if (resolved and resolved % 25 == 0):
+            print(f"Imagens complementares associadas: {resolved}", flush=True)
+        # Small pacing delay between completed results to avoid aggressive retries.
+        time.sleep(0.02)
+print(f"Imagens complementares encontradas no Wikimedia Commons: {resolved}/{len(missing)}", flush=True)
+
 posts.sort(key=lambda item: (item["published_at"], item["url"]), reverse=True)
 source_post_counts = {}
 for item in posts:
