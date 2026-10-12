@@ -49,7 +49,7 @@
       ? `<div class="image-attribution">Imagem: ${imageSource ? `<a href="${escapeHtml(imageSource)}" target="_blank" rel="noopener noreferrer">${imageCredit || "ver origem"}</a>` : (imageCredit || "crédito não informado")}${imageLicense ? ` · Licença: ${imageLicense}` : ""}</div>`
       : "";
     const imageMarkup = image
-      ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(post.image_alt || post.title || "Imagem da publicação")}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove();this.parentElement.classList.add('image-placeholder');this.parentElement.textContent='◉'">`
+      ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(post.image_alt || post.title || "Imagem da publicação")}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`
       : '<div class="image-placeholder" aria-hidden="true">◉</div>';
     const titleMarkup = link
       ? `<a href="${escapeHtml(link)}" class="post-title" target="_blank" rel="noopener noreferrer">${title}</a>`
@@ -81,6 +81,17 @@
     grid.innerHTML = page.length
       ? page.map(renderPost).join("")
       : '<div class="empty-state"><strong>Nenhum resultado encontrado.</strong><br>Tente outros termos ou selecione outra categoria.</div>';
+    // A imagem pode estar indisponível ou ter sido removida pela fonte.
+    // Substitua apenas a imagem quebrada, sem apagar a categoria do cartão.
+    grid.querySelectorAll(".post-image img").forEach(image => {
+      image.addEventListener("error", () => {
+        const placeholder = document.createElement("div");
+        placeholder.className = "image-placeholder";
+        placeholder.setAttribute("aria-hidden", "true");
+        placeholder.textContent = "◉";
+        image.replaceWith(placeholder);
+      }, { once: true });
+    });
     if (status) status.textContent = filtered.length
       ? `Exibindo ${page.length} de ${filtered.length} ${filtered.length === 1 ? "publicação" : "publicações"}`
       : "Nenhuma publicação corresponde aos filtros.";
@@ -92,7 +103,7 @@
 
   async function loadPosts() {
     try {
-      const response = await fetch("data/posts.json", { cache: "no-store" });
+      const response = await fetch("data/posts.json", { cache: "no-cache" });
       if (!response.ok) throw new Error("posts.json indisponível");
       const payload = await response.json();
       allPosts = (Array.isArray(payload) ? payload : payload.posts || [])
