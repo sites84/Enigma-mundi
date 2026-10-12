@@ -54,6 +54,7 @@ class PageParser(HTMLParser):
         self.title = []
         self.in_title = False
         self.meta = {}
+        self.date_candidates = []
         self.canonical = None
         self.feed_urls = []
 
@@ -65,10 +66,16 @@ class PageParser(HTMLParser):
         elif tag == "title":
             self.in_title = True
         elif tag == "meta":
-            key = (attrs.get("property") or attrs.get("name") or "").lower()
+            key = (attrs.get("property") or attrs.get("name") or attrs.get("itemprop") or "").lower()
             value = attrs.get("content", "").strip()
             if key and value:
                 self.meta[key] = value
+                if key in {"article:published_time", "datepublished", "datepublished", "datecreated", "date", "pubdate", "parsely-pub-date", "publish-date", "date.modified"}:
+                    self.date_candidates.append(value)
+        elif tag == "time":
+            value = (attrs.get("datetime") or attrs.get("content") or attrs.get("data-date") or "").strip()
+            if value:
+                self.date_candidates.append(value)
         elif tag == "link":
             rel = attrs.get("rel", "").lower().split()
             if "canonical" in rel:
@@ -289,10 +296,12 @@ def article_metadata(url, site_id, site_name, robots_cache):
                     if isinstance(value, str) and value.strip():
                         return value.strip()
             return ""
-        date = (parser.meta.get("article:published_time") or parser.meta.get("schema:datepublished") or
-                parser.meta.get("datepublished") or parser.meta.get("date") or parser.meta.get("pubdate") or
-                parser.meta.get("parsely-pub-date") or parser.meta.get("publish-date") or
-                first_jsonld("datePublished", "dateCreated", "dateModified"))
+        date = (parser.meta.get("article:published_time") or parser.meta.get("datepublished") or
+                parser.meta.get("schema:datepublished") or parser.meta.get("date") or
+                parser.meta.get("pubdate") or parser.meta.get("parsely-pub-date") or
+                parser.meta.get("publish-date") or first_jsonld("datePublished", "dateCreated") or
+                next((candidate for candidate in parser.date_candidates if parse_datetime(candidate)), "") or
+                first_jsonld("dateModified"))
         description = (parser.meta.get("og:description") or parser.meta.get("description") or
                        parser.meta.get("twitter:description") or first_jsonld("description")).strip()
         title = title or first_jsonld("headline", "name")
