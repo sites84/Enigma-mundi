@@ -154,8 +154,9 @@ def allowed_by_robots(site_url, target_url, cache):
             parser.set_url(robots_url)
             parser.parse(raw.decode("utf-8", "replace").splitlines())
             cache[origin] = parser
-        except Exception:
+        except Exception as exc:
             # A blocked, missing, or malformed robots.txt must not suppress feeds.
+            print(f"[INFO] robots.txt unavailable; failing open origin={origin} error={type(exc).__name__}: {str(exc)[:160]}", flush=True)
             cache[origin] = True
     rules = cache[origin]
     if rules is True:
@@ -176,8 +177,8 @@ def sitemap_candidates(site_url):
         for line in body.decode("utf-8", "replace").splitlines():
             if line.lower().startswith("sitemap:"):
                 found.append(line.split(":", 1)[1].strip())
-    except Exception:
-        pass
+    except Exception as exc:
+        print(f"[WARN] sitemap discovery failed url={robots} error={type(exc).__name__}: {str(exc)[:180]}", flush=True)
     found.extend([urllib.parse.urljoin(origin, "/sitemap.xml"), urllib.parse.urljoin(origin, "/sitemap_index.xml")])
     return list(dict.fromkeys(found))
 
@@ -191,9 +192,10 @@ def parse_sitemap(url, base_host, robots_cache, seen_sitemaps=None, depth=0):
     if not allowed_by_robots(url, url, robots_cache):
         return []
     try:
-        final_url, _, body, _ = fetch(url)
+        final_url, _, body, status = fetch(url)
         root = ET.fromstring(body)
-    except Exception:
+    except Exception as exc:
+        print(f"[WARN] sitemap fetch/parse failed url={url} error={type(exc).__name__}: {str(exc)[:180]}", flush=True)
         return []
     tag = root.tag.rsplit("}", 1)[-1].lower()
     entries = []
@@ -351,7 +353,8 @@ def article_metadata(url, site_id, site_name, robots_cache):
             "status": editorial_status,
             "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado.",
         }
-    except Exception:
+    except Exception as exc:
+        print(f"[WARN] article metadata failed source_id={site_id} url={url} error={type(exc).__name__}: {str(exc)[:220]}", flush=True)
         return None
 
 
