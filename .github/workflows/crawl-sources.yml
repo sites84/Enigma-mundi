@@ -56,8 +56,11 @@ jobs:
           posts = payload.get("posts")
           assert isinstance(posts, list), "data/posts.json must contain a posts array"
           assert payload.get("post_count") == len(posts), "post_count does not match posts array"
+          config = json.loads((root / "config/sources.json").read_text(encoding="utf-8"))
+          excluded_source_ids = {s.get("id") for s in config.get("sources", []) if s.get("exclude_from_publication")}
           seen = set()
           for index, post in enumerate(posts):
+              assert not any(post.get("id", "").startswith(f"{source_id}-") for source_id in excluded_source_ids), f"post {post.get('id')} belongs to an excluded source"
               assert post.get("title", "").strip(), f"post {index} has no title"
               assert post.get("excerpt", "").strip(), f"post {index} has no excerpt"
               url = post.get("source_url") or post.get("url") or ""
