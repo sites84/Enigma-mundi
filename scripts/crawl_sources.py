@@ -320,6 +320,22 @@ def article_metadata(url, site_id, site_name, robots_cache):
         description = (parser.meta.get("og:description") or parser.meta.get("description") or
                        parser.meta.get("twitter:description") or first_jsonld("description")).strip()
         title = title or first_jsonld("headline", "name")
+        image_url = parser.meta.get("og:image") or parser.meta.get("twitter:image") or parser.meta.get("twitter:image:src") or ""
+        if not image_url:
+            for node in article_nodes or jsonld_items:
+                candidate = node.get("image")
+                if isinstance(candidate, str):
+                    image_url = candidate
+                elif isinstance(candidate, dict):
+                    image_url = candidate.get("url") or candidate.get("contentUrl") or ""
+                elif isinstance(candidate, list):
+                    image_url = next((item if isinstance(item, str) else item.get("url", "") for item in candidate if isinstance(item, (str, dict))), "")
+                if image_url:
+                    break
+        if image_url:
+            image_url = urllib.parse.urljoin(final_url, html.unescape(image_url.strip()))
+            if urllib.parse.urlsplit(image_url).scheme not in ("http", "https"):
+                image_url = ""
         schema_article = bool(article_nodes) or bool(re.search(
             r'"@type"\s*:\s*"(?:Article|NewsArticle|BlogPosting|ReportageNewsArticle)"',
             raw_html, re.I
@@ -346,7 +362,7 @@ def article_metadata(url, site_id, site_name, robots_cache):
                 editorial_status = "needs_date_review"
         return {
             "source_id": site_id, "source_name": site_name, "url": canonical,
-            "title": title[:300], "description": description[:1000],
+            "title": title[:300], "description": description[:1000], "image_url": image_url or None,
             "published_at": (parsed_date.isoformat() if parsed_date else None), "has_article_schema": schema_article,
             "discovered_at": datetime.now(timezone.utc).isoformat(),
             "http_status": status, "content_type": content_type.split(";", 1)[0],
@@ -381,6 +397,12 @@ def parse_feed_entries(feed_url, source, robots_cache):
                     fields["link"] = href
                 elif text_value and not fields.get("link"):
                     fields["link"] = text_value
+            elif key in ("content", "thumbnail", "enclosure") and child.attrib.get("url"):
+                media_url = urllib.parse.urljoin(final_url, child.attrib["url"].strip())
+                media_type = child.attrib.get("type", "").lower()
+                medium = child.attrib.get("medium", "").lower()
+                if media_url.startswith(("http://", "https://")) and (medium == "image" or media_type.startswith("image/") or key == "thumbnail"):
+                    fields.setdefault("image_url", media_url)
             elif key in ("title", "description", "summary", "published", "pubdate", "date", "updated", "encoded", "guid"):
                 fields.setdefault(key, text_value)
         raw_link = fields.get("link", "").strip()
@@ -412,6 +434,7 @@ def parse_feed_entries(feed_url, source, robots_cache):
         entries.append({
             "source_id": source.get("id"), "source_name": source.get("name"),
             "url": link, "title": title[:300], "description": desc[:1000],
+            "image_url": fields.get("image_url"),
             "published_at": parsed_date.isoformat(), "has_article_schema": True,
             "discovered_at": datetime.now(timezone.utc).isoformat(),
             "http_status": status, "content_type": content_type.split(";", 1)[0],
