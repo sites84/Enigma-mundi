@@ -259,7 +259,6 @@ def publisher_image_lookup(post):
             candidate = html.unescape(match.group(1).strip())
             break
     if not candidate:
-        # JSON-LD is a common fallback for publishers that omit Open Graph.
         match = re.search(r"""["']image["']\s*:\s*(?:\[\s*)?["'](https?://[^"']+)["']""", page, re.I)
         if match:
             candidate = html.unescape(match.group(1).strip())
