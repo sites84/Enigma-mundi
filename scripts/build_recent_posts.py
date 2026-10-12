@@ -48,6 +48,10 @@ for article in queue.get("articles", []):
     if published < cutoff or published > now:
         continue
     source = sources.get(article.get("source_id"), {})
+    # Do not publish broad SYFY Wire sitemap links under the retired Bad Astronomy label.
+    # Re-enable only after a dedicated, topic-specific feed or URL rule is verified.
+    if source.get("exclude_from_publication"):
+        continue
     category = source.get("category", "misterios")
     title = str(article.get("title", "")).strip()
     excerpt = str(article.get("description", "")).strip()
