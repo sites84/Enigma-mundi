@@ -25,7 +25,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES_PATH = ROOT / "config" / "sources.json"
 OUTPUT_PATH = ROOT / "data" / "discovered-articles.json"
-USER_AGENT = "EnigmaMundiBot/1.0 (+https://github.com/sites84/Enigma-mundi)"
+USER_AGENT = "Mozilla/5.0 (compatible; EnigmaMundiBot/1.0; +https://github.com/sites84/Enigma-mundi)"
 TIMEOUT = 12
 MAX_BYTES = 3_000_000
 MAX_SITEMAP_URLS = 1500
@@ -136,21 +136,34 @@ def likely_article(url, base_host):
 
 
 def allowed_by_robots(site_url, target_url, cache):
+    """Respect readable robots.txt rules; fail open when unavailable."""
     parsed = urllib.parse.urlsplit(site_url)
+    if parsed.scheme not in ("http", "https") or not parsed.netloc:
+        return True
     origin = f"{parsed.scheme}://{parsed.netloc}"
     if origin not in cache:
-        rp = urllib.robotparser.RobotFileParser()
-        rp.set_url(urllib.parse.urljoin(origin, "/robots.txt"))
+        robots_url = urllib.parse.urljoin(origin, "/robots.txt")
         try:
-            rp.read()
-            cache[origin] = rp
+            request = urllib.request.Request(
+                robots_url,
+                headers={"User-Agent": USER_AGENT, "Accept": "text/plain,*/*;q=0.5"},
+            )
+            with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+                raw = response.read(500_000)
+            parser = urllib.robotparser.RobotFileParser()
+            parser.set_url(robots_url)
+            parser.parse(raw.decode("utf-8", "replace").splitlines())
+            cache[origin] = parser
         except Exception:
-            # If robots.txt cannot be read, fail closed for this origin.
-            cache[origin] = False
+            # A blocked, missing, or malformed robots.txt must not suppress feeds.
+            cache[origin] = True
     rules = cache[origin]
-    if rules is False:
-        return False
-    return rules.can_fetch(USER_AGENT, target_url)
+    if rules is True:
+        return True
+    try:
+        return rules.can_fetch(USER_AGENT, target_url)
+    except Exception:
+        return True
 
 
 def sitemap_candidates(site_url):
@@ -344,9 +357,7 @@ def article_metadata(url, site_id, site_name, robots_cache):
 
 
 def parse_feed_entries(feed_url, source, robots_cache):
-    """Read RSS/Atom entries with their original publication dates."""
-    if not allowed_by_robots(feed_url, feed_url, robots_cache):
-        return [], "feed disallowed by robots.txt"
+    """Read explicitly configured/discovered RSS/Atom endpoints without applying robots rules to the feed URL."""
     try:
         final_url, content_type, body, status = fetch(feed_url)
         root = ET.fromstring(body)
