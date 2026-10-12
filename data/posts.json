@@ -1,12 +1,76 @@
 {
   "version": 1,
-  "generated_at": "2026-10-12T00:46:43.922006+00:00",
+  "generated_at": "2026-10-12T01:43:27.854077+00:00",
   "time_window_days": 90,
   "sort_order": "chronological_descending",
-  "post_count": 194,
+  "post_count": 243,
   "posts": [
     {
-      "id": "conspiracy_watch_info-2026-10-11-10",
+      "id": "vigilant_citizen-2026-10-12-7",
+      "title": "Something is Terribly Wrong With Hotel Lucia",
+      "excerpt": "Something is Terribly Wrong With Hotel Lucia",
+      "category": "conspiracoes",
+      "category_label": "Conspiracoes",
+      "published_at": "2026-10-12T01:36:19+00:00",
+      "original_title": "Something is Terribly Wrong With Hotel Lucia",
+      "source_name": "Vigilant Citizen Symbolism",
+      "source_url": "https://vigilantcitizen.com/sinistersites/something-is-wrong-with-hotel-lucia",
+      "url": "https://vigilantcitizen.com/sinistersites/something-is-wrong-with-hotel-lucia",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "vigilant_citizen-2026-10-12-6",
+      "title": "Sinister Sites: The Sansevero Chapel",
+      "excerpt": "Sinister Sites: The Sansevero Chapel",
+      "category": "conspiracoes",
+      "category_label": "Conspiracoes",
+      "published_at": "2026-10-12T00:52:47+00:00",
+      "original_title": "Sinister Sites: The Sansevero Chapel",
+      "source_name": "Vigilant Citizen Symbolism",
+      "source_url": "https://vigilantcitizen.com/sinistersites/sinister-sites-sansevero-chapel",
+      "url": "https://vigilantcitizen.com/sinistersites/sinister-sites-sansevero-chapel",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "vigilant_citizen-2026-10-12-5",
+      "title": "What’s Up With Room 322 at Hotel ZaZa?",
+      "excerpt": "What’s Up With Room 322 at Hotel ZaZa?",
+      "category": "conspiracoes",
+      "category_label": "Conspiracoes",
+      "published_at": "2026-10-12T00:49:09+00:00",
+      "original_title": "What’s Up With Room 322 at Hotel ZaZa?",
+      "source_name": "Vigilant Citizen Symbolism",
+      "source_url": "https://vigilantcitizen.com/sinistersites/whats-up-with-room-322-at-hotel-zaza",
+      "url": "https://vigilantcitizen.com/sinistersites/whats-up-with-room-322-at-hotel-zaza",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "vigilant_citizen-2026-10-12-4",
+      "title": "Sinister Sites: IRS Headquarters, Maryland",
+      "excerpt": "Sinister Sites: IRS Headquarters, Maryland",
+      "category": "conspiracoes",
+      "category_label": "Conspiracoes",
+      "published_at": "2026-10-12T00:46:53+00:00",
+      "original_title": "Sinister Sites: IRS Headquarters, Maryland",
+      "source_name": "Vigilant Citizen Symbolism",
+      "source_url": "https://vigilantcitizen.com/sinistersites/sinister-sites-irs-headquarters-maryland",
+      "url": "https://vigilantcitizen.com/sinistersites/sinister-sites-irs-headquarters-maryland",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "conspiracy_watch_info-2026-10-11-62",
       "title": "Le fil rose du soupçon",
       "excerpt": "La présidente du groupe LFI à l'Assemblée nationale a livré un cas d'école de désinformation conspirationniste.",
       "category": "conspiracoes",
@@ -22,7 +86,23 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-09-159",
+      "id": "skeptic_magazine-2026-10-10-43",
+      "title": "Racism and White Guilt: Has America Changed More Than We Admit?",
+      "excerpt": "About this episode:\n\nCan fighting racism end up reinforcing it? Shelby Steele grew up under segregation and became a Black militant in the 1960s.\n\nToday, he argues that White guilt has created a different racial problem: treating Black Americans as permanent victims who cannot succeed without White help. Shelby and",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-10-10T16:08:41+00:00",
+      "original_title": "Racism and White Guilt: Has America Changed More Than We Admit?",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/racism-and-white-guilt-has-america-changed-more-than-we-admit-shelby-steele-eli-steele",
+      "url": "https://www.skeptic.com/michael-shermer-show/racism-and-white-guilt-has-america-changed-more-than-we-admit-shelby-steele-eli-steele",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "bad_astronomy-2026-10-09-208",
       "title": "Why Alfonso Cuarón Says There Was “Nothing Prophetic” About Children of Men",
       "excerpt": "Two decades later, Oscar-winning director Alfonso Cuarón doesn't believe his dystopian tour-de-force Children of Men was a portent of things to come. To him, the film was immediate, resoundingly topical and, most unfortunately, perennial.",
       "category": "fact_checking",
@@ -38,7 +118,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-09-158",
+      "id": "bad_astronomy-2026-10-09-207",
       "title": "Star Wars: Ahsoka Season 2 Is Going to Get \"Weird,\" Teases Creator Dave Filoni",
       "excerpt": "The Star Wars universe is getting weird. Well, weirder than usual. Nearly four years after Ahsoka debuted on Disney+, the Dave Filoni-created TV series will finally continue in a second season, returning viewers to the strange world of Peridea.",
       "category": "fact_checking",
@@ -54,7 +134,23 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-10-08-180",
+      "id": "library_of_congress-2026-10-09-53",
+      "title": "AFC at 50: Folklife at Work",
+      "excerpt": "The American Folklife Center has been rolling out special programming all year, in celebration of its 50th anniversary. On September 17th, during Live! at the Library, the Center will open its exhibition, \"Alive in Many Hands: The American Folklife Center at 50.\" The exhibition is intended to provide visitors with an exploration of what folklife is, how it has been documented in the Center's archives, and what they can do to sustain folk traditions in their own communities. As part of a series of blog posts celebrating the exhibition, this post shares a selection of items on display from the A",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-10-09T12:00:16+00:00",
+      "original_title": "AFC at 50: Folklife at Work",
+      "source_name": "Library of Congress Folklore",
+      "source_url": "https://blogs.loc.gov/folklife/2026/10/afc-at-50-folklife-at-work",
+      "url": "https://blogs.loc.gov/folklife/2026/10/afc-at-50-folklife-at-work",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "vigilant_citizen-2026-10-08-229",
       "title": "Symbolic Pics of the Month 10/26 - Vigilant Citizen",
       "excerpt": "In this edition of SPOTM: NBA YoungBoy wants to be famous until he's NBA OldBoy; \"Obsession\" star Inde Navarette's disturbingly symbolic photoshoot. Also: What is going on with Britney Spears and her son?",
       "category": "conspiracoes",
@@ -70,7 +166,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-08-157",
+      "id": "bad_astronomy-2026-10-08-206",
       "title": "Marv Wolfman Reflects On His Animated Batman Episode That Inspired Clayface Movie (Exclusive)",
       "excerpt": "For many DC fans, the definitive depiction of Clayface is in the two-part episode of Batman: The Animated Series—\"Feat of Clay.\"",
       "category": "fact_checking",
@@ -86,7 +182,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-08-155",
+      "id": "bad_astronomy-2026-10-08-204",
       "title": "New Book On Animated Transformers Movie Delves Into Orson Welles' Last Role As Unicron (Exclusive)",
       "excerpt": "Why does the Transformers franchise endure? Chris Prince argues its longevity can be traced back to the 1986 animated film, which famously killed off a number of fan favorite characters, including Optimus Prime.",
       "category": "fact_checking",
@@ -102,7 +198,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-08-154",
+      "id": "bad_astronomy-2026-10-08-203",
       "title": "X-Men Reboot Has Christopher Abbott “Excited” to Play Professor X for Marvel Studios",
       "excerpt": "Christopher Abbott can't wait to play Marvel's most famous telepath. All he needs now is a script. While officially confirmed to be playing Professor Charles Xavier in Marvel Studios' long-awaited X-Men reboot, Abbott has yet to see the screenplay from Beef creator Lee Sung Jin and The Bear co-creator Joanna Calo. Not altogether surprising, given that the film isn't slated to come out for another two years.",
       "category": "fact_checking",
@@ -118,7 +214,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-08-156",
+      "id": "bad_astronomy-2026-10-08-205",
       "title": "Why Guardians of the Galaxy’s Sean Gunn Doesn’t Think He’ll Ever Return as Rocket Raccoon",
       "excerpt": "Sean Gunn may be saying goodbye to Marvel's talking trash panda. The actor who provided the motion capture work for Rocket Raccoon in his brother James Gunn's Guardians of the Galaxy trilogy, believes his body may have outgrown the physically demanding Marvel role.",
       "category": "fact_checking",
@@ -134,7 +230,23 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-07-153",
+      "id": "library_of_congress-2026-10-07-52",
+      "title": "Origins of Uncle Sam Part 3: Cartoons and Advertising in the Nineteenth Century",
+      "excerpt": "“Uncle Sam,” as a personification of the United States, certainly goes back to the early days of the nation, emerging soon after the American Revolution. Everyone agrees that his name is an expansion of the abbreviation “U.S.” for “United States,” which first appears in documents written by the founders in 1776.  Since then, the character of Uncle Sam has become a beloved American icon. In this post, we’ll explore the development of the image of Uncle Sam, its relationship with the related images of “Brother Jonathan” and “Yankee Doodle,” and its becoming iconic through cartoons and advertisem",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-10-07T18:28:26+00:00",
+      "original_title": "Origins of Uncle Sam Part 3: Cartoons and Advertising in the Nineteenth Century",
+      "source_name": "Library of Congress Folklore",
+      "source_url": "https://blogs.loc.gov/folklife/2026/10/origins-of-uncle-sam-part-3-cartoons-and-advertising-in-the-nineteenth-century",
+      "url": "https://blogs.loc.gov/folklife/2026/10/origins-of-uncle-sam-part-3-cartoons-and-advertising-in-the-nineteenth-century",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "bad_astronomy-2026-10-07-202",
       "title": "Meryl Streep Juggled a Project Hail Mary Cameo From Greta Gerwig’s Narnia Set",
       "excerpt": "Meryl Streep really can do anything. The three-time Academy Award winner apparently recorded her brief vocal cameo in Project Hail Mary in between sessions for her role as magical lion Aslan in writer-director Greta Gerwig's Chronicles of Narnia movie, The Magician’s Nephew.",
       "category": "fact_checking",
@@ -150,7 +262,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-07-151",
+      "id": "bad_astronomy-2026-10-07-200",
       "title": "Steven Spielberg Returns for Transformers 8 as Michael Bay Enters Talks to Return",
       "excerpt": "There's more to Steven Spielberg than meets the eye.",
       "category": "fact_checking",
@@ -166,7 +278,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-07-150",
+      "id": "bad_astronomy-2026-10-07-199",
       "title": "LEGO Harry Potter Collection Hitting Nintendo Switch 2 Ahead of HBO TV Series",
       "excerpt": "HBO's Harry Potter television show is still two months away, but Warner Bros. Games has a way to cast a Cheering Charm over fans until then.",
       "category": "fact_checking",
@@ -182,7 +294,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-10-06-27",
+      "id": "skeptic_magazine-2026-10-06-77",
       "title": "Islam and Pseudoscience: Close Encounters in the Classroom (and How to Deal with Them)",
       "excerpt": "A philosophy professor at a Moroccan university spends a decade inside classrooms where students invoke Hume, Popper, and Qur’anic verses to defend creationism, Intelligent Design, and anti-vaccine views—an inside look at teaching critical thinking against pseudoscience with empathy, not ridicule.",
       "category": "fact_checking",
@@ -198,7 +310,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-06-149",
+      "id": "bad_astronomy-2026-10-06-198",
       "title": "Nicolas Cage, Who Has Played Marvel Characters, Compares MCU To “Glorified WWE”",
       "excerpt": "Nicolas Cage is not holding back his thoughts on the Marvel Cinematic Universe. The National Treasure actor recently compared the interconnected film franchise overseen by Kevin Feige to the bombastic theater of professional wrestling while answering questions at Fan Expo Dallas.",
       "category": "fact_checking",
@@ -214,7 +326,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-06-148",
+      "id": "bad_astronomy-2026-10-06-197",
       "title": "Arnold Schwarzenegger Tells Company to Melt Obsolete Robots Terminator-Style",
       "excerpt": "The idea of a humanoid robot melting in a vat of liquid metal was mere science fiction when James Cameron's Terminator 2: Judgement Day hit theaters. Thirty-five years later, we can remove the fiction part.",
       "category": "fact_checking",
@@ -230,7 +342,7 @@
       "image_url": null
     },
     {
-      "id": "darpa_news-2026-10-06-37",
+      "id": "darpa_news-2026-10-06-87",
       "title": "Four more teams enter Quantum Benchmarking Initiative’s final stage",
       "excerpt": "Stage C will test whether utility-scale quantum systems can perform as designed.",
       "category": "arquivos_oficiais",
@@ -246,7 +358,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-06-147",
+      "id": "bad_astronomy-2026-10-06-196",
       "title": "Sebastian Stan Teases Harvey Dent Role in The Batman Part II, Says He’s Ready for Captain America",
       "excerpt": "While still an integral part of the Marvel Cinematic Universe, Sebastian Stan is testing out the waters of another comic book-inspired universe in Matt Reeves' The Batman: Part II.",
       "category": "fact_checking",
@@ -262,7 +374,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-05-145",
+      "id": "bad_astronomy-2026-10-05-194",
       "title": "Avengers: Endgame Just Made Box Office History 7 Years After Release",
       "excerpt": "Avengers: Endgame is once again top dog in terms of box office gross. Thanks to its encore re-release ahead of Avengers: Doomsday, the 2019 Marvel Studios blockbuster has become the most lucrative release in history, overtaking Avatar with close to $3 billion worldwide.",
       "category": "fact_checking",
@@ -278,7 +390,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-05-144",
+      "id": "bad_astronomy-2026-10-05-193",
       "title": "What if The Manson Murders Didn’t Happen? Exploring Cliff Booth's Alternate Timeline",
       "excerpt": "The alternate timeline established by Quentin Tarantino at the end of Once Upon a Time in Hollywood will officially continue next month in Netflix's The Further Mis-Adventures of Cliff Booth.",
       "category": "fact_checking",
@@ -294,7 +406,23 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-05-143",
+      "id": "library_of_congress-2026-10-05-51",
+      "title": "New Book from the American Folklife Center: Sharing Food, Sharing Culture",
+      "excerpt": "The American Folklife Center is delighted to announce the publication of our new book, \"Sharing Food, Sharing Culture: Foodways at the American Folklife Center.\" The 132-page book explores the traditional cultural practices surrounding food through more than 200 items from the center’s collections. Across four chapters, the book examines food and work; the ways people gather to prepare and enjoy food; connections among food, tradition, and the landscape; and creative expressions about food, especially songs. The book was researched, curated, and written by American Folklife Center staff member",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-10-05T14:49:33+00:00",
+      "original_title": "New Book from the American Folklife Center: Sharing Food, Sharing Culture",
+      "source_name": "Library of Congress Folklore",
+      "source_url": "https://blogs.loc.gov/folklife/2026/10/new-book-from-the-american-folklife-center-sharing-food-sharing-culture",
+      "url": "https://blogs.loc.gov/folklife/2026/10/new-book-from-the-american-folklife-center-sharing-food-sharing-culture",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "bad_astronomy-2026-10-05-192",
       "title": "Lanterns Creators Explain Jon Stewart’s Custom Green Lantern Oath in Season Finale",
       "excerpt": "HBO's Lanterns closed out its first season Sunday, Oct. 4, with Jon Stewart (Aaron Pierre) finally accepting the role of Earth's Green Lantern, much to the chagrin of Guy Gardner (Nathan Fillion).",
       "category": "fact_checking",
@@ -310,7 +438,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-05-142",
+      "id": "bad_astronomy-2026-10-05-191",
       "title": "Jessica Chastain Reveals Most Frightening Thing About Horror Flick Other Mommy (Exclusive)",
       "excerpt": "This is one mother of a horror film! Jessica Chastain’s horror flick Other Mommy will certainly make audiences scream in theaters, but she says there’s a chilling larger metaphor that goes beyond the jump-scares.",
       "category": "fact_checking",
@@ -326,7 +454,7 @@
       "image_url": null
     },
     {
-      "id": "arquivo_nacional_br-2026-10-05-117",
+      "id": "arquivo_nacional_br-2026-10-05-166",
       "title": "IRRF ganho de capital e outros rendimentos",
       "excerpt": "IRRF ganho de capital e outros rendimentos",
       "category": "arquivos_oficiais",
@@ -342,7 +470,7 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-10-05-194",
+      "id": "revista_ufo-2026-10-05-243",
       "title": "Luzes na floresta: os mistérios ufológicos que ainda desafiam a Amazônia",
       "excerpt": "Floresta, rios, animais selvagens, índios, caboclos e UFOs! Essa foi a combinação de mais uma aventura promovida pelo editor da Revista UFO na série Viaje com Gevaerd, desta vez uma viagem fluvial …",
       "category": "ufologia",
@@ -358,7 +486,7 @@
       "image_url": null
     },
     {
-      "id": "conspiracy_watch_info-2026-10-04-9",
+      "id": "conspiracy_watch_info-2026-10-04-61",
       "title": "Affaire Bardella : personne n'est dupe",
       "excerpt": "Face aux pièces authentifiées par Mediapart, le président du RN nie en bloc. Ses défenseurs le croient-ils sur parole ? Ou estiment-ils que la vraie menace est ailleurs ?",
       "category": "conspiracoes",
@@ -374,7 +502,7 @@
       "image_url": null
     },
     {
-      "id": "conspiracy_watch_info-2026-10-04-8",
+      "id": "conspiracy_watch_info-2026-10-04-2",
       "title": "Axis for Peace",
       "excerpt": "Axis for Peace est une conférence internationale « anti-impérialiste » organisée à Bruxelles les 17 et 18 novembre 2005 par le Réseau Voltaire de Thierry Meyssan. Ses promoteurs la présentent comme un « Davos contestataire » et l'acte fondateur d'un « mouvement intellectuel » opposé au néoconservatisme et à l'« impérialisme états-unien ». La rencontre […]",
       "category": "conspiracoes",
@@ -390,7 +518,7 @@
       "image_url": null
     },
     {
-      "id": "conspiracy_watch_info-2026-10-04-7",
+      "id": "conspiracy_watch_info-2026-10-04-60",
       "title": "Précommandez le premier numéro de COMPLORAMA !",
       "excerpt": "🚀 COMPLORAMA | La campagne de préventes du magazine est toujours ouverte sur Ulule ! 📖 164 pages d'analyses, d'enquêtes et de reportages pour décrypter le complotisme et les enjeux de la désinformation. 🎙️ L'historienne Valérie Igounet, spécialiste du Rassemblement national, explique pourquoi ce combat pour une information fiable est plus que jamais vital à […]",
       "category": "conspiracoes",
@@ -406,7 +534,7 @@
       "image_url": null
     },
     {
-      "id": "conspiracy_watch_info-2026-10-04-6",
+      "id": "conspiracy_watch_info-2026-10-04-59",
       "title": "Dernière semaine de la campagne Ulule pour COMPLORAMA !",
       "excerpt": "🚀 COMPLORAMA | Dernière semaine de la campagne de préventes du magazine sur Ulule ! 📖 164 pages d'analyses, d'enquêtes et de reportages pour décrypter le complotisme et les enjeux de la désinformation. 🎙️David Medioni, journaliste à Conspiracy Watch, revient sur notre choix de passer au papier pour prolonger la réflexion hors de l'immédiateté des […]",
       "category": "conspiracoes",
@@ -422,7 +550,7 @@
       "image_url": null
     },
     {
-      "id": "conspiracy_watch_info-2026-10-04-5",
+      "id": "conspiracy_watch_info-2026-10-04-58",
       "title": "Comprendre l'Empire",
       "excerpt": "Comprendre l'Empire est un brûlot complotiste d'Alain Soral publié en 2011 aux Éditions Blanche, dirigées par Franck Spengler. Mêlant antisémitisme, antimondialisme, antiaméricanisme et antimaçonnisme, le polémiste d'extrême droite y propose une relecture de deux siècles d'histoire occidentale sous le prisme de la prise de pouvoir d'une oligarchie bancaire indissociable de ce qu'il appelle la « […]",
       "category": "conspiracoes",
@@ -438,7 +566,7 @@
       "image_url": null
     },
     {
-      "id": "conspiracy_watch_info-2026-10-04-4",
+      "id": "conspiracy_watch_info-2026-10-04-1",
       "title": "Jean-Pierre Petit",
       "excerpt": "Jean-Pierre Petit (1937-) est un physicien français, ancien directeur de recherche au CNRS et auteur conspirationniste. Il s'est d'abord fait connaître pour ses bandes dessinées de vulgarisation et, plus tard, pour ses livres sur les ovnis. Il est aujourd'hui un invité régulier de la complosphère francophone. Entré en 1965 à l'Institut de mécanique des fluides […]",
       "category": "conspiracoes",
@@ -454,7 +582,23 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-10-03-26",
+      "id": "folklore_society_uk-2026-10-04-11",
+      "title": "Katharine Briggs Award 2026 Shortlist",
+      "excerpt": "The Folklore Society announces the Shortlist of The Katharine Briggs Award 2026",
+      "category": "criptozoologia_lendas",
+      "category_label": "Criptozoologia lendas",
+      "published_at": "2026-10-04T08:00:00+00:00",
+      "original_title": "Katharine Briggs Award 2026 Shortlist",
+      "source_name": "The Folklore Society UK",
+      "source_url": "https://www.folklore-society.com/blog/post/the-katharine-briggs-award-2026-shortlist",
+      "url": "https://www.folklore-society.com/blog/post/the-katharine-briggs-award-2026-shortlist",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-10-03-76",
       "title": "Digger and the Theater of Power",
       "excerpt": "A skeptical review of Digger, starring Tom Cruise—a film that resists easy political labels and ultimately turns its scrutiny on the audience.",
       "category": "fact_checking",
@@ -470,7 +614,7 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-10-03-193",
+      "id": "revista_ufo-2026-10-03-242",
       "title": "Ex-oficial de inteligência dos EUA sugere existência de base submersa ligada a inteligência não humana",
       "excerpt": "O ex-oficial de inteligência norte-americano David Grusch voltou a chamar a atenção da comunidade ufológica internacional ao apresentar novas alegações sobre a possível presença de uma inteligência…",
       "category": "ufologia",
@@ -486,7 +630,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-03-141",
+      "id": "bad_astronomy-2026-10-03-190",
       "title": "Beware Boiúna's Kiana Madeira, Jessica Rothe Tease Snake's \"Chaos\": \"The Jungle Can Come For Anyone\"",
       "excerpt": "More than a decade before Mike P. Nelson made Beware Boiuna, his new horror film about a colossal snake defending her home, he saw proof of just how true to life his beast perhaps once was.",
       "category": "fact_checking",
@@ -502,7 +646,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-02-140",
+      "id": "bad_astronomy-2026-10-02-189",
       "title": "A Mars Attacks Game? Inside Mars Attracts, The Wild Theme Park Simulator (Exclusive)",
       "excerpt": "Break out the Slim Whitman, because the mean-spirited, big-brained, ack-acking ETs from Mars Attacks have returned. And this time, they're looking to build a human zoo.",
       "category": "fact_checking",
@@ -518,7 +662,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-10-02-179",
+      "id": "vigilant_citizen-2026-10-02-228",
       "title": "The Dark Symbolism of Matières Fécales’ Fashion Show “The Ninety-Nine Percent” - Vigilant Citizen",
       "excerpt": "Matières Fécales' fashion show titled \"The Ninety-Nine Percent\" is said to be about giving power to the people. In reality, it's the exact opposite. Here's a look at the dark meaning behind this highly symbolic fashion show.",
       "category": "conspiracoes",
@@ -534,7 +678,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-02-138",
+      "id": "bad_astronomy-2026-10-02-187",
       "title": "Halloween’s Iconic Score Was Created in Just Three Days",
       "excerpt": "What can you get done in three days? For John Carpenter, it's plenty of time to score an entire movie.",
       "category": "fact_checking",
@@ -550,7 +694,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-10-02-25",
+      "id": "skeptic_magazine-2026-10-02-75",
       "title": "The Truth About Vaccine Schedules: An Injection of Politics?",
       "excerpt": "A fraudulent 12-child study. An expert committee purged over conflicts of interest that had nearly vanished. A citation that never existed. Dr. William Meller explains how a century of vaccine victories is now being unwound, and why measles is roaring back. The evidence, and the politics, laid bare.",
       "category": "fact_checking",
@@ -566,7 +710,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-02-137",
+      "id": "bad_astronomy-2026-10-02-186",
       "title": "This Classic Star Trek Episode Had To Shut Down Because of Strep Throat",
       "excerpt": "Even in the 23rd century, social distancing protocols must be observed.",
       "category": "fact_checking",
@@ -582,7 +726,23 @@
       "image_url": null
     },
     {
-      "id": "cufos_studies-2026-10-02-118",
+      "id": "library_of_congress-2026-10-02-50",
+      "title": "AFC at 50 Exhibit: Sharing and Sustaining Folklife",
+      "excerpt": "On September 17, 2026, the Library opened a new exhibit, \"Alive in Many Hands: The American Folklife Center at 50.\" The exhibition is intended to provide visitors with an exploration of what folklife is, how it has been documented in the Center's archives, and what they can do to sustain folk traditions in their own communities. As part of a series of blog posts celebrating the exhibition, this post provides commentary from one of the five curators on the exhibition sections (and a few items) focused on Sharing and Sustaining Folklife. These sections bookend the exhibit's content, introducing ",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-10-02T15:00:03+00:00",
+      "original_title": "AFC at 50 Exhibit: Sharing and Sustaining Folklife",
+      "source_name": "Library of Congress Folklore",
+      "source_url": "https://blogs.loc.gov/folklife/2026/10/afc-at-50-sharing-and-sustaining-folklife",
+      "url": "https://blogs.loc.gov/folklife/2026/10/afc-at-50-sharing-and-sustaining-folklife",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "cufos_studies-2026-10-02-167",
       "title": "Comment on 2025, the Year in Review by jeffery lindell",
       "excerpt": "In reply to <a href=\"https://cufos.org/2025review/#comment-1\">googletest</a>.\n\nIt those dang Phantom Airships again! Just smaller...",
       "category": "ufologia",
@@ -598,7 +758,7 @@
       "image_url": null
     },
     {
-      "id": "e_farsas-2026-10-01-168",
+      "id": "e_farsas-2026-10-01-217",
       "title": "A Xuxa gravou vídeo criticando falas do presidente Lula sobre toque em crianças?",
       "excerpt": "Vídeo mostra a apresentadora chorando e criticando falas de Lula sobre toque íntimo em crianças, mas será que isso é verdade? As imagens se espalharam nas redes sociais e em grupos do WhatsApp no final de setembro de 2026, e mostram a apresentadora Xuxa Meneghel chorando enquanto critica, indignada, as falas do presidente Lula sobre […] \n O post  A Xuxa gravou vídeo criticando falas do presidente Lula sobre toque em crianças?  apareceu primeiro em  E-farsas .",
       "category": "fact_checking",
@@ -614,7 +774,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-10-01-24",
+      "id": "skeptic_magazine-2026-10-01-74",
       "title": "Are Liberals More Depressed Than Conservatives?",
       "excerpt": "Surveys reveal American liberals, especially young women, report more depression than conservatives. But is the gap real, or a difference in how each side defines and admits to distress? Exploring stigma, expanding definitions of harm, and social media use, this article asks who really has it worse.",
       "category": "fact_checking",
@@ -630,7 +790,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-01-135",
+      "id": "bad_astronomy-2026-10-01-184",
       "title": "Divergent Author Veronica Roth Reveals if Tris & Four Are Still Linked in New Book The Sixth Faction",
       "excerpt": "Even in the Divergent multiverse, Tris and Four are still connected! The Sixth Faction is and all-new book in the Divergent franchise from author Veronica Roth, where, in an alternate universe, heroine Beatrice “Tris” Prior picks Abnegation instead of Dauntless as her faction. While Tris is taking on a different adventure, it doesn’t mean her original love interest Tobias “Four” Eaton is out of the picture.",
       "category": "fact_checking",
@@ -646,7 +806,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-01-134",
+      "id": "bad_astronomy-2026-10-01-183",
       "title": "A New Book Series Is Here To Scratch That Indiana Jones Itch—With a Dash of Cosmic Madness",
       "excerpt": "If you placed Indiana Jones and H.P. Lovecraft in CERN's Large Hadron Collider and turned it on, the new element created would look something like author Christopher Michael's new book series—Danforth: Eldritch Tales of WWII.",
       "category": "fact_checking",
@@ -662,7 +822,7 @@
       "image_url": null
     },
     {
-      "id": "arquivo_nacional_br-2026-10-01-116",
+      "id": "arquivo_nacional_br-2026-10-01-165",
       "title": "Exploração de serviços aéreos especializados",
       "excerpt": "Exploração de serviços aéreos especializados",
       "category": "arquivos_oficiais",
@@ -678,7 +838,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-01-152",
+      "id": "bad_astronomy-2026-10-01-201",
       "title": "Is DC’s Clayface Movie Set in The Robert Pattinson Universe? Everything To Know",
       "excerpt": "Sony couldn't make its villain-centric comic book movies work, but maybe DC Studios can. We'll see whether a classic member of Batman's colorful rogues' gallery can hold their own when director James Watkins' Clayface opens on the big screen. Horror titan Mike Flanagan (The Haunting of Hill House, Doctor Sleep) came up with the film's story, which became a screenplay credited to him and Hossein Amini (Drive, 47 Ronin).",
       "category": "fact_checking",
@@ -694,7 +854,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-10-01-133",
+      "id": "bad_astronomy-2026-10-01-182",
       "title": "Before Brad Bird’s Ray Gunn, There Was Kerry Conran’s Sky Captain and the World of Tomorrow",
       "excerpt": "In December, Netflix will release Ray Gunn, a long-gestating passion project from Academy Award-winner Brad Bird, who gave us The Iron Giant, The Incredibles, Ratatouille and Mission: Impossible - Ghost Proto",
       "category": "fact_checking",
@@ -710,7 +870,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-10-01-77",
+      "id": "vigilant_citizen-2026-10-01-126",
       "title": "The Occult Symbolism of the Los Angeles Central Library",
       "excerpt": "The Occult Symbolism of the Los Angeles Central Library",
       "category": "conspiracoes",
@@ -726,7 +886,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-10-01-76",
+      "id": "vigilant_citizen-2026-10-01-125",
       "title": "Sinister Sites: The Georgia Guidestones",
       "excerpt": "Sinister Sites: The Georgia Guidestones",
       "category": "conspiracoes",
@@ -742,7 +902,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-10-01-75",
+      "id": "vigilant_citizen-2026-10-01-124",
       "title": "The Occult Symbolism Found on the Bank of America Murals",
       "excerpt": "The Occult Symbolism Found on the Bank of America Murals",
       "category": "conspiracoes",
@@ -758,7 +918,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-30-74",
+      "id": "vigilant_citizen-2026-09-30-123",
       "title": "Sinister Sites – St. John The Divine Cathedral",
       "excerpt": "Sinister Sites – St. John The Divine Cathedral",
       "category": "conspiracoes",
@@ -774,7 +934,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-30-73",
+      "id": "vigilant_citizen-2026-09-30-122",
       "title": "Sinister Sites – Rockefeller Center",
       "excerpt": "Sinister Sites – Rockefeller Center",
       "category": "conspiracoes",
@@ -790,7 +950,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-30-72",
+      "id": "vigilant_citizen-2026-09-30-121",
       "title": "Sinister Sites – Nur-Sultan, Khazakhstan",
       "excerpt": "Sinister Sites – Nur-Sultan, Khazakhstan",
       "category": "conspiracoes",
@@ -806,7 +966,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-30-146",
+      "id": "bad_astronomy-2026-09-30-195",
       "title": "How Golden Axe Star Liam McIntyre Says Series Honors Sega’s Classic Game (Exclusive)",
       "excerpt": "Liam McIntyre has seemingly found the cheat code to becoming a video game adaptation staple. After all, not only was he cast as the titular Logan in Marvel’s Wolverine, but the actor is also helping introduce Golden Axe and all its 1980s and 1990s Sega glory to new generations.",
       "category": "fact_checking",
@@ -822,7 +982,7 @@
       "image_url": null
     },
     {
-      "id": "darpa_news-2026-09-30-36",
+      "id": "darpa_news-2026-09-30-86",
       "title": "The Vertical Lift Challenger | Ep 97",
       "excerpt": "Participants made meaningful progress, though the final prize proved elusive.",
       "category": "arquivos_oficiais",
@@ -838,7 +998,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-30-132",
+      "id": "bad_astronomy-2026-09-30-181",
       "title": "Game of Thrones is Officially Coming To The Big Screen—Here's What To Know About The Movie",
       "excerpt": "Westeros is making the jump from television to the big screen. Warner Bros. is officially at work on a Game of Thrones-inspired feature titled Aegon's Conquest, Variety confirmed.",
       "category": "fact_checking",
@@ -854,7 +1014,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-30-131",
+      "id": "bad_astronomy-2026-09-30-180",
       "title": "Russo Brothers Call This Avengers: Endgame Encore Stinger \"The Most Profound\" MCU Moment Ever",
       "excerpt": "If you thought both seasons of Loki and Sam Raimi's Doctor Strange sequel delivered multiversal mayhem to last a lifetime, just wait until you get a load of Avengers: Doomsday.",
       "category": "fact_checking",
@@ -870,7 +1030,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-30-130",
+      "id": "bad_astronomy-2026-09-30-179",
       "title": "Mahershala Ali Sounds Off On Cancelled Blade Movie, Agrees Kevin Feige Should Feel Like \"Gigantic Loser\"",
       "excerpt": "In July, Kevin Feige took responsibility for the cancellation of Marvel Studios' Blade reboot starring two-time Oscar-winner Mahershala Ali (Moonlight, Green Book) as vampire-hunting Daywalker Eric Brooks. \"I'm feeling...like a gigantic loser and failure,\" admitted Feige, \"that we didn't get off the ground with Mahershala.\"",
       "category": "fact_checking",
@@ -886,7 +1046,23 @@
       "image_url": null
     },
     {
-      "id": "conspiracy_watch_info-2026-09-29-3",
+      "id": "library_of_congress-2026-09-30-49",
+      "title": "Leather britches, short snorters, and a Sonicycle: a folklife-themed Family Day",
+      "excerpt": "On Saturday, September 19, 2026, the American Folklife Center capped off a week-long celebration in honor of its new exhibit with a Family Day event focused on folklife. Visitors to the Library were invited to participate in a number of activities that highlighted the exhibit’s themes of Folklife at Play, Foodways, Occupational Folklife, Folklife in Place, Sharing Folklife, and Sustaining Folklife. The highlight of the event was a live radio broadcast with Community Collections Grant awardees Los Herederos, via their specially built Sonicycle.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-09-30T14:03:49+00:00",
+      "original_title": "Leather britches, short snorters, and a Sonicycle: a folklife-themed Family Day",
+      "source_name": "Library of Congress Folklore",
+      "source_url": "https://blogs.loc.gov/folklife/2026/09/leather-britches-short-snorters-and-a-sonicycle-a-folklife-themed-family-day",
+      "url": "https://blogs.loc.gov/folklife/2026/09/leather-britches-short-snorters-and-a-sonicycle-a-folklife-themed-family-day",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "conspiracy_watch_info-2026-09-29-57",
       "title": "🔎 7-Octobre : Netanyahou savait-il ?",
       "excerpt": "🔎 7-Octobre : Netanyahou savait-il ? Que dit l'enquête de Haaretz ? Entretien avec David Khalfa, directeur de l'Observatoire Afrique du Nord et Moyen-Orient de la Fondation Jean-Jaurès.   🔗  Retrouvez l'émission complète : https://www.conspiracywatch.info/7-octobre-netanyahou-savait-il-entretien-avec-david-khalfa.html",
       "category": "conspiracoes",
@@ -902,7 +1078,7 @@
       "image_url": null
     },
     {
-      "id": "conspiracy_watch_info-2026-09-29-2",
+      "id": "conspiracy_watch_info-2026-09-29-56",
       "title": "COMPLORAMA : contrer la désinformation",
       "excerpt": "🚀 [LANCEMENT] La campagne de préventes du magazine COMPLORAMA est ouverte sur Ulule ! 📖 164 pages d'analyses, d'enquêtes et de reportages pour décrypter le complotisme et les enjeux de la désinformation. 🎙️Victor Mottin vous présente ce nouveau projet. 👉 Participez à la campagne en précommandant votre exemplaire ou en faisant un don.  🔗 Rendez-vous […]",
       "category": "conspiracoes",
@@ -918,7 +1094,7 @@
       "image_url": null
     },
     {
-      "id": "conspiracy_watch_info-2026-09-29-1",
+      "id": "conspiracy_watch_info-2026-09-29-55",
       "title": "1, 2, 3... Soral !",
       "excerpt": "Accusé par Mediapart d'avoir tenu des propos antisémites entre 2013 et 2015, Jordan Bardella dénonce une « barbouzerie ». Le RN, lui, ressort son arme favorite : le complot du « Système ».",
       "category": "conspiracoes",
@@ -934,7 +1110,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-29-129",
+      "id": "bad_astronomy-2026-09-29-178",
       "title": "Avengers: Doomsday Director Anthony Russo Explains Biggest Hurdle of Directing Marvel Movies",
       "excerpt": "If anyone has the right to a scholarly opinion about the Marvel Cinematic Universe, it's the Russo brothers. After all, sibling filmmakers Joe Russo and Anthony Russo hold the record for directing the most movies in that world—Captain America: The Winter Soldier, Captain America: Civil War, Avengers: Infinity War and Avengers: Endgame.",
       "category": "fact_checking",
@@ -950,7 +1126,7 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-29-192",
+      "id": "revista_ufo-2026-09-29-241",
       "title": "Steven Greer diz que prazo da carta UNOD expirou e acusa “Estado Profundo” de impedir divulgação completa dos UFOs",
       "excerpt": "O médico e pesquisador norte-americano Steven Greer, uma das figuras mais conhecidas e controversas da ufologia mundial, voltou a defender a existência de programas secretos voltados ao estudo de t…",
       "category": "ufologia",
@@ -966,7 +1142,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-29-127",
+      "id": "bad_astronomy-2026-09-29-176",
       "title": "Casey Affleck Called Up Christopher Nolan On a Whim To Settle Tenet Debate With His Son",
       "excerpt": "When most of us have a question about a Christopher Nolan movie, our best resources are Google, Quora and Reddit. When Hollywood insiders have similar queries, however, they go right to the source. That's exactly what Oscar-winner Casey Affleck (Manchester by the Sea) did when he and his son got into a heated debate over Nolan's labyrinthine espionage time travel spy thriller, Tenet.",
       "category": "fact_checking",
@@ -982,7 +1158,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-29-71",
+      "id": "vigilant_citizen-2026-09-29-120",
       "title": "Sinister Sites – Temple Square, Utah",
       "excerpt": "Sinister Sites – Temple Square, Utah",
       "category": "conspiracoes",
@@ -998,7 +1174,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-29-70",
+      "id": "vigilant_citizen-2026-09-29-119",
       "title": "Sinister Sites – Israel Supreme Court",
       "excerpt": "Sinister Sites – Israel Supreme Court",
       "category": "conspiracoes",
@@ -1014,7 +1190,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-29-69",
+      "id": "vigilant_citizen-2026-09-29-118",
       "title": "Sinister Sites – Illuminati Pyramid in Blagnac, France",
       "excerpt": "Sinister Sites – Illuminati Pyramid in Blagnac, France",
       "category": "conspiracoes",
@@ -1030,7 +1206,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-09-28-23",
+      "id": "skeptic_magazine-2026-09-28-73",
       "title": "What’s It Like to Be a Dolphin? (I Don’t Know and Neither Do You)",
       "excerpt": "Swimming with a dolphin named Malu, Michael Shermer tried to imagine life with flukes, blubber, and a raw-fish diet, and ran straight into the hard problem of consciousness. Could brain-linking tech ever let us feel another being’s experience? He doubts it, and isn’t sure he’d even want to know.",
       "category": "fact_checking",
@@ -1046,7 +1222,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-09-28-22",
+      "id": "skeptic_magazine-2026-09-28-72",
       "title": "Brain-Dependent Dualism: Why the Hard Problem Isn’t Hopeless",
       "excerpt": "Gary J. Whittenberger counters Michael Shermer’s claim that consciousness is forever unsolvable, arguing the hard problem is actually yielding to science. He rejects souls and Cartesian dualism, defends a brain-dependent mind, and explains why some facts simply have no further explanation.",
       "category": "fact_checking",
@@ -1062,7 +1238,23 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-28-128",
+      "id": "skeptic_magazine-2026-09-28-40",
+      "title": "Would You Want to Know If You Were Wrong?",
+      "excerpt": "About this episode:\n\nWhat do you make of an experience you can’t explain? A strange light in the sky, a book flying off a desk, a coincidence that feels too improbable to be chance? Social psychologist Barry Markovsky joins Michael Shermer to discuss his new book Everyday Extraordinary and",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-09-28T19:16:56+00:00",
+      "original_title": "Would You Want to Know If You Were Wrong?",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/would-you-want-to-know-if-you-were-wrong",
+      "url": "https://www.skeptic.com/michael-shermer-show/would-you-want-to-know-if-you-were-wrong",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "bad_astronomy-2026-09-28-177",
       "title": "Avengers: Doomsday \"Is Born\" In This Moment From Avengers: Endgame Encore, Per Anthony Russo",
       "excerpt": "Avengers: Doomsday is almost here, with Avengers: Endgame Encore setting the stage for what's to come. The swan song screenings of the massive 2019 blockbuster hit ends with four separate stingers directly related to the forthcoming battle against Robert Downey Jr.'s Doctor Doom, which involves several corners of the infinite multiverse.",
       "category": "fact_checking",
@@ -1078,7 +1270,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-28-126",
+      "id": "bad_astronomy-2026-09-28-175",
       "title": "Star Wars Taps Spider-Man: No Way Home Director Jon Watts To Continue Skywalker Saga",
       "excerpt": "Jon Watts is officially returning to the galaxy far, far away.",
       "category": "fact_checking",
@@ -1094,7 +1286,7 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-28-191",
+      "id": "revista_ufo-2026-09-28-240",
       "title": "Dakila integra pesquisas sobre Ratanabá, tecnologia LiDAR e economia digital em um dos projetos mais ousados do Brasil",
       "excerpt": "É dali que partem as atividades da Dakila Pesquisas, organização presidida por Urandir Fernandes de Oliveira e conhecida por seus estudos relacionados à enigmática Ratanabá, suposta civilização anc…",
       "category": "ufologia",
@@ -1110,7 +1302,23 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-25-136",
+      "id": "folklore_society_uk-2026-09-28-10",
+      "title": "The Folklore Society blog : New issue of Folklore now out!",
+      "excerpt": "<p>Funerals, healing traditions, whistling languages - and more!</p>",
+      "category": "criptozoologia_lendas",
+      "category_label": "Criptozoologia lendas",
+      "published_at": "2026-09-28T08:00:00+00:00",
+      "original_title": "The Folklore Society blog : New issue of Folklore now out!",
+      "source_name": "The Folklore Society UK",
+      "source_url": "https://www.folklore-society.com/blog/post/new-issue-of-folklore-now-out",
+      "url": "https://www.folklore-society.com/blog/post/new-issue-of-folklore-now-out",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "bad_astronomy-2026-09-25-185",
       "title": "Will We See William Shatner In Another Star Trek Project? He Says... (Exclusive)",
       "excerpt": "It's been 32 years since William Shatner played James T. Kirk in a Star Trek project. Will he ever return to Starfleet?",
       "category": "fact_checking",
@@ -1126,7 +1334,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-25-125",
+      "id": "bad_astronomy-2026-09-25-174",
       "title": "Dan Aykroyd Reveals Wild Stolen Police Motorcycle Joyride with Ghostbusters’ Bill Murray",
       "excerpt": "If you battle malevolent ectoplasmic entities for a living you can pretty much do whatever you want, consequences be damned.",
       "category": "fact_checking",
@@ -1142,7 +1350,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-25-178",
+      "id": "vigilant_citizen-2026-09-25-227",
       "title": "The 2026 Brazilian Election Farce - Vigilant Citizen",
       "excerpt": "The most efficient form of power is the kind that does not need to appear in the photograph. Presidents may deliver speeches, ministers may hold office, and cameras may capture every gesture; yet, public exposure alone does not reveal the true source of decisions. It is precisely on the gap between holding office and exercising",
       "category": "conspiracoes",
@@ -1158,7 +1366,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-25-124",
+      "id": "bad_astronomy-2026-09-25-173",
       "title": "What Is The Magician’s Nephew? Greta Gerwig’s Narnia Adaptation Explained",
       "excerpt": "Nearly a decade after Disney's last Chronicles of Narnia film, The Voyage of the Dawn Treader, the expansive fantasy universe created by C.S. Lewis is coming back to the big screen via Netflix and Barbie director Greta Gerwig. Given that the Mouse House already adapted the first three novels, Gerwig—who serves as both writer and director—is going in a different direction by tackling The Magician's Nephew.",
       "category": "fact_checking",
@@ -1174,7 +1382,7 @@
       "image_url": null
     },
     {
-      "id": "darpa_news-2026-09-25-35",
+      "id": "darpa_news-2026-09-25-85",
       "title": "CIDAR challenge pushes the limits of passive ranging",
       "excerpt": "Participants made meaningful progress, though the final prize proved elusive.",
       "category": "arquivos_oficiais",
@@ -1190,7 +1398,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-09-24-21",
+      "id": "skeptic_magazine-2026-09-24-71",
       "title": "An Evolutionary Perspective on Socialism",
       "excerpt": "Why do strangers cooperate at planetary scale, and why does centrally planned socialism keep stumbling? Drawing on evolutionary biology, game theory, and his own Soviet-era fieldwork, Marc Defant argues that human cooperation is conditional, and that markets, not planners, best channel that trait.",
       "category": "fact_checking",
@@ -1206,7 +1414,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-24-123",
+      "id": "bad_astronomy-2026-09-24-172",
       "title": "Robert Downey Jr. Reveals Why He Returned To MCU For Avengers: Doomsday",
       "excerpt": "Robert Downey Jr. is looking to shift the hierarchy of power, Black Adam-style, with Avengers: Doomsday.",
       "category": "fact_checking",
@@ -1222,7 +1430,7 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-24-190",
+      "id": "revista_ufo-2026-09-24-239",
       "title": "Revendo a Abdução de Antonio Villas Boas",
       "excerpt": "Existem regiões que parecem atrair ou produzir fenômenos anômalos e inexplicados. E, não raro, tais locais também são cenários de casos ufológicos famosos. Ninguém até hoje conseguiu explicar por q…",
       "category": "ufologia",
@@ -1238,7 +1446,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-24-122",
+      "id": "bad_astronomy-2026-09-24-171",
       "title": "How Harry Potter Helped Kit Harington with His Sobriety",
       "excerpt": "Oftentimes, Harry Potter can be as soothing as a long hot soak in the Prefects' private bathtub. Game of Thrones alum Kit Harington discovered just that when he turned to Potter audiobooks for comfort after getting sober. As a native Brit, he is, of course, partial to Stephen Fry's narration over the work done by Jim Dale for American listeners. To each their own.",
       "category": "fact_checking",
@@ -1254,7 +1462,7 @@
       "image_url": null
     },
     {
-      "id": "e_farsas-2026-09-24-167",
+      "id": "e_farsas-2026-09-24-216",
       "title": "Médico-robô é flagrado fugindo do hospital! Real ou fake?",
       "excerpt": "Vídeo mostra um robô fugindo de um hospital depois de trabalhar por 36 horas em um plantão, mas será que esse vídeo é verdadeiro? As imagens que mostram um robô vestido com uma roupa hospitalar correndo enquanto uma ambulância e outras pessoas parecem tentar alcançá-lo começaram a se espalhar nas redes sociais na segunda metade […] \n O post  Médico-robô é flagrado fugindo do hospital! Real ou fake?  apareceu primeiro em  E-farsas .",
       "category": "fact_checking",
@@ -1270,7 +1478,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-23-177",
+      "id": "vigilant_citizen-2026-09-23-226",
       "title": "There’s Something Terribly Wrong Happening to Kate Beckinsale - Vigilant Citizen",
       "excerpt": "After posting a series of alarming stories, actress Kate Beckinsale wiped her entire Instagram account, leaving only a strange link and a profile picture about being \"a threat to the new world order.\" Is something happening to her behind the scenes?",
       "category": "conspiracoes",
@@ -1286,7 +1494,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-23-120",
+      "id": "bad_astronomy-2026-09-23-169",
       "title": "Resident Evil’s Austin Abrams Reacts to Movie's \"Really Risky and Gutsy\" Ending",
       "excerpt": "Rather than try to faithfully adapt the video game franchise that inspired it, Zach Cregger's Resident Evil takes a more loosey-goosey approach to the survival horror source material.",
       "category": "fact_checking",
@@ -1302,7 +1510,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-23-121",
+      "id": "bad_astronomy-2026-09-23-170",
       "title": "What Makes Tom Holland the Perfect Spider-Man? Allow Frank Miller to Explain",
       "excerpt": "After just two months in theaters, Spider-Man: Brand New Day is now the third-highest grossing movie of all time after Avatar and Avengers: Endgame with nearly $2.5 billion in worldwide ticket sales. Clearly, there's still a massive appetite for Marvel's friendly neighborhood wall-crawler, and Tom Holland's youthful and disarming take on Peter Parker has a lot to do with it.",
       "category": "fact_checking",
@@ -1318,7 +1526,23 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-23-189",
+      "id": "library_of_congress-2026-09-23-48",
+      "title": "Veterans History Project in the American Folklife Center’s New Exhibit",
+      "excerpt": "What do a WWII-era chocolate ration, a photograph of a veteran playing golf in the middle of the Iraq desert and something called a “short snorter” have in common? You can find all three in the Library of Congress’s newest exhibition, Alive in Many Hands: The American Folklife Center at 50, opening September 18 in the Thomas Jefferson Building. Read on to find out more about the exhibit and some of the Veterans History Project collections featured within it.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-09-23T14:00:36+00:00",
+      "original_title": "Veterans History Project in the American Folklife Center’s New Exhibit",
+      "source_name": "Library of Congress Folklore",
+      "source_url": "https://blogs.loc.gov/folklife/2026/09/veterans-history-project-in-the-american-folklife-centers-new-exhibit",
+      "url": "https://blogs.loc.gov/folklife/2026/09/veterans-history-project-in-the-american-folklife-centers-new-exhibit",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "revista_ufo-2026-09-23-238",
       "title": "Contatos imediatos de Segundo e Terceiro grau na Amazônia",
       "excerpt": "Entre diversos episódios de avistamento e contato com UFOs na Amazônia, o de Roberto Ariel certamente é surpreendente. Ariel é um dos protagonistas do avistamento coletivo de uma nave que atravesso…",
       "category": "ufologia",
@@ -1334,7 +1558,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-23-68",
+      "id": "vigilant_citizen-2026-09-23-117",
       "title": "The (Not So) Hidden Spiritual Meaning of the Movie “Sinners”",
       "excerpt": "The (Not So) Hidden Spiritual Meaning of the Movie “Sinners”",
       "category": "conspiracoes",
@@ -1350,7 +1574,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-23-67",
+      "id": "vigilant_citizen-2026-09-23-116",
       "title": "The Occult Symbolism of “KPop Demon Hunters” and Its Messages About the Music Industry",
       "excerpt": "The Occult Symbolism of “KPop Demon Hunters” and Its Messages About the Music Industry",
       "category": "conspiracoes",
@@ -1366,7 +1590,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-23-66",
+      "id": "vigilant_citizen-2026-09-23-115",
       "title": "The Mind-Boggling Links Between the Movie “Snake Eyes” and Charlie Kirk’s Death",
       "excerpt": "The Mind-Boggling Links Between the Movie “Snake Eyes” and Charlie Kirk’s Death",
       "category": "conspiracoes",
@@ -1382,7 +1606,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-23-65",
+      "id": "vigilant_citizen-2026-09-23-114",
       "title": "“HIM”: A Ridiculously Blatant Movie About the Occult Elite Grooming Its Stars",
       "excerpt": "“HIM”: A Ridiculously Blatant Movie About the Occult Elite Grooming Its Stars",
       "category": "conspiracoes",
@@ -1398,7 +1622,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-09-22-20",
+      "id": "skeptic_magazine-2026-09-22-70",
       "title": "Shadow Evidence: What UAPs, Ghosts, and AI Images Teach Us About Inference",
       "excerpt": "A shadow on a wall can’t tell you everything about the object casting it and neither can a blurry UAP video, a ghost photo, or an AI-generated image. This essay offers a five-step test for separating genuine observation from the hidden story we quietly add to it ourselves, every time.",
       "category": "fact_checking",
@@ -1414,7 +1638,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-22-119",
+      "id": "bad_astronomy-2026-09-22-168",
       "title": "Why Harry Potter, Star Wars Was a Problem For Domhnall Gleeson in The Incomer (Exclusive)",
       "excerpt": "Domhnall Gleeson has already entered the worlds of Harry Potter and Star Wars. But, thankfully he’s stayed out of Middle-earth. Otherwise his The Incomer character’s comical retelling of Lord of the Rings might’ve been too meta for comfort.",
       "category": "fact_checking",
@@ -1430,7 +1654,23 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-22-108",
+      "id": "skeptic_magazine-2026-09-22-39",
+      "title": "Does Consciousness Break the Laws of Physics?",
+      "excerpt": "About this episode:\n\nIf we could explain everything happening in your brain, would there still be something left to explain about you? Physicist Avshalom Elitzur thinks so—and argues that accounting for consciousness may require changing the laws of physics. In this lively conversation, Michael Shermer challenges Elitzur on why",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-09-22T21:19:02+00:00",
+      "original_title": "Does Consciousness Break the Laws of Physics?",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/does-consciousness-break-the-laws-of-physics",
+      "url": "https://www.skeptic.com/michael-shermer-show/does-consciousness-break-the-laws-of-physics",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "bad_astronomy-2026-09-22-157",
       "title": "Star Wars Veteran Hayden Christensen Addresses Solo Darth Vader Movie Rumors",
       "excerpt": "You can take the man out of the Dark Side of the Force, but you can't take the Dark Side of the Force out of the man. Star Wars alum Hayden Christensen is ready to put the respirator and black cape back on should Lucasfilm come calling with the offer of an alleged Darth Vader solo movie.",
       "category": "fact_checking",
@@ -1446,7 +1686,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-22-107",
+      "id": "bad_astronomy-2026-09-22-156",
       "title": "Mark Hamill Reacts to Ryan Gosling Joining Star Wars in Starfighter",
       "excerpt": "Ryan Gosling can rest assured that he will enter the Star Wars universe with Luke Skywalker's blessing.",
       "category": "fact_checking",
@@ -1462,7 +1702,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-22-105",
+      "id": "bad_astronomy-2026-09-22-154",
       "title": "See George Lucas Reunite with Star Wars Icons Harrison Ford and Mark Hamill",
       "excerpt": "The Force was strong as the Lucas Museum of Narrative Art officially opened its doors to a galaxy-sized crowd of Hollywood elites.",
       "category": "fact_checking",
@@ -1478,7 +1718,7 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-22-188",
+      "id": "revista_ufo-2026-09-22-237",
       "title": "Documentos levantam suspeitas de que Bush sabia de contato extraterrestre em 1964",
       "excerpt": "A verdade pode estar lá fora, e George H.W. Bush aparentemente sabia disso. Depoimentos apresentados no impactante documentário \"The Age of Disclosure\" indicam que o ex-presidente não só …",
       "category": "ufologia",
@@ -1494,7 +1734,7 @@
       "image_url": null
     },
     {
-      "id": "e_farsas-2026-09-19-166",
+      "id": "e_farsas-2026-09-19-215",
       "title": "O IBGE vai incluir o tráfico de drogas no cálculo do PIB?",
       "excerpt": "É verdade que o IBGE vai acrescentar a movimentação do tráfico de drogas e das BETs no cálculo do Produto Interno Bruto nacional? Publicações espalhadas nas redes sociais na segunda quinzena de setembro de 2026 afirmam que o Governo Federal teria ordenado que o Instituto Brasileiro de Geografia e Estatísticas (IBGE) passe a incluir a […] \n O post  O IBGE vai incluir o tráfico de drogas no cálculo do PIB?  apareceu primeiro em  E-farsas .",
       "category": "fact_checking",
@@ -1510,7 +1750,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-19-64",
+      "id": "vigilant_citizen-2026-09-19-113",
       "title": "Is “The Assessment” a Script For a Globalist New World Order?",
       "excerpt": "Is “The Assessment” a Script For a Globalist New World Order?",
       "category": "conspiracoes",
@@ -1526,7 +1766,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-19-63",
+      "id": "vigilant_citizen-2026-09-19-112",
       "title": "2024 Grammys: It Had To Be All About Taylor Swift. It Just Had To.",
       "excerpt": "2024 Grammys: It Had To Be All About Taylor Swift. It Just Had To.",
       "category": "conspiracoes",
@@ -1542,7 +1782,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-19-62",
+      "id": "vigilant_citizen-2026-09-19-111",
       "title": "There’s Something Terribly Wrong With “Poor Things”",
       "excerpt": "There’s Something Terribly Wrong With “Poor Things”",
       "category": "conspiracoes",
@@ -1558,7 +1798,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-19-61",
+      "id": "vigilant_citizen-2026-09-19-110",
       "title": "“American Horror Story: Delicate” and its Messages About Hollywood’s Occult Underbelly",
       "excerpt": "“American Horror Story: Delicate” and its Messages About Hollywood’s Occult Underbelly",
       "category": "conspiracoes",
@@ -1574,7 +1814,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-18-104",
+      "id": "bad_astronomy-2026-09-18-153",
       "title": "Brad Pitt's World War Z Sequel Finally Moving Forward With Conclave Director",
       "excerpt": "At long last, Brad Pitt's World War Z sequel is finally seeing some undead momentum. Oscar winner Edward Berger (All Quiet on the Western Front, Conclave) has boarded the Paramount project as director and executive producer, according to The Hollywood Reporter.",
       "category": "fact_checking",
@@ -1590,7 +1830,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-18-103",
+      "id": "bad_astronomy-2026-09-18-152",
       "title": "How a Fire Nearly Derailed The Dark Crystal: Age of Resistance",
       "excerpt": "The Darkening was the least of Thra's worries when a fire broke out on the set of Netflix's The Dark Crystal: Age of Resistance. Most unfortunately, the destructive blaze occurred before it was time to shoot the finale's big battle sequence between the Gelflings and Skesis.",
       "category": "fact_checking",
@@ -1606,7 +1846,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-18-60",
+      "id": "vigilant_citizen-2026-09-18-109",
       "title": "The Eurovision 2024 Finale Was Basically a Demonic Ritual",
       "excerpt": "The Eurovision 2024 Finale Was Basically a Demonic Ritual",
       "category": "conspiracoes",
@@ -1622,7 +1862,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-18-59",
+      "id": "vigilant_citizen-2026-09-18-108",
       "title": "The Much-Overlooked Symbolism in Roman Polanski’s “The Ninth Gate”",
       "excerpt": "The Much-Overlooked Symbolism in Roman Polanski’s “The Ninth Gate”",
       "category": "conspiracoes",
@@ -1638,7 +1878,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-18-58",
+      "id": "vigilant_citizen-2026-09-18-107",
       "title": "Politics and Mind Control: Why “The Manchurian Candidate” is More Relevant Than Ever",
       "excerpt": "Politics and Mind Control: Why “The Manchurian Candidate” is More Relevant Than Ever",
       "category": "conspiracoes",
@@ -1654,7 +1894,7 @@
       "image_url": null
     },
     {
-      "id": "arquivo_nacional_br-2026-09-18-38",
+      "id": "arquivo_nacional_br-2026-09-18-54",
       "title": "Procuradoria Federal Especializada",
       "excerpt": "Procuradoria Federal Especializada",
       "category": "arquivos_oficiais",
@@ -1670,7 +1910,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-09-18-19",
+      "id": "skeptic_magazine-2026-09-18-69",
       "title": "The Psychology of Being “Spiritual but Not Religious”",
       "excerpt": "Why do humans stay spiritual even after abandoning belief in God? A psychology professor traces the evolutionary wiring behind faith, spirituality, and ritual, showing why secular seekers still chase meaning, awe, and connection long after organized religion fades away.",
       "category": "fact_checking",
@@ -1686,7 +1926,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-18-102",
+      "id": "bad_astronomy-2026-09-18-151",
       "title": "William Shatner Reacts to Twilight Zone’s Eerie Parallels to AI (Exclusive)",
       "excerpt": "Last summer, X user @Gravantus made a pointed observation:",
       "category": "fact_checking",
@@ -1702,7 +1942,7 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-18-187",
+      "id": "revista_ufo-2026-09-18-236",
       "title": "Departamento de Guerra dos EUA libera sexto lote de arquivos oficiais sobre UAPs",
       "excerpt": "O governo dos Estados Unidos divulgou nesta sexta-feira (18) uma nova leva de arquivos relacionados aos Fenômenos Anômalos Não Identificados (UAPs). Ao todo, foram publicados 71 novos arquivos, ele…",
       "category": "ufologia",
@@ -1718,7 +1958,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-18-101",
+      "id": "bad_astronomy-2026-09-18-150",
       "title": "The Ending of Zach Cregger's Resident Evil Movie Explained",
       "excerpt": "If you took an average person off the street and dropped them into Raccoon City, it would probably look something like director Zach Cregger's take on the Resident Evil franchise.",
       "category": "fact_checking",
@@ -1734,7 +1974,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-17-100",
+      "id": "bad_astronomy-2026-09-17-149",
       "title": "Resident Evil Director Zach Cregger Reveals the Movie's Video Game Connections",
       "excerpt": "Long before making his own Resident Evil movie, Zach Cregger was a fan of Capcom’s video game franchise, pouring countless hours into fighting monsters, solving puzzles and anxiously awaiting the next threat.",
       "category": "fact_checking",
@@ -1750,7 +1990,7 @@
       "image_url": null
     },
     {
-      "id": "e_farsas-2026-09-17-165",
+      "id": "e_farsas-2026-09-17-214",
       "title": "A inteligência artificial pode alterar votos na urna eletrônica?",
       "excerpt": "É verdade que os avanços na área de inteligência artificial colocaram a segurança das urnas eletrônicas em xeque? É possível que a IA consiga alterar votos na urna eletrônica?  Vídeos publicados nas redes sociais na segunda quinzena de setembro de 2026 sugerem que a inteligência artificial pode alterar votos nas urnas eletrônicas e o assunto […] \n O post  A inteligência artificial pode alterar votos na urna eletrônica?  apareceu primeiro em  E-farsas .",
       "category": "fact_checking",
@@ -1766,7 +2006,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-17-99",
+      "id": "bad_astronomy-2026-09-17-148",
       "title": "Jurassic Park Subtly References John Hammond's Global Dinosaur Plans",
       "excerpt": "In case you needed any more proof that John Hammond (Sir Richard Attenborough) bit off way more than he could chew with Jurassic Park, then pay close attention to the background audio during the Chilean sea bass lunch scene. The little slideshow presentation is accompanied by a narration track in which Hammond talks about future plans to expand the dinosaur operation worldwide.",
       "category": "fact_checking",
@@ -1782,7 +2022,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-17-176",
+      "id": "vigilant_citizen-2026-09-17-225",
       "title": "The Frighteningly Accurate Predictions the 1973 Movie “Soylent Green” Made About the 2020s - Vigilant Citizen",
       "excerpt": "The 1973 movie \"Soylent Green\" takes place in 2022 and many of its darkest predictions have become reality in recent years. Here's a look at this bizarre movie's many accurate predictions.",
       "category": "conspiracoes",
@@ -1798,7 +2038,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-17-98",
+      "id": "bad_astronomy-2026-09-17-147",
       "title": "New Book On E.T.'s Unexpected Origin Chronicles Last Time Hollywood \"Ever Doubted Spielberg\" (Exclusive)",
       "excerpt": "The origin of Steven Spielberg's E.T. the Extra-Terrestrial is wilder than you could ever imagine.",
       "category": "fact_checking",
@@ -1814,7 +2054,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-17-57",
+      "id": "vigilant_citizen-2026-09-17-106",
       "title": "An In-Depth Look at the Dark Messages and Symbolism in “Longlegs”",
       "excerpt": "An In-Depth Look at the Dark Messages and Symbolism in “Longlegs”",
       "category": "conspiracoes",
@@ -1830,7 +2070,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-17-56",
+      "id": "vigilant_citizen-2026-09-17-105",
       "title": "An In-Depth Look at the Hidden Meaning and Symbolism in “Blink Twice”",
       "excerpt": "An In-Depth Look at the Hidden Meaning and Symbolism in “Blink Twice”",
       "category": "conspiracoes",
@@ -1846,7 +2086,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-17-55",
+      "id": "vigilant_citizen-2026-09-17-104",
       "title": "Adrenochrome and Ritual Humiliation: The True Meaning of the Movie “The Substance”",
       "excerpt": "Adrenochrome and Ritual Humiliation: The True Meaning of the Movie “The Substance”",
       "category": "conspiracoes",
@@ -1862,7 +2102,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-17-97",
+      "id": "bad_astronomy-2026-09-17-146",
       "title": "The Hunger Games: Sunrise on the Reaping Trailer Features Some Eye-Catching Easter Eggs",
       "excerpt": "Odds are, The Hunger Games: Sunrise on the Reaping will connect plenty to the bestselling book series.  And judging from the trailer released Sept. 16, both fans and newcomers to Suzanne Collins’ stories can be excited about the latest big screen prequel.",
       "category": "fact_checking",
@@ -1878,7 +2118,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-09-16-18",
+      "id": "skeptic_magazine-2026-09-16-68",
       "title": "The Hard Problem of Consciousness Is an Insoluble One",
       "excerpt": "Can science ever explain why brain activity feels like something? Michael Shermer argues the Hard Problem of consciousness isn’t just hard, it’s permanently insoluble—a question so logically tangled that the human mind may be constitutionally incapable of answering it.",
       "category": "fact_checking",
@@ -1894,7 +2134,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-09-16-17",
+      "id": "skeptic_magazine-2026-09-16-67",
       "title": "The Hard Problem of Consciousness Is a Soluble One",
       "excerpt": "What is consciousness, how does the brain produce it, and why does it exist? Philosopher Gary Whittenberger tackles Chalmers’s famous Hard Problem head-on, proposing a bold new model—Brain Dependent Dualism—that just might crack one of science’s greatest mysteries.",
       "category": "fact_checking",
@@ -1910,7 +2150,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-16-96",
+      "id": "bad_astronomy-2026-09-16-145",
       "title": "Why Matrix Co-Creator Lilly Wachowski Is “Kinda Done” With Franchise",
       "excerpt": "Lilly Wachowski is officially unplugging herself from The Matrix. The filmmaker, who directed the original trilogy with her sister Lana Wachowski, recently confessed she's \"kinda done\" with the groundbreaking and prescient franchise. While Lilly didn't provide a specific reason as to why, it sounds as though the incessant studio desire to mine existing IP has left her creatively fatigued.",
       "category": "fact_checking",
@@ -1926,7 +2166,7 @@
       "image_url": null
     },
     {
-      "id": "e_farsas-2026-09-16-164",
+      "id": "e_farsas-2026-09-16-213",
       "title": "Daniel Vorcaro pagou 50 mil para corredor amador usar seu relógio em treino?",
       "excerpt": "É verdade que o banqueiro Daniel Vorcaro pagou 50 mil para um corredor amador usar seu relógio em uma corrida para impressionar uma paquera estrangeira? A imagem supostamente vazada do inquérito movido contra Daniel Vorcaro começou a circular nas redes sociais na segunda quinzena de setembro de 2026 e mostra uma conversa entre o banqueiro […] \n O post  Daniel Vorcaro pagou 50 mil para corredor amador usar seu relógio em treino?  apareceu primeiro em  E-farsas .",
       "category": "fact_checking",
@@ -1942,7 +2182,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-16-94",
+      "id": "bad_astronomy-2026-09-16-143",
       "title": "Guillermo del Toro Explains Why It’s So Hard to Adapt H.P. Lovecraft",
       "excerpt": "Guillermo del Toro's filmmaking career is littered with unmade films, but the one that gets brought up time and again is his adaptation of At the Mountains of Madness.",
       "category": "fact_checking",
@@ -1958,7 +2198,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-16-95",
+      "id": "bad_astronomy-2026-09-16-144",
       "title": "Andrew Garfield and Jamie Bell Break Silence on Competing for Spider-Man Role",
       "excerpt": "Fourteen years later, Jamie Bell has made peace with the fact that he lost out on the role of Peter Parker in director Marc Webb's The Amazing Spider-Man to Andrew Garfield. The two actors addressed the Marvel casting during a recent appearance on Watch What Happens Live With Andy Cohen (watch below) to promote their Robin Hood-coded film, The Uprising.",
       "category": "fact_checking",
@@ -1974,7 +2214,7 @@
       "image_url": null
     },
     {
-      "id": "arquivo_nacional_br-2026-09-16-115",
+      "id": "arquivo_nacional_br-2026-09-16-164",
       "title": "EBSERH - Filial Hospital Universitário da UFSCar",
       "excerpt": "EBSERH - Filial Hospital Universitário da UFSCar",
       "category": "arquivos_oficiais",
@@ -1990,7 +2230,7 @@
       "image_url": null
     },
     {
-      "id": "e_farsas-2026-09-15-163",
+      "id": "e_farsas-2026-09-15-212",
       "title": "Fotografia encontrada em tumba egípcia provou que a viagem no tempo é real?",
       "excerpt": "O cientista Elon Huck teria provado que é possível viajar no tempo ao deixar uma fotografia sua de 1987 em uma tumba egípcia aberta em 1932! Será que isso é verdade? A história voltou a circular nas redes sociais na primeira quinzena de setembro de 2026 e conta o estranho caso de uma relíquia que […] \n O post  Fotografia encontrada em tumba egípcia provou que a viagem no tempo é real?  apareceu primeiro em  E-farsas .",
       "category": "fact_checking",
@@ -2006,7 +2246,23 @@
       "image_url": null
     },
     {
-      "id": "arquivo_nacional_br-2026-09-15-110",
+      "id": "skeptic_magazine-2026-09-15-38",
+      "title": "How Much Can One Person Change History?",
+      "excerpt": "New on the podcast: Jared Diamond. Listen now.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-09-15T22:17:15+00:00",
+      "original_title": "How Much Can One Person Change History?",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/jared-diamond-how-much-can-one-person-change-history",
+      "url": "https://www.skeptic.com/michael-shermer-show/jared-diamond-how-much-can-one-person-change-history",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "arquivo_nacional_br-2026-09-15-159",
       "title": "Registrar ou Averbar Direitos Autorais na Biblioteca Nacional  _com legenda",
       "excerpt": "Registrar ou Averbar Direitos Autorais na Biblioteca Nacional  _com legenda",
       "category": "arquivos_oficiais",
@@ -2022,7 +2278,7 @@
       "image_url": null
     },
     {
-      "id": "arquivo_nacional_br-2026-09-15-113",
+      "id": "arquivo_nacional_br-2026-09-15-162",
       "title": "Registrar ou Averbar Direitos Autorais na Biblioteca Nacional  _com legenda",
       "excerpt": "Registrar ou Averbar Direitos Autorais na Biblioteca Nacional  _com legenda",
       "category": "arquivos_oficiais",
@@ -2038,7 +2294,7 @@
       "image_url": null
     },
     {
-      "id": "arquivo_nacional_br-2026-09-15-112",
+      "id": "arquivo_nacional_br-2026-09-15-161",
       "title": "Registrar ou Averbar Direitos Autorais na Biblioteca Nacional  _com legenda",
       "excerpt": "Registrar ou Averbar Direitos Autorais na Biblioteca Nacional  _com legenda",
       "category": "arquivos_oficiais",
@@ -2054,7 +2310,7 @@
       "image_url": null
     },
     {
-      "id": "arquivo_nacional_br-2026-09-15-114",
+      "id": "arquivo_nacional_br-2026-09-15-163",
       "title": "Registrar ou Averbar Direitos Autorais na Biblioteca Nacional  _com legenda",
       "excerpt": "Registrar ou Averbar Direitos Autorais na Biblioteca Nacional  _com legenda",
       "category": "arquivos_oficiais",
@@ -2070,7 +2326,7 @@
       "image_url": null
     },
     {
-      "id": "arquivo_nacional_br-2026-09-15-111",
+      "id": "arquivo_nacional_br-2026-09-15-160",
       "title": "Registrar ou Averbar Direitos Autorais na Biblioteca Nacional  _com legenda",
       "excerpt": "Registrar ou Averbar Direitos Autorais na Biblioteca Nacional  _com legenda",
       "category": "arquivos_oficiais",
@@ -2086,7 +2342,23 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-15-92",
+      "id": "folklore_society_uk-2026-09-15-9",
+      "title": "The Folklore Society blog : SAVE THE DATE: The Folklore Society Annual Conference 2027",
+      "excerpt": "<p>Diaries out! Details of our next annual conference revealed.&nbsp;</p>",
+      "category": "criptozoologia_lendas",
+      "category_label": "Criptozoologia lendas",
+      "published_at": "2026-09-15T17:00:00+00:00",
+      "original_title": "The Folklore Society blog : SAVE THE DATE: The Folklore Society Annual Conference 2027",
+      "source_name": "The Folklore Society UK",
+      "source_url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
+      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "bad_astronomy-2026-09-15-141",
       "title": "Harry Potter TV Show’s New Arthur Weasley Has Surprising Tie to OG Peter Pettigrew",
       "excerpt": "HBO's Harry Potter television series has found its Arthur Weasley.",
       "category": "fact_checking",
@@ -2102,7 +2374,7 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-15-186",
+      "id": "revista_ufo-2026-09-15-235",
       "title": "Pentágono emite autorização para denunciantes revelarem informações sobre UAPs",
       "excerpt": "O Pentágono anunciou nesta segunda-feira (14) uma nova autorização legal para que atuais e ex-militares, funcionários civis e contratados do governo dos Estados Unidos possam fornecer informações p…",
       "category": "ufologia",
@@ -2118,7 +2390,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-15-90",
+      "id": "bad_astronomy-2026-09-15-139",
       "title": "Orlando Bloom Ready To Reprise Will Turner Role in Next Pirates of the Caribbean Movie",
       "excerpt": "Orlando Bloom can't wait to set sail again as Will Turner in the next installment of Disney's Pirates of the",
       "category": "fact_checking",
@@ -2134,7 +2406,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-15-91",
+      "id": "bad_astronomy-2026-09-15-140",
       "title": "Creep Tapes’ Kate Siegel Breaks Down the Sex Prosthetic She Became “Obsessed” With (Exclusive)",
       "excerpt": "Kate Siegel is finding the fun in the found footage genre.  But before her guest starring spot on The Creep Tapes’ season three premiere, it was husband and The Exorcist: Martyrs director Mike Flanagan who was pleading to appear on Mark Duplass’ horror anthology series.",
       "category": "fact_checking",
@@ -2150,7 +2422,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-15-93",
+      "id": "bad_astronomy-2026-09-15-142",
       "title": "When Does Crystal Lake TV Show Take Place in the Friday the 13th Timeline?",
       "excerpt": "Summer may be coming to an end for us, but it's just beginning for Linda Cardellini's Pamela Voorhees in Crystal Lake. The Friday the 13th prequel series follows the mother of slasher icon Jason Voorhees before she started murdering sex-crazed counselors.",
       "category": "fact_checking",
@@ -2166,7 +2438,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-15-89",
+      "id": "bad_astronomy-2026-09-15-138",
       "title": "Sarah Michelle Gellar Throws Shade At Canceled Buffy the Vampire Slayer Reboot at 2026 Emmy Awards",
       "excerpt": "Sarah Michelle Gellar had a Buffy reunion and also took a stake to the reboot cancelation news!  The actress was at the 2026 Emmy Awards, where she was joined by her former Buffy the Vampire Slayer costar David Boreanaz in an epic reunion moment. The moment on Sept. 14 marks the first time they’ve reunited in nine years!",
       "category": "fact_checking",
@@ -2182,7 +2454,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-54",
+      "id": "vigilant_citizen-2026-09-14-103",
       "title": "Sinister Sites – The Denver International Airport",
       "excerpt": "Sinister Sites – The Denver International Airport",
       "category": "conspiracoes",
@@ -2198,7 +2470,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-11",
+      "id": "vigilant_citizen-2026-09-14-3",
       "title": "Sinister Sites – The EU Parliament",
       "excerpt": "Sinister Sites – The EU Parliament",
       "category": "conspiracoes",
@@ -2214,7 +2486,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-14-87",
+      "id": "bad_astronomy-2026-09-14-136",
       "title": "How Classic Twilight Zone Episode Pulled Off Rapid Aging In Walter Jameson Episode",
       "excerpt": "More than 60 years later, the practical effects used to rapidly age the title character in Twilight Zone season one episode \"Long Live Walter Jameson\" still hold up.",
       "category": "fact_checking",
@@ -2230,7 +2502,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-14-86",
+      "id": "bad_astronomy-2026-09-14-135",
       "title": "How Andrew Garfield’s The Uprising Connects to The Robin Hood Myth",
       "excerpt": "Robin Hood. The beloved folk hero known for his quiver of arrows and philosophy of stealing from the rich and giving to the poor. Whether it's Disney's kid-friendly version with the singing Rooster or Michael Sarnoski's brutal The Death of Robin Hood, the apocryphal character has enjoyed a rich history onscreen.",
       "category": "fact_checking",
@@ -2246,7 +2518,7 @@
       "image_url": null
     },
     {
-      "id": "darpa_news-2026-09-14-34",
+      "id": "darpa_news-2026-09-14-84",
       "title": "$3.5M to advance autonomous trauma robotics",
       "excerpt": "DARPA Surgical Competition aims to build ‘infinite’ surgical capacity for mass casualty events.",
       "category": "arquivos_oficiais",
@@ -2262,7 +2534,7 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-14-185",
+      "id": "revista_ufo-2026-09-14-234",
       "title": "Vazamentos de UAPs do ISR Militar: Imagens infravermelha adicionadas ao orbe de Mosul",
       "excerpt": "Durante anos, rumores sobre objetos estranhos rastreados por sensores militares avançados circularam nos cantos mais obscuros da internet e em conversas sussurradas entre especialistas em defesa. A…",
       "category": "ufologia",
@@ -2278,7 +2550,7 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-14-184",
+      "id": "revista_ufo-2026-09-14-233",
       "title": "Justiça de Mato Grosso do Sul sentencia dono do Midiamax por improbidade administrativa",
       "excerpt": "Justiça de Mato Grosso do Sul sentencia dono do Midiamax por improbidade administrativa",
       "category": "ufologia",
@@ -2294,7 +2566,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-14-88",
+      "id": "bad_astronomy-2026-09-14-137",
       "title": "James McAvoy Offers Advice to Professor X Successor Christopher Abbott Ahead of MCU's X-Men Reboot",
       "excerpt": "James McAvoy has some solid words of advice for Christopher Abbott as the Wolf Man star prepares to assume the mantle of Professor Charles Xavier in Marvel Studios' upcoming X-Men reboot.",
       "category": "fact_checking",
@@ -2310,7 +2582,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-53",
+      "id": "vigilant_citizen-2026-09-14-102",
       "title": "The Hidden Meaning of “Smile 2”: It’s About Monarch Mind Control",
       "excerpt": "The Hidden Meaning of “Smile 2”: It’s About Monarch Mind Control",
       "category": "conspiracoes",
@@ -2326,7 +2598,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-52",
+      "id": "vigilant_citizen-2026-09-14-101",
       "title": "The Occult Meaning of “Guillermo del Toro’s Pinocchio”",
       "excerpt": "The Occult Meaning of “Guillermo del Toro’s Pinocchio”",
       "category": "conspiracoes",
@@ -2342,7 +2614,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-51",
+      "id": "vigilant_citizen-2026-09-14-100",
       "title": "The 2023 Grammys, Host of the Sam Smith Satanic Ritual",
       "excerpt": "The 2023 Grammys, Host of the Sam Smith Satanic Ritual",
       "category": "conspiracoes",
@@ -2358,7 +2630,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-50",
+      "id": "vigilant_citizen-2026-09-14-99",
       "title": "The Hidden Messages in “Blonde”: Marilyn Monroe’s Life as an Industry Slave",
       "excerpt": "The Hidden Messages in “Blonde”: Marilyn Monroe’s Life as an Industry Slave",
       "category": "conspiracoes",
@@ -2374,7 +2646,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-49",
+      "id": "vigilant_citizen-2026-09-14-98",
       "title": "The Meaning of Melanie Martinez’s Bizarre New Alter-Persona",
       "excerpt": "The Meaning of Melanie Martinez’s Bizarre New Alter-Persona",
       "category": "conspiracoes",
@@ -2390,7 +2662,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-48",
+      "id": "vigilant_citizen-2026-09-14-97",
       "title": "The Hidden Messages in “The Idol” About the Music Industry",
       "excerpt": "The Hidden Messages in “The Idol” About the Music Industry",
       "category": "conspiracoes",
@@ -2406,7 +2678,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-47",
+      "id": "vigilant_citizen-2026-09-14-96",
       "title": "There is Something Terribly Wrong With Media’s Reaction to “Sound of Freedom”",
       "excerpt": "There is Something Terribly Wrong With Media’s Reaction to “Sound of Freedom”",
       "category": "conspiracoes",
@@ -2422,7 +2694,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-46",
+      "id": "vigilant_citizen-2026-09-14-95",
       "title": "The Conspiracy Theories in “They Cloned Tyrone” and its Link With Jamie Foxx’s Mysterious Hospitalization",
       "excerpt": "The Conspiracy Theories in “They Cloned Tyrone” and its Link With Jamie Foxx’s Mysterious Hospitalization",
       "category": "conspiracoes",
@@ -2438,7 +2710,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-45",
+      "id": "vigilant_citizen-2026-09-14-94",
       "title": "The Absolute Hypocrisy of the Movie “Barbie”",
       "excerpt": "The Absolute Hypocrisy of the Movie “Barbie”",
       "category": "conspiracoes",
@@ -2454,7 +2726,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-14-44",
+      "id": "vigilant_citizen-2026-09-14-93",
       "title": "The Hidden Symbolism in “Leave the World Behind”, a Disturbing Movie Produced by the Obamas",
       "excerpt": "The Hidden Symbolism in “Leave the World Behind”, a Disturbing Movie Produced by the Obamas",
       "category": "conspiracoes",
@@ -2470,7 +2742,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-13-43",
+      "id": "vigilant_citizen-2026-09-13-92",
       "title": "How the 1993 Movie “Demolition Man” Perfectly Predicted (and Ridiculed) Today’s Society",
       "excerpt": "How the 1993 Movie “Demolition Man” Perfectly Predicted (and Ridiculed) Today’s Society",
       "category": "conspiracoes",
@@ -2486,7 +2758,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-13-42",
+      "id": "vigilant_citizen-2026-09-13-91",
       "title": "There’s Something Terribly Wrong With “Euphoria”",
       "excerpt": "There’s Something Terribly Wrong With “Euphoria”",
       "category": "conspiracoes",
@@ -2502,7 +2774,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-13-41",
+      "id": "vigilant_citizen-2026-09-13-90",
       "title": "The Disturbing (and Deeply Irritating) Globalist Agendas in the James Bond Movie “No Time to Die”",
       "excerpt": "The Disturbing (and Deeply Irritating) Globalist Agendas in the James Bond Movie “No Time to Die”",
       "category": "conspiracoes",
@@ -2518,7 +2790,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-13-40",
+      "id": "vigilant_citizen-2026-09-13-89",
       "title": "The Toxic Agendas and the Blatant Occult Symbolism of the 2022 VMAs",
       "excerpt": "The Toxic Agendas and the Blatant Occult Symbolism of the 2022 VMAs",
       "category": "conspiracoes",
@@ -2534,7 +2806,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-13-39",
+      "id": "vigilant_citizen-2026-09-13-88",
       "title": "There’s Something Terribly Wrong With Disney’s “Hocus Pocus 2”",
       "excerpt": "There’s Something Terribly Wrong With Disney’s “Hocus Pocus 2”",
       "category": "conspiracoes",
@@ -2550,7 +2822,7 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-13-183",
+      "id": "revista_ufo-2026-09-13-232",
       "title": "Ex-piloto rompe silêncio após décadas e relata encontro com UFO ligado ao caso da Floresta de Rendlesham",
       "excerpt": "O coronel aposentado da Força Aérea dos EUA, Dan 'Tanna' Isbell, um piloto de caça condecorado e engenheiro aeroespacial, decidiu tornar pública sua experiência com fenômenos anômalos não…",
       "category": "ufologia",
@@ -2566,7 +2838,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-12-83",
+      "id": "bad_astronomy-2026-09-12-132",
       "title": "Star Wars' Domhnall Gleeson Got Spotted By Stormtroopers While Sneaking Into Rise of the Resistance",
       "excerpt": "Domhnall Gleeson got the General Hux treatment during his first visit to Star Wars: Galaxy’s Edge. The Rise of Skywalker actor recently revealed what it was like to ride Disney’s Star Wars: Rise of the Resistance ride as an actor in the sci-fi franchise—especially since his ruthless commander-turned-double agent features prominently during the attraction.",
       "category": "fact_checking",
@@ -2582,7 +2854,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-11-85",
+      "id": "bad_astronomy-2026-09-11-134",
       "title": "Gary Oldman Recalls The Very Un-Snape-Like Behavior Alan Rickman Showed On Harry Potter Film Set",
       "excerpt": "If ever there was an award for an actor who was the complete opposite of their most famous movie character, the late Alan Rickman would certainly be one of the top contenders.",
       "category": "fact_checking",
@@ -2598,7 +2870,23 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-11-84",
+      "id": "library_of_congress-2026-09-11-47",
+      "title": "Origins of Uncle Sam: Metafolklore of an American Icon Part 2",
+      "excerpt": "“Uncle Sam,” as a personification of the United States, certainly goes back to the early days of the nation, emerging soon after the American Revolution. Everyone agrees that his name is an expansion of the abbreviation “U.S.” for “United States,” which first appears in documents written by the founders in 1776.  A popular story says that the phrase “Uncle Sam” originally referred to Samuel Wilson, a meatpacker from Troy, New York, who had a contract with the U.S. Army during the War of 1812. According to the story, his crates were stamped “U.S.” because they were destined for the Army, but lo",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-09-11T20:11:45+00:00",
+      "original_title": "Origins of Uncle Sam: Metafolklore of an American Icon Part 2",
+      "source_name": "Library of Congress Folklore",
+      "source_url": "https://blogs.loc.gov/folklife/2026/09/origins-of-uncle-sam-metafolklore-of-an-american-icon-part-2",
+      "url": "https://blogs.loc.gov/folklife/2026/09/origins-of-uncle-sam-metafolklore-of-an-american-icon-part-2",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "bad_astronomy-2026-09-11-133",
       "title": "This Devilish Line in The Twilight Zone's First Faustian Episode Was Completely Improvised",
       "excerpt": "Across its five-season run on CBS, The Twilight Zone struck a total of three Faustian bargains. The idea of selling one's soul to the literal Devil marked a clever way for series creator Rod Serling to explore humanity's fear of death and how people so often compromise their own humanity in exchange for money, power, influence.",
       "category": "fact_checking",
@@ -2614,7 +2902,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-11-106",
+      "id": "bad_astronomy-2026-09-11-155",
       "title": "Everything We Know About Ryan Gosling's Star Wars: Starfighter",
       "excerpt": "Ryan Gosling is set to go to galaxy far, far away in Star Wars: Starfighter.",
       "category": "fact_checking",
@@ -2630,7 +2918,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-09-11-16",
+      "id": "skeptic_magazine-2026-09-11-66",
       "title": "The 9/11 Conspiracy Theories",
       "excerpt": "Michael Shermer takes on the 9/11 Truther movement—melting steel, Pentagon missiles, stand-down orders, suspicious stock trades—dismantling each claim with hard science and demolition-expert testimony, then delivers a sly twist: 9/11 really was a conspiracy, just not the one they think.",
       "category": "fact_checking",
@@ -2646,7 +2934,23 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-10-82",
+      "id": "skeptic_magazine-2026-09-11-37",
+      "title": "Why America Failed to Stop 9/11",
+      "excerpt": "New on the podcast: Gerald Posner on 9/11. The conspiracies & what really happened. Listen now.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-09-11T14:43:19+00:00",
+      "original_title": "Why America Failed to Stop 9/11",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/why-america-failed-to-stop-9-11-gerald-posner-michael-shermer",
+      "url": "https://www.skeptic.com/michael-shermer-show/why-america-failed-to-stop-9-11-gerald-posner-michael-shermer",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "bad_astronomy-2026-09-10-131",
       "title": "Why Charlie Hunnam Was Driven to Make Sons of Anarchy Spinoff Legends Now",
       "excerpt": "Charlie Hunnam is literally making his dreams come true.  After all, the Sons of Anarchy alum was compelled to produce the upcoming meta-spinoff Legends following some nighttime nostalgia.",
       "category": "fact_checking",
@@ -2662,7 +2966,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-10-81",
+      "id": "bad_astronomy-2026-09-10-130",
       "title": "Kate Siegel Teases Summer H. Howell’s “Brand New” Take on Stephen King’s Carrie (Exclusive)",
       "excerpt": "Carrie is the reigning queen of Stephen King adaptations.  Fifty years after Sissy Spacek literally saw red at her high school prom, Mike Flanagan set his sights on a longform retelling of the prolific author’s debut novel surrounding a vengeful telekinetic teenager.",
       "category": "fact_checking",
@@ -2678,7 +2982,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-10-80",
+      "id": "bad_astronomy-2026-09-10-129",
       "title": "Star Wars’ Rotta the Hutt Was Inspired By This Blubbery Ocean Mammal in The Mandalorian and Grogu",
       "excerpt": "How does a giant slug creature move?",
       "category": "fact_checking",
@@ -2694,7 +2998,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-09-10-171",
+      "id": "vigilant_citizen-2026-09-10-220",
       "title": "“Disclosure Day”: A Movie About Aliens, Mind Control and a New World Religion - Vigilant Citizen",
       "excerpt": "Though described as a science fiction movie, Steven Spielberg's \"Disclosure Day\" is about UFOs, but more about the arrival of a mind-controlled alien messiah. Here's a look at the movie's profound symbolism.",
       "category": "conspiracoes",
@@ -2710,7 +3014,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-10-79",
+      "id": "bad_astronomy-2026-09-10-128",
       "title": "Spider-Noir Creator Reveals Scrapped Nicolas Cage Season 2 Plans After Cancellation",
       "excerpt": "On Sep. 4, Amazon officially cancelled the Nicolas Cage-fronted Marvel series Spider-Noir after a single season on Prime Video.",
       "category": "fact_checking",
@@ -2726,7 +3030,7 @@
       "image_url": null
     },
     {
-      "id": "arquivo_nacional_br-2026-09-10-109",
+      "id": "arquivo_nacional_br-2026-09-10-158",
       "title": "Multa substitutiva da pena de perdimento",
       "excerpt": "Multa substitutiva da pena de perdimento",
       "category": "arquivos_oficiais",
@@ -2742,7 +3046,7 @@
       "image_url": null
     },
     {
-      "id": "bad_astronomy-2026-09-10-78",
+      "id": "bad_astronomy-2026-09-10-127",
       "title": "Why The Lost World: Jurassic Park Needed 3 Different Versions of Baby T. Rex",
       "excerpt": "For better or worse, 1997's The Lost World: Jurassic Park doubled down on the dino-action of its 1993 predecessor, with not one but two T. rexes.",
       "category": "fact_checking",
@@ -2758,7 +3062,7 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-09-10-15",
+      "id": "skeptic_magazine-2026-09-10-65",
       "title": "Hagioptasia: The Feeling You've Never Had a Word For",
       "excerpt": "There’s a feeling you’ve had at the Grand Canyon, near a celebrity, or falling in love: a sense of sacred weight radiating outward. Psychologists now have a name for it—hagioptasia—and evidence for how this ancient mental response gets engineered, sold, and weaponized against you daily.",
       "category": "fact_checking",
@@ -2774,7 +3078,7 @@
       "image_url": null
     },
     {
-      "id": "darpa_news-2026-09-10-33",
+      "id": "darpa_news-2026-09-10-83",
       "title": "$1M to advance AI medical documentation and decision support",
       "excerpt": "DARPA D2 Sprint aims to automate pre-hospital trauma care tracking and guidance.",
       "category": "arquivos_oficiais",
@@ -2790,7 +3094,23 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-09-182",
+      "id": "skeptic_magazine-2026-09-09-36",
+      "title": "Why Be Honest When Cheating Pays?",
+      "excerpt": "About this episode:\n\nMost of us think of ourselves as honest. But would we still tell the truth if lying got us what we wanted—and nobody would ever find out? Philosopher Christian Miller joins Michael Shermer to discuss his new book, The Honesty Crisis, and the uncomfortable gap between",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-09-09T16:32:34+00:00",
+      "original_title": "Why Be Honest When Cheating Pays?",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/why-be-honest-when-cheating-pays",
+      "url": "https://www.skeptic.com/michael-shermer-show/why-be-honest-when-cheating-pays",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "revista_ufo-2026-09-09-231",
       "title": "Caso Roswell: O mistério dos UFOs  que até hoje intriga os EUA",
       "excerpt": "Caso Roswell quais são os fatos por trás do incidente?",
       "category": "ufologia",
@@ -2806,7 +3126,23 @@
       "image_url": null
     },
     {
-      "id": "revista_ufo-2026-09-08-181",
+      "id": "skeptic_magazine-2026-09-08-35",
+      "title": "Consciousness & the Brain",
+      "excerpt": "Delve into the ultimate mystery of the human mind! Explore cutting-edge neuroscience, the mechanics of the brain, and the enigma of consciousness. Plus, examine sharp critical takes on EMDR hype, debunk dubious educational claims, and uncover the heartbreaking biological realities of dementia.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-09-08T21:52:38+00:00",
+      "original_title": "Consciousness & the Brain",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/magazine/consciousness-and-the-brain",
+      "url": "https://www.skeptic.com/magazine/consciousness-and-the-brain",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "revista_ufo-2026-09-08-230",
       "title": "O que você vai encontrar na nova edição 305 da Revista UFO",
       "excerpt": "Confira alguns dos destaques da nova Revista UFO: NÃO TENHA MEDO — ELES JÁ ESTAVAM AQUI Por Letícia Eduarda e Urandir Fernandes de Oliveira Relatos antigos e documentos preservados ao longo do temp…",
       "category": "ufologia",
@@ -2822,7 +3158,23 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-09-05-14",
+      "id": "library_of_congress-2026-09-07-46",
+      "title": "Alive in Many Hands: The American Folklife Center at 50 — Opening Soon!",
+      "excerpt": "The American Folklife Center has been rolling out special programming all year, in celebration of its 50th anniversary. On September 17th, during Live! at the Library, the Center will open its exhibit, \"Alive in Many Hands: The American Folklife Center at 50.\" The exhibit is intended to provide visitors with an exploration of what folklife is, how it has been documented in the Center's archives, and what they can do to sustain folk traditions in their own communities. In this post, members of the content committee share a sneak peek at the upcoming exhibit and some of the special programming t",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-09-07T16:15:52+00:00",
+      "original_title": "Alive in Many Hands: The American Folklife Center at 50 — Opening Soon!",
+      "source_name": "Library of Congress Folklore",
+      "source_url": "https://blogs.loc.gov/folklife/2026/09/alive-in-many-hands-the-american-folklife-center-at-50-opening-soon",
+      "url": "https://blogs.loc.gov/folklife/2026/09/alive-in-many-hands-the-american-folklife-center-at-50-opening-soon",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-09-05-64",
       "title": "The Appeal of the Irrational: Pseudoscience, UFOs, Cults",
       "excerpt": "It appears the more absurd the claim, or the more outrageous the demand, the more effective it is as a winnowing tool. One such absurd claim recently caught my eye, because it fit the narrative trope of …",
       "category": "fact_checking",
@@ -2838,7 +3190,23 @@
       "image_url": null
     },
     {
-      "id": "skeptic_magazine-2026-09-03-13",
+      "id": "library_of_congress-2026-09-04-45",
+      "title": "New Online Collection: Miami’s Goombay Festival and Little Bahamas of Coconut Grove",
+      "excerpt": "This Folklife Today blog post is guest written by Dr. Aarti Mehta-Kroll, who co-led the 2024 AFC Community Collections Grant project, Documenting Goombay and Little Bahamas of Coconut Grove, which has now been made available as an online collection on loc.gov. The post discusses the longstanding Goombay Festival and its importance to the Bahamian community of Miami, as well as highlights from the collection.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-09-04T12:00:08+00:00",
+      "original_title": "New Online Collection: Miami’s Goombay Festival and Little Bahamas of Coconut Grove",
+      "source_name": "Library of Congress Folklore",
+      "source_url": "https://blogs.loc.gov/folklife/2026/09/new-online-collection-miamis-goombay-festival-and-little-bahamas-of-coconut-grove",
+      "url": "https://blogs.loc.gov/folklife/2026/09/new-online-collection-miamis-goombay-festival-and-little-bahamas-of-coconut-grove",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-09-03-63",
       "title": "The Kurds and Kurdistan: How History Left 35 Million People Without a Country",
       "excerpt": "T o most of us, at least at a first glance, maps appear to describe reality. They show states, borders, capitals, and frontiers with the reassuring precision of geography. We learn them at school, consult them in newspapers, and rarely question the assumptions they contain. A mountain either exists or",
       "category": "fact_checking",
@@ -2854,7 +3222,103 @@
       "image_url": null
     },
     {
-      "id": "e_farsas-2026-08-29-162",
+      "id": "skeptic_magazine-2026-09-02-34",
+      "title": "Monkey-Man Mystery Explained",
+      "excerpt": "Why did hundreds of impoverished Delhi residents swear a monkey-faced creature was mauling them at night? A reporter and a veteran skeptic unpack pareidolia and mass hysteria behind India’s infamous 2001 Monkey-Man panic, and what it really reveals about poverty and isolation.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-09-02T18:52:52+00:00",
+      "original_title": "Monkey-Man Mystery Explained",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/monkey-man-mystery-explained",
+      "url": "https://www.skeptic.com/article/monkey-man-mystery-explained",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-09-02-32",
+      "title": "Götterdämmerung in Japan",
+      "excerpt": "Was Hiroshima truly necessary? Michael Shermer delivers a searing defense of Truman’s atomic decision, drawing on primary sources to show why Japan’s unyielding military leadership left no other exit. A compelling dive into total war, tragic choices, and the harsh realities of moral history.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-09-02T18:38:30+00:00",
+      "original_title": "Götterdämmerung in Japan",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/gotterdammerung-in-japan",
+      "url": "https://www.skeptic.com/article/gotterdammerung-in-japan",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-09-02-33",
+      "title": "Hiroshima, Nagasaki, and an Article of Faith About the Dropping of Atomic Bombs",
+      "excerpt": "A mathematician turns Michael Shermer’s own skeptical method against his defense of the atomic bombings—exposing how counterfactual arithmetic, unexamined alternatives like Soviet entry, and national loyalty can smuggle a moral verdict past the scrutiny real skepticism demands.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-09-02T18:38:12+00:00",
+      "original_title": "Hiroshima, Nagasaki, and an Article of Faith About the Dropping of Atomic Bombs",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/hiroshima-nagasaki-and-an-article-of-faith-about-the-dropping-of-atomic-bombs",
+      "url": "https://www.skeptic.com/article/hiroshima-nagasaki-and-an-article-of-faith-about-the-dropping-of-atomic-bombs",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "library_of_congress-2026-09-02-44",
+      "title": "Origins of Uncle Sam: Metafolklore of an American Icon Part 1",
+      "excerpt": "“Uncle Sam,” as a personification of the United States, certainly goes back to the early days of the nation, emerging soon after the American Revolution. Everyone agrees that his name is an expansion of the abbreviation “U.S.” for “United States,” which first appears in documents written by the founders in 1776.  A popular story says that the phrase “Uncle Sam” originally referred to Samuel Wilson, a meatpacker from Troy, New York, who had a contract with the U.S. Army during the War of 1812. According to the story, his crates were stamped “U.S.” because they were destined for the Army, but lo",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-09-02T16:02:49+00:00",
+      "original_title": "Origins of Uncle Sam: Metafolklore of an American Icon Part 1",
+      "source_name": "Library of Congress Folklore",
+      "source_url": "https://blogs.loc.gov/folklife/2026/09/origins-of-uncle-sam-metafolklore-of-an-american-icon-part-1",
+      "url": "https://blogs.loc.gov/folklife/2026/09/origins-of-uncle-sam-metafolklore-of-an-american-icon-part-1",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-09-01-30",
+      "title": "Is the Future Unknowable? Uncertainty, Free Will, and the Limits of Science",
+      "excerpt": "About this episode:\n\nWhat if uncertainty isn’t a temporary problem science will eventually solve, but a fundamental feature of reality? Neuroscientist Stuart Firestein joins Michael Shermer to make the case that the universe may be far less deterministic—and the future far less predictable—than we like to imagine.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-09-01T17:39:25+00:00",
+      "original_title": "Is the Future Unknowable? Uncertainty, Free Will, and the Limits of Science",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/is-the-future-unknowable-uncertainty-free-will-and-the-limits-of-science",
+      "url": "https://www.skeptic.com/michael-shermer-show/is-the-future-unknowable-uncertainty-free-will-and-the-limits-of-science",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-08-31-29",
+      "title": "Repatriation and Reburial of Sh*t Needs to Be Stopped",
+      "excerpt": "Federal agencies are officially classifying bags of human feces—as well as animal droppings and fossilized coprolites—as sacred funerary objects under revised NAGPRA rules. Elizabeth Weiss argues this shows how ideology, not evidence, now governs America’s archaeological record.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-31T17:11:54+00:00",
+      "original_title": "Repatriation and Reburial of Sh*t Needs to Be Stopped",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/repatriation-and-reburial-of-sh-t-needs-to-be-stopped",
+      "url": "https://www.skeptic.com/article/repatriation-and-reburial-of-sh-t-needs-to-be-stopped",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "e_farsas-2026-08-29-211",
       "title": "É verdade que o presidente Lula construiu uma ponte gigante em São Paulo?",
       "excerpt": "Vídeo mostra obra colossal que estaria sendo feito pelo governo Lula, mas será que isso é verdade mesmo? As imagens surgiram nas redes sociais na segunda quinzena de agosto de 2026 e mostram a construção de uma ponte com centenas de metros de comprimento e outras centenas de metros de altura. Segundo o que se […] \n O post  É verdade que o presidente Lula construiu uma ponte gigante em São Paulo?  apareceu primeiro em  E-farsas .",
       "category": "fact_checking",
@@ -2870,7 +3334,71 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-08-25-170",
+      "id": "skeptic_magazine-2026-08-27-28",
+      "title": "An Insider’s Look at What Happened When Chiropractic Was Evaluated Scientifically, and Why No One Remembers",
+      "excerpt": "A chiropractor spent decades pushing his profession toward rigorous science, certain the evidence would vindicate it. The trials finally came back—null. Then the field simply forgot. An insider’s account of the research that answered the question, and why almost no one remembers it happened.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-27T19:55:15+00:00",
+      "original_title": "An Insider’s Look at What Happened When Chiropractic Was Evaluated Scientifically, and Why No One Remembers",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/an-insiders-look-at-what-happened-when-chiropractic-was-evaluated-scientifically-and-why-no-one-remembers",
+      "url": "https://www.skeptic.com/article/an-insiders-look-at-what-happened-when-chiropractic-was-evaluated-scientifically-and-why-no-one-remembers",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-08-26-27",
+      "title": "Other Ways of Knowing: Ethno Epistemic Challenges to the Universality of Science",
+      "excerpt": "From toe rings for a healthy pregnancy to a president who scrapped AIDS drugs for a dream-given herbal cure, this essay confronts a growing academic movement claiming spirits, astrology, and ancestral visions rival science—and what’s at stake for medicine, education, and truth.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-26T18:11:36+00:00",
+      "original_title": "Other Ways of Knowing: Ethno Epistemic Challenges to the Universality of Science",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/other-ways-of-knowing-ethno-epistemic-challenges-to-the-universality-of-science",
+      "url": "https://www.skeptic.com/article/other-ways-of-knowing-ethno-epistemic-challenges-to-the-universality-of-science",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "folklore_society_uk-2026-08-26-8",
+      "title": "The Folklore Society blog : President's Prizes for student work 2026",
+      "excerpt": "<p>Closing date for our student prizes is 30th September.</p>",
+      "category": "criptozoologia_lendas",
+      "category_label": "Criptozoologia lendas",
+      "published_at": "2026-08-26T08:00:00+00:00",
+      "original_title": "The Folklore Society blog : President's Prizes for student work 2026",
+      "source_name": "The Folklore Society UK",
+      "source_url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026",
+      "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-08-25-26",
+      "title": "Why We Want to Believe in Aliens and Why We Still Haven’t Found Them",
+      "excerpt": "About this episode:\n\nUFOs were once the stuff of tabloids and conspiracy theories. Today they’re the subject of congressional hearings, Pentagon investigations, mainstream news coverage, and a new wave of claims about government cover-ups and alien technology. Adam Kirsch, senior editor at The Atlantic and author of We",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-25T21:07:36+00:00",
+      "original_title": "Why We Want to Believe in Aliens and Why We Still Haven’t Found Them",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/why-we-want-to-believe-in-aliens-and-why-we-still-havent-found-them",
+      "url": "https://www.skeptic.com/michael-shermer-show/why-we-want-to-believe-in-aliens-and-why-we-still-havent-found-them",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "vigilant_citizen-2026-08-25-219",
       "title": "Symbolic Pics of the Month 08/26 - Vigilant Citizen",
       "excerpt": "In this edition of SPOTM: Paris Jackson's troubling album art, the WNBA losing its mind, and Lady Gaga launching a creepy biotech company. Also: What in God's name is happening around the Lindsay Clancy trial?",
       "category": "conspiracoes",
@@ -2886,7 +3414,55 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-08-17-175",
+      "id": "skeptic_magazine-2026-08-22-41",
+      "title": "Ufology: Stories in the Smoke",
+      "excerpt": "Eighty years after Donald Keyhoe invented the government cover-up myth, ufology still hasn’t produced a single verified artifact. A sharp dissection of how folklore accretes while real history distills, and why the field’s own top advocates admit they’ve never seen the proof themselves.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-22T20:29:35+00:00",
+      "original_title": "Ufology: Stories in the Smoke",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/ufo-disclosure-myth-explained",
+      "url": "https://www.skeptic.com/article/ufo-disclosure-myth-explained",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-08-19-25",
+      "title": "The Life and Death and Life of Repressed Memories",
+      "excerpt": "Unpack the resurgence of the dangerous “repressed memory” myth. Harvard psychologist Richard McNally and social psychologist Carol Tavris dismantle pseudoscience, debunk traumatic memory tropes, and expose how disproven psychological fads continue to endanger society.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-19T14:53:58+00:00",
+      "original_title": "The Life and Death and Life of Repressed Memories",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/life-and-death-and-life-of-repressed-memories",
+      "url": "https://www.skeptic.com/article/life-and-death-and-life-of-repressed-memories",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-08-18-24",
+      "title": "Is There a Second Arrow of Time? A New Law of Evolution, Information, and Complexity",
+      "excerpt": "About this episode:\n\nWhy does the universe produce ever more elaborate forms, from atoms and minerals to cells, organisms, brains, technology, and civilization? The familiar laws of physics can explain much of what happens in nature, but Robert Hazen and Michael Wong argue that something important has been missing: a",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-18T17:20:00+00:00",
+      "original_title": "Is There a Second Arrow of Time? A New Law of Evolution, Information, and Complexity",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/is-there-a-second-arrow-of-time-a-new-law-of-evolution-information-and-complexity",
+      "url": "https://www.skeptic.com/michael-shermer-show/is-there-a-second-arrow-of-time-a-new-law-of-evolution-information-and-complexity",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "vigilant_citizen-2026-08-17-224",
       "title": "What Really Happened to Perez Hilton? - Vigilant Citizen",
       "excerpt": "Shortly before his bloody livestream incident, Perez Hilton said he became a Christian. However, at the height of his fame, he was involved in the darkest parts of the industry. Here's a look at the spiritual dimension of Hilton's cursed night, where his sister said she was \"staring at someone else.\"",
       "category": "conspiracoes",
@@ -2902,7 +3478,23 @@
       "image_url": null
     },
     {
-      "id": "e_farsas-2026-08-17-139",
+      "id": "skeptic_magazine-2026-08-17-22",
+      "title": "What Is Christian Counseling? How American Christians Split Over the Science of the Mind",
+      "excerpt": "Somewhere in America this week, a depressed Christian will sit down across from a counselor who believes that her fundamental problem is not a disorder but a sin. In another office, a different Christian will see a licensed psychologist who prays with her, assigns scripture alongside cognitive-behavioral homework, and",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-17T19:13:01+00:00",
+      "original_title": "What Is Christian Counseling? How American Christians Split Over the Science of the Mind",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/what-is-christian-counseling-how-american-christians-split-over-the-science-of-the-mind",
+      "url": "https://www.skeptic.com/article/what-is-christian-counseling-how-american-christians-split-over-the-science-of-the-mind",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "e_farsas-2026-08-17-188",
       "title": "Como verificar se uma plataforma de apostas é real antes de clicar",
       "excerpt": "Endereço, identidade da empresa e sinais de navegação ajudam a separar páginas legítimas de imitações criadas para capturar atenção em anúncios e mensagens!",
       "category": "fact_checking",
@@ -2918,7 +3510,55 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-08-12-160",
+      "id": "skeptic_magazine-2026-08-13-21",
+      "title": "Indigenous Knowledge, Public Money, and Bad Science",
+      "excerpt": "How did a debunked indigenous voyage to Antarctica become part of New Zealand’s curriculum? Discover how government funding, media silence, and cultural deference are pushing pseudoscientific ideas into modern science and education—and why critical scrutiny is vital to public trust.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-13T22:23:15+00:00",
+      "original_title": "Indigenous Knowledge, Public Money, and Bad Science",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/maori-antarctica-myth-new-zealand-curriculum",
+      "url": "https://www.skeptic.com/article/maori-antarctica-myth-new-zealand-curriculum",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-08-12-23",
+      "title": "Texas Education and Christian Nationalism",
+      "excerpt": "A $1 billion voucher program, two oil billionaires, and a fight over church-state separation: this piece investigates whether Texas’s new Education Freedom Accounts are the latest move in a decades-long strategy to reshape public schools around a White Christian nationalist vision.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-12T19:07:00+00:00",
+      "original_title": "Texas Education and Christian Nationalism",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/texas-education-and-christian-nationalism",
+      "url": "https://www.skeptic.com/article/texas-education-and-christian-nationalism",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-08-12-20",
+      "title": "Driverless Cars and Human Error",
+      "excerpt": "When a driverless car makes a mistake, everyone pays attention.\n\n\n\n\nA robotaxi stops awkwardly in traffic. A Waymo gets confused near a construction zone. A child runs into the street and is struck. A fleet of empty autonomous cars circles a residential neighborhood. A self-driving vehicle passes a stopped",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-12T18:48:32+00:00",
+      "original_title": "Driverless Cars and Human Error",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/driverless-cars-and-human-error",
+      "url": "https://www.skeptic.com/article/driverless-cars-and-human-error",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "vigilant_citizen-2026-08-12-209",
       "title": "VC Video: Ariana Grande and the Dark Side of the Entertainment Industry",
       "excerpt": "The only way to fully understand Ariana's bizarre transformation is to look at her life and career on the dark side of the entertainment industry. \n The post  VC Video: Ariana Grande and the Dark Side of the Entertainment Industry  first appeared on  Vigilant Citizen .",
       "category": "conspiracoes",
@@ -2934,7 +3574,23 @@
       "image_url": null
     },
     {
-      "id": "darpa_news-2026-08-09-32",
+      "id": "skeptic_magazine-2026-08-11-19",
+      "title": "Why Good People Disagree About Right and Wrong",
+      "excerpt": "About this episode:\n\nWhy do reasonable people disagree so strongly about right and wrong? And why are we so quick to assume that people on the other side of a moral or political issue are irrational, selfish, ignorant, or simply bad?\n\nMichael Shermer speaks with Cornell psychologist Audun Dahl, author",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-11T19:46:49+00:00",
+      "original_title": "Why Good People Disagree About Right and Wrong",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/why-good-people-disagree-about-right-and-wrong",
+      "url": "https://www.skeptic.com/michael-shermer-show/why-good-people-disagree-about-right-and-wrong",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "darpa_news-2026-08-09-82",
       "title": "Lift Challenge results",
       "excerpt": "Aviation records set and new options demonstrated for military, civilian use.",
       "category": "arquivos_oficiais",
@@ -2950,7 +3606,39 @@
       "image_url": null
     },
     {
-      "id": "darpa_news-2026-08-05-31",
+      "id": "skeptic_magazine-2026-08-09-31",
+      "title": "The Moral Case for Dropping the Atomic Bombs",
+      "excerpt": "On this, the 81st anniversary of the atomic bombing of Hiroshima (August 6) and Nagasaki (August 9), it is altogether fitting to revisit the moral question of their development and use.\n\n\n\n\nOperating under the best intelligence that indicated the Nazis were working on their own bomb project, it was clearly",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-09T17:07:10+00:00",
+      "original_title": "The Moral Case for Dropping the Atomic Bombs",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/the-moral-case-for-dropping-the-atomic-bombs",
+      "url": "https://www.skeptic.com/article/the-moral-case-for-dropping-the-atomic-bombs",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-08-07-18",
+      "title": "The View From Inside: How Mind Emerged From Mindless Matter",
+      "excerpt": "How did lifeless matter learn to feel? Psychiatrist Ralph Lewis traces consciousness from bacteria to human self-awareness, showing step by step how sensing, learning, memory, and emotion evolved into subjective experience—demystifying the brain’s deepest mystery, no soul required at all.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-07T19:18:40+00:00",
+      "original_title": "The View From Inside: How Mind Emerged From Mindless Matter",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/how-consciousness-evolved-from-mindless-matter",
+      "url": "https://www.skeptic.com/article/how-consciousness-evolved-from-mindless-matter",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "darpa_news-2026-08-05-81",
       "title": "It’s about time for quantum manufacturing",
       "excerpt": "Piloting a pipeline to build and integrate optical clocks at scale.",
       "category": "arquivos_oficiais",
@@ -2966,7 +3654,39 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-08-04-172",
+      "id": "skeptic_magazine-2026-08-04-16",
+      "title": "We Can’t Just Lie About Sex Differences",
+      "excerpt": "Steve Stewart-Williams addresses misconceptions about evolutionary psychology, refutes charges of pseudoscience, and discusses the political and ethical risks of denying biological sex differences, advocating for an honest, evidence-based approach to human nature.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-04T22:23:51+00:00",
+      "original_title": "We Can’t Just Lie About Sex Differences",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/is-evolutionary-psychology-pseudoscience-sex-differences",
+      "url": "https://www.skeptic.com/article/is-evolutionary-psychology-pseudoscience-sex-differences",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-08-04-17",
+      "title": "Are We Building a God? AI, Superintelligence, and the Coming Singularity",
+      "excerpt": "New on the podcast: The latest on the rapid evolution of AI. Listen now.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-08-04T20:30:50+00:00",
+      "original_title": "Are We Building a God? AI, Superintelligence, and the Coming Singularity",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/are-we-building-a-god-ai-superintelligence-and-the-coming-singularity",
+      "url": "https://www.skeptic.com/michael-shermer-show/are-we-building-a-god-ai-superintelligence-and-the-coming-singularity",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "vigilant_citizen-2026-08-04-221",
       "title": "What is Happening With Ariana Grande and Her “Petal” Video? - Vigilant Citizen",
       "excerpt": "Ariana Grande's video \"Petal\" was purposely made to showcase her skeletal figure and to cover her in blood. Here's why.",
       "category": "conspiracoes",
@@ -2982,7 +3702,55 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-07-23-169",
+      "id": "skeptic_magazine-2026-07-30-42",
+      "title": "Reincarnation: What Science Says and Doesn’t (or Can’t) Say",
+      "excerpt": "Inside a University of Virginia lab, scientists have spent nearly six decades gathering unsettling evidence: children who recall violent deaths, bear matching birthmarks, and know facts they never could have learned. A grieving skeptic investigates whether reincarnation might just be real.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-07-30T00:05:48+00:00",
+      "original_title": "Reincarnation: What Science Says and Doesn’t (or Can’t) Say",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/reincarnation-science-what-research-says",
+      "url": "https://www.skeptic.com/article/reincarnation-science-what-research-says",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-07-29-15",
+      "title": "Can You Trust Wikipedia? Co-Founder Larry Sanger on Wikipedia’s Bias and Why He Was Banned",
+      "excerpt": "About this episode:\n\nMichael Shermer speaks with Wikipedia co-founder Larry Sanger shortly after Sanger was permanently banned from editing the site he helped create.\n\nSanger tells the story of Wikipedia’s founding, how its ideal of open collaboration hardened into a system dominated by a relatively small group of",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-07-29T22:06:38+00:00",
+      "original_title": "Can You Trust Wikipedia? Co-Founder Larry Sanger on Wikipedia’s Bias and Why He Was Banned",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/michael-shermer-show/can-you-trust-wikipedia-co-founder-larry-sanger-on-wikipedias-bias-and-why-he-was-banned",
+      "url": "https://www.skeptic.com/michael-shermer-show/can-you-trust-wikipedia-co-founder-larry-sanger-on-wikipedias-bias-and-why-he-was-banned",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "skeptic_magazine-2026-07-28-14",
+      "title": "Lab-Grown Meat: Separating the Science From the “Yuck”",
+      "excerpt": "Is lab-grown meat the sustainable future of food or an unsettling science experiment? Dive into the complex world of cultivated protein as this insightful article explores the “yuck” factor, steep economic hurdles, and structural shifting driving the cutting-edge future of farming.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-07-28T23:36:55+00:00",
+      "original_title": "Lab-Grown Meat: Separating the Science From the “Yuck”",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/lab-grown-meat-inside-cleanest-kitchen-you-will-never-see",
+      "url": "https://www.skeptic.com/article/lab-grown-meat-inside-cleanest-kitchen-you-will-never-see",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "vigilant_citizen-2026-07-23-218",
       "title": "Was the 2026 World Cup Final a Passing-of-the-Torch Ritual? - Vigilant Citizen",
       "excerpt": "The 2026 World Cup was the first to feature 48 national teams, jointly hosted by the United States, Mexico, and Canada. The final took place on July 19 at New York New Jersey Stadium in East Rutherford. Before a crowd of approximately 80,000 people, Spain defeated Argentina 1–0 in extra time (with a goal by",
       "category": "conspiracoes",
@@ -2998,7 +3766,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-07-22-174",
+      "id": "vigilant_citizen-2026-07-22-223",
       "title": "The 2026 FIFA World Cup Mega-Ritual - Vigilant Citizen",
       "excerpt": "A look at the intense symbolism and \"coincidences\" that occurred at the 2026 FIFA World Cup. It was more than sport, it was a mega-ritual.",
       "category": "conspiracoes",
@@ -3014,7 +3782,7 @@
       "image_url": null
     },
     {
-      "id": "e_farsas-2026-07-22-161",
+      "id": "e_farsas-2026-07-22-210",
       "title": "Cucurella levou a Copa do Mundo em uma sacola plástica?",
       "excerpt": "É verdade que o jogador da Seleção Espanhola Marc Cucurella foi flagrado levando o troféu da copa do mundo em uma sacola de lixo?  O vídeo surgiu nas redes sociais na segunda quinzena de julho de 2026, logo após o término do jogo da final da Copa do Mundo de futebol. Nele podemos ver jogadores […] \n O post  Cucurella levou a Copa do Mundo em uma sacola plástica?  apareceu primeiro em  E-farsas .",
       "category": "fact_checking",
@@ -3030,7 +3798,7 @@
       "image_url": null
     },
     {
-      "id": "darpa_news-2026-07-20-29",
+      "id": "darpa_news-2026-07-20-79",
       "title": "With personal protective gear, best defense is a good offense",
       "excerpt": "DARPA support for startup turns technical promise into traction.",
       "category": "arquivos_oficiais",
@@ -3046,7 +3814,7 @@
       "image_url": null
     },
     {
-      "id": "darpa_news-2026-07-20-30",
+      "id": "darpa_news-2026-07-20-80",
       "title": "Robotic Servicing of Geosynchronous Satellites lifts off",
       "excerpt": "Historic Mission Robotic Vehicle en route to GEO, transforming space servicing.",
       "category": "arquivos_oficiais",
@@ -3062,7 +3830,23 @@
       "image_url": null
     },
     {
-      "id": "darpa_news-2026-07-16-28",
+      "id": "skeptic_magazine-2026-07-16-13",
+      "title": "Flying Organisms, Not Flying Saucers: The Biological Case for UAPs",
+      "excerpt": "What if UFOs aren’t secret military tech or alien invaders, but undiscovered creatures native to Earth’s own atmosphere? This forensic look at UAP flight patterns, cigar-shaped leviathans, radar illusions, and biology offers a fear-free alternative to decades of speculation.",
+      "category": "fact_checking",
+      "category_label": "Fact checking",
+      "published_at": "2026-07-16T18:45:00+00:00",
+      "original_title": "Flying Organisms, Not Flying Saucers: The Biological Case for UAPs",
+      "source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/flying-organisms-not-flying-saucers-the-biological-case-for-uaps",
+      "url": "https://www.skeptic.com/article/flying-organisms-not-flying-saucers-the-biological-case-for-uaps",
+      "status": "published",
+      "post_type": "curated_source",
+      "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
+      "image_url": null
+    },
+    {
+      "id": "darpa_news-2026-07-16-78",
       "title": "DARPA, U.S. Air Force fly AI-controlled F-16",
       "excerpt": "Historic VENOM milestone demonstrates scalable AI development capabilities for the operational fleet.",
       "category": "arquivos_oficiais",
@@ -3094,7 +3878,7 @@
       "image_url": null
     },
     {
-      "id": "vigilant_citizen-2026-07-14-173",
+      "id": "vigilant_citizen-2026-07-14-222",
       "title": "Something is Terribly Wrong With the “Pervasive” Artist Gary Baseman - Vigilant Citizen",
       "excerpt": "Gary Baseman's art was featured on the board game Cranium and the Disney movie \"Teacher's Pet.\" Then he started making fine art, and things got dark with themes involving dark occultism and the sexualization of children. Then there's his bizarre Instagram account. Here's a look at the strange world of Gary Baseman.",
       "category": "conspiracoes",
