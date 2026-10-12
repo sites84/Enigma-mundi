@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "RSS/Atom endpoints validated for XML parsing and HTTP 200 are recorded only when they match the source's purpose. Some valid feeds were intentionally excluded because their feed title/content was generic or mismatched. All sources remain disabled until editorial relevance and ingestion are tested.",
+  "note": "Somente fontes que produziram publicações na coleta de 2026-10-12 foram mantidas. Fontes sem publicações foram removidas e podem ser reavaliadas individualmente no futuro.",
   "sources": [
     {
       "id": "the_black_vault",
@@ -10,45 +10,6 @@
       "feed_type": "unverified",
       "enabled": false,
       "site_url": "https://theblackvault.com"
-    },
-    {
-      "id": "fbi_vault",
-      "name": "FBI Vault",
-      "feed_url": "https://vault.fbi.gov/",
-      "category": "arquivos_oficiais",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://vault.fbi.gov/",
-      "allow_homepage_discovery": false
-    },
-    {
-      "id": "cia_foia",
-      "name": "CIA FOIA Reading Room",
-      "feed_url": "https://www.cia.gov/readingroom/",
-      "category": "arquivos_oficiais",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://www.cia.gov/readingroom/",
-      "allow_homepage_discovery": true
-    },
-    {
-      "id": "uk_national_archives",
-      "name": "UK National Archives UFO Files",
-      "feed_url": "https://www.nationalarchives.gov.uk/rss/news.xml",
-      "category": "arquivos_oficiais",
-      "feed_type": "rss",
-      "enabled": false,
-      "site_url": "https://www.nationalarchives.gov.uk",
-      "allow_homepage_discovery": false
-    },
-    {
-      "id": "nsa_documents",
-      "name": "NSA UFO Documents",
-      "feed_url": "https://nsa.gov",
-      "category": "arquivos_oficiais",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://nsa.gov"
     },
     {
       "id": "arquivo_nacional_br",
@@ -80,25 +41,6 @@
       "allow_homepage_discovery": true
     },
     {
-      "id": "wikileaks",
-      "name": "WikiLeaks",
-      "feed_url": "https://wikileaks.org",
-      "category": "arquivos_oficiais",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://wikileaks.org"
-    },
-    {
-      "id": "national_security_archive",
-      "name": "National Security Archive",
-      "feed_url": "https://nsarchive.gwu.edu/",
-      "category": "arquivos_oficiais",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://nsarchive.gwu.edu/postings/news",
-      "allow_homepage_discovery": true
-    },
-    {
       "id": "skeptical_inquirer",
       "name": "Skeptical Inquirer",
       "feed_url": "https://skepticalinquirer.org/feed/",
@@ -106,15 +48,6 @@
       "feed_type": "rss",
       "enabled": false,
       "site_url": "https://skepticalinquirer.org"
-    },
-    {
-      "id": "center_for_inquiry",
-      "name": "Center for Inquiry",
-      "feed_url": "https://centerforinquiry.org",
-      "category": "fact_checking",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://centerforinquiry.org"
     },
     {
       "id": "snopes_urban_legends",
@@ -142,15 +75,6 @@
       "feed_type": "rss",
       "enabled": false,
       "site_url": "https://boatos.org"
-    },
-    {
-      "id": "hoax_slayer",
-      "name": "Hoax-Slayer",
-      "feed_url": "https://hoax-slayer.net",
-      "category": "fact_checking",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://hoax-slayer.net"
     },
     {
       "id": "metabunk",
@@ -181,15 +105,6 @@
       "allow_homepage_discovery": false
     },
     {
-      "id": "james_randi_foundation",
-      "name": "James Randi Foundation",
-      "feed_url": "https://randi.org",
-      "category": "fact_checking",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://randi.org"
-    },
-    {
       "id": "mufon_news",
       "name": "MUFON UFO News",
       "feed_url": "https://mufon.com/feed/",
@@ -217,15 +132,6 @@
       "site_url": "https://ufo.com.br"
     },
     {
-      "id": "narcap_reports",
-      "name": "NARCAP Reports",
-      "feed_url": "https://narcap.org",
-      "category": "ufologia",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://narcap.org"
-    },
-    {
       "id": "seti_institute",
       "name": "SETI Institute",
       "feed_url": "https://www.seti.org/rss.xml",
@@ -233,24 +139,6 @@
       "feed_type": "rss",
       "enabled": false,
       "site_url": "https://www.seti.org/news"
-    },
-    {
-      "id": "project_blue_book",
-      "name": "Project Blue Book Archive",
-      "feed_url": "https://fold3.com",
-      "category": "ufologia",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://fold3.com"
-    },
-    {
-      "id": "ufo_evidence",
-      "name": "UFO Evidence",
-      "feed_url": "http://ufoevidence.org",
-      "category": "ufologia",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "http://ufoevidence.org"
     },
     {
       "id": "fenomenum",
@@ -262,152 +150,6 @@
       "site_url": "https://fenomenum.com.br"
     },
     {
-      "id": "ufo_casebook",
-      "name": "UFO Casebook",
-      "feed_url": "https://ufocasebook.com",
-      "category": "ufologia",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://ufocasebook.com"
-    },
-    {
-      "id": "nuforc_realtime",
-      "name": "NUFORC Real-time Reports",
-      "feed_url": "https://nuforc.org",
-      "category": "ufologia",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://nuforc.org"
-    },
-    {
-      "id": "society_psychical_research",
-      "name": "Society for Psychical Research",
-      "feed_url": "https://www.spr.ac.uk/",
-      "category": "sobrenatural",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://www.spr.ac.uk/",
-      "allow_homepage_discovery": true
-    },
-    {
-      "id": "rhine_research",
-      "name": "Rhine Research Center",
-      "feed_url": "https://www.rhineonline.org/",
-      "category": "sobrenatural",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://www.rhineonline.org/"
-    },
-    {
-      "id": "parapsychology_foundation",
-      "name": "Parapsychology Foundation",
-      "feed_url": "https://parapsychology.org/feed/",
-      "category": "sobrenatural",
-      "feed_type": "rss",
-      "enabled": false,
-      "site_url": "https://parapsychology.org"
-    },
-    {
-      "id": "the_ghost_club",
-      "name": "The Ghost Club",
-      "feed_url": "http://ghostclub.org.uk",
-      "category": "sobrenatural",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "http://ghostclub.org.uk"
-    },
-    {
-      "id": "associa_portuguesa_parapsicologia",
-      "name": "Associação Port. Parapsicologia",
-      "feed_url": "https://parapsicologia.org.pt",
-      "category": "sobrenatural",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://parapsicologia.org.pt"
-    },
-    {
-      "id": "instituto_psicologia_paranormal",
-      "name": "Inst. Psicologia Paranormal",
-      "feed_url": "https://www.alipsi.com.ar/feed/",
-      "category": "sobrenatural",
-      "feed_type": "rss",
-      "enabled": false,
-      "site_url": "https://www.alipsi.com.ar/",
-      "allow_homepage_discovery": true
-    },
-    {
-      "id": "assap_scientific",
-      "name": "ASSAP Scientific Anomalous",
-      "feed_url": "https://assap.ac.uk",
-      "category": "sobrenatural",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://assap.ac.uk"
-    },
-    {
-      "id": "chasing_shadows",
-      "name": "Chasing Shadows Haunted",
-      "feed_url": "https://chasingshadows.org",
-      "category": "sobrenatural",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://chasingshadows.org"
-    },
-    {
-      "id": "ghost_research_society",
-      "name": "Ghost Research Society",
-      "feed_url": "http://ghostresearch.org",
-      "category": "sobrenatural",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "http://ghostresearch.org"
-    },
-    {
-      "id": "haunted_places",
-      "name": "Haunted Places Directory",
-      "feed_url": "https://hauntedplaces.org",
-      "category": "sobrenatural",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://hauntedplaces.org"
-    },
-    {
-      "id": "cryptozoology_news",
-      "name": "Cryptozoology News",
-      "feed_url": "https://cryptozoologynews.com",
-      "category": "criptozoologia_lendas",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://cryptozoologynews.com"
-    },
-    {
-      "id": "intl_cryptozoology_museum",
-      "name": "Intl Cryptozoology Museum",
-      "feed_url": "https://cryptozoologymuseum.com/feed/",
-      "category": "criptozoologia_lendas",
-      "feed_type": "rss",
-      "enabled": false,
-      "site_url": "https://cryptozoologymuseum.com"
-    },
-    {
-      "id": "about_urban_legends",
-      "name": "ThoughtCo Urban Legends",
-      "feed_url": "https://thoughtco.com",
-      "category": "criptozoologia_lendas",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://thoughtco.com"
-    },
-    {
-      "id": "cryptid_fandom_wiki",
-      "name": "Cryptid Wiki Activity",
-      "feed_url": "https://fandom.com",
-      "category": "criptozoologia_lendas",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://fandom.com"
-    },
-    {
       "id": "folklore_society_uk",
       "name": "The Folklore Society UK",
       "feed_url": "https://folklore-society.com",
@@ -415,33 +157,6 @@
       "feed_type": "unverified",
       "enabled": false,
       "site_url": "https://folklore-society.com"
-    },
-    {
-      "id": "portal_lendas_urbanas",
-      "name": "Portal Lendas Urbanas BR",
-      "feed_url": "https://lendasurbanas.com.br",
-      "category": "criptozoologia_lendas",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://lendasurbanas.com.br"
-    },
-    {
-      "id": "scary_for_kids",
-      "name": "Scary For Kids Legends",
-      "feed_url": "http://feeds.feedburner.com/ScaryForKids",
-      "category": "criptozoologia_lendas",
-      "feed_type": "rss",
-      "enabled": false,
-      "site_url": "https://scaryforkids.com"
-    },
-    {
-      "id": "bizarreopedia",
-      "name": "Bizarreopedia Documentaries",
-      "feed_url": "https://bizarreopedia.com",
-      "category": "criptozoologia_lendas",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://bizarreopedia.com"
     },
     {
       "id": "cryptomundo_monsters",
@@ -453,24 +168,6 @@
       "site_url": "https://cryptomundo.com"
     },
     {
-      "id": "yokai_japanese_monsters",
-      "name": "Yokai Japanese Monsters",
-      "feed_url": "https://yokai.com/feed/",
-      "category": "criptozoologia_lendas",
-      "feed_type": "rss",
-      "enabled": false,
-      "site_url": "https://yokai.com"
-    },
-    {
-      "id": "above_top_secret",
-      "name": "Above Top Secret Headlines",
-      "feed_url": "https://abovetopsecret.com",
-      "category": "conspiracoes",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://abovetopsecret.com"
-    },
-    {
       "id": "vigilant_citizen",
       "name": "Vigilant Citizen Symbolism",
       "feed_url": "https://vigilantcitizen.com/feed/",
@@ -478,15 +175,6 @@
       "feed_type": "rss",
       "enabled": false,
       "site_url": "https://vigilantcitizen.com"
-    },
-    {
-      "id": "freemasonry_research",
-      "name": "Freemasonry Research BC",
-      "feed_url": "https://bcy.ca",
-      "category": "conspiracoes",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://bcy.ca"
     },
     {
       "id": "conspiracy_watch_info",
@@ -498,15 +186,6 @@
       "site_url": "https://conspiracywatch.info"
     },
     {
-      "id": "bavarian_illuminati_info",
-      "name": "Bavarian Illuminati History",
-      "feed_url": "https://www.bavarian-illuminati.info/feed",
-      "category": "conspiracoes",
-      "feed_type": "rss",
-      "enabled": false,
-      "site_url": "https://bavarian-illuminati.info"
-    },
-    {
       "id": "global_research_ca",
       "name": "Global Research Geopolitics",
       "feed_url": "https://www.globalresearch.ca/feed",
@@ -514,69 +193,6 @@
       "feed_type": "rss",
       "enabled": false,
       "site_url": "https://globalresearch.ca"
-    },
-    {
-      "id": "infowars_feed",
-      "name": "InfoWars Operational Feed",
-      "feed_url": "https://infowars.com",
-      "category": "conspiracoes",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://infowars.com"
-    },
-    {
-      "id": "david_icke_official",
-      "name": "David Icke Official Feed",
-      "feed_url": "https://davidicke.com/feed/",
-      "category": "conspiracoes",
-      "feed_type": "rss",
-      "enabled": false,
-      "site_url": "https://davidicke.com"
-    },
-    {
-      "id": "bibliotecapleyades_news",
-      "name": "Bibliotecapleyades Mirror",
-      "feed_url": "https://bibliotecapleyades.net",
-      "category": "conspiracoes",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://bibliotecapleyades.net"
-    },
-    {
-      "id": "stayan0maly_news",
-      "name": "An0maly Alternative News",
-      "feed_url": "https://stayan0maly.com",
-      "category": "conspiracoes",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://stayan0maly.com"
-    },
-    {
-      "id": "coast_to_coast_am",
-      "name": "Coast to Coast AM Radio",
-      "feed_url": "https://coasttocoastam.com",
-      "category": "podcasts_multimidia",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://coasttocoastam.com"
-    },
-    {
-      "id": "stuff_they_dont_want_you_to_know",
-      "name": "Stuff They Dont Want You To Know",
-      "feed_url": "https://omnycontent.com",
-      "category": "podcasts_multimidia",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://omnycontent.com"
-    },
-    {
-      "id": "astonishing_legends",
-      "name": "Astonishing Legends Podcast",
-      "feed_url": "https://megaphone.fm",
-      "category": "podcasts_multimidia",
-      "feed_type": "unverified",
-      "enabled": false,
-      "site_url": "https://megaphone.fm"
     }
   ]
 }
