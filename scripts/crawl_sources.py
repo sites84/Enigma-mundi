@@ -70,7 +70,7 @@ class PageParser(HTMLParser):
             value = attrs.get("content", "").strip()
             if key and value:
                 self.meta[key] = value
-                if key in {"article:published_time", "datepublished", "datepublished", "datecreated", "date", "pubdate", "parsely-pub-date", "publish-date", "date.modified"}:
+                if key in {"article:published_time", "datepublished", "datecreated", "datecreated", "date", "pubdate", "parsely-pub-date", "publish-date", "date.modified"}:
                     self.date_candidates.append(value)
         elif tag == "time":
             value = (attrs.get("datetime") or attrs.get("content") or attrs.get("data-date") or "").strip()
