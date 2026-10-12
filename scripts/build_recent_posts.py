@@ -117,6 +117,54 @@ def image_tokens(value):
     words = re.findall(r"[a-z0-9]{3,}", str(value or "").lower())
     return {w for w in words if w not in STOP_WORDS and not w.isdigit()}
 
+def openverse_lookup(post):
+    """Find a topic-matched image indexed from many public web sources."""
+    title = post.get("title", "").strip()
+    tokens = image_tokens(title)
+    if not tokens:
+        return None
+    query_words = [word for word in re.findall(r"[a-z0-9]{3,}", title.lower()) if word not in STOP_WORDS]
+    query = " ".join(query_words[:10])[:180].strip()
+    if not query:
+        return None
+    params = {
+        "q": query, "page_size": "20",
+        "license_type": "commercial,modification",
+        "aspect_ratio": "wide", "size": "medium",
+    }
+    api_url = "https://api.openverse.org/v1/images/?" + urllib.parse.urlencode(params)
+    request = urllib.request.Request(api_url, headers={
+        "User-Agent": "EnigmaMundiEditorialBot/1.0 (editorial image matching; https://github.com/sites84/Enigma-mundi)",
+        "Accept": "application/json",
+    })
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except Exception:
+        return None
+    best = None
+    best_score = 0
+    for item in (data or {}).get("results") or []:
+        image_url = item.get("thumbnail") or item.get("url")
+        if not image_url or not image_url.startswith("https://"):
+            continue
+        candidate_text = " ".join(str(item.get(k) or "") for k in ("title", "tags", "creator", "source"))
+        overlap = tokens & image_tokens(candidate_text)
+        distinctive = [word for word in overlap if len(word) >= 6]
+        if len(overlap) < 2 and not distinctive:
+            continue
+        score = len(overlap) + sum(0.6 for word in distinctive)
+        if score > best_score:
+            best_score = score
+            best = {
+                "image_url": image_url,
+                "image_alt": (item.get("title") or title)[:250],
+                "image_credit": str(item.get("creator") or "")[:300],
+                "image_license": str(item.get("license") or "")[:100],
+                "image_source_url": item.get("foreign_landing_url") or item.get("detail_url") or "",
+            }
+    return best
+
 def commons_lookup(post):
     title = post.get("title", "")
     tokens = image_tokens(title)
@@ -181,10 +229,10 @@ def commons_lookup(post):
     return best
 
 missing = [p for p in posts if not p.get("image_url")]
-print(f"Busca complementar no Wikimedia Commons: {len(missing)} posts sem imagem; até 5 consultas simultâneas.", flush=True)
-resolved = 0
-with ThreadPoolExecutor(max_workers=5) as pool:
-    futures = {pool.submit(commons_lookup, post): post for post in missing}
+print(f"Busca de imagens em fontes web indexadas: {len(missing)} posts sem imagem; até 3 consultas simultâneas.", flush=True)
+resolved_openverse = 0
+with ThreadPoolExecutor(max_workers=3) as pool:
+    futures = {pool.submit(openverse_lookup, post): post for post in missing}
     for future in as_completed(futures):
         post = futures[future]
         try:
@@ -193,12 +241,28 @@ with ThreadPoolExecutor(max_workers=5) as pool:
             match = None
         if match:
             post.update(match)
-            resolved += 1
-        if (resolved and resolved % 25 == 0):
-            print(f"Imagens complementares associadas: {resolved}", flush=True)
-        # Small pacing delay between completed results to avoid aggressive retries.
-        time.sleep(0.02)
-print(f"Imagens complementares encontradas no Wikimedia Commons: {resolved}/{len(missing)}", flush=True)
+            resolved_openverse += 1
+        if resolved_openverse and resolved_openverse % 25 == 0:
+            print(f"Imagens associadas via Openverse: {resolved_openverse}", flush=True)
+print(f"Imagens encontradas via Openverse: {resolved_openverse}/{len(missing)}", flush=True)
+
+missing_after_openverse = [p for p in posts if not p.get("image_url")]
+print(f"Busca secundária no Wikimedia Commons: {len(missing_after_openverse)} posts ainda sem imagem.", flush=True)
+resolved_commons = 0
+with ThreadPoolExecutor(max_workers=3) as pool:
+    futures = {pool.submit(commons_lookup, post): post for post in missing_after_openverse}
+    for future in as_completed(futures):
+        post = futures[future]
+        try:
+            match = future.result()
+        except Exception:
+            match = None
+        if match:
+            post.update(match)
+            resolved_commons += 1
+        if resolved_commons and resolved_commons % 25 == 0:
+            print(f"Imagens associadas via Wikimedia Commons: {resolved_commons}", flush=True)
+print(f"Imagens encontradas via Wikimedia Commons: {resolved_commons}/{len(missing_after_openverse)}", flush=True)
 
 posts.sort(key=lambda item: (item["published_at"], item["url"]), reverse=True)
 source_post_counts = {}
