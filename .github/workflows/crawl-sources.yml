@@ -32,6 +32,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Check Python syntax before running the crawler
+        run: python -m py_compile scripts/discover_feeds.py scripts/crawl_sources.py scripts/build_recent_posts.py
+
       - name: Validate RSS and Atom feeds for all 21 configured sources
         run: python scripts/discover_feeds.py
 
@@ -40,6 +43,36 @@ jobs:
 
       - name: Build chronological posts from the last 90 days
         run: python scripts/build_recent_posts.py
+
+      - name: Validate generated editorial data
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from urllib.parse import urlsplit, parse_qsl, urlencode, urlunsplit
+
+          root = Path(".")
+          payload = json.loads((root / "data/posts.json").read_text(encoding="utf-8"))
+          posts = payload.get("posts")
+          assert isinstance(posts, list), "data/posts.json must contain a posts array"
+          assert payload.get("post_count") == len(posts), "post_count does not match posts array"
+          seen = set()
+          for index, post in enumerate(posts):
+              assert post.get("title", "").strip(), f"post {index} has no title"
+              assert post.get("excerpt", "").strip(), f"post {index} has no excerpt"
+              url = post.get("source_url") or post.get("url") or ""
+              parsed = urlsplit(url)
+              assert parsed.scheme in ("http", "https") and parsed.netloc, f"post {index} has invalid source URL"
+              query = [(k, v) for k, v in parse_qsl(parsed.query, keep_blank_values=True)
+                       if k.lower() not in {"fbclid", "gclid", "dclid", "mc_cid", "mc_eid", "replytocom", "ref", "source"}
+                       and not k.lower().startswith("utm_")]
+              canonical = urlunsplit((parsed.scheme.lower(), parsed.netloc.lower(), parsed.path.rstrip("/") or "/", urlencode(sorted(query)), ""))
+              assert canonical not in seen, f"duplicate canonical article URL: {url}"
+              seen.add(canonical)
+          for path in ("data/discovered-articles.json", "data/source-status.json"):
+              json.loads((root / path).read_text(encoding="utf-8"))
+          print(f"Validated {len(posts)} posts; canonical URLs are unique; source/discovery JSON is valid.")
+          PY
 
       - name: Commit discovery queue and posts when changed
         run: |
