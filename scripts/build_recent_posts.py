@@ -75,7 +75,7 @@ for article in queue.get("articles", []):
         "status": "published",
         "post_type": "curated_source",
         "editorial_note": "Curadoria de publicação externa; não é reportagem original do Enigma Mundi. Verifique as alegações na fonte.",
-        "image_url": None
+        "image_url": article.get("image_url") or None
     })
 
 posts.sort(key=lambda item: (item["published_at"], item["url"]), reverse=True)
