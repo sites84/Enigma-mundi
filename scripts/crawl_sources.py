@@ -34,7 +34,7 @@ MAX_PAGE_FETCHES_PER_SOURCE = 50
 FRESHNESS_DAYS = 90
 DELAY_SECONDS = 0.2
 SKIP_EXTENSIONS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".pdf", ".zip", ".mp4", ".mp3", ".css", ".js")
-SKIP_PARTS = ("/tag/", "/tags/", "/author/", "/authors/", "/category/", "/categories/", "/page/", "/search", "/login", "/signup", "/privacy", "/contact", "/about", "/feed", "/rss", "/subscribe", "/subscription", "/membership", "/donate", "/support", "/shop", "/bookstore", "/books", "/store", "/links", "/sitemap", "/newsletter", "/advertise", "/submit", "/pitch", "/careers", "/jobs", "/events", "/calendar")
+SKIP_PARTS = ("/tag/", "/tags/", "/author/", "/authors/", "/category/", "/categories/", "/page/", "/search", "/login", "/signup", "/privacy", "/contact", "/about", "/feed", "/rss", "/subscribe", "/subscription", "/membership", "/donate", "/support", "/shop", "/bookstore", "/books", "/store", "/products/", "/product/", "/cart/", "/checkout/", "/collections/", "/links", "/sitemap", "/newsletter", "/advertise", "/submit", "/pitch", "/careers", "/jobs", "/events", "/calendar")
 
 
 def fetch(url: str):
@@ -390,6 +390,11 @@ def parse_feed_entries(feed_url, source, robots_cache):
                 raw_link = guid
         link = normalize_url(urllib.parse.urljoin(final_url, raw_link))
         if not link:
+            continue
+        # Exclude commerce URLs even when a publisher feed or compromised sitemap
+        # exposes product pages instead of editorial articles.
+        link_path = urllib.parse.urlsplit(link).path.lower()
+        if any(part in link_path for part in SKIP_PARTS):
             continue
         # Feed URLs are explicitly configured for this source; valid feeds may link
         # to hosted podcast platforms, CDNs, or canonical publisher domains.
