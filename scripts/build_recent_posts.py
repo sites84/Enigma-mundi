@@ -247,10 +247,10 @@ def publisher_image_lookup(post):
         return None
     # Prefer the publisher's social preview image, then JSON-LD image metadata.
     patterns = [
-        r'<meta[^>]+(?:property|name)=["\\']og:image(?::secure_url)?["\\'][^>]+content=["\\']([^"\\']+)["\\']',
-        r'<meta[^>]+content=["\\']([^"\\']+)["\\'][^>]+(?:property|name)=["\\']og:image(?::secure_url)?["\\']',
-        r'<meta[^>]+(?:property|name)=["\\']twitter:image(?::src)?["\\'][^>]+content=["\\']([^"\\']+)["\\']',
-        r'<meta[^>]+content=["\\']([^"\\']+)["\\'][^>]+(?:property|name)=["\\']twitter:image(?::src)?["\\']',
+        r"""<meta[^>]+(?:property|name)=["']og:image(?::secure_url)?["'][^>]+content=["']([^"']+)["']""",
+        r"""<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']og:image(?::secure_url)?["']""",
+        r"""<meta[^>]+(?:property|name)=["']twitter:image(?::src)?["'][^>]+content=["']([^"']+)["']""",
+        r"""<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']twitter:image(?::src)?["']""",
     ]
     candidate = None
     for pattern in patterns:
@@ -260,7 +260,7 @@ def publisher_image_lookup(post):
             break
     if not candidate:
         # JSON-LD is a common fallback for publishers that omit Open Graph.
-        match = re.search(r'["\\']image["\\']\\s*:\\s*(?:\\[\\s*)?["\\'](https?://[^"\\']+)["\\']', page, re.I)
+        match = re.search(r"""["']image["']\s*:\s*(?:\[\s*)?["'](https?://[^"']+)["']""", page, re.I)
         if match:
             candidate = html.unescape(match.group(1).strip())
     if not candidate:
