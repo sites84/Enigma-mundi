@@ -97,7 +97,9 @@ payload = {
 }
 out = ROOT / "data/posts.json"
 out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+posts_with_images = sum(1 for item in posts if item.get("image_url"))
 print(
-    f"Posts recentes gerados: {len(posts)}; fontes configuradas: {len(sources)}; "
+    f"Posts recentes gerados: {len(posts)}; com imagem: {posts_with_images}; "
+    f"sem imagem: {len(posts) - posts_with_images}; fontes configuradas: {len(sources)}; "
     f"fontes representadas: {len(source_post_counts)}; janela: {cutoff.date()} a {now.date()}"
 )
