@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "generated_at": "2026-10-12T23:24:54.534163+00:00",
+  "generated_at": "2026-10-12T23:52:55.350718+00:00",
   "source_count": 21,
-  "candidate_urls_checked": 3994,
-  "new_articles_total": 4224,
-  "pending_editorial_review": 920,
-  "stale_archive_count": 3304,
+  "candidate_urls_checked": 4961,
+  "new_articles_total": 4296,
+  "pending_editorial_review": 926,
+  "stale_archive_count": 3370,
   "freshness_window_days": 90,
-  "legacy_records_rejected_by_quality_filter": 18,
+  "legacy_records_rejected_by_quality_filter": 12,
   "articles": [
     {
       "source_id": "global_research_ca",
@@ -18,7 +18,247 @@
       "image_url": "https://www.globalresearch.ca/wp-content/uploads/2022/08/WCC-ebook-cover-final-776x1024.jpg",
       "published_at": "2023-04-25T18:01:36+00:00",
       "has_article_schema": false,
-      "discovered_at": "2026-10-12T23:24:52.553979+00:00",
+      "discovered_at": "2026-10-12T23:52:53.359354+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "conspiracy_watch_info",
+      "source_name": "Conspiracy Watch",
+      "url": "https://www.conspiracywatch.info/d-ou-vient-l-intox-des-6000-mercenaires-de-la-cia-en-syrie‏_a905.html",
+      "title": "D’où vient l'intox des « 6000 mercenaires de la CIA en Syrie‏ » ? - Conspiracy Watch",
+      "description": "Depuis plus de trois mois, le web conspirationniste bruisse de la rumeur selon laquelle « 6000 mercenaires recrutés par la CIA terrorisent la Syrie ».",
+      "image_url": "https://www.conspiracywatch.info/wp-content/uploads/2012/08/4620988-6915801.jpg",
+      "published_at": "2012-08-17T02:09:00+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:52:23.484078+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "conspiracy_watch_info",
+      "source_name": "Conspiracy Watch",
+      "url": "https://www.conspiracywatch.info/notice/jean-pierre-petit",
+      "title": "Jean-Pierre Petit",
+      "description": "Jean-Pierre Petit (1937-) est un physicien français, ancien directeur de recherche au CNRS et auteur conspirationniste. Il s'est d'abord fait connaître pour ses bandes dessinées de vulgarisation et, plus tard, pour ses livres sur les ovnis. Il est aujourd'hui un invité régulier de la complosphère francophone. Entré en 1965 à l'Institut de mécanique des fluides […]",
+      "image_url": null,
+      "published_at": "2026-10-04T11:35:26+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:51:12.069448+00:00",
+      "http_status": 200,
+      "content_type": "application/rss+xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "conspiracy_watch_info",
+      "source_name": "Conspiracy Watch",
+      "url": "https://www.conspiracywatch.info/notice/axis-for-peace",
+      "title": "Axis for Peace",
+      "description": "Axis for Peace est une conférence internationale « anti-impérialiste » organisée à Bruxelles les 17 et 18 novembre 2005 par le Réseau Voltaire de Thierry Meyssan. Ses promoteurs la présentent comme un « Davos contestataire » et l'acte fondateur d'un « mouvement intellectuel » opposé au néoconservatisme et à l'« impérialisme états-unien ». La rencontre […]",
+      "image_url": null,
+      "published_at": "2026-10-04T15:19:56+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:51:12.069135+00:00",
+      "http_status": 200,
+      "content_type": "application/rss+xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "vigilant_citizen",
+      "source_name": "Vigilant Citizen Symbolism",
+      "url": "https://vigilantcitizen.com/sinistersites/sinister-sites-the-eu-parliament",
+      "title": "Sinister Sites – The EU Parliament",
+      "description": "Sinister Sites – The EU Parliament",
+      "image_url": null,
+      "published_at": "2026-09-14T21:29:52+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:50:53.215131+00:00",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "vigilant_citizen",
+      "source_name": "Vigilant Citizen Symbolism",
+      "url": "https://vigilantcitizen.com/tdb_templates/single-template-week-pro-2",
+      "title": "Single Template – VC Articles",
+      "description": "Single Template – VC Articles",
+      "image_url": null,
+      "published_at": "2026-10-08T20:44:46+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:50:53.213397+00:00",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "vigilant_citizen",
+      "source_name": "Vigilant Citizen Symbolism",
+      "url": "https://vigilantcitizen.com/tdb_templates/footer-template-week-pro",
+      "title": "Footer Template – Week PRO",
+      "description": "Footer Template – Week PRO",
+      "image_url": null,
+      "published_at": "2026-10-10T13:32:43+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:50:53.213278+00:00",
+      "http_status": 200,
+      "content_type": "text/xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "fenomenum",
+      "source_name": "Fenomenum Brasil",
+      "url": "https://fenomenum.com.br/os-primeiros-envolvimentos-da-fab-com-o-tema-ovni",
+      "title": "Os Primeiros Envolvimentos da FAB com o Tema OVNI",
+      "description": "Saiba como foram os primeiros envolvimentos da Força Aérea Brasileira com o tema OVNI. Neste artigo: Introdução Fonte Introdução Os primeiros envolvimentos da FAB em torno do Fenômeno OVNI ocorreram no ano de 1954. Nesta época ocorreram diversos casos ufológicos que despertaram a atenção da FAB para o assunto. A onda ufológica de 1954 levou [...]",
+      "image_url": "https://fenomenum.com.br/wp-content/uploads/2025/05/capas-docs-650x260.jpg",
+      "published_at": "2025-05-18T12:43:51+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-12T23:48:56.879259+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "fenomenum",
+      "source_name": "Fenomenum Brasil",
+      "url": "https://fenomenum.com.br/avistamentos-de-ovnis-relatados-a-policia-de-kent-incluem-dezenas-de-avistamentos-incomuns",
+      "title": "Avistamentos de OVNIs relatados à Polícia de Kent incluem dezenas de avistamentos incomuns",
+      "description": "Avistamentos de OVNIs relatados à Polícia de Kent incluem uma nave espacial pairando sobre Gravesend e 1.000 luzes em movimento no céu. Neste artigo: Introdução Fonte Introdução Uma nave espacial pairando, 1.000 luzes no céu e uma aeronave não identificada em movimento acima da rodovia estão entre as chamadas de emergência feitas pela polícia de [...]",
+      "image_url": "https://fenomenum.com.br/wp-content/uploads/2025/05/UDRSO1HS2NAV9WLJPMUM-650x435.jpg",
+      "published_at": "2025-05-06T13:31:45+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-12T23:48:53.697955+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "fenomenum",
+      "source_name": "Fenomenum Brasil",
+      "url": "https://fenomenum.com.br/rover-zhurong-encontra-evidencias-de-agua-em-marte",
+      "title": "Rover Zhurong encontra evidências de água em Marte",
+      "description": "O rover chinês Zhurong Mars, encontrou evidências de que seu atual local de exploração sofreu intemperismo pela água. O rover chinês Zhurong Mars, que pousou no planeta vermelho em maio do ano passado, encontrou evidências de que seu atual local de exploração sofreu longos períodos de intemperismo pelo vento e até pela água. O rover pousou [...]",
+      "image_url": "https://fenomenum.com.br/wp-content/uploads/2022/03/1ifksadnkqss6koq_1646745552-650x372.webp",
+      "published_at": "2022-03-09T12:51:56+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-12T23:48:50.353395+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "fenomenum",
+      "source_name": "Fenomenum Brasil",
+      "url": "https://fenomenum.com.br/ortotenias-ufos-em-voo-programado",
+      "title": "Ortotenias – UFOs em Voo Programado",
+      "description": "Ortotenia é uma teoria formulada em 1956, pelo ufólogo francês Aimé Michel, baseada nos dados da grande onda ufológica de 1954. Segundo esta teoria, os casos de avistamento não ocorrem ao acaso, pois observa-se uma atuação inteligente diária por trás destas aparições. Neste artigo: Introdução Fonte Introdução O ano de 1954 foi um ano extremamente [...]",
+      "image_url": "https://fenomenum.com.br/wp-content/uploads/2022/02/ortotenia02-650x650.jpg",
+      "published_at": "2022-02-19T23:13:44+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-12T23:48:47.177723+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "fenomenum",
+      "source_name": "Fenomenum Brasil",
+      "url": "https://fenomenum.com.br/o-encontro-de-rosa-dainelli",
+      "title": "O Encontro de Rosa Dainelli",
+      "description": "Caso de aterrissagem de UFO e contato com seus tripulantes ocorrido em um pequeno vilarejo da região da Toscana, na Itália, em 1º de novembro de 1954. Neste artigo: Introdução Um Estranho Encontro Efeitos Psicológicos na Testemunha As Consequencias Investigações Posteriores Outras Testemunhas Fonte Introdução O ano de 1954 foi um dos mais significativos para [...]",
+      "image_url": "https://fenomenum.com.br/wp-content/uploads/2022/02/e5574fc7fac90a3e6530c5a37edf7b7d-650x761.jpg",
+      "published_at": "2022-02-24T19:23:30+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-12T23:47:32.901526+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "fenomenum",
+      "source_name": "Fenomenum Brasil",
+      "url": "https://fenomenum.com.br/forca-aerea-dos-estados-unidos-revela-informacoes-sobre-drovnis-sobrevoando-bases-militares",
+      "title": "Força Aérea dos Estados Unidos revela informações sobre drovnis sobrevoando bases militares",
+      "description": "Registros recém-divulgados via FOIA revelaram imagens inéditas de OVNIs invadindo a Base Aérea de Wright-Patterson, em Ohio, durante dois incidentes em dezembro de 2024, reacendendo o mistério sobre enxames de drones não identificados e reforçando as teorias que ligam a base a casos históricos como o acidente de Roswell e o Projeto Blue Book. Neste [...]",
+      "image_url": "https://fenomenum.com.br/wp-content/uploads/2025/07/100565293-14930749-image-a-8_1753290776379.avif",
+      "published_at": "2025-07-24T13:18:41+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-12T23:47:29.532204+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "fenomenum",
+      "source_name": "Fenomenum Brasil",
+      "url": "https://fenomenum.com.br/caso-haroldo-westendorff",
+      "title": "Caso Haroldo Westendorff",
+      "description": "Impressionante encontro entre aeronave particular e um gigantesco OVNI avistado e captado por radar sobre a Lagoa dos Patos (RS). Em 05 de outubro de 1996, o empresário e piloto Haroldo Westendorff pilotava um monomotor Tupy (prefixo PT-NTH) sobre a Lagoa dos Patos, nas proximidades da cidade de São José do Norte (RS). Naquele dia [...]",
+      "image_url": "https://fenomenum.com.br/wp-content/uploads/2022/04/westendorff2-1.jpg",
+      "published_at": "2022-04-02T16:06:23+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-12T23:47:26.343419+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "fenomenum",
+      "source_name": "Fenomenum Brasil",
+      "url": "https://fenomenum.com.br/chupacabras17",
+      "title": "Ataques de Chupacabras no Mato Grosso do Sul",
+      "description": "Transcrição de artigo, publicado na Revista UFO, edição 53, de setembro de 1997. Artigo anterior sobre o Chupacabras Próximo artigo sobre o Chupacabras Por Mauren Andrea Stieven A febre epidêmica do temível Chupacabras chegou ao Mato Grosso do Sul. Jardim, situada a sudoeste do Estado, a 218 km de Campo Grande e próxima a Guia [...]",
+      "image_url": "https://fenomenum.com.br/wp-content/uploads/2022/03/direita-1.png",
+      "published_at": "2022-04-07T17:39:35+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-12T23:47:23.199809+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "fenomenum",
+      "source_name": "Fenomenum Brasil",
+      "url": "https://fenomenum.com.br/cientista-afirma-ter-finalmente-resolvido-o-misterio-do-triangulo-das-bermudas",
+      "title": "Cientista afirma ter finalmente resolvido o mistério do Triângulo das Bermudas",
+      "description": "O mistério do Triângulo das Bermudas, marcado por desaparecimentos de navios e aviões, pode ser explicado por ondas gigantes, segundo o oceanógrafo Simon Boxall. Neste artigo: Introdução Fonte Introdução De aeronaves que desaparecem a navios fantasmas sinistros, o Triângulo das Bermudas é o local de  alguns dos fenômenos mais estranhos do planeta. Agora, um cientista afirma [...]",
+      "image_url": "https://fenomenum.com.br/wp-content/uploads/2025/08/250825_Bermuda_Triangle-large-650x515.jpg",
+      "published_at": "2025-08-26T13:05:18+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-12T23:47:19.950923+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "fenomenum",
+      "source_name": "Fenomenum Brasil",
+      "url": "https://fenomenum.com.br/o-pouso-na-lua-teria-sido-uma-fraude",
+      "title": "O Pouso na Lua Teria Sido uma Fraude?",
+      "description": "Em Junho de 1969, pessoas de todo o planeta acompanhavam, extasiados, o desenrolar da missão Apollo 11, que seria a primeira missão tripulada a pousar em outro corpo celeste. Com o passar dos anos, surgiram informações controversas questionando a realidade das missões tripuladas enviadas à Lua. A Internet é um dos principais, senão o principal [...]",
+      "image_url": "https://fenomenum.com.br/wp-content/uploads/2022/04/4sombras2-1-650x171.jpg",
+      "published_at": "2022-04-07T17:23:29+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-12T23:47:16.499182+00:00",
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
@@ -33,7 +273,7 @@
       "image_url": null,
       "published_at": "2026-09-15T20:32:03+00:00",
       "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:15:57.755955+00:00",
+      "discovered_at": "2026-10-12T23:46:14.328615+00:00",
       "http_status": 200,
       "content_type": "application/xml",
       "status": "discovered",
@@ -48,7 +288,7 @@
       "image_url": null,
       "published_at": "2026-09-16T17:14:14+00:00",
       "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:15:57.755895+00:00",
+      "discovered_at": "2026-10-12T23:46:14.328554+00:00",
       "http_status": 200,
       "content_type": "application/xml",
       "status": "discovered",
@@ -63,7 +303,7 @@
       "image_url": null,
       "published_at": "2026-09-16T17:25:17+00:00",
       "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:15:57.755832+00:00",
+      "discovered_at": "2026-10-12T23:46:14.328490+00:00",
       "http_status": 200,
       "content_type": "application/xml",
       "status": "discovered",
@@ -78,7 +318,7 @@
       "image_url": null,
       "published_at": "2026-10-07T16:06:13+00:00",
       "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:15:57.755295+00:00",
+      "discovered_at": "2026-10-12T23:46:14.327911+00:00",
       "http_status": 200,
       "content_type": "application/xml",
       "status": "discovered",
@@ -93,11 +333,956 @@
       "image_url": null,
       "published_at": "2026-10-07T17:47:14+00:00",
       "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:15:57.755231+00:00",
+      "discovered_at": "2026-10-12T23:46:14.327841+00:00",
       "http_status": 200,
       "content_type": "application/xml",
       "status": "discovered",
       "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "revista_ufo",
+      "source_name": "Revista UFO Brasil",
+      "url": "https://ufo.com.br/web-stories/testando-um-story",
+      "title": "Testando um story",
+      "description": "Testando um story",
+      "image_url": "https://ufo.com.br/wp-content/uploads/2026/06/cropped-cropped-Avatar.jpeg",
+      "published_at": "2026-07-15T00:31:31+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:43:54.864389+00:00",
+      "http_status": 200,
+      "content_type": "application/rss+xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "mufon_news",
+      "source_name": "MUFON UFO News",
+      "url": "https://mufon.com/2024/04/12/researcher-paul-f-eno-has-died-2",
+      "title": "Researcher Paul F. Eno has Died!",
+      "description": "MUFON Experiencer Resource Team member Paul F. Eno has died. Marking over 50 years in research, Paul Eno was one of the first investigators of the early 1970s investigating unusual occurrences. His early mentors included parapsychology pioneer Dr. Louisa Rhine, Fr. John J. Nicola S.J. (technical advisor for the film The Exorcist) and legendary, first-generation ghost hunters Ed & Lorraine Warren (of The Conjuring fame). Eno graduated from two seminaries but, in 1977, was expelled from a third because of his unorthodox work with less than two years to go before ordination. He ended up as an award-winning New England newspaper and magazine journalist.",
+      "image_url": "https://mufon.com//wp-content/uploads/2024/04/paul_eno_head_shot_hi_res-1475079790-3260.webp",
+      "published_at": "2024-04-12T02:52:27+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:43:36.791593+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "mufon_news",
+      "source_name": "MUFON UFO News",
+      "url": "https://mufon.com/2024/04/12/mufon-up-close-radio-show-premiers",
+      "title": "MUFON 'UP CLOSE' RADIO SHOW PREMIERS!",
+      "description": "On the heels of the successful launch of the MUFON CONTACT radio show on KGRA with hosts Sev Tok and Earl Grey Anderson, MUFON is proud to announce a second show not associated with the Experiencer Phenomenon but with the “nuts and bolts” type phenomenon witnesses have been reporting for the last 3,500 years of human history. Join us as MUFON CAG Investigator Alex Tusia and MUFON Cuba and Mexico National Director Ruben Uiarte deep dive into conventional UFO reports, the witnesses, and the possibilities concerning what this most enigmatic drama is affecting our world! This link will bring you",
+      "image_url": "https://mufon.com//wp-content/uploads/2024/04/Contact-Radio-FINAL-800x200-1.jpg",
+      "published_at": "2024-04-12T03:02:24+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:43:35.639531+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "mufon_news",
+      "source_name": "MUFON UFO News",
+      "url": "https://mufon.com/2024/05/03/the-laguardia-cylinder-and-its-similarity-to-the-1979-cecconi-incident-over-italy-2",
+      "title": "The LaGuardia Cylinder and its Similarity to the 1979 Cecconi Incident Over Italy",
+      "description": "On March 25, 2024, a story broke in the New York Post concerning an airline passenger named Michelle Reyes who accidentially filmed a black cylinder shaped object with a white possible dome over New York City passing her plane in the opposite direction`. Of course, she reported the incident to the FAA immediately. She was concerned it was a safety hazard. She received no reply as of this writing from the FAA. This is not surprising! Tom Wertman, MUFON's Ohio State Director and a member of The MUTUAL UFO Network's Photo Analysis Team, who rarely is stumped, could not identify",
+      "image_url": "https://mufon.com//wp-content/uploads/2024/05/comparison.jpg",
+      "published_at": "2024-05-03T04:00:34+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:43:34.378432+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "mufon_news",
+      "source_name": "MUFON UFO News",
+      "url": "https://mufon.com/2024/05/24/legendary-ufo-researcher-dr-bruce-maccabee-has-passed",
+      "title": "Legendary UFO Researcher Dr. Bruce Maccabee has Passed!",
+      "description": "ufo researcher physicist bruce maccabee ufo uap gulf breeze phoenix lights MUFON FBI CIA MARYLAND STATE DIRECTOR PIANIST SYMPOSIUA",
+      "image_url": "https://mufon.com//wp-content/uploads/2024/05/bruce-maccabee.jpg",
+      "published_at": "2024-05-24T01:40:04+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:43:33.339122+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/frozen-grape-water-to-ice",
+      "title": "Did This Frozen Grape Instantaneously Turn Water Into Ice?",
+      "description": "Supercooled water, which remains liquid below its freezing point, can be tricky to create but is useful for party tricks.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/ice-grape.png",
+      "published_at": "2019-01-02T17:07:14+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:55.726710+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/immigrants-riot-italy",
+      "title": "Does This Video Show Immigrants Rioting in Italy?",
+      "description": "Whether it does or doesn't show rioting, the video has been viewed more than 1.6 million times.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/shutterstock_419503312.jpg",
+      "published_at": "2019-01-10T16:03:44+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:55.215486+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/high-income-earners-tax-rate",
+      "title": "Were High-Income Earners in U.S. Taxed at a 70% Rate in 1980?",
+      "description": "The question arose in light of proposal by freshman U.S. Congresswoman Alexandria Ocasio-Cortez to tax such earners at a 70% rate.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/11/AP18316750911983.jpg",
+      "published_at": "2019-01-04T16:04:40+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:54.655267+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/news/2019/01/07/government-shutdown-may-delay-income-tax-refunds",
+      "title": "Will the Government Shutdown Delay Income Tax Refunds?",
+      "description": "This year's tax season may see even more confusion than usual due to the government shutdown.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2015/05/irs.jpg",
+      "published_at": "2019-01-07T10:08:46+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:54.192487+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/federal-government-workers-30-days",
+      "title": "Can Federal Government Workers Be Fired After 30 Days of Shutdown?",
+      "description": "The law varies depending on the type of shutdown.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/shutterstock_1271811034.jpg",
+      "published_at": "2019-01-17T16:25:01+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:53.718437+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/mike-pence-visit-to-iceland",
+      "title": "Was Mike Pence Kicked Out of Iceland?",
+      "description": "You can't get kicked out of a place you haven't been.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/shutterstock_479350555.jpg",
+      "published_at": "2019-01-11T16:56:14+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:53.229061+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/trump-boycott-chinese-restaurants",
+      "title": "Did President Trump Urge Americans to Boycott Chinese Restaurants?",
+      "description": "Always good to beware of what news items you ingest.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2017/12/chinese_takeout_tw.jpg",
+      "published_at": "2019-01-14T14:52:04+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:52.658472+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/italy-seize-vatican-city",
+      "title": "Did Italy Arrest Cardinals and Seize Vatican City?",
+      "description": "\"The article starts out seemingly sane and then spirals into absurdity ...\"",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2017/06/vatican_fb.jpg",
+      "published_at": "2019-01-22T16:19:47+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:52.187730+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/chuck-schumer-excessive-contributions",
+      "title": "Was Senator Chuck Schumer Caught Taking $1 Million in 'Excessive Contributions'?",
+      "description": "Trump supporters raised the issue of past campaign finance violations to question Schumer's fitness to hold office in December 2018.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2025/11/schumer_replacement_2.jpg",
+      "published_at": "2019-01-08T12:58:51+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:51.727344+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/fine-using-cellphones-while-driving",
+      "title": "Do Motorists Now Face $999 Fines and 3-Year Suspensions for Using Cellphones While Driving?",
+      "description": "A number of recent laws have focused on preventing distracted driving, but the penalties vary from location to location.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/06/texting_driving.jpg",
+      "published_at": "2019-01-14T10:03:26+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:51.197960+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/news/2019/01/07/media-silent-islamic-party-of-ontario",
+      "title": "Was the 'Media Silent' About the Islamic Party of Ontario?",
+      "description": "The news media are typically \"silent\" in cases where there's nothing to report.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2015/07/canadaflag.jpg",
+      "published_at": "2019-01-07T17:48:32+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:50.619218+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/eagle-cloud-jerusalem",
+      "title": "Does This Photograph Show an Eagle Cloud Over Jerusalem?",
+      "description": "While pareidolia may explain why we see faces (or birds) in the clouds, it doesn't explain why we post misinformation to social media.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/eagle.jpg",
+      "published_at": "2019-01-22T17:26:44+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:50.052654+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/nancy-pelosi-crime-family",
+      "title": "Is a 'Nancy Pelosi Crime Family' Meme Accurate?",
+      "description": "And where does the 'Pelosi Crime Family' fall on a scale of 'innocent' to 'Gambino'?",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2017/05/shutterstock_596958554.jpg",
+      "published_at": "2019-01-29T16:46:16+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:49.596386+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/obama-65000-hot-dogs",
+      "title": "Did President Obama Once Spend $65,000 on Hot Dogs?",
+      "description": "A leaked email used in 2009 to push the \"Pizzagate\" conspiracy theory was repurposed in 2019 to spread rumors about bulk hot dog purchases.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/shutterstock_282467483.jpg",
+      "published_at": "2019-01-16T13:46:26+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:49.079014+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/marlboro-cigarettes-production",
+      "title": "Did the Company That Makes Marlboros Announce They Intend to Stop Producing Cigarettes?",
+      "description": "Philip Morris International sells the iconic brand outside the United States, and has for years expressed a plan to end production of cigarettes altogether.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/shutterstock_1265191855.jpg",
+      "published_at": "2019-01-11T17:37:19+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:47.398835+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/president-trump-walter-reed-media",
+      "title": "Was President Trump's Visit to Walter Reed Hospital Ignored by the Media?",
+      "description": "The media doesn't typically afford prominent coverage to year-old stories.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/purpleheartmedal.jpg",
+      "published_at": "2019-01-03T15:45:53+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:46.932334+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/supreme-court-bible-oath",
+      "title": "Did the U.S. Supreme Court Rule That Oaths Not Taken on the Bible Are 'Illegal'?",
+      "description": "A frequent purveyor of junk news caused some uncertainty about the nation's highest court in January 2019.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/shutterstock_507837871.jpg",
+      "published_at": "2019-01-11T12:41:53+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:46.373181+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/olivia-newton-john-dying-cancer",
+      "title": "Is Olivia Newton-John Dying of Cancer?",
+      "description": "Celebrity gossip websites reported in December 2018 that the 70-year-old singer had only days or weeks to live.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/olivia-newton-john.jpg",
+      "published_at": "2019-01-02T13:20:58+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:45.753547+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/schumer-pelosi-150-billion",
+      "title": "Did Schumer and Pelosi Help Obama Hand $150 Billion to an 'Enemy of the US'?",
+      "description": "Two prominent Democratic members of Congress didn't \"help\" bring about something that never took place.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/schumerpelosi.jpg",
+      "published_at": "2019-01-08T17:37:19+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:45.261752+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/news/2019/01/24/lesbian-couple-transition-son",
+      "title": "Is a 'Lesbian Couple' Preparing to Transition Their Son Into a Daughter?",
+      "description": "Words and context matter when it comes to discussing marginalized groups.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/10/ss_transgender.jpg",
+      "published_at": "2019-01-24T14:48:00+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:44.788055+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/rnc-block-trump-challenge",
+      "title": "Did the RNC Block Challengers to Trump's Re-Election?",
+      "description": "The Republican National Committee passed a resolution supporting President Trump at a winter 2019 gathering but didn't completely preclude an intra-party challenge.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/10/trumphead2.jpg",
+      "published_at": "2019-01-29T12:16:00+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:44.197828+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/criminal-aliens-gang-members",
+      "title": "Were 17,000 \"Criminal Aliens\" and 6,000 MS-13 Gang Members Arrested in 2018?",
+      "description": "This claim, made on the RNC’s “Border Facts” page, muddied several numbers to make a misleading argument.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/08/icearrest.jpg",
+      "published_at": "2019-01-08T18:30:23+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:43.735192+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/border-traffic-drop-barriers",
+      "title": "Did Illegal Border Traffic Drop by 90% in Areas Where Physical Barriers Were Expanded?",
+      "description": "This claim, made on the RNC’s “Border Facts” page, is problematic and largely meaningless in terms of demonstrating the efficacy of a border wall.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/06/US_mexico_border_fence.jpg",
+      "published_at": "2019-01-08T16:18:12+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:43.274892+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/fbi-raid-retirement-home",
+      "title": "Was a Retirement Home Raided by the FBI for Running an Elderly Fight Club?",
+      "description": "Breaking up non-existent elderly fight clubs at retirement homes does not appear to be an FBI priority.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/shutterstock_1013725102.jpg",
+      "published_at": "2019-01-28T13:01:24+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:42.789429+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/elizabeth-warren-abortion-tonsils",
+      "title": "Did U.S. Sen. Elizabeth Warren Say Abortion Is 'No Different' Than Removing Tonsils?",
+      "description": "Right-leaning Facebook pages and websites twisted something the Massachusetts Democrat wrote in July 2018.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/10/AP18289490493316.jpg",
+      "published_at": "2019-01-25T14:07:17+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:42.267303+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/roger-stone-hillary-prison-merch",
+      "title": "Did Roger Stone Sell 'Hillary for Prison' Merchandise?",
+      "description": "Lock her up? Roger Stone's attacks on Hillary Clinton seemed rather ironic after his January 2019 arrest.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/ap_stone.jpg",
+      "published_at": "2019-01-28T11:18:16+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:41.616179+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/karen-pence-school-lgbt",
+      "title": "Did Second Lady Karen Pence Work at a School That Bans LGBT Teachers and Students?",
+      "description": "The wife of Vice President Mike Pence resumed her work as an art teacher at the Immanuel Christian School in Northern Virginia in January 2019.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/39773427874_fd11655afe_o.jpg",
+      "published_at": "2019-01-17T14:10:09+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:41.071925+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/san-antonio-border-wall",
+      "title": "Did President Trump Tout San Antonio as a City Made Safe by a Border Wall?",
+      "description": "President Donald Trump seemingly boasted to reporters about how well San Antonio’s non-existent border wall﻿ is working.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/ss_sanantonio.jpg",
+      "published_at": "2019-01-20T14:21:23+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:40.505039+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/muslim-community-patrol-nyc",
+      "title": "Does a Muslim Community Patrol in New York City Enforce 'Sharia Law'?",
+      "description": "Certain websites regurgitated a familiar complaint upon the debut of a new patrol group in Brooklyn.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/shutterstock_520066648.jpg",
+      "published_at": "2019-01-13T09:03:20+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:39.906125+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/julie-sandmann-smallpox-blankets",
+      "title": "Did Julie Sandmann Say She Wished 'Pioneers Had Brought More Blankets with Smallpox'?",
+      "description": "Social media avatars don't always correspond with the person actually using the account.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/magamock.jpg",
+      "published_at": "2019-01-22T09:12:39+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:39.368086+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/red-ribbon-nurse-abortions",
+      "title": "Will Red Ribbon Nurses Kill Abandoned Babies Under a 2019 New York Law?",
+      "description": "Scaremongering over New York's Reproductive Health Act reached fever pitch in January 2019.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/shutterstock_440808748.jpg",
+      "published_at": "2019-01-31T14:53:40+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:38.800565+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/tlaib-omar-muslim-holidays",
+      "title": "Did Rashida Tlaib and Ilhan Omar Co-Sponsor a Bill to Recognize Muslim Holidays as Federal Holidays?",
+      "description": "A dubious website said the first two Muslim women elected to Congress wasted no time in trying to rearrange the national holiday schedule.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2017/03/mosque_michigan_fb.jpg",
+      "published_at": "2019-01-16T15:38:11+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:38.260293+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/billionaire-steve-guoves-last-words",
+      "title": "Are These the Last Words of Billionaire Steve Gouves?",
+      "description": "Can fictional characters be penalized for plagiarizing fake news?",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/ss_deathbed.jpg",
+      "published_at": "2019-01-07T09:22:27+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:37.764000+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/ronald-reagan-jacket-oval-office",
+      "title": "Did Ronald Reagan Always Wear a Jacket in the Oval Office?",
+      "description": "Former Starbucks CEO Howard Schultz renewed interest in a longstanding rumor about the former U.S. president's attire.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/01/ronald_reagan_tw.jpg",
+      "published_at": "2019-01-30T17:18:06+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:37.197388+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/healthcare-deaths-terrorism-illegal-immigration",
+      "title": "Does Lack of Affordable Healthcare Kill More People in America Than Terrorism and Illegal Immigration?",
+      "description": "A widely-shared Facebook meme challenged readers to reevaluate their political priorities about immigration and health care.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2025/10/default_thumb.jpg",
+      "published_at": "2019-01-08T20:17:25+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:36.666935+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/ocasio-cortez-change-textbooks-act",
+      "title": "Did Alexandria Ocasio-Cortez Pass the 'Change Unfit New Textbooks Act'?",
+      "description": "Robert Edward Lee was an American and Confederate soldier, best known as a commander of the Confederate States Army.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/08/cortezhead.jpg",
+      "published_at": "2019-01-20T13:27:55+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:36.110074+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/ghana-wedding-clothes-divorce",
+      "title": "Do Ghanaians Have to Wear Their Wedding Clothes to Get Divorced?",
+      "description": "\"There are numerous curious laws in different countries of the African continent.\"",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/ghana.jpg",
+      "published_at": "2019-01-31T17:50:48+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:35.520133+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/coast-guard-shutdown-cocaine",
+      "title": "Did the Coast Guard Start Reselling Seized Cocaine Amid Government Shutdown?",
+      "description": "The government can raise funds in many different ways, but selling recreational drugs would be a whole new enterprise.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/01/cocaineline.jpg",
+      "published_at": "2019-01-03T08:18:45+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:34.715783+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/joshua-tree-shutdown",
+      "title": "Did Visitors to Joshua Tree National Park Cut Down Trees During the Government Shutdown?",
+      "description": "The iconic wilderness area fell victim to staff shortages caused by the budget standoff in Washington.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/joshua_trees.jpg",
+      "published_at": "2019-01-11T08:12:54+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:34.210430+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/el-indio-rancher",
+      "title": "Did a Group of Migrant Men With a Kidnapped Mexican Girl Hold a Texas Rancher in El Indio at Gunpoint?",
+      "description": "We sought to corroborate an incident described in a social media post that went viral in early 2019.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/03/US_Mexico_border_wall_feature.jpg",
+      "published_at": "2019-01-21T12:39:31+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:33.696357+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/news/2019/01/24/yahoo-news-republished-a-satirical-article-from-the-onion",
+      "title": "Yahoo! News Republished a Satirical Article from The Onion",
+      "description": "An unusual cross-posting briefly blended satire with actual news.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2015/06/osama.jpg",
+      "published_at": "2019-01-24T14:19:32+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:33.120580+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/children-raped-illegal-immigrants",
+      "title": "Were 10,800 U.S. Children Raped by Illegal Immigrants in 2018?",
+      "description": "You can reach just about any conclusion with shoddy statistics and false premises.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/04/ICE_immigration_customs_enforcemnt_detaining_arrest_feature.jpg",
+      "published_at": "2019-01-10T07:15:00+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:32.629974+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/kevin-spacey-justin-bieber",
+      "title": "Did a Producer Claim Kevin Spacey 'Drugged and Raped' Justin Bieber?",
+      "description": "Although Spacey has been accused by multiple people of sexual abuse, the claim that he 'drugged and raped' Justin Bieber is unfounded.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/spacey.jpg",
+      "published_at": "2019-01-09T16:53:26+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:32.122884+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/theresa-may-adopt-children",
+      "title": "Did Theresa May Say Pedophiles Should Be Allowed to Adopt Children?",
+      "description": "A notorious junk news site twisted a news story from 2010.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2017/06/theresa_may_fb.jpg",
+      "published_at": "2019-01-18T18:02:33+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:31.577247+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/ocasio-cortez-gun-rights-quote",
+      "title": "Did Congresswoman Ocasio-Cortez Say 'Owning Guns Is Not a Right' in the Constitution?",
+      "description": "Attempts to discredit the freshman lawmaker from NYC seem to know no end.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/shutterstock_1231811008.jpg",
+      "published_at": "2019-01-18T11:40:05+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:31.061307+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/wall-street-border-wall",
+      "title": "Was Wall Street Originally the Site of a 'Border Wall' Meant to Protect New Amsterdam?",
+      "description": "Social media memes compared a defensive wall built along the northern border of New Amsterdam during the 17th century to President Donald Trump's border wall.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/new-amsterdam-map.jpg",
+      "published_at": "2019-01-15T16:50:55+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:30.581496+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/jim-thorpe-shoes-olympics",
+      "title": "Did Jim Thorpe Wear Mismatched Shoes at the 1912 Olympics?",
+      "description": "The \"world's greatest athlete\" may not have always had the world's greatest kicks.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/shutterstock_152995316.jpg",
+      "published_at": "2019-01-25T15:40:54+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:30.126054+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/trump-commencement-speech-wall",
+      "title": "Did Trump Use a Concrete Wall Metaphor During a 2004 Commencement Speech?",
+      "description": "Donald Trump in 2004: \"‘If there’s a concrete wall in front of you, go through it, go over it, go around it. But get to the other side of that wall.\"",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/AP19006550199477.jpg",
+      "published_at": "2019-01-10T11:36:50+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:29.657268+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/cats-diagnosed-bubonic-plague",
+      "title": "Were Three Cats in Wyoming Diagnosed with Bubonic Plague?",
+      "description": "Officials issued an advisory to residents after a spate of cases within a six-month period.",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2019/01/two-cats.jpg",
+      "published_at": "2019-01-18T17:43:01+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:29.128273+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "snopes_urban_legends",
+      "source_name": "Snopes Urban Legends",
+      "url": "https://www.snopes.com/fact-check/ilhan-omar-isis",
+      "title": "Did Rep. Ilhan Omar Call for Lighter Sentences for Would-Be ISIS Recruits?",
+      "description": "The Minnesota Democrat sent a letter to a U.S. District Court judge in 2016. What exactly did she write?",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2018/09/ilhan.jpg",
+      "published_at": "2019-01-28T17:07:00+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:41:28.539021+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+    },
+    {
+      "source_id": "arquivo_nacional_br",
+      "source_name": "Arquivo Nacional do Brasil",
+      "url": "https://www.gov.br/pt-br/servicos/obter-vacina",
+      "title": "Obter Vacina no HU-UFJF",
+      "description": "Obter Vacina no HU-UFJF",
+      "image_url": null,
+      "published_at": "2026-08-27T15:26:06+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:37:34.931042+00:00",
+      "http_status": 200,
+      "content_type": "application/atom+xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "arquivo_nacional_br",
+      "source_name": "Arquivo Nacional do Brasil",
+      "url": "https://www.gov.br/pt-br/servicos/estimar-rota-segura",
+      "title": "Estimar Rota segura",
+      "description": "Estimar Rota segura",
+      "image_url": null,
+      "published_at": "2026-09-02T19:08:20+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:37:34.930389+00:00",
+      "http_status": 200,
+      "content_type": "application/atom+xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "arquivo_nacional_br",
+      "source_name": "Arquivo Nacional do Brasil",
+      "url": "https://www.gov.br/pt-br/servicos/plano-mestre-portuario",
+      "title": "Solicitar o Plano Mestre Portuário",
+      "description": "Solicitar o Plano Mestre Portuário",
+      "image_url": null,
+      "published_at": "2026-09-02T19:10:25+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:37:34.930067+00:00",
+      "http_status": 200,
+      "content_type": "application/atom+xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "arquivo_nacional_br",
+      "source_name": "Arquivo Nacional do Brasil",
+      "url": "https://www.gov.br/pt-br/servicos/solicitar-supervisao-de-obras",
+      "title": "Solicitar supervisão de obras",
+      "description": "Solicitar supervisão de obras",
+      "image_url": null,
+      "published_at": "2026-09-02T19:10:47+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:37:34.930008+00:00",
+      "http_status": 200,
+      "content_type": "application/atom+xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "arquivo_nacional_br",
+      "source_name": "Arquivo Nacional do Brasil",
+      "url": "https://www.gov.br/pt-br/servicos/realizar-cirurgia-eletiva-no-huol",
+      "title": "Realizar cirurgia eletiva no Huol",
+      "description": "Realizar cirurgia eletiva no Huol",
+      "image_url": null,
+      "published_at": "2026-09-10T13:42:30+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:37:34.927485+00:00",
+      "http_status": 200,
+      "content_type": "application/atom+xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "arquivo_nacional_br",
+      "source_name": "Arquivo Nacional do Brasil",
+      "url": "https://www.gov.br/pt-br/orgaos/procuradoria-federal-especializada",
+      "title": "Procuradoria Federal Especializada",
+      "description": "Procuradoria Federal Especializada",
+      "image_url": null,
+      "published_at": "2026-09-18T17:56:38+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:37:34.926166+00:00",
+      "http_status": 200,
+      "content_type": "application/atom+xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "arquivo_nacional_br",
+      "source_name": "Arquivo Nacional do Brasil",
+      "url": "https://www.gov.br/pt-br/servicos/acessar-dicas-em-saude",
+      "title": "Acessar Dicas em Saúde",
+      "description": "Acessar Dicas em Saúde",
+      "image_url": null,
+      "published_at": "2026-09-22T13:46:27+00:00",
+      "has_article_schema": true,
+      "discovered_at": "2026-10-12T23:37:34.925954+00:00",
+      "http_status": 200,
+      "content_type": "application/atom+xml",
+      "status": "discovered",
+      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
+    },
+    {
+      "source_id": "global_research_ca",
+      "source_name": "Global Research Geopolitics",
+      "url": "https://www.globalresearch.ca/new-pdf-ebook-the-worldwide-corona-crisis-global-coup-detat-against-humanity-by-michel-chossudovsky/5791054",
+      "title": "\"The Worldwide Corona Crisis, Global Coup d'Etat Against Humanity\" by Michel Chossudovsky - Global Research",
+      "description": "My objective is to inform people worldwide and refute the official narrative which has been used as a justification to destabilize the economic and social fabric of entire countries, followed by the imposition of the “deadly” COVID-19 “vaccine”. This crisis affects humanity in its entirety: almost 8 billion people.",
+      "image_url": "https://www.globalresearch.ca/wp-content/uploads/2022/08/WCC-ebook-cover-final-776x1024.jpg",
+      "published_at": "2023-04-25T18:01:36+00:00",
+      "has_article_schema": false,
+      "discovered_at": "2026-10-12T23:24:52.553979+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "status": "stale_archive",
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "bad_astronomy",
@@ -127,7 +1312,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -142,7 +1327,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -157,7 +1342,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -172,7 +1357,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -187,7 +1372,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -202,7 +1387,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -217,7 +1402,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -232,7 +1417,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -247,7 +1432,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -262,7 +1447,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -277,7 +1462,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -292,7 +1477,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -307,7 +1492,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -322,7 +1507,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -337,7 +1522,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -352,7 +1537,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -367,7 +1552,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -382,7 +1567,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -397,7 +1582,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -412,7 +1597,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -427,7 +1612,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -442,7 +1627,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -457,7 +1642,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -472,7 +1657,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -487,7 +1672,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -502,7 +1687,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -517,7 +1702,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -532,7 +1717,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -547,7 +1732,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -562,7 +1747,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -577,7 +1762,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -592,7 +1777,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -607,7 +1792,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -622,7 +1807,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -637,7 +1822,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -652,7 +1837,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -667,7 +1852,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -682,7 +1867,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -697,7 +1882,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -712,7 +1897,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -727,7 +1912,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -742,7 +1927,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -757,7 +1942,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -772,7 +1957,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -787,7 +1972,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -802,7 +1987,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -817,7 +2002,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -832,7 +2017,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -847,7 +2032,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -862,7 +2047,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -877,7 +2062,7 @@
       "http_status": 200,
       "content_type": "text/html",
       "status": "stale_archive",
-      "notes": "Metadados detectados; ainda exige verificação editorial. Não publicado."
+      "notes": "Conteúdo com mais de 90 dias; preservado como arquivo, fora da fila de notícias recentes."
     },
     {
       "source_id": "snopes_urban_legends",
@@ -891,111 +2076,6 @@
       "discovered_at": "2026-10-12T23:13:11.026340+00:00",
       "http_status": 200,
       "content_type": "text/xml",
-      "status": "discovered",
-      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
-    },
-    {
-      "source_id": "arquivo_nacional_br",
-      "source_name": "Arquivo Nacional do Brasil",
-      "url": "https://www.gov.br/pt-br/servicos/obter-vacina",
-      "title": "Obter Vacina no HU-UFJF",
-      "description": "Obter Vacina no HU-UFJF",
-      "image_url": null,
-      "published_at": "2026-08-27T15:26:06+00:00",
-      "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:10:31.025032+00:00",
-      "http_status": 200,
-      "content_type": "application/atom+xml",
-      "status": "discovered",
-      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
-    },
-    {
-      "source_id": "arquivo_nacional_br",
-      "source_name": "Arquivo Nacional do Brasil",
-      "url": "https://www.gov.br/pt-br/servicos/estimar-rota-segura",
-      "title": "Estimar Rota segura",
-      "description": "Estimar Rota segura",
-      "image_url": null,
-      "published_at": "2026-09-02T19:08:20+00:00",
-      "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:10:31.024337+00:00",
-      "http_status": 200,
-      "content_type": "application/atom+xml",
-      "status": "discovered",
-      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
-    },
-    {
-      "source_id": "arquivo_nacional_br",
-      "source_name": "Arquivo Nacional do Brasil",
-      "url": "https://www.gov.br/pt-br/servicos/plano-mestre-portuario",
-      "title": "Solicitar o Plano Mestre Portuário",
-      "description": "Solicitar o Plano Mestre Portuário",
-      "image_url": null,
-      "published_at": "2026-09-02T19:10:25+00:00",
-      "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:10:31.024044+00:00",
-      "http_status": 200,
-      "content_type": "application/atom+xml",
-      "status": "discovered",
-      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
-    },
-    {
-      "source_id": "arquivo_nacional_br",
-      "source_name": "Arquivo Nacional do Brasil",
-      "url": "https://www.gov.br/pt-br/servicos/solicitar-supervisao-de-obras",
-      "title": "Solicitar supervisão de obras",
-      "description": "Solicitar supervisão de obras",
-      "image_url": null,
-      "published_at": "2026-09-02T19:10:47+00:00",
-      "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:10:31.023982+00:00",
-      "http_status": 200,
-      "content_type": "application/atom+xml",
-      "status": "discovered",
-      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
-    },
-    {
-      "source_id": "arquivo_nacional_br",
-      "source_name": "Arquivo Nacional do Brasil",
-      "url": "https://www.gov.br/pt-br/servicos/realizar-cirurgia-eletiva-no-huol",
-      "title": "Realizar cirurgia eletiva no Huol",
-      "description": "Realizar cirurgia eletiva no Huol",
-      "image_url": null,
-      "published_at": "2026-09-10T13:42:30+00:00",
-      "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:10:31.021451+00:00",
-      "http_status": 200,
-      "content_type": "application/atom+xml",
-      "status": "discovered",
-      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
-    },
-    {
-      "source_id": "arquivo_nacional_br",
-      "source_name": "Arquivo Nacional do Brasil",
-      "url": "https://www.gov.br/pt-br/orgaos/procuradoria-federal-especializada",
-      "title": "Procuradoria Federal Especializada",
-      "description": "Procuradoria Federal Especializada",
-      "image_url": null,
-      "published_at": "2026-09-18T17:56:38+00:00",
-      "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:10:31.020156+00:00",
-      "http_status": 200,
-      "content_type": "application/atom+xml",
-      "status": "discovered",
-      "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
-    },
-    {
-      "source_id": "arquivo_nacional_br",
-      "source_name": "Arquivo Nacional do Brasil",
-      "url": "https://www.gov.br/pt-br/servicos/acessar-dicas-em-saude",
-      "title": "Acessar Dicas em Saúde",
-      "description": "Acessar Dicas em Saúde",
-      "image_url": null,
-      "published_at": "2026-09-22T13:46:27+00:00",
-      "has_article_schema": true,
-      "discovered_at": "2026-10-12T23:10:31.019971+00:00",
-      "http_status": 200,
-      "content_type": "application/atom+xml",
       "status": "discovered",
       "notes": "Descoberto por RSS/Atom; data original dentro da janela de 90 dias; requer revisão editorial."
     },
@@ -59980,50 +61060,6 @@
     {
       "source_id": "bad_astronomy",
       "error": "feed unavailable: not well-formed (invalid token): line 6, column 11"
-    },
-    {
-      "source_id": "mufon_news",
-      "error": "homepage feed discovery: HTTP Error 403: Forbidden"
-    },
-    {
-      "source_id": "mufon_news",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source_id": "cufos_studies",
-      "error": "homepage feed discovery: HTTP Error 403: Forbidden"
-    },
-    {
-      "source_id": "cufos_studies",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source_id": "revista_ufo",
-      "error": "homepage feed discovery: HTTP Error 403: Forbidden"
-    },
-    {
-      "source_id": "revista_ufo",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source_id": "vigilant_citizen",
-      "error": "homepage feed discovery: <urlopen error timed out>"
-    },
-    {
-      "source_id": "vigilant_citizen",
-      "error": "<urlopen error timed out>"
-    },
-    {
-      "source_id": "conspiracy_watch_info",
-      "error": "homepage feed discovery: <urlopen error timed out>"
-    },
-    {
-      "source_id": "conspiracy_watch_info",
-      "error": "feed unavailable: <urlopen error timed out>"
-    },
-    {
-      "source_id": "conspiracy_watch_info",
-      "error": "<urlopen error timed out>"
     }
   ],
   "source_results": [
@@ -60092,11 +61128,11 @@
       "source_name": "Skeptical Inquirer",
       "site_url": "https://skepticalinquirer.org",
       "configured_feed": "https://skepticalinquirer.org/feed/",
-      "validated_feed": null,
-      "validated_feed_status": "not_validated",
-      "feed_used": "https://skepticalinquirer.org/feed/",
+      "validated_feed": "https://skepticalinquirer.org/feed/",
+      "validated_feed_status": "valid",
+      "feed_used": "https://skepticalinquirer.org/rss",
       "feed_type": "rss",
-      "recent_items_from_feed": 0,
+      "recent_items_from_feed": 20,
       "recent_items_in_queue": 10,
       "candidate_urls_checked": 0,
       "new_article_pages_registered": 0,
@@ -60129,7 +61165,7 @@
       "recent_items_from_feed": 16,
       "recent_items_in_queue": 9,
       "candidate_urls_checked": 300,
-      "new_article_pages_registered": 1,
+      "new_article_pages_registered": 0,
       "result": "recent_items_found"
     },
     {
@@ -60189,7 +61225,7 @@
       "recent_items_from_feed": 0,
       "recent_items_in_queue": 74,
       "candidate_urls_checked": 300,
-      "new_article_pages_registered": 1,
+      "new_article_pages_registered": 0,
       "result": "recent_items_found"
     },
     {
@@ -60199,12 +61235,12 @@
       "configured_feed": "https://mufon.com/feed/",
       "validated_feed": "https://mufon.com/feed/",
       "validated_feed_status": "valid",
-      "feed_used": "https://mufon.com/feed",
+      "feed_used": "https://mufon.com/rss",
       "feed_type": "rss",
-      "recent_items_from_feed": 6,
+      "recent_items_from_feed": 12,
       "recent_items_in_queue": 6,
       "candidate_urls_checked": 251,
-      "new_article_pages_registered": 0,
+      "new_article_pages_registered": 4,
       "result": "recent_items_found"
     },
     {
@@ -60227,13 +61263,13 @@
       "source_name": "Revista UFO Brasil",
       "site_url": "https://ufo.com.br",
       "configured_feed": "https://ufo.com.br/feed/",
-      "validated_feed": null,
-      "validated_feed_status": "not_validated",
-      "feed_used": "https://ufo.com.br/feed/",
+      "validated_feed": "https://ufo.com.br/feed/",
+      "validated_feed_status": "valid",
+      "feed_used": "https://ufo.com.br/rss",
       "feed_type": "rss",
-      "recent_items_from_feed": 0,
-      "recent_items_in_queue": 14,
-      "candidate_urls_checked": 0,
+      "recent_items_from_feed": 21,
+      "recent_items_in_queue": 15,
+      "candidate_urls_checked": 300,
       "new_article_pages_registered": 0,
       "result": "recent_items_found"
     },
@@ -60257,14 +61293,14 @@
       "source_name": "Fenomenum Brasil",
       "site_url": "https://fenomenum.com.br",
       "configured_feed": "https://fenomenum.com.br/feed/",
-      "validated_feed": null,
-      "validated_feed_status": "not_validated",
-      "feed_used": "https://fenomenum.com.br/feed/",
+      "validated_feed": "https://fenomenum.com.br/feed/",
+      "validated_feed_status": "valid",
+      "feed_used": "https://fenomenum.com.br/rss",
       "feed_type": "rss",
-      "recent_items_from_feed": 0,
+      "recent_items_from_feed": 18,
       "recent_items_in_queue": 9,
-      "candidate_urls_checked": 0,
-      "new_article_pages_registered": 0,
+      "candidate_urls_checked": 67,
+      "new_article_pages_registered": 10,
       "result": "recent_items_found"
     },
     {
@@ -60302,13 +61338,13 @@
       "source_name": "Vigilant Citizen Symbolism",
       "site_url": "https://vigilantcitizen.com",
       "configured_feed": "https://vigilantcitizen.com/feed/",
-      "validated_feed": null,
-      "validated_feed_status": "not_validated",
-      "feed_used": "https://vigilantcitizen.com/feed/",
+      "validated_feed": "https://vigilantcitizen.com/feed/",
+      "validated_feed_status": "valid",
+      "feed_used": "https://vigilantcitizen.com/rss.xml",
       "feed_type": "rss",
-      "recent_items_from_feed": 0,
-      "recent_items_in_queue": 59,
-      "candidate_urls_checked": 0,
+      "recent_items_from_feed": 76,
+      "recent_items_in_queue": 62,
+      "candidate_urls_checked": 300,
       "new_article_pages_registered": 0,
       "result": "recent_items_found"
     },
@@ -60317,14 +61353,14 @@
       "source_name": "Conspiracy Watch",
       "site_url": "https://conspiracywatch.info",
       "configured_feed": "https://www.conspiracywatch.info/feed",
-      "validated_feed": null,
-      "validated_feed_status": "not_validated",
-      "feed_used": "https://www.conspiracywatch.info/feed",
+      "validated_feed": "https://www.conspiracywatch.info/feed",
+      "validated_feed_status": "valid",
+      "feed_used": "https://conspiracywatch.info/rss",
       "feed_type": "rss",
-      "recent_items_from_feed": 0,
-      "recent_items_in_queue": 9,
-      "candidate_urls_checked": 0,
-      "new_article_pages_registered": 0,
+      "recent_items_from_feed": 30,
+      "recent_items_in_queue": 11,
+      "candidate_urls_checked": 300,
+      "new_article_pages_registered": 1,
       "result": "recent_items_found"
     },
     {
