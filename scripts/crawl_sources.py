@@ -412,7 +412,7 @@ def parse_feed_entries(feed_url, source, robots_cache):
                 # Many WordPress feeds embed the lead image in content:encoded
                 # or description HTML instead of RSS media tags.
                 if key in ("encoded", "description", "summary") and not fields.get("image_url"):
-                    match = re.search(r"""<img\\b[^>]*\\b(?:src|data-src)=["']([^"']+)["']""", text_value, re.I)
+                    match = re.search(r"""<img\b[^>]*\b(?:src|data-src)=["']([^"']+)["']""", text_value, re.I)
                     if match:
                         candidate_image = urllib.parse.urljoin(final_url, html.unescape(match.group(1).strip()))
                         if urllib.parse.urlsplit(candidate_image).scheme in ("http", "https"):
