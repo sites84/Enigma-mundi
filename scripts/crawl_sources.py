@@ -403,8 +403,20 @@ def parse_feed_entries(feed_url, source, robots_cache):
                 medium = child.attrib.get("medium", "").lower()
                 if media_url.startswith(("http://", "https://")) and (medium == "image" or media_type.startswith("image/") or key == "thumbnail"):
                     fields.setdefault("image_url", media_url)
+            elif key in ("thumbnail", "content", "image") and (child.attrib.get("url") or child.attrib.get("href")):
+                media_url = urllib.parse.urljoin(final_url, (child.attrib.get("url") or child.attrib.get("href") or "").strip())
+                if media_url.startswith(("http://", "https://")):
+                    fields.setdefault("image_url", media_url)
             elif key in ("title", "description", "summary", "published", "pubdate", "date", "updated", "encoded", "guid"):
                 fields.setdefault(key, text_value)
+                # Many WordPress feeds embed the lead image in content:encoded
+                # or description HTML instead of RSS media tags.
+                if key in ("encoded", "description", "summary") and not fields.get("image_url"):
+                    match = re.search(r'<img\\b[^>]*\\b(?:src|data-src)=["\\']([^"\\']+)["\\']', text_value, re.I)
+                    if match:
+                        candidate_image = urllib.parse.urljoin(final_url, html.unescape(match.group(1).strip()))
+                        if urllib.parse.urlsplit(candidate_image).scheme in ("http", "https"):
+                            fields["image_url"] = candidate_image
         raw_link = fields.get("link", "").strip()
         if not raw_link:
             guid = fields.get("guid", "").strip()
