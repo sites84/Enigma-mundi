@@ -45,8 +45,8 @@
     const imageCredit = escapeHtml(post.image_credit || "");
     const imageLicense = escapeHtml(post.image_license || "");
     const imageSource = safeUrl(post.image_source_url);
-    const attribution = imageCredit || imageLicense
-      ? `<div class="image-attribution">Imagem: ${imageSource ? `<a href="${escapeHtml(imageSource)}" target="_blank" rel="noopener noreferrer">${imageCredit || "ver origem"}</a>` : imageCredit}${imageLicense ? ` · ${imageLicense}` : ""}</div>`
+    const attribution = imageCredit || imageLicense || imageSource
+      ? `<div class="image-attribution">Imagem: ${imageSource ? `<a href="${escapeHtml(imageSource)}" target="_blank" rel="noopener noreferrer">${imageCredit || "ver origem"}</a>` : (imageCredit || "crédito não informado")}${imageLicense ? ` · Licença: ${imageLicense}` : ""}</div>`
       : "";
     const imageMarkup = image
       ? `<img src="${escapeHtml(image)}" alt="${escapeHtml(post.image_alt || post.title || "Imagem da publicação")}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove();this.parentElement.classList.add('image-placeholder');this.parentElement.textContent='◉'">`
