@@ -359,6 +359,16 @@ with ThreadPoolExecutor(max_workers=3) as pool:
             print(f"Imagens associadas via Wikimedia Commons: {resolved_commons}", flush=True)
 print(f"Imagens encontradas via Wikimedia Commons: {resolved_commons}/{len(missing_after_openverse)}", flush=True)
 
+# Every displayed image should expose its context and an alt text.
+# If the feed did not provide a dedicated image page, link to the article page
+# where the image was published; never invent a creator or license.
+for post in posts:
+    if post.get("image_url"):
+        if not post.get("image_source_url"):
+            post["image_source_url"] = post.get("source_url") or post.get("url") or ""
+        if not post.get("image_alt"):
+            post["image_alt"] = post.get("title", "")[:250]
+
 posts.sort(key=lambda item: (item["published_at"], item["url"]), reverse=True)
 source_post_counts = {}
 for item in posts:

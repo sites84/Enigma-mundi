@@ -69,9 +69,21 @@ jobs:
               canonical = urlunsplit((parsed.scheme.lower(), parsed.netloc.lower(), parsed.path.rstrip("/") or "/", urlencode(sorted(query)), ""))
               assert canonical not in seen, f"duplicate canonical article URL: {url}"
               seen.add(canonical)
+          images = [post for post in posts if post.get("image_url")]
+          missing_image_source = [post for post in images if not post.get("image_source_url")]
+          missing_image_alt = [post for post in images if not post.get("image_alt")]
+          assert not missing_image_source, f"{len(missing_image_source)} images have no source URL"
+          assert not missing_image_alt, f"{len(missing_image_alt)} images have no alt text"
           for path in ("data/discovered-articles.json", "data/source-status.json"):
               json.loads((root / path).read_text(encoding="utf-8"))
-          print(f"Validated {len(posts)} posts; canonical URLs are unique; source/discovery JSON is valid.")
+          licensed = sum(1 for post in images if post.get("image_license"))
+          credited = sum(1 for post in images if post.get("image_credit"))
+          print(
+              f"Validated {len(posts)} posts; canonical URLs are unique; "
+              f"{len(images)} images have source links and alt text; "
+              f"licenses recorded: {licensed}; credits recorded: {credited}; "
+              "source/discovery JSON is valid."
+          )
           PY
 
       - name: Commit discovery queue and posts when changed
