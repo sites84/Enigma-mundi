@@ -1,0 +1,50 @@
+name: Frontend smoke checks
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "assets/**"
+      - ".github/workflows/frontend-check.yml"
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "assets/**"
+      - ".github/workflows/frontend-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  frontend-smoke-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check JavaScript syntax
+        run: node --check assets/app.js
+
+      - name: Check HTML hooks and responsive styles
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          html = Path("index.html").read_text(encoding="utf-8")
+          js = Path("assets/app.js").read_text(encoding="utf-8")
+          css = Path("assets/styles.css").read_text(encoding="utf-8")
+
+          required_ids = {
+              "post-grid", "status-message", "post-search",
+              "category-filter", "load-more", "year", "today-label",
+          }
+          missing = sorted(item for item in required_ids if f'id="{item}"' not in html)
+          assert not missing, f"Missing HTML hooks: {missing}"
+          assert 'fetch("data/posts.json", { cache: "no-cache" })' in js
+          assert 'image.replaceWith(placeholder)' in js
+          assert "this.parentElement.textContent='◉'" not in js
+          assert "@media(max-width:850px)" in css
+          assert "@media(max-width:560px)" in css
+          print("Frontend smoke checks passed: DOM hooks, image fallback, cache revalidation, and responsive breakpoints.")
+          PY
