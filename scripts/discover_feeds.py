@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES_FILE = ROOT / "config" / "sources.json"
 OUTPUT_FILE = ROOT / "data" / "source-status.json"
 TIMEOUT_SECONDS = 12
-USER_AGENT = "EnigmaMundiFeedDiscovery/1.0 (+https://github.com/sites84/Enigma-mundi)"
+USER_AGENT = "Mozilla/5.0 (compatible; EnigmaMundiBot/1.0; +https://github.com/sites84/Enigma-mundi)"
 FEED_TYPES = {
     "application/rss+xml", "application/atom+xml", "application/rdf+xml",
     "application/xml", "text/xml",
