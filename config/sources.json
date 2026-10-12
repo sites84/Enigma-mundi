@@ -101,6 +101,8 @@
       "category": "fact_checking",
       "feed_type": "unverified",
       "enabled": false,
+      "exclude_from_publication": true,
+      "exclusion_reason": "A descoberta ampla no domínio da SYFY atribuiu matérias gerais de entretenimento ao rótulo Bad Astronomy; não publicar até validar uma fonte específica.",
       "site_url": "https://www.syfy.com/all/bad-astronomy",
       "allow_homepage_discovery": false
     },
