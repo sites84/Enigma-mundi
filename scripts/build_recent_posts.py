@@ -228,8 +228,76 @@ def commons_lookup(post):
             }
     return best
 
+def publisher_image_lookup(post):
+    """Extract the image explicitly attached to the original article page."""
+    url = post.get("source_url") or post.get("url") or ""
+    parsed = urllib.parse.urlsplit(url)
+    if parsed.scheme not in ("http", "https") or not parsed.netloc:
+        return None
+    request = urllib.request.Request(url, headers={
+        "User-Agent": "Mozilla/5.0 (compatible; EnigmaMundiBot/1.0; +https://github.com/sites84/Enigma-mundi)",
+        "Accept": "text/html,application/xhtml+xml",
+    })
+    try:
+        with urllib.request.urlopen(request, timeout=8) as response:
+            if "html" not in response.headers.get("Content-Type", "").lower():
+                return None
+            page = response.read(900_000).decode("utf-8", errors="replace")
+    except Exception:
+        return None
+    # Prefer the publisher's social preview image, then JSON-LD image metadata.
+    patterns = [
+        r'<meta[^>]+(?:property|name)=["\\']og:image(?::secure_url)?["\\'][^>]+content=["\\']([^"\\']+)["\\']',
+        r'<meta[^>]+content=["\\']([^"\\']+)["\\'][^>]+(?:property|name)=["\\']og:image(?::secure_url)?["\\']',
+        r'<meta[^>]+(?:property|name)=["\\']twitter:image(?::src)?["\\'][^>]+content=["\\']([^"\\']+)["\\']',
+        r'<meta[^>]+content=["\\']([^"\\']+)["\\'][^>]+(?:property|name)=["\\']twitter:image(?::src)?["\\']',
+    ]
+    candidate = None
+    for pattern in patterns:
+        match = re.search(pattern, page, re.I)
+        if match:
+            candidate = html.unescape(match.group(1).strip())
+            break
+    if not candidate:
+        # JSON-LD is a common fallback for publishers that omit Open Graph.
+        match = re.search(r'["\\']image["\\']\\s*:\\s*(?:\\[\\s*)?["\\'](https?://[^"\\']+)["\\']', page, re.I)
+        if match:
+            candidate = html.unescape(match.group(1).strip())
+    if not candidate:
+        return None
+    candidate = urllib.parse.urljoin(url, candidate)
+    image_parts = urllib.parse.urlsplit(candidate)
+    if image_parts.scheme != "https" or not image_parts.netloc:
+        return None
+    if any(x in candidate.lower() for x in ("logo", "avatar", "favicon", "icon-", "sprite")):
+        return None
+    return {
+        "image_url": candidate,
+        "image_alt": post.get("title", "")[:250],
+        "image_source_url": url,
+    }
+
 missing = [p for p in posts if not p.get("image_url")]
-print(f"Busca de imagens em fontes web indexadas: {len(missing)} posts sem imagem; até 3 consultas simultâneas.", flush=True)
+missing.sort(key=lambda p: p.get("published_at", ""), reverse=True)
+# First try the exact publisher page for the newest stories. This is usually
+# the most contextually accurate image, even when external image indexes miss it.
+publisher_batch = missing[:350]
+print(f"Extraindo imagens das páginas originais: {len(publisher_batch)} matérias recentes.", flush=True)
+resolved_publisher = 0
+with ThreadPoolExecutor(max_workers=5) as pool:
+    futures = {pool.submit(publisher_image_lookup, post): post for post in publisher_batch}
+    for future in as_completed(futures):
+        post = futures[future]
+        try:
+            match = future.result()
+        except Exception:
+            match = None
+        if match:
+            post.update(match)
+            resolved_publisher += 1
+print(f"Imagens encontradas nas páginas originais: {resolved_publisher}/{len(publisher_batch)}", flush=True)
+missing = [p for p in posts if not p.get("image_url")]
+print(f"Busca Openverse: {len(missing)} posts ainda sem imagem; até 3 consultas simultâneas.", flush=True)
 resolved_openverse = 0
 with ThreadPoolExecutor(max_workers=3) as pool:
     futures = {pool.submit(openverse_lookup, post): post for post in missing}
