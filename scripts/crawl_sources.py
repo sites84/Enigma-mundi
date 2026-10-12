@@ -212,7 +212,7 @@ def article_metadata(url, site_id, site_name, robots_cache):
         # Extract structured article metadata too: many publishers expose the
         # real publication date only in JSON-LD, not in HTML meta tags.
         jsonld_blocks = re.findall(
-            r"<script[^>]+type=[\"']application/ld\\+json[\"'][^>]*>(.*?)</script>",
+            r"<script[^>]+type=[\"']application/ld\+json[\"'][^>]*>(.*?)</script>",
             raw_html, re.I | re.S
         )
         jsonld_items = []
@@ -249,7 +249,7 @@ def article_metadata(url, site_id, site_name, robots_cache):
                        parser.meta.get("twitter:description") or first_jsonld("description")).strip()
         title = title or first_jsonld("headline", "name")
         schema_article = bool(article_nodes) or bool(re.search(
-            r'"@type"\\s*:\\s*"(?:Article|NewsArticle|BlogPosting|ReportageNewsArticle)"',
+            r'"@type"\s*:\s*"(?:Article|NewsArticle|BlogPosting|ReportageNewsArticle)"',
             raw_html, re.I
         ))
         generic_titles = {
@@ -318,9 +318,8 @@ def parse_feed_entries(feed_url, source, robots_cache):
         link = normalize_url(urllib.parse.urljoin(final_url, fields.get("link", "")))
         if not link:
             continue
-        host = urllib.parse.urlsplit(source.get("site_url", "")).hostname
-        if host and urllib.parse.urlsplit(link).hostname != host:
-            continue
+        # Feed URLs are explicitly configured for this source; valid feeds may link
+        # to hosted podcast platforms, CDNs, or canonical publisher domains.
         title = html.unescape(re.sub(r"<[^>]+>", "", fields.get("title", "")).strip())
         desc = html.unescape(re.sub(r"<[^>]+>", " ", fields.get("description") or fields.get("summary") or fields.get("encoded") or "").strip())
         raw_date = fields.get("published") or fields.get("pubdate") or fields.get("date") or fields.get("updated") or ""
