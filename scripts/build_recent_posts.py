@@ -3,6 +3,7 @@
 import json
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+import urllib.parse
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,11 +14,29 @@ now = datetime.now(timezone.utc)
 cutoff = now - timedelta(days=90)
 posts = []
 seen = set()
+TRACKING_PARAMS = {"fbclid", "gclid", "dclid", "mc_cid", "mc_eid", "replytocom", "ref", "source"}
+def canonical_article_url(value):
+    """Normalize tracking-only URL differences so one article is not listed repeatedly."""
+    try:
+        parsed = urllib.parse.urlsplit(str(value).strip())
+        if parsed.scheme.lower() not in ("http", "https") or not parsed.netloc:
+            return str(value).strip()
+        query = [
+            (key, val) for key, val in urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)
+            if key.lower() not in TRACKING_PARAMS and not key.lower().startswith("utm_")
+        ]
+        path = parsed.path.rstrip("/") or "/"
+        return urllib.parse.urlunsplit((
+            parsed.scheme.lower(), parsed.netloc.lower(), path,
+            urllib.parse.urlencode(sorted(query)), ""
+        ))
+    except (TypeError, ValueError):
+        return str(value).strip()
 
 for article in queue.get("articles", []):
     url = article.get("url")
     raw_date = article.get("published_at")
-    if not url or url in seen or not raw_date or article.get("status") != "discovered":
+    if not url or canonical_article_url(url) in seen or not raw_date or article.get("status") != "discovered":
         continue
     try:
         published = datetime.fromisoformat(str(raw_date).replace("Z", "+00:00"))
@@ -49,6 +68,8 @@ for article in queue.get("articles", []):
         "/terms", "/contact", "/about", "/subscribe", "/login",
         "/register", "/account", "/feed", "/rss", "/sitemap",
         "/service/", "/services/", "/servicos/", "/arquivo-central", "/acesso-ao-arquivo",
+        "/archives/", "/archive/", "/topics/", "/collections/", "/sections/", "/directory/",
+        "/publication/", "/publications/", "/all-articles/", "/all-stories/", "/latest-news/",
     )
     title_key = "".join(ch.lower() if ch.isalnum() else " " for ch in title).split()
     title_text = " ".join(title_key)
@@ -57,10 +78,18 @@ for article in queue.get("articles", []):
         "404 not found", "page not found", "privacy policy", "cookie policy",
         "terms of use", "search results", "log in", "sign in",
         "obter acesso ao arquivo central", "access the archive", "service unavailable",
+        "search results", "latest news", "all articles", "all stories", "news archive",
+        "tag archives", "category archives", "in depth reports on", "in-depth reports on",
     )
-    if any(part in path + "/" for part in bad_path_parts) or any(phrase in title_text for phrase in bad_title_phrases):
+    # Archive/category landing pages often have a plausible description but are not articles.
+    generic_listing_title = (
+        title_text.endswith(" archives") or title_text.endswith(" archive")
+        or title_text.endswith(" categories") or title_text.endswith(" topics")
+        or title_text.endswith(" latest news") or title_text.startswith("all articles ")
+    )
+    if any(part in path + "/" for part in bad_path_parts) or any(phrase in title_text for phrase in bad_title_phrases) or generic_listing_title:
         continue
-    seen.add(url)
+    seen.add(canonical_article_url(url))
     posts.append({
         "id": f'{article.get("source_id", "source")}-{published.date().isoformat()}-{len(posts)+1}',
         "title": title,
@@ -99,7 +128,6 @@ for post in posts:
 import html
 import re
 import time
-import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
