@@ -40,8 +40,10 @@
 
     <section class="latest section-wrap" id="ultimas">
       <div class="section-heading"><div><div class="eyebrow">O QUE ESTÁ ACONTECENDO</div><h2>Últimas matérias<span class="heading-dot">.</span></h2></div><span class="sort-note">MAIS RECENTES PRIMEIRO <span aria-hidden="true">↘</span></span></div>
-      <div id="status-message" class="status-message" role="status">Carregando publicações…</div>
+      <div class="post-tools" role="search" aria-label="Buscar publicações"><label class="search-field"><span aria-hidden="true">⌕</span><input id="post-search" type="search" placeholder="Buscar por assunto, título ou fonte…" autocomplete="off" aria-label="Buscar publicações"></label><label class="category-field"><span class="sr-only">Filtrar por categoria</span><select id="category-filter" aria-label="Filtrar por categoria"><option value="">Todas as categorias</option></select></label></div>
+      <div id="status-message" class="status-message" role="status" aria-live="polite">Carregando publicações…</div>
       <div id="post-grid" class="post-grid" aria-live="polite"></div>
+      <div class="load-more-wrap"><button id="load-more" class="load-more" type="button" hidden>Carregar mais matérias</button></div>
       <noscript><p class="empty-state">Ative o JavaScript para visualizar as publicações mais recentes.</p></noscript>
     </section>
 
