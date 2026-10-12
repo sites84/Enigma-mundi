@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate RSS and Atom feeds for all 63 configured sources
+      - name: Validate RSS and Atom feeds for all 21 configured sources
         run: python scripts/discover_feeds.py
 
       - name: Discover new article URLs using validated feeds and sitemaps
