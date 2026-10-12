@@ -99,9 +99,20 @@ def normalize_url(url):
     return urllib.parse.urlunsplit((parsed.scheme.lower(), parsed.netloc.lower(), path, query, ""))
 
 
+def same_site_host(host, base_host):
+    """Treat www and apex hostnames as the same site, but do not admit other hosts."""
+    host = (host or "").lower().rstrip(".")
+    base_host = (base_host or "").lower().rstrip(".")
+    if host.startswith("www."):
+        host = host[4:]
+    if base_host.startswith("www."):
+        base_host = base_host[4:]
+    return bool(host and base_host and host == base_host)
+
+
 def likely_article(url, base_host):
     parsed = urllib.parse.urlsplit(url)
-    if parsed.scheme not in ("http", "https") or parsed.hostname != base_host:
+    if parsed.scheme not in ("http", "https") or not same_site_host(parsed.hostname, base_host):
         return False
     path = parsed.path.lower()
     if not path or path == "/" or any(path.endswith(ext) for ext in SKIP_EXTENSIONS):
@@ -195,6 +206,43 @@ def parse_sitemap(url, base_host, robots_cache, seen_sitemaps=None, depth=0):
     return results[:MAX_SITEMAP_URLS]
 
 
+def parse_datetime(value):
+    """Parse common ISO, RFC 822, and human-readable publisher date formats."""
+    if isinstance(value, datetime):
+        parsed = value
+    else:
+        raw = html.unescape(str(value or "")).strip()
+        if not raw:
+            return None
+        raw = raw.replace(" UTC", " +0000").replace(" GMT", " +0000")
+        parsed = None
+        try:
+            parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except (ValueError, TypeError):
+            pass
+        if parsed is None:
+            try:
+                parsed = email.utils.parsedate_to_datetime(raw)
+            except (TypeError, ValueError, OverflowError):
+                pass
+        if parsed is None:
+            for fmt in (
+                "%B %d, %Y", "%b %d, %Y", "%d %B %Y", "%d %b %Y",
+                "%Y/%m/%d", "%m/%d/%Y", "%d/%m/%Y",
+                "%B %d %Y", "%b %d %Y",
+            ):
+                try:
+                    parsed = datetime.strptime(raw, fmt)
+                    break
+                except ValueError:
+                    continue
+        if parsed is None:
+            return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
 def article_metadata(url, site_id, site_name, robots_cache):
     if not allowed_by_robots(url, url, robots_cache):
         return None
@@ -206,7 +254,7 @@ def article_metadata(url, site_id, site_name, robots_cache):
         parser.feed(body.decode("utf-8", "replace"))
         title = (parser.meta.get("og:title") or parser.meta.get("twitter:title") or " ".join(parser.title)).strip()
         canonical = normalize_url(urllib.parse.urljoin(final_url, parser.canonical)) if parser.canonical else normalize_url(final_url)
-        if not title or not canonical:
+        if not canonical:
             return None
         raw_html = body.decode("utf-8", "replace")
         # Extract structured article metadata too: many publishers expose the
@@ -263,22 +311,19 @@ def article_metadata(url, site_id, site_name, robots_cache):
             return None
         if not date and not schema_article:
             return None
-        editorial_status = "discovered" if date else "needs_date_review"
-        age_days = None
-        if date:
-            try:
-                parsed_date = datetime.fromisoformat(date.replace("Z", "+00:00"))
-                if parsed_date.tzinfo is None:
-                    parsed_date = parsed_date.replace(tzinfo=timezone.utc)
-                age_days = (datetime.now(timezone.utc) - parsed_date.astimezone(timezone.utc)).days
-                if age_days > 90:
-                    editorial_status = "stale_archive"
-            except (ValueError, TypeError):
+        parsed_date = parse_datetime(date) if date else None
+        editorial_status = "discovered" if parsed_date else "needs_date_review"
+        if parsed_date:
+            age_days = (datetime.now(timezone.utc) - parsed_date).days
+            date = parsed_date.isoformat()
+            if age_days > FRESHNESS_DAYS:
+                editorial_status = "stale_archive"
+            elif age_days < 0:
                 editorial_status = "needs_date_review"
         return {
             "source_id": site_id, "source_name": site_name, "url": canonical,
             "title": title[:300], "description": description[:1000],
-            "published_at": date[:80] or None, "has_article_schema": schema_article,
+            "published_at": (parsed_date.isoformat() if parsed_date else None), "has_article_schema": schema_article,
             "discovered_at": datetime.now(timezone.utc).isoformat(),
             "http_status": status, "content_type": content_type.split(";", 1)[0],
             "status": editorial_status,
@@ -313,9 +358,14 @@ def parse_feed_entries(feed_url, source, robots_cache):
                     fields["link"] = href
                 elif text_value and not fields.get("link"):
                     fields["link"] = text_value
-            elif key in ("title", "description", "summary", "published", "pubdate", "date", "updated", "encoded"):
+            elif key in ("title", "description", "summary", "published", "pubdate", "date", "updated", "encoded", "guid"):
                 fields.setdefault(key, text_value)
-        link = normalize_url(urllib.parse.urljoin(final_url, fields.get("link", "")))
+        raw_link = fields.get("link", "").strip()
+        if not raw_link:
+            guid = fields.get("guid", "").strip()
+            if guid.startswith(("http://", "https://", "/")):
+                raw_link = guid
+        link = normalize_url(urllib.parse.urljoin(final_url, raw_link))
         if not link:
             continue
         # Feed URLs are explicitly configured for this source; valid feeds may link
@@ -323,20 +373,9 @@ def parse_feed_entries(feed_url, source, robots_cache):
         title = html.unescape(re.sub(r"<[^>]+>", "", fields.get("title", "")).strip())
         desc = html.unescape(re.sub(r"<[^>]+>", " ", fields.get("description") or fields.get("summary") or fields.get("encoded") or "").strip())
         raw_date = fields.get("published") or fields.get("pubdate") or fields.get("date") or fields.get("updated") or ""
-        parsed_date = None
-        if raw_date:
-            try:
-                parsed_date = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
-            except ValueError:
-                try:
-                    parsed_date = email.utils.parsedate_to_datetime(raw_date)
-                except (TypeError, ValueError, OverflowError):
-                    parsed_date = None
-        if parsed_date and parsed_date.tzinfo is None:
-            parsed_date = parsed_date.replace(tzinfo=timezone.utc)
+        parsed_date = parse_datetime(raw_date)
         if not title or len(title) < 12 or not parsed_date:
             continue
-        parsed_date = parsed_date.astimezone(timezone.utc)
         age_days = (datetime.now(timezone.utc) - parsed_date).days
         if age_days < 0 or age_days > FRESHNESS_DAYS:
             continue

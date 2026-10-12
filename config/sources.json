@@ -34,11 +34,11 @@
     {
       "id": "uk_national_archives",
       "name": "UK National Archives UFO Files",
-      "feed_url": "https://nationalarchives.gov.uk",
+      "feed_url": "https://www.nationalarchives.gov.uk/rss/news.xml",
       "category": "arquivos_oficiais",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
-      "site_url": "https://nationalarchives.gov.uk",
+      "site_url": "https://www.nationalarchives.gov.uk",
       "allow_homepage_discovery": false
     },
     {
@@ -72,11 +72,12 @@
     {
       "id": "library_of_congress",
       "name": "Library of Congress Folklore",
-      "feed_url": "https://loc.gov",
+      "feed_url": "https://blogs.loc.gov/folklife/feed/",
       "category": "arquivos_oficiais",
-      "feed_type": "unverified",
+      "feed_type": "rss",
       "enabled": false,
-      "site_url": "https://loc.gov"
+      "site_url": "https://blogs.loc.gov/folklife/",
+      "allow_homepage_discovery": true
     },
     {
       "id": "wikileaks",
@@ -94,7 +95,8 @@
       "category": "arquivos_oficiais",
       "feed_type": "unverified",
       "enabled": false,
-      "site_url": "https://nsarchive.gwu.edu/"
+      "site_url": "https://nsarchive.gwu.edu/postings/news",
+      "allow_homepage_discovery": true
     },
     {
       "id": "skeptical_inquirer",
