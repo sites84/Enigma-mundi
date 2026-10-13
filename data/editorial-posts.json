@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T18:32:20.972117+00:00",
-  "article_count": 1,
+  "generated_at": "2026-10-13T18:34:41.634731+00:00",
+  "article_count": 3,
   "articles": [
     {
       "id": "em-08c25809ae",
@@ -27,6 +27,58 @@
         "inteligência artificial",
         "espaço tridimensional",
         "ciência"
+      ]
+    },
+    {
+      "id": "em-69672de1f7",
+      "title": "Alerta sobre sites falsos de isenção de visto europeu para viajantes britânicos",
+      "excerpt": "Associação de viagens avisa para não solicitar o Etias enquanto o sistema estiver adiado e aponta dezenas de páginas fraudulentas na internet.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-10-13T15:21:04+00:00",
+      "generated_at": "2026-10-13T18:33:46.033049+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Guardian — Space",
+      "source_url": "https://www.theguardian.com/world/2026/oct/13/britons-travelling-to-europe-told-not-to-apply-for-delayed-etias-visa-waiver",
+      "url": "https://www.theguardian.com/world/2026/oct/13/britons-travelling-to-europe-told-not-to-apply-for-delayed-etias-visa-waiver",
+      "path": "artigos/alerta-sobre-sites-falsos-de-isenção-de-visto-europeu-para-v-69672de1f7.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "viagens",
+        "uniao europeia",
+        "seguranca digital",
+        "turismo",
+        "fronteiras"
+      ]
+    },
+    {
+      "id": "em-9a5bd13408",
+      "title": "A sombra do Kremlin e o debate sobre a interferência externa no Brexit",
+      "excerpt": "Discussões políticas recentes no Reino Unido reabrem a controvérsia sobre a suposta atuação de agentes russos no referendo do Brexit e a convergência de interesses entre potências.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-10-13T15:21:02+00:00",
+      "generated_at": "2026-10-13T18:34:36.919702+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Guardian — Space",
+      "source_url": "https://www.theguardian.com/commentisfree/2026/oct/13/brexit-vladimir-putin-russia-referendum-result-eu",
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/13/brexit-vladimir-putin-russia-referendum-result-eu",
+      "path": "artigos/a-sombra-do-kremlin-e-o-debate-sobre-a-interferência-externa-9a5bd13408.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "Brexit",
+        "Rússia",
+        "Geopolítica",
+        "União Europeia",
+        "Desinformação"
       ]
     }
   ]
