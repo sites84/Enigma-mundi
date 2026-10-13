@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T21:52:59.920001+00:00",
-  "article_count": 27,
+  "generated_at": "2026-10-13T22:13:33.570Z",
+  "article_count": 25,
   "articles": [
     {
       "id": "em-9616143318",
@@ -575,58 +575,6 @@
         "folclore",
         "assombracoes",
         "historia"
-      ]
-    },
-    {
-      "id": "em-6c404abd74",
-      "title": "Prêmios acadêmicos incentivam novas pesquisas sobre folclore",
-      "excerpt": "A The Folklore Society do Reino Unido abriu inscrições para os prêmios estudantis de 2026, valorizando investigações sobre tradições populares.",
-      "category": "misterios",
-      "category_label": "Mistérios",
-      "published_at": "2026-08-26T08:00:00+00:00",
-      "generated_at": "2026-10-13T21:52:58.919616+00:00",
-      "source_name": "Enigma Mundi",
-      "primary_source_name": "The Folklore Society UK",
-      "source_url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026/",
-      "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026/",
-      "path": "artigos/prêmios-acadêmicos-incentivam-novas-pesquisas-sobre-folclore-6c404abd74.html",
-      "status": "published",
-      "post_type": "original_article",
-      "image_url": null,
-      "image_source_url": null,
-      "image_alt": null,
-      "tags": [
-        "folclore",
-        "pesquisa acadêmica",
-        "tradições populares",
-        "Reino Unido",
-        "história"
-      ]
-    },
-    {
-      "id": "em-8a16c1d0f5",
-      "title": "Investigação de Ian Stevenson sobre caso poltergeist na Califórnia",
-      "excerpt": "Um arquivo da década de 1980 examinado pelo pesquisador Ian Stevenson descreve manifestações anômalas em uma residência de Kern City sem a presença de adolescentes.",
-      "category": "misterios",
-      "category_label": "Mistérios",
-      "published_at": "2026-08-09T19:41:25+00:00",
-      "generated_at": "2026-10-13T20:58:08.926045+00:00",
-      "source_name": "Enigma Mundi",
-      "primary_source_name": "The Daily Grail",
-      "source_url": "https://www.dailygrail.com/2026/08/sunday-funnies-pictorial-poltergeist-based-on-true-events/",
-      "url": "https://www.dailygrail.com/2026/08/sunday-funnies-pictorial-poltergeist-based-on-true-events/",
-      "path": "artigos/investigação-de-ian-stevenson-sobre-caso-poltergeist-na-cali-8a16c1d0f5.html",
-      "status": "published",
-      "post_type": "original_article",
-      "image_url": "https://www.dailygrail.com/wp-content/uploads/2026/08/PictorialPoltergeist_banner02.jpg",
-      "image_source_url": "https://www.dailygrail.com/2026/08/sunday-funnies-pictorial-poltergeist-based-on-true-events/",
-      "image_alt": "Investigação de Ian Stevenson sobre caso poltergeist na Califórnia",
-      "tags": [
-        "poltergeist",
-        "ian stevenson",
-        "paranormal",
-        "california",
-        "misterio"
       ]
     },
     {
