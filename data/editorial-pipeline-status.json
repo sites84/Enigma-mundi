@@ -1,18 +1,14 @@
 {
-  "updated_at": "2026-10-13T19:37:47.883599+00:00",
+  "updated_at": "2026-10-13T19:38:43.900515+00:00",
   "provider": "gemini",
-  "model": "gemini-3.8-flash",
-  "existing_articles": 27,
-  "generated_this_run": 0,
-  "status": "errors",
+  "model": "gemini-3.5-flash-lite",
+  "existing_articles": 28,
+  "generated_this_run": 1,
+  "status": "completed",
   "errors": [
     {
       "url": "https://www.space.com/astronomy/earth/namibian-salt-flats-look-like-an-alien-planet-space-photo-of-the-day-for-oct-12-2026",
-      "error": "Space.com: is_core_topic() takes from 1 to 2 positional arguments but 3 were given"
-    },
-    {
-      "url": "https://www.theguardian.com/uk-news/2026/oct/12/mythical-roman-fort-frenni-fawr-wales-emperor",
-      "error": "The Guardian — Space: is_core_topic() takes from 1 to 2 positional arguments but 3 were given"
+      "error": "Space.com: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
@@ -20,15 +16,15 @@
     },
     {
       "url": "https://www.dailygrail.com/2026/10/news-briefs-12-10-2026",
-      "error": "The Daily Grail: is_core_topic() takes from 1 to 2 positional arguments but 3 were given"
+      "error": "The Daily Grail: Reportagem curta: exige abertura e pelo menos três seções"
     },
     {
       "url": "https://www.space.com/entertainment/space-games/alien-isolation-2-this-highly-anticipated-sequel-has-no-release-date-yet-but-heres-everything-else-we-know",
-      "error": "Space.com: is_core_topic() takes from 1 to 2 positional arguments but 3 were given"
+      "error": "Space.com: Reportagem curta: exige abertura e pelo menos três seções"
     },
     {
       "url": "https://www.unexplained-mysteries.com/news/400179/new-records-could-provide-context-to-trumps-ufo-file-dumps",
-      "error": "Unexplained Mysteries: is_core_topic() takes from 1 to 2 positional arguments but 3 were given"
+      "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/10/argentina-multidisciplinary-research.html",
@@ -36,15 +32,15 @@
     },
     {
       "url": "https://www.snopes.com/fact-check/musk-midterms-democrats",
-      "error": "Snopes Urban Legends: is_core_topic() takes from 1 to 2 positional arguments but 3 were given"
+      "error": "Snopes Urban Legends: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://www.atlasobscura.com/articles/america-haunted-cemeteries",
-      "error": "Atlas Obscura: is_core_topic() takes from 1 to 2 positional arguments but 3 were given"
+      "error": "Atlas Obscura: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.theguardian.com/games/2026/oct/09/end-of-abyss-review-playstation-5-xbox-pc",
-      "error": "The Guardian — Space: is_core_topic() takes from 1 to 2 positional arguments but 3 were given"
+      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
   "candidate_count": 119,
