@@ -453,6 +453,7 @@ def is_core_topic(title, description="", source_text=""):
         r"civiliza[cç][aã]o|evid[eê]ncia|poss[ií]vel)\b.{0,55}\b(aliens?|extraterrestre[s]?)\b|"
         r"\b(aliens?|extraterrestre[s]?)\b.{0,55}\b(vida|sinal|contato|abdu[cç][aã]o|"
         r"avistamento|intelig[eê]ncia|civiliza[cç][aã]o|evid[eê]ncia|poss[ií]vel)\b",
+        headline,
         re.IGNORECASE,
     )
     if generic_alien and not contextual_extraterrestrial.search(headline):
