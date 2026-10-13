@@ -1,5 +1,9 @@
 {
-  "status": "waiting_for_api_key",
+  "updated_at": "2026-10-13T07:35:49.488674+00:00",
+  "model": "",
+  "existing_articles": 0,
   "generated_this_run": 0,
-  "message": "Configure OPENAI_API_KEY in GitHub repository secrets to enable original article generation."
+  "status": "waiting_for_api_key",
+  "errors": [],
+  "message": "Configure o segredo OPENAI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
 }
