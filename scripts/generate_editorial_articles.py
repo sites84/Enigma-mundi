@@ -631,6 +631,37 @@ def main():
     if removed_legacy:
         print(f"[INFO] Removendo {removed_legacy} artigos antigos fora do escopo editorial.", flush=True)
     existing_articles = relevant_articles
+    # Backfill images on already-published pages, without regenerating article text.
+    missing_images = [a for a in existing_articles if not a.get("image_url") and a.get("source_url")]
+    if missing_images:
+        print(f"[INFO] Recuperando imagens para artigos existentes: {len(missing_images)}.", flush=True)
+        fixed_images = 0
+        for item in missing_images:
+            title = str(item.get("title") or "")
+            found = publisher_image_lookup(item.get("source_url"), title)
+            if not found:
+                found = openverse_image_lookup(title)
+            if not found or not found.get("image_url"):
+                continue
+            item.update(found)
+            page_path = ROOT / str(item.get("path") or "")
+            if page_path.is_file():
+                page = page_path.read_text(encoding="utf-8")
+                if '<figure class="article-cover">' not in page:
+                    image = esc(found["image_url"])
+                    alt = esc(found.get("image_alt") or title)
+                    source = esc(item.get("source_url") or "")
+                    figure = f'<figure class="article-cover"><img src="{image}" alt="{alt}" loading="eager" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="article-image-fallback" hidden>ENIGMA MUNDI · ARQUIVO VISUAL</div><figcaption>Imagem ilustrativa. <a href="{source}" rel="noopener noreferrer">Fonte da matéria</a></figcaption></figure>'
+                    if '<article class="article-body">' in page:
+                        page = page.replace('<article class="article-body">', figure + '\\n<article class="article-body">', 1)
+                    elif '<div class="article-meta">' in page:
+                        page = re.sub(r'(<div class="article-meta">.*?</div>)', r'\\1' + figure, page, count=1, flags=re.S)
+                    else:
+                        page = page.replace('</main>', figure + '\\n</main>', 1)
+                    page_path.write_text(page, encoding="utf-8")
+                fixed_images += 1
+        if fixed_images:
+            print(f"[INFO] Imagens adicionadas a artigos antigos: {fixed_images}.", flush=True)
     existing_urls = {canonical_url(a.get("source_url")) for a in existing_articles if a.get("source_url")}
     status = {
         "updated_at": now_iso(), "provider": provider or None, "model": model or None,
