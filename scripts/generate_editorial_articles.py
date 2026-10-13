@@ -412,7 +412,7 @@ CORE_TOPIC_PATTERNS = [
     r"\b(criptozoolog\w*|cryptozoolog\w*|bigfoot|sasquatch|yeti|nessie|monstro do lago ness|chupacabra|chupa[- ]?cabra|mokele[- ]?mbembe|pé[- ]?grande)\b",
     r"\b(paranormal|sobrenatural|fantasma[s]?|assombra[cç][aã]o|poltergeist|possess[aã]o|esp[ií]rito[s]?|apari[cç][aã]o fantasmag[oó]rica|haunted|ghost sighting[s]?)\b",
     r"\b(lenda[s]? urbana[s]?|folclore|folklore|criatura[s]? lend[aá]ria[s]?|monstro[s]? lend[aá]rio[s]?|urban legend[s]?|mythical creature[s]?)\b",
-    r"\b(teoria[s]? da conspira[cç][aã]o|conspiracy theor\w*|acobertamento de ovni|ufo cover[- ]?up|documentos desclassificados sobre ovni|opera[cç][aã]o secreta inexplicada)\b",
+    r"\b(teoria[s]? da conspira[cç][aã]o|conspira[cç][oõ]es?|conspiracy theor\w*|conspiracy|sociedade[s]? secreta[s]?|illuminati|nova ordem mundial|new world order|deep state|estado profundo|governo sombra|shadow government|acobertamento[s]?|encobrimento[s]? oficial|cover[- ]?up|ufo cover[- ]?up|documentos desclassificados sobre ovni|opera[cç][aã]o secreta inexplicada|experimento[s]? secreto[s]?|projeto[s]? secreto[s]?|arquivo[s]? secreto[s]?|agenda oculta|manipula[cç][aã]o global)\b",
     r"\b(c[ií]rculos nas planta[cç][oõ]es|crop circles?|artefato[s]? fora do lugar|out[- ]of[- ]place artifact[s]?|oopart|civiliza[cç][aã]o perdida misteriosa|sinal wow|wow signal|fast radio burst inexplicado|sinal de r[aá]dio inexplic[aá]vel)\b",
     r"\b(mist[eé]rio[s]? n[aã]o resolvido[s]?|unsolved mysteries|fen[oô]meno[s]? inexplic[aá]vel|fen[oô]meno[s]? paranormal|anomalia[s]? inexplic[aá]vel|mysterious disappearance[s]?|desaparecimento[s]? inexplic[aá]vel)\b",
 ]
@@ -456,7 +456,7 @@ def is_core_topic(title, description="", source_text=""):
         headline,
         re.IGNORECASE,
     )
-    if generic_alien and not contextual_extraterrestrial.search(headline):
+    if generic_alien and not contextual_extraterrestrial:
         headline_without_generic = re.sub(r"\b(aliens?|extraterrestre[s]?)\b", "", headline, flags=re.IGNORECASE)
         if not CORE_TOPIC_RE.search(headline_without_generic):
             return False
