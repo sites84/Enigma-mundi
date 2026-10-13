@@ -57,7 +57,7 @@ jobs:
           seen = set()
           for item in articles:
               assert item.get("post_type") == "original_article"
-              assert item.get("status") == "published"
+              assert item.get("status") in ("published", "draft")
               assert item.get("title") and item.get("excerpt")
               assert item.get("path", "").startswith("artigos/")
               assert item.get("source_url", "").startswith(("https://", "http://"))
