@@ -1,9 +1,10 @@
 {
-  "updated_at": "2026-10-13T07:35:49.488674+00:00",
-  "model": "",
+  "updated_at": "2026-10-13T07:37:38.081292+00:00",
+  "provider": null,
+  "model": null,
   "existing_articles": 0,
   "generated_this_run": 0,
   "status": "waiting_for_api_key",
   "errors": [],
-  "message": "Configure o segredo OPENAI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
+  "message": "Configure GEMINI_API_KEY (recomendado) ou OPENAI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
 }
