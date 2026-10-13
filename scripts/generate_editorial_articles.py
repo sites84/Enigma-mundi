@@ -436,6 +436,25 @@ def is_core_topic(title, description="", source_text=""):
     )
     if election_coverage.search(candidate):
         return False
+    # Reject generic academic/editorial announcements that mention folklore without
+    # describing a specific mystery, paranormal report, cryptid, UFO case or conspiracy.
+    generic_folklore_announcement = re.compile(
+        r"\\b(new issue|latest issue|journal issue|issue of folklore|folklore now out|"
+        r"call for papers|academic journal|journal publication|book review|conference proceedings|"
+        r"edi[cç][aã]o acad[eê]mica|novo n[uú]mero do peri[oó]dico|chamada para artigos|"
+        r"revista acad[eê]mica|peri[oó]dico revisado por pares)\\b",
+        re.IGNORECASE,
+    )
+    strong_mystery_signal = re.compile(
+        r"\\b(ufo|uap|ovni|extraterrestrial|alien abduction|cryptozoolog\\w*|bigfoot|sasquatch|"
+        r"yeti|nessie|chupacabra|paranormal|ghost|haunted|haunting|poltergeist|possession|"
+        r"urban legend|conspiracy|illuminati|new world order|unexplained|unsolved mystery|"
+        r"mysterious disappearance|crop circles|oopart|wow signal|fantasma[s]?|assombra[cç][aã]o|"
+        r"mist[eé]rio[s]? n[aã]o resolvido[s]?|fen[oô]meno[s]? inexplic[aá]vel|teoria[s]? da conspira[cç][aã]o)\\b",
+        re.IGNORECASE,
+    )
+    if generic_folklore_announcement.search(candidate) and not strong_mystery_signal.search(candidate):
+        return False
     # A standalone "alien" or a horror/film/game title is not evidence of a real mystery.
     entertainment = re.compile(
         r"\b(video game|videogame|videojogo|jogo[s]? eletr[oô]nico[s]?|game[s]? eletr[oô]nico[s]?|gameplay|gaming|trailer|teaser|sequel|franchise|"
