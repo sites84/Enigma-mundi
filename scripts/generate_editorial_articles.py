@@ -428,7 +428,7 @@ def is_core_topic(title, description="", source_text=""):
     candidate = f"{headline} {summary}"
     # A standalone "alien" or a horror/film/game title is not evidence of a real mystery.
     entertainment = re.compile(
-        r"\b(video game|videogame|videojogo|videogame|jogo[s]? eletr[oô]nico[s]?|game[s]? eletr[oô]nico[s]?|gameplay|gaming|trailer|teaser|sequel|franchise|
+        r"\b(video game|videogame|videojogo|jogo[s]? eletr[oô]nico[s]?|game[s]? eletr[oô]nico[s]?|gameplay|gaming|trailer|teaser|sequel|franchise|"
         r"box office|hollywood|movie|film|cinema|tv series|television series|"
         r"streaming|netflix|playstation|xbox|nintendo|dlc|expansion pack|"
         r"alien: isolation|resident evil|silent hill|clayface|comic book)\b",
