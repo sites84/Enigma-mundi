@@ -1,14 +1,18 @@
 {
-  "updated_at": "2026-10-13T19:38:43.900515+00:00",
+  "updated_at": "2026-10-13T20:10:15.497942+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 28,
+  "existing_articles": 1,
   "generated_this_run": 1,
   "status": "completed",
   "errors": [
     {
-      "url": "https://www.space.com/astronomy/earth/namibian-salt-flats-look-like-an-alien-planet-space-photo-of-the-day-for-oct-12-2026",
-      "error": "Space.com: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://www.theguardian.com/uk-news/2026/oct/12/sas-personnel-refusing-to-answer-questions-afghanistan-inquiry-alleged-killings",
+      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.theguardian.com/uk-news/2026/oct/12/mythical-roman-fort-frenni-fawr-wales-emperor",
+      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
@@ -16,11 +20,7 @@
     },
     {
       "url": "https://www.dailygrail.com/2026/10/news-briefs-12-10-2026",
-      "error": "The Daily Grail: Reportagem curta: exige abertura e pelo menos três seções"
-    },
-    {
-      "url": "https://www.space.com/entertainment/space-games/alien-isolation-2-this-highly-anticipated-sequel-has-no-release-date-yet-but-heres-everything-else-we-know",
-      "error": "Space.com: Reportagem curta: exige abertura e pelo menos três seções"
+      "error": "The Daily Grail: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.unexplained-mysteries.com/news/400179/new-records-could-provide-context-to-trumps-ufo-file-dumps",
@@ -31,18 +31,18 @@
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
+      "url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/10/havana-syndrome-mystery-cia-russia",
+      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
       "url": "https://www.snopes.com/fact-check/musk-midterms-democrats",
-      "error": "Snopes Urban Legends: A resposta da API gemini não contém JSON válido"
+      "error": "Snopes Urban Legends: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.atlasobscura.com/articles/america-haunted-cemeteries",
-      "error": "Atlas Obscura: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.theguardian.com/games/2026/oct/09/end-of-abyss-review-playstation-5-xbox-pc",
-      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Atlas Obscura: A resposta da API gemini não contém JSON válido"
     }
   ],
-  "candidate_count": 119,
+  "candidate_count": 112,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária."
 }
