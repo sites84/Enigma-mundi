@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Somente fontes que produziram publicações na coleta de 2026-10-12 foram mantidas. Fontes sem publicações foram removidas e podem ser reavaliadas individualmente no futuro.",
+  "note": "Inventário com 21 fontes preexistentes e 20 fontes internacionais adicionais. As fontes novas entram na descoberta; enabled=false mantém a aprovação editorial separada da coleta. A validação diária registra quais feeds funcionam e quais exigem adaptação.",
   "sources": [
     {
       "id": "the_black_vault",
@@ -195,6 +195,336 @@
       "feed_type": "rss",
       "enabled": false,
       "site_url": "https://globalresearch.ca"
+    },
+    {
+      "id": "unexplained_mysteries_uk",
+      "name": "Unexplained Mysteries",
+      "country": "Reino Unido",
+      "language": "en",
+      "feed_url": "https://www.unexplained-mysteries.com/news/umnews.xml",
+      "category": "ufologia",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.unexplained-mysteries.com",
+      "topic_focus": [
+        "mistérios",
+        "paranormal",
+        "ufologia",
+        "ciência",
+        "história"
+      ]
+    },
+    {
+      "id": "atlas_obscura_us",
+      "name": "Atlas Obscura",
+      "country": "Estados Unidos",
+      "language": "en",
+      "feed_url": "https://www.atlasobscura.com/rss.xml",
+      "category": "criptozoologia_lendas",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.atlasobscura.com",
+      "topic_focus": [
+        "lugares incomuns",
+        "folclore",
+        "história",
+        "lendas"
+      ]
+    },
+    {
+      "id": "space_com_us",
+      "name": "Space.com",
+      "country": "Estados Unidos",
+      "language": "en",
+      "feed_url": "https://www.space.com/feeds/all",
+      "category": "ufologia",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.space.com",
+      "topic_focus": [
+        "espaço",
+        "astronomia",
+        "exoplanetas",
+        "vida extraterrestre"
+      ]
+    },
+    {
+      "id": "nasa_news_us",
+      "name": "NASA News",
+      "country": "Estados Unidos",
+      "language": "en",
+      "feed_url": "https://www.nasa.gov/feed/",
+      "category": "arquivos_oficiais",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.nasa.gov",
+      "topic_focus": [
+        "exploração espacial",
+        "astronomia",
+        "ciência oficial"
+      ]
+    },
+    {
+      "id": "jpl_news_us",
+      "name": "NASA Jet Propulsion Laboratory",
+      "country": "Estados Unidos",
+      "language": "en",
+      "feed_url": "https://www.jpl.nasa.gov/feeds/news/",
+      "category": "arquivos_oficiais",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.jpl.nasa.gov",
+      "topic_focus": [
+        "sistema solar",
+        "missões espaciais",
+        "astrobiologia"
+      ]
+    },
+    {
+      "id": "phys_org_space_uk",
+      "name": "Phys.org — Space",
+      "country": "Reino Unido",
+      "language": "en",
+      "feed_url": "https://phys.org/rss-feed/space-news/",
+      "category": "fact_checking",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://phys.org",
+      "topic_focus": [
+        "astronomia",
+        "ciência",
+        "física",
+        "planetas"
+      ]
+    },
+    {
+      "id": "astronomy_magazine_us",
+      "name": "Astronomy Magazine",
+      "country": "Estados Unidos",
+      "language": "en",
+      "feed_url": "https://www.astronomy.com/feed/",
+      "category": "fact_checking",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.astronomy.com",
+      "topic_focus": [
+        "astronomia",
+        "observação do céu",
+        "fenômenos celestes"
+      ]
+    },
+    {
+      "id": "new_scientist_space_uk",
+      "name": "New Scientist — Space",
+      "country": "Reino Unido",
+      "language": "en",
+      "feed_url": "https://www.newscientist.com/subject/space/feed/",
+      "category": "fact_checking",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.newscientist.com",
+      "topic_focus": [
+        "ciência espacial",
+        "astrobiologia",
+        "universo"
+      ]
+    },
+    {
+      "id": "guardian_space_uk",
+      "name": "The Guardian — Space",
+      "country": "Reino Unido",
+      "language": "en",
+      "feed_url": "https://www.theguardian.com/science/space/rss",
+      "category": "fact_checking",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.theguardian.com",
+      "topic_focus": [
+        "espaço",
+        "ciência",
+        "descobertas"
+      ]
+    },
+    {
+      "id": "sky_telescope_us",
+      "name": "Sky & Telescope",
+      "country": "Estados Unidos",
+      "language": "en",
+      "feed_url": "https://skyandtelescope.org/feed/",
+      "category": "fact_checking",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://skyandtelescope.org",
+      "topic_focus": [
+        "astronomia",
+        "fenômenos celestes",
+        "observações"
+      ]
+    },
+    {
+      "id": "sciencealert_au",
+      "name": "ScienceAlert",
+      "country": "Austrália",
+      "language": "en",
+      "feed_url": "https://www.sciencealert.com/feed",
+      "category": "fact_checking",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.sciencealert.com",
+      "topic_focus": [
+        "ciência",
+        "descobertas",
+        "espaço",
+        "arqueologia"
+      ]
+    },
+    {
+      "id": "earthsky_us",
+      "name": "EarthSky",
+      "country": "Estados Unidos",
+      "language": "en",
+      "feed_url": "https://earthsky.org/feed/",
+      "category": "fact_checking",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://earthsky.org",
+      "topic_focus": [
+        "astronomia",
+        "Terra",
+        "fenômenos naturais"
+      ]
+    },
+    {
+      "id": "scientific_american_us",
+      "name": "Scientific American",
+      "country": "Estados Unidos",
+      "language": "en",
+      "feed_url": "http://rss.sciam.com/ScientificAmerican-Global",
+      "category": "fact_checking",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.scientificamerican.com",
+      "topic_focus": [
+        "ciência",
+        "psicologia",
+        "astronomia",
+        "arqueologia"
+      ]
+    },
+    {
+      "id": "skeptic_uk",
+      "name": "The Skeptic",
+      "country": "Reino Unido",
+      "language": "en",
+      "feed_url": "https://www.skeptic.org.uk/feed/",
+      "category": "fact_checking",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.skeptic.org.uk",
+      "topic_focus": [
+        "pseudociência",
+        "alegações paranormais",
+        "pensamento crítico"
+      ]
+    },
+    {
+      "id": "australian_skeptics_au",
+      "name": "Australian Skeptics",
+      "country": "Austrália",
+      "language": "en",
+      "feed_url": "https://www.skeptics.com.au/feed/",
+      "category": "fact_checking",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.skeptics.com.au",
+      "topic_focus": [
+        "pseudociência",
+        "alegações extraordinárias",
+        "investigação cética"
+      ]
+    },
+    {
+      "id": "folklore_thursday_uk",
+      "name": "Folklore Thursday",
+      "country": "Reino Unido",
+      "language": "en",
+      "feed_url": "https://folklorethursday.com/feed/",
+      "category": "criptozoologia_lendas",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://folklorethursday.com",
+      "topic_focus": [
+        "folclore",
+        "mitologia",
+        "lendas",
+        "tradições"
+      ]
+    },
+    {
+      "id": "american_folklore_society_us",
+      "name": "American Folklore Society",
+      "country": "Estados Unidos",
+      "language": "en",
+      "feed_url": "https://americanfolklore.org/feed/",
+      "category": "criptozoologia_lendas",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://americanfolklore.org",
+      "topic_focus": [
+        "folclore",
+        "tradições orais",
+        "lendas"
+      ]
+    },
+    {
+      "id": "mysterious_universe_intl",
+      "name": "Mysterious Universe",
+      "country": "Austrália",
+      "language": "en",
+      "feed_url": "https://mysteriousuniverse.org/feed/",
+      "category": "ufologia",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://mysteriousuniverse.org",
+      "topic_focus": [
+        "mistérios",
+        "ufologia",
+        "paranormal",
+        "casos históricos"
+      ]
+    },
+    {
+      "id": "daily_grail_au",
+      "name": "The Daily Grail",
+      "country": "Austrália",
+      "language": "en",
+      "feed_url": "https://www.dailygrail.com/feed/",
+      "category": "conspiracoes",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://www.dailygrail.com",
+      "topic_focus": [
+        "fenômenos anômalos",
+        "arqueologia",
+        "mistérios",
+        "ciência marginal"
+      ]
+    },
+    {
+      "id": "inexplicata_mx",
+      "name": "Inexplicata — Journal of Hispanic Ufology",
+      "country": "México / comunidade hispânica",
+      "language": "en/es",
+      "feed_url": "https://inexplicata.blogspot.com/feeds/posts/default?alt=rss",
+      "category": "ufologia",
+      "feed_type": "rss",
+      "enabled": false,
+      "site_url": "https://inexplicata.blogspot.com",
+      "topic_focus": [
+        "ufologia hispânica",
+        "relatos",
+        "casos históricos"
+      ]
     }
   ]
 }
