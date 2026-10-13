@@ -399,6 +399,38 @@ def resolve_gemini_model(api_key, preferred):
     raise RuntimeError("A chave Gemini não tem nenhum modelo Flash de geração de texto disponível. Verifique o projeto e a API habilitada.")
 
 
+
+# Editorial gate: only admit stories directly related to the site's core subjects.
+# Broad science, politics, and general news are not eligible just because a feed
+# labels them as space, science, official archives, or fact-checking.
+CORE_TOPIC_PATTERNS = [
+    r"\\b(ufo|ufos|ovni|ovnis|uap|uas|fen[oô]meno[s]? a[eé]reo[s]? n[aã]o identificado[s]?)\\b",
+    r"\\b(aliens?|extraterrestrial|extraterrestres?|vida extraterrestre|intelig[eê]ncia extraterrestre)\\b",
+    r"\\b(criptozoolog\w*|cryptozoolog\w*|bigfoot|pé[- ]?grande|sasquatch|yeti|abomin[aá]vel homem das neves|nessie|monstro do lago ness|chupacabra|chupa[- ]?cabra|mokele[- ]?mbembe)\\b",
+    r"\\b(paranormal|sobrenatural|fantasma[s]?|assombra[cç][aã]o|poltergeist|haunted|haunting|ghost sightings?|possess[aã]o|poltergeists?)\\b",
+    r"\\b(mist[eé]rio[s]?|misterioso[s]?|inexplic[aá]vel|inexplicados?|unexplained|mysterious|unsolved mystery|enigmas?)\\b",
+    r"\\b(conspira[cç][aã]o|conspiracy theor\w*|opera[cç][aã]o secreta|acobertamento|cover[- ]?up|secret files|documentos desclassificados sobre ovni)\\b",
+    r"\\b(lenda[s]? urbanas?|folclore|folklore|criatura[s]? lend[aá]ria[s]?|monstro[s]? lend[aá]rio[s]?|urban legend[s]?|mythical creature[s]?)\\b",
+    r"\\b(crop circles?|c[ií]rculos nas planta[cç][oõ]es|abdu[cç][aã]o|abduction|contato extraterrestre|contato imediato)\\b",
+    r"\\b(artefato[s]? an[oô]malo[s]?|arqueologia an[oô]mala|out[- ]of[- ]place artifact|oopart|civiliza[cç][aã]o perdida|lost civilization|hist[oó]ria proibida|origem desconhecida)\\b",
+    r"\\b(cripta[s]?|oculto|ocultismo|occult|ritual inexplic[aá]vel|fen[oô]meno[s]? an[oô]malo[s]?|anomalia[s]? inexplic[aá]vel)\\b",
+    r"\\b(sinal wow|wow signal|fast radio burst|sinal de r[aá]dio inexplic[aá]vel|sinal misterioso|mysterious signal)\\b",
+]
+CORE_TOPIC_RE = re.compile("|".join(f"(?:{p})" for p in CORE_TOPIC_PATTERNS), re.IGNORECASE)
+GENERAL_NEWS_RE = re.compile(
+    r"\\b(visto|visa|brexit|elei[cç][aã]o|parlamento|partido pol[ií]tico|fertilizante[s]?|"
+    r"agricultura|treinamento de cavalos|horse racing|mercado financeiro|futebol|celebridade|"
+    r"datacenter|data centre|guerra na ucr[aâ]nia|geopol[ií]tica|seguran[cç]a digital)\\b",
+    re.IGNORECASE,
+)
+
+
+def is_core_topic(title, description="", source_text=""):
+    """Require explicit topical evidence; category labels alone never qualify a story."""
+    combined = " ".join(str(v or "") for v in (title, description, source_text))
+    return bool(CORE_TOPIC_RE.search(combined))
+
+
 def main():
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
     openai_key = os.getenv("OPENAI_API_KEY", "").strip()
@@ -446,6 +478,9 @@ def main():
         description = str(item.get("description") or "").strip()
         if len(title) < 18 or len(description) < 35:
             continue
+        # Reject irrelevant feed items before spending API calls or publishing them.
+        if not is_core_topic(title, description):
+            continue
         candidates.append(item)
     candidates.sort(key=lambda item: (item.get("published_at") or "", item.get("discovered_at") or ""), reverse=True)
     status["status"] = "running"
@@ -457,6 +492,10 @@ def main():
             final_url, source_text = fetch_article(url)
             if len(source_text) < 900:
                 raise ValueError(f"Conteúdo extraído insuficiente ({len(source_text)} caracteres); não gerar artigo a partir apenas de título/resumo")
+            # Recheck the extracted article body. A relevant-looking headline must not
+            # bypass the gate if the fetched page is unrelated or a feed is misconfigured.
+            if not is_core_topic(item.get("title", ""), item.get("description", ""), source_text[:10000]):
+                raise ValueError("Conteúdo fora do escopo editorial do Enigma Mundi; artigo descartado pelo filtro temático")
             category = item.get("category") or "misterios"
             source_name = item.get("source_name") or item.get("source_id") or "Fonte externa"
             draft, used_model = call_model_with_fallback(api_key, provider, model, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
