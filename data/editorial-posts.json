@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T18:51:38.523052+00:00",
-  "article_count": 4,
+  "generated_at": "2026-10-13T18:54:35.638991+00:00",
+  "article_count": 5,
   "articles": [
     {
       "id": "em-08c25809ae",
@@ -82,29 +82,55 @@
       ]
     },
     {
+      "id": "em-08017333ac",
+      "title": "Novo estudo aponta eficácia de fertilizantes reciclados do saneamento",
+      "excerpt": "Pesquisa internacional avalia o uso de nutrientes extraídos de sistemas de saneamento na agricultura, comparando sua eficácia aos fertilizantes convencionais.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-10-13T15:20:11+00:00",
+      "generated_at": "2026-10-13T18:52:40.212313+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Phys.org — Space",
+      "source_url": "https://phys.org/news/2026-10-recycled-fertilizers-sanitation-effective-conventional.html",
+      "url": "https://phys.org/news/2026-10-recycled-fertilizers-sanitation-effective-conventional.html",
+      "path": "artigos/novo-estudo-aponta-eficácia-de-fertilizantes-reciclados-do-s-08017333ac.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://scx1.b-cdn.net/csz/news/tmb/2026/fertilizer.jpg",
+      "image_source_url": "https://phys.org/news/2026-10-recycled-fertilizers-sanitation-effective-conventional.html",
+      "image_alt": "Novo estudo aponta eficácia de fertilizantes reciclados do saneamento",
+      "tags": [
+        "agricultura",
+        "fertilizantes",
+        "saneamento",
+        "sustentabilidade",
+        "pesquisa"
+      ]
+    },
+    {
       "id": "em-da57595344",
-      "title": "Sondas espaciais detectam padrão inesperado no caos do vento solar",
-      "excerpt": "Estudo internacional revela que a turbulência magnética no vento solar esconde uma inversão ordenada de rotação, desafiando modelos físicos tradicionais.",
+      "title": "Ordem no Caos Solar: Sonda Parker Revela Estrutura Inédita no Vento Solar",
+      "excerpt": "Cientistas identificam uma inversão na rotação magnética do plasma solar, revelando padrões organizados onde a física previa apenas turbulência caótica desordenada.",
       "category": "misterios",
       "category_label": "Mistérios",
       "published_at": "2026-10-13T15:20:06+00:00",
-      "generated_at": "2026-10-13T18:51:37.483422+00:00",
+      "generated_at": "2026-10-13T18:52:57.137092+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Phys.org — Space",
       "source_url": "https://phys.org/news/2026-10-unstructured-phenomenon-solar.html",
       "url": "https://phys.org/news/2026-10-unstructured-phenomenon-solar.html",
-      "path": "artigos/sondas-espaciais-detectam-padrão-inesperado-no-caos-do-vento-da57595344.html",
+      "path": "artigos/ordem-no-caos-solar-sonda-parker-revela-estrutura-inédita-no-da57595344.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": "https://scx1.b-cdn.net/csz/news/tmb/2026/structure-in-the-unstr.jpg",
       "image_source_url": "https://phys.org/news/2026-10-unstructured-phenomenon-solar.html",
-      "image_alt": "Sondas espaciais detectam padrão inesperado no caos do vento solar",
+      "image_alt": "Ordem no Caos Solar: Sonda Parker Revela Estrutura Inédita no Vento Solar",
       "tags": [
         "vento solar",
-        "campo magnético",
         "física de plasma",
-        "parker solar probe",
-        "astrofísica"
+        "Parker Solar Probe",
+        "campo magnético",
+        "clima espacial"
       ]
     }
   ]
