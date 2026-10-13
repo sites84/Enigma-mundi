@@ -303,7 +303,7 @@ def render_article_page(article, post, slug):
     site_url = "https://sites84.github.io/Enigma-mundi/"
     page_url = site_url + "artigos/" + slug + ".html"
     image = post.get("image_url")
-    image_html = (f'<figure class="article-cover"><img src="{esc(image)}" alt="{esc(post.get("image_alt") or article["title"])}" loading="eager"><figcaption>Imagem relacionada ao tema. <a href="{esc(post["source_url"])}" rel="noopener noreferrer">Fonte da matéria</a></figcaption></figure>') if image else ""
+    image_html = (f'<figure class="article-cover"><img src="{esc(image)}" alt="{esc(post.get("image_alt") or article["title"])}" loading="eager" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="article-image-fallback" hidden>ENIGMA MUNDI · ARQUIVO VISUAL</div><figcaption>Imagem relacionada ao tema. <a href="{esc(post["source_url"])}" rel="noopener noreferrer">Fonte da matéria</a></figcaption></figure>') if image else ""
     sections_html = "\n".join(
         f"<section><h2>{esc(section['heading'])}</h2>{paragraphs(section['paragraphs'])}</section>"
         for section in article["sections"]
