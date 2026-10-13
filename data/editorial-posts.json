@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T23:34:16.063245+00:00",
+  "generated_at": "2026-10-13T23:37:31.274171+00:00",
   "article_count": 54,
   "articles": [
     {
@@ -183,6 +183,32 @@
         "Segurança Nacional",
         "Ufologia",
         "Documentos oficiais"
+      ]
+    },
+    {
+      "id": "em-2373e15d39",
+      "title": "Debates sobre ufologia e novos enigmas históricos movimentam o cenário internacional",
+      "excerpt": "Uma análise recente traz atualizações sobre declarações de denunciantes de OVNIs, o debate envolvendo a estrutura do DNA e investigações sobre antigos mistérios arqueológicos.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-07T10:36:15+00:00",
+      "generated_at": "2026-10-13T23:37:21.164683+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Daily Grail",
+      "source_url": "https://www.dailygrail.com/2026/10/news-briefs-07-10-2026/",
+      "url": "https://www.dailygrail.com/2026/10/news-briefs-07-10-2026/",
+      "path": "artigos/debates-sobre-ufologia-e-novos-enigmas-históricos-movimentam-2373e15d39.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.dailygrail.com/wp-content/uploads/2017/10/Grail-Placeholder.jpg",
+      "image_source_url": "https://www.dailygrail.com/2026/10/news-briefs-07-10-2026/",
+      "image_alt": "Debates sobre ufologia e novos enigmas históricos movimentam o cenário internacional",
+      "tags": [
+        "ufologia",
+        "misterios",
+        "arqueologia",
+        "ciencia",
+        "historia"
       ]
     },
     {
@@ -657,29 +683,29 @@
     },
     {
       "id": "em-cab092075a",
-      "title": "Novos Arquivos UAP e Descobertas Científicas Conduzem o Debate sobre o Desconhecido",
-      "excerpt": "Uma análise detalhada aborda a divulgação recente de documentos oficiais de OVNIs, impactos de asteroides na Lua e avanços na biologia e na arqueologia global.",
+      "title": "Novos Arquivos UAP e Outros Mistérios: Um Panorama Recente de Anomalias",
+      "excerpt": "O Departamento de Defesa dos EUA divulgou novos documentos sobre UAPs. O portal Enigma Mundi analisa este e outros tópicos recentes do noticiário de mistérios.",
       "category": "arquivos_oficiais",
       "category_label": "Arquivos oficiais",
       "published_at": "2026-09-21T08:34:34+00:00",
-      "generated_at": "2026-10-13T23:34:15.062805+00:00",
+      "generated_at": "2026-10-13T23:37:30.273744+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "The Daily Grail",
       "source_url": "https://www.dailygrail.com/2026/09/news-briefs-21-09-2026/",
       "url": "https://www.dailygrail.com/2026/09/news-briefs-21-09-2026/",
-      "path": "artigos/novos-arquivos-uap-e-descobertas-científicas-conduzem-o-deba-cab092075a.html",
+      "path": "artigos/novos-arquivos-uap-e-outros-mistérios-um-panorama-recente-de-cab092075a.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": "https://www.dailygrail.com/wp-content/uploads/2017/10/Grail-Placeholder.jpg",
       "image_source_url": "https://www.dailygrail.com/2026/09/news-briefs-21-09-2026/",
-      "image_alt": "Novos Arquivos UAP e Descobertas Científicas Conduzem o Debate sobre o Desconhecido",
+      "image_alt": "Novos Arquivos UAP e Outros Mistérios: Um Panorama Recente de Anomalias",
       "tags": [
-        "UFO",
-        "UAP",
-        "Astronomia",
-        "Arquivos Oficiais",
+        "UAPs",
+        "Pentágono",
+        "Mistérios",
+        "Arqueologia",
         "Ciência",
-        "Mistérios"
+        "Arquivos Oficiais"
       ]
     },
     {
@@ -1022,29 +1048,29 @@
       ]
     },
     {
-      "id": "em-fcbf9f3778",
-      "title": "Conselheiro de Trump sobre OVNIs avalia o desinteresse de inteligências alienígenas pela política terrestre",
-      "excerpt": "Em declarações recentes, o conselheiro presidencial Avi Loeb argumentou que uma civilização extraterrestre avançada ignoraria divisões geopolíticas e líderes humanos.",
-      "category": "ufologia",
-      "category_label": "Ufologia",
-      "published_at": "2026-08-29T00:00:00+00:00",
-      "generated_at": "2026-10-13T23:32:28.138726+00:00",
+      "id": "em-33ffc52cde",
+      "title": "Criaturas bípedes de pequeno porte são relatadas na Pensilvânia",
+      "excerpt": "Dois relatos independentes em dias consecutivos na Pensilvânia descrevem hominídeos de baixa estatura semelhantes ao Pé-Grande, desafiando perfis tradicionais.",
+      "category": "criptozoologia_lendas",
+      "category_label": "Lendas e fenômenos incomuns",
+      "published_at": "2026-08-30T00:00:00+00:00",
+      "generated_at": "2026-10-13T23:35:33.627617+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Unexplained Mysteries",
-      "source_url": "https://www.unexplained-mysteries.com/news/400136/trumps-ufo-advisor-aliens-wouldnt-care-who-the-president-is",
-      "url": "https://www.unexplained-mysteries.com/news/400136/trumps-ufo-advisor-aliens-wouldnt-care-who-the-president-is",
-      "path": "artigos/conselheiro-de-trump-sobre-ovnis-avalia-o-desinteresse-de-in-fcbf9f3778.html",
+      "source_url": "https://www.unexplained-mysteries.com/news/400137/small-bipedal-bigfoot-like-creatures-spotted-twice-in-pennsylvania",
+      "url": "https://www.unexplained-mysteries.com/news/400137/small-bipedal-bigfoot-like-creatures-spotted-twice-in-pennsylvania",
+      "path": "artigos/criaturas-bípedes-de-pequeno-porte-são-relatadas-na-pensilvâ-33ffc52cde.html",
       "status": "published",
       "post_type": "original_article",
-      "image_url": "https://www.unexplained-mysteries.com/images/news_large_retina/news-hq-alien-entity-7.jpg",
-      "image_source_url": "https://www.unexplained-mysteries.com/news/400136/trumps-ufo-advisor-aliens-wouldnt-care-who-the-president-is",
-      "image_alt": "Conselheiro de Trump sobre OVNIs avalia o desinteresse de inteligências alienígenas pela política terrestre",
+      "image_url": "https://www.unexplained-mysteries.com/images/news_large_retina/news-hq-skunk-ape-2.jpg",
+      "image_source_url": "https://www.unexplained-mysteries.com/news/400137/small-bipedal-bigfoot-like-creatures-spotted-twice-in-pennsylvania",
+      "image_alt": "Criaturas bípedes de pequeno porte são relatadas na Pensilvânia",
       "tags": [
-        "Ufologia",
-        "Avi Loeb",
-        "OVNIs",
-        "Vida Extraterrestre",
-        "Política"
+        "criptozoologia",
+        "pensilvania",
+        "misterios",
+        "criaturas",
+        "relatos"
       ]
     },
     {
@@ -1309,28 +1335,28 @@
     },
     {
       "id": "em-575402b3f7",
-      "title": "Explorando Relatos Incomuns de Contatos Extraterrestres e Folclore Moderno",
-      "excerpt": "Uma análise de publicações sobre ufologia e folclore traz à tona narrativas antigas de seres cinzentos, entidades furtivas e humanoides misteriosos.",
+      "title": "Explorando Relatos de OVNIs e o Livro Visitors From Within no Debate Ufológico",
+      "excerpt": "Uma análise de discussões ufológicas recentes destaca obras clássicas sobre o fenômeno extraterrestre e relatos insólitos de encontros com seres inusitados.",
       "category": "ufologia",
       "category_label": "Ufologia",
       "published_at": "2026-07-24T10:15:00+00:00",
-      "generated_at": "2026-10-13T23:33:42.710442+00:00",
+      "generated_at": "2026-10-13T23:36:49.650892+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Mysterious Universe",
       "source_url": "https://mysteriousuniverse.org/2026/07/36.03-MU-Podcast-Visitors-From-Within-Extraterrestrial-Encounters-and-Species-Evolution-part-01",
       "url": "https://mysteriousuniverse.org/2026/07/36.03-MU-Podcast-Visitors-From-Within-Extraterrestrial-Encounters-and-Species-Evolution-part-01",
-      "path": "artigos/explorando-relatos-incomuns-de-contatos-extraterrestres-e-fo-575402b3f7.html",
+      "path": "artigos/explorando-relatos-de-ovnis-e-o-livro-visitors-from-within-n-575402b3f7.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": "https://megaphone.imgix.net/podcasts/2dbaaef6-86e4-11f1-9a66-73740e565e5d/image/736fde2f1a1f483517b4bdde2a09fb2d.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
       "image_source_url": "https://mysteriousuniverse.org/2026/07/36.03-MU-Podcast-Visitors-From-Within-Extraterrestrial-Encounters-and-Species-Evolution-part-01",
-      "image_alt": "Explorando Relatos Incomuns de Contatos Extraterrestres e Folclore Moderno",
+      "image_alt": "Explorando Relatos de OVNIs e o Livro Visitors From Within no Debate Ufológico",
       "tags": [
         "ufologia",
-        "alienígenas",
-        "folclore",
-        "misterios",
-        "fenomenos anômalos"
+        "abdução",
+        "mistérios",
+        "livros",
+        "relatos"
       ]
     },
     {
