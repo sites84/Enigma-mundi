@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-13T22:59:15.855616+00:00",
+  "updated_at": "2026-10-13T23:02:13.429404+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 40,
-  "generated_this_run": 8,
+  "existing_articles": 39,
+  "generated_this_run": 7,
   "status": "completed",
   "errors": [
     {
@@ -28,23 +28,19 @@
     },
     {
       "url": "https://www.unexplained-mysteries.com/news/400175/nasa-administrator-says-he-is-open-minded-about-ufo-videos",
-      "error": "Unexplained Mysteries: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
+    },
+    {
+      "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
+      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
       "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://www.skeptic.com/article/you-cant-handle-the-truthers-the-9-11-conspiracy-theories",
-      "error": "Skeptic Magazine: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
       "url": "https://www.metabunk.org/threads/uap-predictions-for-next-two-years.15079",
       "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.theblackvault.com/documentarchive/aaro-releases-fy2025-uap-report-months-after-statutory-deadline-citing-319-new-cases-and-expanded-satellite-analysis",
-      "error": "The Black Vault: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
@@ -89,6 +85,10 @@
     {
       "url": "https://www.snopes.com/fact-check/musk-midterms-democrats",
       "error": "Snopes Urban Legends: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.folklore-society.com/blog/post/the-katharine-briggs-award-2026-shortlist",
+      "error": "The Folklore Society UK: Reportagem curta: exige abertura e pelo menos três seções"
     }
   ],
   "candidate_count": 71,
