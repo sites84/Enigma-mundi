@@ -1,10 +1,23 @@
 {
-  "updated_at": "2026-10-13T18:09:26.979109+00:00",
-  "provider": null,
+  "updated_at": "2026-10-13T18:17:38.774428+00:00",
+  "provider": "gemini",
   "model": null,
   "existing_articles": 0,
   "generated_this_run": 0,
-  "status": "waiting_for_api_key",
-  "errors": [],
-  "message": "Configure GEMINI_API_KEY (recomendado) ou OPENAI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
+  "status": "errors",
+  "errors": [
+    {
+      "url": "https://phys.org/news/2026-10-newly-3d-chair-space-patterns.html",
+      "error": "Phys.org — Space: API gemini retornou HTTP 404: "
+    },
+    {
+      "url": "https://www.theguardian.com/world/2026/oct/13/britons-travelling-to-europe-told-not-to-apply-for-delayed-etias-visa-waiver",
+      "error": "The Guardian — Space: API gemini retornou HTTP 404: "
+    },
+    {
+      "url": "https://www.theguardian.com/commentisfree/2026/oct/13/brexit-vladimir-putin-russia-referendum-result-eu",
+      "error": "The Guardian — Space: API gemini retornou HTTP 404: "
+    }
+  ],
+  "candidate_count": 2338
 }
