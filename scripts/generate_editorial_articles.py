@@ -453,6 +453,12 @@ def main():
     existing_articles = existing_payload.get("articles", []) if isinstance(existing_payload, dict) else []
     if not isinstance(existing_articles, list):
         existing_articles = []
+    # Retire legacy posts that were published before the strict topic gate existed.
+    relevant_articles = [a for a in existing_articles if isinstance(a, dict) and is_core_topic(a.get("title"), a.get("excerpt"))]
+    removed_legacy = len(existing_articles) - len(relevant_articles)
+    if removed_legacy:
+        print(f"[INFO] Removendo {removed_legacy} artigos antigos fora do escopo editorial.", flush=True)
+    existing_articles = relevant_articles
     existing_urls = {canonical_url(a.get("source_url")) for a in existing_articles if a.get("source_url")}
     status = {
         "updated_at": now_iso(), "provider": provider or None, "model": model or None,
