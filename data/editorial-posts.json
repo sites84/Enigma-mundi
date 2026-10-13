@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T19:22:01.609888+00:00",
-  "article_count": 20,
+  "generated_at": "2026-10-13T19:24:25.770395+00:00",
+  "article_count": 19,
   "articles": [
     {
       "id": "em-08c25809ae",
@@ -131,6 +131,32 @@
         "Parker Solar Probe",
         "campo magnético",
         "clima espacial"
+      ]
+    },
+    {
+      "id": "em-14954086ef",
+      "title": "Chefia do MI5 confirma ações da Rússia no referendo do Brexit",
+      "excerpt": "Diretor-geral do serviço secreto interno britânico afirmou que Moscou tentou influenciar a votação de 2016, embora minimize o impacto real.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-10-13T15:15:45+00:00",
+      "generated_at": "2026-10-13T19:23:36.644720+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Guardian — Space",
+      "source_url": "https://www.theguardian.com/politics/2026/oct/13/russia-brexit-eu-referendum-interference-mi5",
+      "url": "https://www.theguardian.com/politics/2026/oct/13/russia-brexit-eu-referendum-interference-mi5",
+      "path": "artigos/chefia-do-mi5-confirma-ações-da-rússia-no-referendo-do-brexi-14954086ef.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "MI5",
+        "Brexit",
+        "Rússia",
+        "Desinformação",
+        "Segurança Nacional"
       ]
     },
     {
@@ -266,11 +292,11 @@
     {
       "id": "em-ae909289fd",
       "title": "A origem real da frase sobre infertilidade atribuída a Robert F. Kennedy Jr.",
-      "excerpt": "Investigação analisa postagens nas redes sociais que colocam uma declaração falsa sobre genética e infertilidade na boca do secretário de saúde dos EUA.",
+      "excerpt": "Uma investigação de checagem de fatos revela que declarações satíricas e antigas da internet foram incorretamente associadas ao secretário de saúde dos EUA.",
       "category": "fact_checking",
       "category_label": "Investigação e checagem",
       "published_at": "2026-10-13T15:00:00+00:00",
-      "generated_at": "2026-10-13T19:21:43.044075+00:00",
+      "generated_at": "2026-10-13T19:24:00.329592+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Snopes Urban Legends",
       "source_url": "https://www.snopes.com/fact-check/rfk-jr-infertility-genetic-quote/",
@@ -282,52 +308,26 @@
       "image_source_url": "https://www.snopes.com/fact-check/rfk-jr-infertility-genetic-quote/",
       "image_alt": "A origem real da frase sobre infertilidade atribuída a Robert F. Kennedy Jr.",
       "tags": [
-        "fact-checking",
-        "robert f kennedy jr",
-        "saúde",
-        "redes sociais",
-        "mitos"
-      ]
-    },
-    {
-      "id": "em-fb0890592c",
-      "title": "Divulgação científica ganha espaço em produções infantis contemporâneas",
-      "excerpt": "A comunicadora Emily Calandrelli integra o universo de animações da Marvel voltadas para o público infantil, unindo entretenimento e ciência.",
-      "category": "misterios",
-      "category_label": "Mistérios",
-      "published_at": "2026-10-13T15:00:00+00:00",
-      "generated_at": "2026-10-13T19:21:37.069273+00:00",
-      "source_name": "Enigma Mundi",
-      "primary_source_name": "Space.com",
-      "source_url": "https://www.space.com/entertainment/space-movies-shows/space-gal-emily-calandrelli-launches-into-the-marvel-universe-this-week-on-disney-jr-s-iron-man-series-exclusive",
-      "url": "https://www.space.com/entertainment/space-movies-shows/space-gal-emily-calandrelli-launches-into-the-marvel-universe-this-week-on-disney-jr-s-iron-man-series-exclusive",
-      "path": "artigos/divulgação-científica-ganha-espaço-em-produções-infantis-con-fb0890592c.html",
-      "status": "published",
-      "post_type": "original_article",
-      "image_url": "https://cdn.mos.cms.futurecdn.net/GyULe95bW5ojSrYR7cUuWc-1920-80.png",
-      "image_source_url": "https://www.space.com/entertainment/space-movies-shows/space-gal-emily-calandrelli-launches-into-the-marvel-universe-this-week-on-disney-jr-s-iron-man-series-exclusive",
-      "image_alt": "Divulgação científica ganha espaço em produções infantis contemporâneas",
-      "tags": [
-        "ciência",
-        "entretenimento",
-        "marvel",
-        "espaço",
-        "educação"
+        "Fact Checking",
+        "Robert F. Kennedy Jr",
+        "Saúde Pública",
+        "Boatos",
+        "Internet"
       ]
     },
     {
       "id": "em-5250c62fd8",
-      "title": "Espelho cósmico: galáxia distante revela segredos sobre a Via Láctea",
-      "excerpt": "Novas observações da galáxia espiral NGC 3137 ajudam astrônomos a compreender melhor a dinâmica e a evolução da nossa própria vizinhança cósmica.",
+      "title": "Nova imagem do telescópio Hubble revela segredos da galáxia NGC 3137",
+      "excerpt": "Observações detalhadas da galáxia espiral NGC 3137 trazem pistas sobre a formação estelar e apontam semelhanças estruturais com a Via Láctea.",
       "category": "misterios",
       "category_label": "Mistérios",
       "published_at": "2026-10-13T15:00:00+00:00",
-      "generated_at": "2026-10-13T19:21:30.869752+00:00",
+      "generated_at": "2026-10-13T19:23:49.750747+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Astronomy Magazine",
       "source_url": "https://www.astronomy.com/science/distant-ngc-3137-reveals-clues-about-our-own-galaxy/",
       "url": "https://www.astronomy.com/science/distant-ngc-3137-reveals-clues-about-our-own-galaxy/",
-      "path": "artigos/espelho-cósmico-galáxia-distante-revela-segredos-sobre-a-via-5250c62fd8.html",
+      "path": "artigos/nova-imagem-do-telescópio-hubble-revela-segredos-da-galáxia--5250c62fd8.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": null,
@@ -336,19 +336,19 @@
       "tags": [
         "astronomia",
         "galáxias",
-        "via láctea",
         "hubble",
-        "espaço profundo"
+        "via láctea",
+        "ciência"
       ]
     },
     {
       "id": "em-3524d2f5b7",
       "title": "Células maternas podem residir no cérebro humano ao longo de toda a vida",
-      "excerpt": "Nova pesquisa revela que vestígios celulares da mãe cruzam a placenta durante a gestação e persistem no cérebro humano, transformando a nossa compreensão da identidade genética.",
+      "excerpt": "Nova pesquisa revela que cérebros humanos abrigam células de origem materna adquiridas ainda na fase gestacional, persistindo até a velhice.",
       "category": "misterios",
       "category_label": "Mistérios",
       "published_at": "2026-10-13T15:00:00+00:00",
-      "generated_at": "2026-10-13T19:21:24.140473+00:00",
+      "generated_at": "2026-10-13T19:23:44.295943+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "New Scientist — Space",
       "source_url": "https://www.newscientist.com/article/2593373-cells-from-your-mother-could-stay-in-your-brain-your-whole-life/",
@@ -361,9 +361,9 @@
       "image_alt": "Células maternas podem residir no cérebro humano ao longo de toda a vida",
       "tags": [
         "neurociencia",
+        "microquimerismo",
         "genetica",
         "biologia",
-        "estudo",
         "misterios"
       ]
     },
@@ -446,81 +446,55 @@
       ]
     },
     {
-      "id": "em-3b88ad7991",
-      "title": "Os limites do horror e da transformação no novo projeto do vilão Clayface",
-      "excerpt": "O ator Tom Rhys Harries assume o papel principal no vindouro filme de super-herói focado no icônico personagem Clayface, em uma produção que promete apostar em tons sombrios e viscerais.",
-      "category": "misterios",
-      "category_label": "Mistérios",
-      "published_at": "2026-10-13T14:58:35+00:00",
-      "generated_at": "2026-10-13T19:21:49.710073+00:00",
-      "source_name": "Enigma Mundi",
-      "primary_source_name": "The Guardian — Space",
-      "source_url": "https://www.theguardian.com/film/2026/oct/13/tom-rhys-harries-on-playing-dc-supervillain-clayface",
-      "url": "https://www.theguardian.com/film/2026/oct/13/tom-rhys-harries-on-playing-dc-supervillain-clayface",
-      "path": "artigos/os-limites-do-horror-e-da-transformação-no-novo-projeto-do-v-3b88ad7991.html",
-      "status": "published",
-      "post_type": "original_article",
-      "image_url": null,
-      "image_source_url": null,
-      "image_alt": null,
-      "tags": [
-        "Clayface",
-        "DC Comics",
-        "Cinema",
-        "Horror",
-        "Tom Rhys Harries"
-      ]
-    },
-    {
       "id": "em-415d11365e",
-      "title": "A discussão sobre a descolonização dos direitos humanos na geopolítica",
-      "excerpt": "Uma análise recente traz à tona o debate sobre a suposta manipulação conceitual dos direitos humanos e o papel de potências globais.",
+      "title": "Debate internacional questiona a manipulação global dos direitos humanos",
+      "excerpt": "Uma análise recente traz à tona o debate sobre a descolonização dos direitos humanos e o suposto domínio geopolítico ocidental.",
       "category": "conspiracoes",
       "category_label": "Teorias da conspiração",
       "published_at": "2026-10-13T14:53:05+00:00",
-      "generated_at": "2026-10-13T19:21:55.179618+00:00",
+      "generated_at": "2026-10-13T19:24:16.381691+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Global Research Geopolitics",
       "source_url": "https://www.globalresearch.ca/video-reclaiming-human-rights-from-u-s-nato-stranglehold/5942782",
       "url": "https://www.globalresearch.ca/video-reclaiming-human-rights-from-u-s-nato-stranglehold/5942782",
-      "path": "artigos/a-discussão-sobre-a-descolonização-dos-direitos-humanos-na-g-415d11365e.html",
+      "path": "artigos/debate-internacional-questiona-a-manipulação-global-dos-dire-415d11365e.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": "https://www.globalresearch.ca/wp-content/uploads/2024/09/human-rights.png",
       "image_source_url": "https://www.globalresearch.ca/video-reclaiming-human-rights-from-u-s-nato-stranglehold/5942782",
-      "image_alt": "A discussão sobre a descolonização dos direitos humanos na geopolítica",
+      "image_alt": "Debate internacional questiona a manipulação global dos direitos humanos",
       "tags": [
-        "geopolítica",
         "direitos humanos",
-        "global research",
-        "soberania",
-        "relações internacionais"
+        "geopolitica",
+        "onu",
+        "relacoes internacionais",
+        "critica social"
       ]
     },
     {
       "id": "em-0c155ba54f",
-      "title": "Telescópio James Webb flagra possível supernova distante no universo primordial",
-      "excerpt": "Astrônomos utilizando o telescópio James Webb detectaram um transiente luminoso no universo primordial, capturado poucos dias após o provável evento explosivo.",
+      "title": "Telescópio James Webb flagra possível supernova no universo primitivo",
+      "excerpt": "Astrônomos identificam um transiente luminoso distante sem ajuda de lente gravitacional, capturado poucos dias após o provável evento explosivo.",
       "category": "misterios",
       "category_label": "Mistérios",
       "published_at": "2026-10-13T14:50:01+00:00",
-      "generated_at": "2026-10-13T19:22:00.609464+00:00",
+      "generated_at": "2026-10-13T19:24:24.770040+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Phys.org — Space",
       "source_url": "https://phys.org/news/2026-10-webb-early-universe-supernova-days.html",
       "url": "https://phys.org/news/2026-10-webb-early-universe-supernova-days.html",
-      "path": "artigos/telescópio-james-webb-flagra-possível-supernova-distante-no--0c155ba54f.html",
+      "path": "artigos/telescópio-james-webb-flagra-possível-supernova-no-universo--0c155ba54f.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": "https://scx1.b-cdn.net/csz/news/tmb/2026/james-webb-telescope-c.jpg",
       "image_source_url": "https://phys.org/news/2026-10-webb-early-universe-supernova-days.html",
-      "image_alt": "Telescópio James Webb flagra possível supernova distante no universo primordial",
+      "image_alt": "Telescópio James Webb flagra possível supernova no universo primitivo",
       "tags": [
         "James Webb",
         "Supernova",
         "Universo Primitivo",
         "Astronomia",
-        "Astrofísica"
+        "Cosmologia"
       ]
     }
   ]
