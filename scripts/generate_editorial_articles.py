@@ -426,6 +426,16 @@ def is_core_topic(title, description="", source_text=""):
     if not headline:
         return False
     candidate = f"{headline} {summary}"
+    # Hard exclusion: election-result and vote-counting coverage is outside this site's remit,
+    # even if the feed/category incorrectly labels it as fact-checking or mystery content.
+    election_coverage = re.compile(
+        r"\\b(apura[cç][aã]o|resultado[s]?|candidatura[s]?|candidato[s]?|disputa|corrida)\\b.{0,100}\\b(eleitoral|elei[cç][oõ]es?|deputado[s]?|senador(?:es)?|governador(?:es)?|prefeito[s]?)\\b|"
+        r"\\b(eleitoral|elei[cç][oõ]es?)\\b.{0,100}\\b(apura[cç][aã]o|resultado[s]?|deputado[s]?|senador(?:es)?|governador(?:es)?|prefeito[s]?)\\b|"
+        r"\\b(resultado[s]? das? elei[cç][oõ]es?|elei[cç][oõ]es? de 20\\d{2}.*(?:1º|primeiro|segundo|2º) turno)\\b",
+        re.IGNORECASE,
+    )
+    if election_coverage.search(candidate):
+        return False
     # A standalone "alien" or a horror/film/game title is not evidence of a real mystery.
     entertainment = re.compile(
         r"\b(video game|videogame|videojogo|jogo[s]? eletr[oô]nico[s]?|game[s]? eletr[oô]nico[s]?|gameplay|gaming|trailer|teaser|sequel|franchise|"
