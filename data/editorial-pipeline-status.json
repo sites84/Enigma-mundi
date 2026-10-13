@@ -1,48 +1,69 @@
 {
-  "updated_at": "2026-10-13T20:43:56.005159+00:00",
+  "updated_at": "2026-10-13T20:59:47.493485+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 5,
-  "generated_this_run": 1,
+  "existing_articles": 15,
+  "generated_this_run": 10,
   "status": "completed",
   "errors": [
     {
       "url": "https://www.unexplained-mysteries.com/news/400179/new-records-could-provide-context-to-trumps-ufo-file-dumps",
-      "error": "Unexplained Mysteries: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/10/argentina-extraterrestrials-in-trevelin.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
       "url": "https://www.atlasobscura.com/articles/best-haunted-hotels-for-a-spooky-getaway",
-      "error": "Atlas Obscura: A resposta da API gemini não contém JSON válido"
+      "error": "Atlas Obscura: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/a-lost-police-report-48-years-later.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/mexico-year-of-ufo-and-paranormal.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Reportagem curta: exige abertura e pelo menos três seções"
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://vigilantcitizen.com/sinistersites/sinister-sites-illuminati-pyramid-in-blagnac-france",
+      "url": "https://vigilantcitizen.com/moviesandtv/is-the-assessment-a-script-for-a-globalist-new-world-order",
       "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "url": "https://mufon.com/2026/09/15/department-of-war-issues-legal-waiver-to-authorize-unidentified-anomalous-phenomena-uap-disclosures-to-pursue",
+      "error": "MUFON UFO News: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://vigilantcitizen.com/moviesandtv/the-conspiracy-theories-in-they-cloned-tyrone-and-its-link-with-jamie-foxxs-mysterious-hospitalization",
+      "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-caused-massive-greater.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "url": "https://ufo.com.br/edicao-305-revista-ufo",
+      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://fenomenum.com.br/piloto-de-helicoptero-observou-ovni-no-estado-de-ohio",
+      "error": "Fenomenum Brasil: A resposta da API gemini não contém JSON válido"
+    },
+    {
+      "url": "https://www.unexplained-mysteries.com/news/400175/nasa-administrator-says-he-is-open-minded-about-ufo-videos",
+      "error": "Unexplained Mysteries: Reportagem curta: exige abertura e pelo menos três seções"
+    },
+    {
+      "url": "https://ufo.com.br/steven-greer-diz-que-prazo-da-carta-unod-expirou-e-acusa-estado-profundo-de-impedir-divulgacao-completa-dos-ufos",
+      "error": "Revista UFO Brasil: A resposta da API gemini não contém JSON válido"
+    },
+    {
+      "url": "https://www.dailygrail.com/2026/09/the-ufo-as-a-mirror-a-conversation-with-meredith-spearman",
+      "error": "The Daily Grail: A resposta da API gemini não contém JSON válido"
+    },
+    {
+      "url": "https://www.conspiracywatch.info/notice/deception-the-great-covid-cover-up",
+      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
-  "candidate_count": 107,
-  "message": "Geração automática ativa: até 10 artigos publicados por execução horária."
+  "candidate_count": 106,
+  "attempted_this_run": 25,
+  "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
 }
