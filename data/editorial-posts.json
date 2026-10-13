@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T18:34:41.634731+00:00",
-  "article_count": 3,
+  "generated_at": "2026-10-13T18:51:38.523052+00:00",
+  "article_count": 4,
   "articles": [
     {
       "id": "em-08c25809ae",
@@ -79,6 +79,32 @@
         "Geopolítica",
         "União Europeia",
         "Desinformação"
+      ]
+    },
+    {
+      "id": "em-da57595344",
+      "title": "Sondas espaciais detectam padrão inesperado no caos do vento solar",
+      "excerpt": "Estudo internacional revela que a turbulência magnética no vento solar esconde uma inversão ordenada de rotação, desafiando modelos físicos tradicionais.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-13T15:20:06+00:00",
+      "generated_at": "2026-10-13T18:51:37.483422+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Phys.org — Space",
+      "source_url": "https://phys.org/news/2026-10-unstructured-phenomenon-solar.html",
+      "url": "https://phys.org/news/2026-10-unstructured-phenomenon-solar.html",
+      "path": "artigos/sondas-espaciais-detectam-padrão-inesperado-no-caos-do-vento-da57595344.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://scx1.b-cdn.net/csz/news/tmb/2026/structure-in-the-unstr.jpg",
+      "image_source_url": "https://phys.org/news/2026-10-unstructured-phenomenon-solar.html",
+      "image_alt": "Sondas espaciais detectam padrão inesperado no caos do vento solar",
+      "tags": [
+        "vento solar",
+        "campo magnético",
+        "física de plasma",
+        "parker solar probe",
+        "astrofísica"
       ]
     }
   ]

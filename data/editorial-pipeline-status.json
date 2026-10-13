@@ -1,15 +1,19 @@
 {
-  "updated_at": "2026-10-13T18:34:41.636401+00:00",
+  "updated_at": "2026-10-13T18:51:38.523615+00:00",
   "provider": "gemini",
-  "model": "gemini-3.5-flash-lite",
-  "existing_articles": 3,
-  "generated_this_run": 2,
+  "model": "gemini-3.8-flash",
+  "existing_articles": 4,
+  "generated_this_run": 1,
   "status": "completed",
   "errors": [
     {
       "url": "https://phys.org/news/2026-10-recycled-fertilizers-sanitation-effective-conventional.html",
       "error": "Phys.org — Space: Nenhum modelo Gemini alternativo respondeu. gemini-3-flash-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-2.5-flash: API gemini retornou HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer avail"
+    },
+    {
+      "url": "https://www.theguardian.com/science/video/2026/oct/13/the-surprising-psychology-of-morbid-curiosity-video",
+      "error": "The Guardian — Space: Conteúdo extraído insuficiente (798 caracteres); não gerar artigo a partir apenas de título/resumo"
     }
   ],
-  "candidate_count": 2337
+  "candidate_count": 2335
 }
