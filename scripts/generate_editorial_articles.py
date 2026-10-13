@@ -467,6 +467,36 @@ def is_core_topic(title, description="", source_text=""):
     return bool(CORE_TOPIC_RE.search(headline) or CORE_TOPIC_RE.search(summary))
 
 
+def candidate_priority(item):
+    """Rank eligible feed items by direct relevance and source specialization."""
+    title = re.sub(r"\\s+", " ", str(item.get("title") or "")).strip()
+    description = re.sub(r"\\s+", " ", str(item.get("description") or "")).strip()
+    combined = f"{title} {description}"
+    score = 0
+    # A direct signal in the headline is stronger than a passing mention in the summary.
+    if CORE_TOPIC_RE.search(title):
+        score += 5
+    if CORE_TOPIC_RE.search(description):
+        score += 2
+    source = " ".join(str(item.get(key) or "") for key in ("source_name", "source_id", "url")).lower()
+    specialist_sources = (
+        "mufon", "cufos", "revista_ufo", "ufo.com.br", "fenomenum",
+        "cryptomundo", "unexplained-mysteries", "mysterious-universe",
+        "dailygrail", "inexplicata", "vigilant_citizen", "conspiracywatch",
+        "atlasobscura", "folklorethursday",
+    )
+    if any(marker in source for marker in specialist_sources):
+        score += 3
+    # Briefings/roundups rarely provide enough depth for a standalone original article.
+    if re.search(r"\\b(news briefs?|roundup|weekly roundup|daily briefing|not[ií]cias da semana|resumo de not[ií]cias)\\b", title, re.IGNORECASE):
+        score -= 5
+    # General astronomy/science feeds remain eligible only for directly relevant stories,
+    # but should not crowd out specialist reports when the relevance is otherwise equal.
+    if any(marker in source for marker in ("nasa", "space.com", "phys.org", "sciencealert", "earthsky", "guardian")):
+        score -= 1
+    return score
+
+
 def main():
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
     openai_key = os.getenv("OPENAI_API_KEY", "").strip()
@@ -524,7 +554,14 @@ def main():
         if not is_core_topic(title, description):
             continue
         candidates.append(item)
-    candidates.sort(key=lambda item: (item.get("published_at") or "", item.get("discovered_at") or ""), reverse=True)
+    candidates.sort(
+        key=lambda item: (
+            candidate_priority(item),
+            item.get("published_at") or "",
+            item.get("discovered_at") or "",
+        ),
+        reverse=True,
+    )
     status["status"] = "running"
     ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
     generated = 0
