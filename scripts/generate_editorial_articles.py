@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Generate original Portuguese editorial stories from discovered source material.
+"""Generate original Portuguese editorial stories using Gemini or OpenAI API.
 
-Requires OPENAI_API_KEY. Articles are created as new editorial pieces with explicit
-source attribution; the script does not copy source wording or claim independent
-corroboration when only one source has been consulted.
+Prefers GEMINI_API_KEY; falls back to OPENAI_API_KEY. The script creates original
+pieces with explicit source attribution and never claims independent corroboration
+when only one source has been consulted.
 """
 from __future__ import annotations
 
@@ -26,8 +26,10 @@ QUEUE_PATH = ROOT / "data" / "discovered-articles.json"
 OUTPUT_PATH = ROOT / "data" / "editorial-posts.json"
 STATUS_PATH = ROOT / "data" / "editorial-pipeline-status.json"
 ARTICLES_DIR = ROOT / "artigos"
-API_URL = os.getenv("OPENAI_API_URL", "https://api.openai.com/v1/chat/completions")
-MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+OPENAI_API_URL = os.getenv("OPENAI_API_URL", "https://api.openai.com/v1/chat/completions")
+GEMINI_API_BASE = os.getenv("GEMINI_API_BASE", "https://generativelanguage.googleapis.com/v1beta/models")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 MAX_PER_RUN = max(1, min(int(os.getenv("MAX_ARTICLES_PER_RUN", "3")), 10))
 TIMEOUT = 45
 USER_AGENT = "EnigmaMundiEditorialBot/1.0 (+https://github.com/sites84/Enigma-mundi)"
@@ -144,7 +146,7 @@ def fetch_article(url):
     return final_url, text[:18000]
 
 
-def call_model(api_key, title, description, source_name, source_url, source_text, category):
+def call_model(api_key, provider, model, title, description, source_name, source_url, source_text, category):
     system = (
         "Você é editor de um portal jornalístico brasileiro chamado Enigma Mundi, especializado em mistérios, "
         "ufologia, fenômenos incomuns, folclore, ciência e arquivos históricos. Produza uma reportagem ORIGINAL "
@@ -176,34 +178,54 @@ def call_model(api_key, title, description, source_name, source_url, source_text
         ],
         "source_references": [{"name": source_name, "url": source_url}],
     }
-    payload = {
-        "model": MODEL,
-        "temperature": 0.4,
-        "response_format": {"type": "json_object"},
-        "messages": [
-            {"role": "system", "content": system},
-            {"role": "user", "content": json.dumps(user, ensure_ascii=False)},
-        ],
-    }
-    request = urllib.request.Request(API_URL, data=json.dumps(payload).encode("utf-8"), headers={
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-        "User-Agent": USER_AGENT,
-    }, method="POST")
+    if provider == "gemini":
+        endpoint = f"{GEMINI_API_BASE}/{urllib.parse.quote(model, safe='')}:generateContent"
+        payload = {
+            "systemInstruction": {"parts": [{"text": system}]},
+            "contents": [{"role": "user", "parts": [{"text": json.dumps(user, ensure_ascii=False)}]}],
+            "generationConfig": {"temperature": 0.4, "responseMimeType": "application/json"},
+        }
+        headers = {
+            "x-goog-api-key": api_key,
+            "Content-Type": "application/json",
+            "User-Agent": USER_AGENT,
+        }
+    else:
+        endpoint = OPENAI_API_URL
+        payload = {
+            "model": model,
+            "temperature": 0.4,
+            "response_format": {"type": "json_object"},
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": json.dumps(user, ensure_ascii=False)},
+            ],
+        }
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "User-Agent": USER_AGENT,
+        }
+    request = urllib.request.Request(endpoint, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
     try:
         with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
             result = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         detail = exc.read(3000).decode("utf-8", "replace")
-        raise RuntimeError(f"API de IA retornou HTTP {exc.code}: {detail[:500]}") from exc
-    choices = result.get("choices") or []
-    if not choices:
-        raise RuntimeError("A API de IA não retornou conteúdo")
-    content = choices[0].get("message", {}).get("content", "")
+        raise RuntimeError(f"API {provider} retornou HTTP {exc.code}: {detail[:500]}") from exc
+    if provider == "gemini":
+        candidates = result.get("candidates") or []
+        parts = (candidates[0].get("content", {}).get("parts", []) if candidates else [])
+        content = next((part.get("text", "") for part in parts if part.get("text")), "")
+    else:
+        choices = result.get("choices") or []
+        content = choices[0].get("message", {}).get("content", "") if choices else ""
+    if not content:
+        raise RuntimeError(f"A API {provider} não retornou conteúdo")
     try:
         article = json.loads(content)
     except json.JSONDecodeError as exc:
-        raise RuntimeError("A resposta da IA não contém JSON válido") from exc
+        raise RuntimeError(f"A resposta da API {provider} não contém JSON válido") from exc
     return article
 
 
@@ -314,21 +336,28 @@ def render_article_page(article, post, slug):
 
 
 def main():
-    api_key = os.getenv("OPENAI_API_KEY", "").strip()
+    gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
+    openai_key = os.getenv("OPENAI_API_KEY", "").strip()
+    if gemini_key:
+        api_key, provider, model = gemini_key, "gemini", GEMINI_MODEL
+    elif openai_key:
+        api_key, provider, model = openai_key, "openai", OPENAI_MODEL
+    else:
+        api_key, provider, model = "", "", ""
     existing_payload = read_json(OUTPUT_PATH, {"version": 1, "articles": []})
     existing_articles = existing_payload.get("articles", []) if isinstance(existing_payload, dict) else []
     if not isinstance(existing_articles, list):
         existing_articles = []
     existing_urls = {canonical_url(a.get("source_url")) for a in existing_articles if a.get("source_url")}
     status = {
-        "updated_at": now_iso(), "model": MODEL,
+        "updated_at": now_iso(), "provider": provider or None, "model": model or None,
         "existing_articles": len(existing_articles), "generated_this_run": 0,
         "status": "waiting_for_api_key", "errors": [],
     }
     if not api_key:
-        status["message"] = "Configure o segredo OPENAI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
+        status["message"] = "Configure GEMINI_API_KEY (recomendado) ou OPENAI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
         write_json(STATUS_PATH, status)
-        print("OPENAI_API_KEY não configurada. A fila foi preservada; nenhuma matéria foi inventada ou publicada.")
+        print("Nenhuma chave GEMINI_API_KEY/OPENAI_API_KEY configurada. A fila foi preservada; nenhum conteúdo foi inventado ou publicado.")
         return 0
 
     queue = read_json(QUEUE_PATH, {"articles": []})
@@ -355,7 +384,7 @@ def main():
                 raise ValueError(f"Conteúdo extraído insuficiente ({len(source_text)} caracteres); não gerar artigo a partir apenas de título/resumo")
             category = item.get("category") or "misterios"
             source_name = item.get("source_name") or item.get("source_id") or "Fonte externa"
-            draft = call_model(api_key, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
+            draft = call_model(api_key, provider, model, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
             article = validate_article(draft)
             fingerprint = hashlib.sha256(url.encode("utf-8")).hexdigest()[:10]
             slug = slugify(article["title"])[:60] + "-" + fingerprint
