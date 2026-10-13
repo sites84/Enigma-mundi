@@ -329,7 +329,7 @@ def render_article_page(article, post, slug):
 .article-page h1{{font-size:clamp(2rem,5vw,3.8rem);line-height:1.12;margin:.7rem 0 1rem}}
 .article-page .article-deck{{font-size:1.2rem;line-height:1.7;opacity:.88}}
 .article-page .article-meta{{font-size:.88rem;opacity:.7;margin:20px 0 28px}}
-.article-page .article-cover img{{width:100%;max-height:520px;object-fit:cover;border-radius:14px}}
+.article-page .article-cover img{{width:100%;max-height:520px;object-fit:cover;border-radius:14px}}\n.article-page .article-image-fallback{{min-height:220px;display:grid;place-items:center;border:1px solid #49463c;border-radius:14px;background:radial-gradient(ellipse at center,#343126,#171815 72%);color:#c5a66a;letter-spacing:.16em;font-size:.8rem;text-align:center}}\n.article-page .article-image-fallback[hidden]{{display:none}}
 .article-page figcaption{{font-size:.8rem;opacity:.7;margin-top:8px}}
 .article-page .article-body{{font-size:1.06rem;line-height:1.85}}
 .article-page .article-body h2{{font-size:1.65rem;line-height:1.25;margin:2.4rem 0 .8rem}}
