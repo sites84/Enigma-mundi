@@ -229,6 +229,32 @@ def call_model(api_key, provider, model, title, description, source_name, source
     return article
 
 
+def call_model_with_fallback(api_key, provider, model, title, description, source_name, source_url, source_text, category):
+    """Try other API-supported Flash model IDs when the selected model is busy or unavailable."""
+    models = [model]
+    if provider == "gemini":
+        models.extend([
+            "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash",
+            "gemini-3.5-flash-lite", "gemini-3-flash-preview",
+            "gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash",
+        ])
+    errors = []
+    for candidate in dict.fromkeys(models):
+        try:
+            result = call_model(api_key, provider, candidate, title, description,
+                                source_name, source_url, source_text, category)
+            if candidate != model:
+                print(f"[INFO] Geração concluída usando modelo alternativo '{candidate}'.", flush=True)
+            return result, candidate
+        except RuntimeError as exc:
+            message = str(exc)
+            if provider != "gemini" or not re.search(r"HTTP (?:404|429|503)", message):
+                raise
+            errors.append(f"{candidate}: {message[:180]}")
+            print(f"[WARN] Modelo '{candidate}' indisponível/ocupado; tentando alternativa.", flush=True)
+    raise RuntimeError("Nenhum modelo Gemini alternativo respondeu. " + " | ".join(errors[-4:]))
+
+
 def clean_paragraphs(value, minimum=1):
     if not isinstance(value, list):
         return []
@@ -433,7 +459,8 @@ def main():
                 raise ValueError(f"Conteúdo extraído insuficiente ({len(source_text)} caracteres); não gerar artigo a partir apenas de título/resumo")
             category = item.get("category") or "misterios"
             source_name = item.get("source_name") or item.get("source_id") or "Fonte externa"
-            draft = call_model(api_key, provider, model, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
+            draft, used_model = call_model_with_fallback(api_key, provider, model, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
+            status["model"] = used_model
             article = validate_article(draft)
             fingerprint = hashlib.sha256(url.encode("utf-8")).hexdigest()[:10]
             slug = slugify(article["title"])[:60] + "-" + fingerprint
