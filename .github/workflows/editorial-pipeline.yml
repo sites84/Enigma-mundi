@@ -8,10 +8,9 @@ on:
       - "scripts/generate_editorial_articles.py"
       - ".github/workflows/editorial-pipeline.yml"
       - "data/discovered-articles.json"
-      - "data/editorial-queue-selection.json"
   schedule:
-    # Runs after the daily discovery crawl.
-    - cron: "0 */6 * * *"
+    # Publish up to 10 original articles every hour.
+    - cron: "0 * * * *"
 
 permissions:
   contents: write
