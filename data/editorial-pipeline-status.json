@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13T20:41:18.793575+00:00",
+  "updated_at": "2026-10-13T20:43:56.005159+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
   "existing_articles": 5,
@@ -8,11 +8,11 @@
   "errors": [
     {
       "url": "https://www.unexplained-mysteries.com/news/400179/new-records-could-provide-context-to-trumps-ufo-file-dumps",
-      "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
+      "error": "Unexplained Mysteries: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/10/argentina-extraterrestrials-in-trevelin.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.atlasobscura.com/articles/best-haunted-hotels-for-a-spooky-getaway",
@@ -20,11 +20,15 @@
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/a-lost-police-report-48-years-later.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/mexico-year-of-ufo-and-paranormal.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "error": "Inexplicata — Journal of Hispanic Ufology: Reportagem curta: exige abertura e pelo menos três seções"
+    },
+    {
+      "url": "https://vigilantcitizen.com/sinistersites/sinister-sites-illuminati-pyramid-in-blagnac-france",
+      "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
@@ -32,11 +36,7 @@
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
-    },
-    {
-      "url": "https://cryptomundo.com/bigfoot-report/mountain-dew-bigfoot-bounty",
-      "error": "Cryptomundo Monster Hunting: A resposta da API gemini não contém JSON válido"
+      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-caused-massive-greater.html",

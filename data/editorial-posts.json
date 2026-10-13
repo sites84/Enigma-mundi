@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T20:41:18.701392+00:00",
+  "generated_at": "2026-10-13T20:43:56.004521+00:00",
   "article_count": 5,
   "articles": [
     {
@@ -108,29 +108,29 @@
       ]
     },
     {
-      "id": "em-48e3a25ae7",
-      "title": "Monumento na França desperta teorias sobre simbolismo oculto e maçonaria",
-      "excerpt": "A Place de la Révolution, em Blagnac, exibe uma estrutura piramidal que analistas de simbologia apontam como um marco de sociedades secretas.",
-      "category": "conspiracoes",
-      "category_label": "Teorias da conspiração",
-      "published_at": "2026-09-29T01:42:06+00:00",
-      "generated_at": "2026-10-13T20:41:10.367882+00:00",
+      "id": "em-9916ee2bbf",
+      "title": "Marca lança desafio financeiro para tentar provar a existência do Pé-Grande",
+      "excerpt": "Uma empresa de bebidas promove uma premiação em dinheiro para quem apresentar evidências verificáveis sobre a lenda do Pé-Grande.",
+      "category": "criptozoologia_lendas",
+      "category_label": "Lendas e fenômenos incomuns",
+      "published_at": "2026-09-25T14:00:39+00:00",
+      "generated_at": "2026-10-13T20:43:54.691045+00:00",
       "source_name": "Enigma Mundi",
-      "primary_source_name": "Vigilant Citizen Symbolism",
-      "source_url": "https://vigilantcitizen.com/sinistersites/sinister-sites-illuminati-pyramid-in-blagnac-france/",
-      "url": "https://vigilantcitizen.com/sinistersites/sinister-sites-illuminati-pyramid-in-blagnac-france/",
-      "path": "artigos/monumento-na-frança-desperta-teorias-sobre-simbolismo-oculto-48e3a25ae7.html",
+      "primary_source_name": "Cryptomundo Monster Hunting",
+      "source_url": "https://cryptomundo.com/bigfoot-report/mountain-dew-bigfoot-bounty/",
+      "url": "https://cryptomundo.com/bigfoot-report/mountain-dew-bigfoot-bounty/",
+      "path": "artigos/marca-lança-desafio-financeiro-para-tentar-provar-a-existênc-9916ee2bbf.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": null,
       "image_source_url": null,
       "image_alt": null,
       "tags": [
-        "maçonaria",
-        "simbolismo",
-        "França",
-        "história",
-        "conspiração"
+        "Pé-Grande",
+        "Criptozoologia",
+        "Lendas",
+        "Mistérios",
+        "Folclore"
       ]
     }
   ]
