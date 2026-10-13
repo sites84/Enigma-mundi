@@ -420,12 +420,45 @@ CORE_TOPIC_RE = re.compile("|".join(f"(?:{p})" for p in CORE_TOPIC_PATTERNS), re
 
 
 def is_core_topic(title, description="", source_text=""):
-    """Accept only explicit site-topic signals in the headline or feed summary."""
+    """Accept explicit paranormal/ufology/cryptid signals; reject generic entertainment news."""
     headline = re.sub(r"\s+", " ", str(title or "")).strip()
     summary = re.sub(r"\s+", " ", str(description or "")).strip()
     if not headline:
         return False
-    # Avoid generic use of "mystery", "secret", "discovery", "space" and "science".
+    candidate = f"{headline} {summary}"
+    # A standalone "alien" or a horror/film/game title is not evidence of a real mystery.
+    entertainment = re.compile(
+        r"\b(video game|videogame|gameplay|gaming|trailer|teaser|sequel|franchise|"
+        r"box office|hollywood|movie|film|cinema|tv series|television series|"
+        r"streaming|netflix|playstation|xbox|nintendo|dlc|expansion pack|"
+        r"alien: isolation|resident evil|silent hill|clayface|comic book)\b",
+        re.IGNORECASE,
+    )
+    if entertainment.search(candidate):
+        # Permit entertainment pieces only if their main subject is explicitly a real-world
+        # paranormal case, UFO sighting, cryptid report or documented legend.
+        explicit_case = re.compile(
+            r"\b(ufo|ovni|uap|abdu[cç][aã]o extraterrestre|avistamento[s]? de ovni|"
+            r"criptozoolog\w*|bigfoot|sasquatch|yeti|nessie|chupacabra|"
+            r"fantasma[s]?|assombra[cç][aã]o|poltergeist|caso paranormal|"
+            r"mist[eé]rio[s]? n[aã]o resolvido[s]?|desaparecimento[s]? inexplic[aá]vel)\b",
+            re.IGNORECASE,
+        )
+        if not explicit_case.search(headline):
+            return False
+    # "alien" alone is too broad (often entertainment); extraterrestrial must be contextual.
+    generic_alien = re.search(r"\b(aliens?|extraterrestre[s]?)\b", headline, re.IGNORECASE)
+    contextual_extraterrestrial = re.search(
+        r"\b(vida|sinal|contato|abdu[cç][aã]o|avistamento|intelig[eê]ncia|"
+        r"civiliza[cç][aã]o|evid[eê]ncia|poss[ií]vel)\b.{0,55}\b(aliens?|extraterrestre[s]?)\b|"
+        r"\b(aliens?|extraterrestre[s]?)\b.{0,55}\b(vida|sinal|contato|abdu[cç][aã]o|"
+        r"avistamento|intelig[eê]ncia|civiliza[cç][aã]o|evid[eê]ncia|poss[ií]vel)\b",
+        re.IGNORECASE,
+    )
+    if generic_alien and not contextual_extraterrestrial.search(headline):
+        headline_without_generic = re.sub(r"\b(aliens?|extraterrestre[s]?)\b", "", headline, flags=re.IGNORECASE)
+        if not CORE_TOPIC_RE.search(headline_without_generic):
+            return False
     return bool(CORE_TOPIC_RE.search(headline) or CORE_TOPIC_RE.search(summary))
 
 
