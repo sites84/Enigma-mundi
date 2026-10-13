@@ -404,23 +404,23 @@ def resolve_gemini_model(api_key, preferred):
 # Broad science, politics, and general news are not eligible just because a feed
 # labels them as space, science, official archives, or fact-checking.
 CORE_TOPIC_PATTERNS = [
-    r"\\b(ufo|ufos|ovni|ovnis|uap|uas|fen[oô]meno[s]? a[eé]reo[s]? n[aã]o identificado[s]?)\\b",
-    r"\\b(aliens?|extraterrestrial|extraterrestres?|vida extraterrestre|intelig[eê]ncia extraterrestre)\\b",
-    r"\\b(criptozoolog\w*|cryptozoolog\w*|bigfoot|pé[- ]?grande|sasquatch|yeti|abomin[aá]vel homem das neves|nessie|monstro do lago ness|chupacabra|chupa[- ]?cabra|mokele[- ]?mbembe)\\b",
-    r"\\b(paranormal|sobrenatural|fantasma[s]?|assombra[cç][aã]o|poltergeist|haunted|haunting|ghost sightings?|possess[aã]o|poltergeists?)\\b",
-    r"\\b(mist[eé]rio[s]?|misterioso[s]?|inexplic[aá]vel|inexplicados?|unexplained|mysterious|unsolved mystery|enigmas?)\\b",
-    r"\\b(conspira[cç][aã]o|conspiracy theor\w*|opera[cç][aã]o secreta|acobertamento|cover[- ]?up|secret files|documentos desclassificados sobre ovni)\\b",
-    r"\\b(lenda[s]? urbanas?|folclore|folklore|criatura[s]? lend[aá]ria[s]?|monstro[s]? lend[aá]rio[s]?|urban legend[s]?|mythical creature[s]?)\\b",
-    r"\\b(crop circles?|c[ií]rculos nas planta[cç][oõ]es|abdu[cç][aã]o|abduction|contato extraterrestre|contato imediato)\\b",
-    r"\\b(artefato[s]? an[oô]malo[s]?|arqueologia an[oô]mala|out[- ]of[- ]place artifact|oopart|civiliza[cç][aã]o perdida|lost civilization|hist[oó]ria proibida|origem desconhecida)\\b",
-    r"\\b(cripta[s]?|oculto|ocultismo|occult|ritual inexplic[aá]vel|fen[oô]meno[s]? an[oô]malo[s]?|anomalia[s]? inexplic[aá]vel)\\b",
-    r"\\b(sinal wow|wow signal|fast radio burst|sinal de r[aá]dio inexplic[aá]vel|sinal misterioso|mysterious signal)\\b",
+    r"\b(ufo|ufos|ovni|ovnis|uap|uas|fen[oô]meno[s]? a[eé]reo[s]? n[aã]o identificado[s]?)\b",
+    r"\b(aliens?|extraterrestrial|extraterrestres?|vida extraterrestre|intelig[eê]ncia extraterrestre)\b",
+    r"\b(criptozoolog\w*|cryptozoolog\w*|bigfoot|pé[- ]?grande|sasquatch|yeti|abomin[aá]vel homem das neves|nessie|monstro do lago ness|chupacabra|chupa[- ]?cabra|mokele[- ]?mbembe)\b",
+    r"\b(paranormal|sobrenatural|fantasma[s]?|assombra[cç][aã]o|poltergeist|haunted|haunting|ghost sightings?|possess[aã]o|poltergeists?)\b",
+    r"\b(mist[eé]rio[s]?|misterioso[s]?|inexplic[aá]vel|inexplicados?|unexplained|mysterious|unsolved mystery|enigmas?)\b",
+    r"\b(conspira[cç][aã]o|conspiracy theor\w*|opera[cç][aã]o secreta|acobertamento|cover[- ]?up|secret files|documentos desclassificados sobre ovni)\b",
+    r"\b(lenda[s]? urbanas?|folclore|folklore|criatura[s]? lend[aá]ria[s]?|monstro[s]? lend[aá]rio[s]?|urban legend[s]?|mythical creature[s]?)\b",
+    r"\b(crop circles?|c[ií]rculos nas planta[cç][oõ]es|abdu[cç][aã]o|abduction|contato extraterrestre|contato imediato)\b",
+    r"\b(artefato[s]? an[oô]malo[s]?|arqueologia an[oô]mala|out[- ]of[- ]place artifact|oopart|civiliza[cç][aã]o perdida|lost civilization|hist[oó]ria proibida|origem desconhecida)\b",
+    r"\b(cripta[s]?|oculto|ocultismo|occult|ritual inexplic[aá]vel|fen[oô]meno[s]? an[oô]malo[s]?|anomalia[s]? inexplic[aá]vel)\b",
+    r"\b(sinal wow|wow signal|fast radio burst|sinal de r[aá]dio inexplic[aá]vel|sinal misterioso|mysterious signal)\b",
 ]
 CORE_TOPIC_RE = re.compile("|".join(f"(?:{p})" for p in CORE_TOPIC_PATTERNS), re.IGNORECASE)
 GENERAL_NEWS_RE = re.compile(
-    r"\\b(visto|visa|brexit|elei[cç][aã]o|parlamento|partido pol[ií]tico|fertilizante[s]?|"
+    r"\b(visto|visa|brexit|elei[cç][aã]o|parlamento|partido pol[ií]tico|fertilizante[s]?|"
     r"agricultura|treinamento de cavalos|horse racing|mercado financeiro|futebol|celebridade|"
-    r"datacenter|data centre|guerra na ucr[aâ]nia|geopol[ií]tica|seguran[cç]a digital)\\b",
+    r"datacenter|data centre|guerra na ucr[aâ]nia|geopol[ií]tica|seguran[cç]a digital)\b",
     re.IGNORECASE,
 )
 
