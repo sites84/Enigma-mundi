@@ -1,11 +1,24 @@
 {
-  "updated_at": "2026-10-13T19:10:33.216167+00:00",
+  "updated_at": "2026-10-13T19:20:57.209084+00:00",
   "provider": "gemini",
-  "model": "gemini-3.8-flash",
-  "existing_articles": 8,
-  "generated_this_run": 0,
-  "status": "no_new_candidates",
-  "errors": [],
-  "candidate_count": 0,
-  "message": "Artigos gerados ficam como rascunho até aprovação no painel editorial."
+  "model": "gemini-3.5-flash-lite",
+  "existing_articles": 20,
+  "generated_this_run": 7,
+  "status": "completed",
+  "errors": [
+    {
+      "url": "https://www.theguardian.com/science/video/2026/oct/13/the-surprising-psychology-of-morbid-curiosity-video",
+      "error": "The Guardian — Space: Conteúdo extraído insuficiente (798 caracteres); não gerar artigo a partir apenas de título/resumo"
+    },
+    {
+      "url": "https://www.theguardian.com/politics/2026/oct/13/russia-brexit-eu-referendum-interference-mi5",
+      "error": "The Guardian — Space: A resposta da API gemini não contém JSON válido"
+    },
+    {
+      "url": "https://skyandtelescope.org/astronomy-news/nasa-initiative-to-study-the-moons-environment",
+      "error": "Sky & Telescope: HTTP Error 403: Forbidden"
+    }
+  ],
+  "candidate_count": 2325,
+  "message": "Geração automática ativa: até 10 artigos publicados por execução horária."
 }
