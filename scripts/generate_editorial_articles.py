@@ -403,32 +403,30 @@ def resolve_gemini_model(api_key, preferred):
 # Editorial gate: only admit stories directly related to the site's core subjects.
 # Broad science, politics, and general news are not eligible just because a feed
 # labels them as space, science, official archives, or fact-checking.
+# Strict topic gate: only title + feed description can qualify a candidate.
+# Never scan the entire article body for generic words like "mystery", "secret" or
+# "unexplained": those words occur in ordinary science and political reporting.
 CORE_TOPIC_PATTERNS = [
     r"\b(ufo|ufos|ovni|ovnis|uap|uas|fen[oô]meno[s]? a[eé]reo[s]? n[aã]o identificado[s]?)\b",
-    r"\b(aliens?|extraterrestrial|extraterrestres?|vida extraterrestre|intelig[eê]ncia extraterrestre)\b",
-    r"\b(criptozoolog\w*|cryptozoolog\w*|bigfoot|pé[- ]?grande|sasquatch|yeti|abomin[aá]vel homem das neves|nessie|monstro do lago ness|chupacabra|chupa[- ]?cabra|mokele[- ]?mbembe)\b",
-    r"\b(paranormal|sobrenatural|fantasma[s]?|assombra[cç][aã]o|poltergeist|haunted|haunting|ghost sightings?|possess[aã]o|poltergeists?)\b",
-    r"\b(mist[eé]rio[s]?|misterioso[s]?|inexplic[aá]vel|inexplicados?|unexplained|mysterious|unsolved mystery|enigmas?)\b",
-    r"\b(conspira[cç][aã]o|conspiracy theor\w*|opera[cç][aã]o secreta|acobertamento|cover[- ]?up|secret files|documentos desclassificados sobre ovni)\b",
-    r"\b(lenda[s]? urbanas?|folclore|folklore|criatura[s]? lend[aá]ria[s]?|monstro[s]? lend[aá]rio[s]?|urban legend[s]?|mythical creature[s]?)\b",
-    r"\b(crop circles?|c[ií]rculos nas planta[cç][oõ]es|abdu[cç][aã]o|abduction|contato extraterrestre|contato imediato)\b",
-    r"\b(artefato[s]? an[oô]malo[s]?|arqueologia an[oô]mala|out[- ]of[- ]place artifact|oopart|civiliza[cç][aã]o perdida|lost civilization|hist[oó]ria proibida|origem desconhecida)\b",
-    r"\b(cripta[s]?|oculto|ocultismo|occult|ritual inexplic[aá]vel|fen[oô]meno[s]? an[oô]malo[s]?|anomalia[s]? inexplic[aá]vel)\b",
-    r"\b(sinal wow|wow signal|fast radio burst|sinal de r[aá]dio inexplic[aá]vel|sinal misterioso|mysterious signal)\b",
+    r"\b(vida extraterrestre|intelig[eê]ncia extraterrestre|extraterrestre[s]?|alien[s]?|abdu[cç][aã]o|abduction|contato imediato|contato extraterrestre)\b",
+    r"\b(criptozoolog\w*|cryptozoolog\w*|bigfoot|sasquatch|yeti|nessie|monstro do lago ness|chupacabra|chupa[- ]?cabra|mokele[- ]?mbembe|pé[- ]?grande)\b",
+    r"\b(paranormal|sobrenatural|fantasma[s]?|assombra[cç][aã]o|poltergeist|possess[aã]o|esp[ií]rito[s]?|apari[cç][aã]o fantasmag[oó]rica|haunted|ghost sighting[s]?)\b",
+    r"\b(lenda[s]? urbana[s]?|folclore|folklore|criatura[s]? lend[aá]ria[s]?|monstro[s]? lend[aá]rio[s]?|urban legend[s]?|mythical creature[s]?)\b",
+    r"\b(teoria[s]? da conspira[cç][aã]o|conspiracy theor\w*|acobertamento de ovni|ufo cover[- ]?up|documentos desclassificados sobre ovni|opera[cç][aã]o secreta inexplicada)\b",
+    r"\b(c[ií]rculos nas planta[cç][oõ]es|crop circles?|artefato[s]? fora do lugar|out[- ]of[- ]place artifact[s]?|oopart|civiliza[cç][aã]o perdida misteriosa|sinal wow|wow signal|fast radio burst inexplicado|sinal de r[aá]dio inexplic[aá]vel)\b",
+    r"\b(mist[eé]rio[s]? n[aã]o resolvido[s]?|unsolved mysteries|fen[oô]meno[s]? inexplic[aá]vel|fen[oô]meno[s]? paranormal|anomalia[s]? inexplic[aá]vel|mysterious disappearance[s]?|desaparecimento[s]? inexplic[aá]vel)\b",
 ]
 CORE_TOPIC_RE = re.compile("|".join(f"(?:{p})" for p in CORE_TOPIC_PATTERNS), re.IGNORECASE)
-GENERAL_NEWS_RE = re.compile(
-    r"\b(visto|visa|brexit|elei[cç][aã]o|parlamento|partido pol[ií]tico|fertilizante[s]?|"
-    r"agricultura|treinamento de cavalos|horse racing|mercado financeiro|futebol|celebridade|"
-    r"datacenter|data centre|guerra na ucr[aâ]nia|geopol[ií]tica|seguran[cç]a digital)\b",
-    re.IGNORECASE,
-)
 
 
-def is_core_topic(title, description="", source_text=""):
-    """Require explicit topical evidence; category labels alone never qualify a story."""
-    combined = " ".join(str(v or "") for v in (title, description, source_text))
-    return bool(CORE_TOPIC_RE.search(combined))
+def is_core_topic(title, description=""):
+    """Accept only explicit site-topic signals in the headline or feed summary."""
+    headline = re.sub(r"\s+", " ", str(title or "")).strip()
+    summary = re.sub(r"\s+", " ", str(description or "")).strip()
+    if not headline:
+        return False
+    # Avoid generic use of "mystery", "secret", "discovery", "space" and "science".
+    return bool(CORE_TOPIC_RE.search(headline) or CORE_TOPIC_RE.search(summary))
 
 
 def main():
