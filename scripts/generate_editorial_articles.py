@@ -335,11 +335,60 @@ def render_article_page(article, post, slug):
 '''
 
 
+def resolve_gemini_model(api_key, preferred):
+    """Choose a model that this exact API key can access and that supports generateContent."""
+    request = urllib.request.Request(
+        GEMINI_API_BASE,
+        headers={"x-goog-api-key": api_key, "User-Agent": USER_AGENT},
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        detail = exc.read(1500).decode("utf-8", "replace")
+        raise RuntimeError(f"Não foi possível listar modelos Gemini (HTTP {exc.code}): {detail[:300]}") from exc
+    models = []
+    for item in payload.get("models", []):
+        methods = item.get("supportedGenerationMethods", [])
+        name = str(item.get("name", "")).removeprefix("models/")
+        if name and "generateContent" in methods:
+            models.append(name)
+    if not models:
+        raise RuntimeError("A API Gemini não listou modelos compatíveis com generateContent para esta chave.")
+    if preferred in models:
+        return preferred
+    priorities = ("gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash",
+                  "gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-3-flash-preview",
+                  "gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash")
+    for name in priorities:
+        if name in models:
+            print(f"[INFO] Modelo configurado '{preferred}' indisponível para esta chave; usando '{name}'.", flush=True)
+            return name
+    # Prefer a Flash model returned by the API, without selecting embedding/audio/image-only models.
+    flash_models = [name for name in models if "flash" in name.lower() and not any(
+        marker in name.lower() for marker in ("embedding", "image", "tts", "audio", "live"))]
+    if flash_models:
+        print(f"[INFO] Usando modelo Flash disponível: '{flash_models[0]}'.", flush=True)
+        return flash_models[0]
+    raise RuntimeError("A chave Gemini não tem nenhum modelo Flash de geração de texto disponível. Verifique o projeto e a API habilitada.")
+
+
 def main():
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
     openai_key = os.getenv("OPENAI_API_KEY", "").strip()
     if gemini_key:
         api_key, provider, model = gemini_key, "gemini", GEMINI_MODEL
+        try:
+            model = resolve_gemini_model(api_key, model)
+        except Exception as exc:
+            status = {
+                "updated_at": now_iso(), "provider": "gemini", "model": None,
+                "existing_articles": 0, "generated_this_run": 0,
+                "status": "errors", "errors": [{"error": str(exc)[:500]}],
+            }
+            write_json(STATUS_PATH, status)
+            print(f"[ERROR] {str(exc)[:500]}", flush=True)
+            return 0
     elif openai_key:
         api_key, provider, model = openai_key, "openai", OPENAI_MODEL
     else:
