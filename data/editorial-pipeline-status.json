@@ -1,11 +1,20 @@
 {
-  "updated_at": "2026-10-13T19:35:49.586718+00:00",
+  "updated_at": "2026-10-13T19:37:13.498960+00:00",
   "provider": "gemini",
-  "model": "gemini-3.8-flash",
-  "existing_articles": 19,
-  "generated_this_run": 0,
-  "status": "no_new_candidates",
-  "errors": [],
-  "candidate_count": 0,
+  "model": "gemini-3.5-flash-lite",
+  "existing_articles": 27,
+  "generated_this_run": 8,
+  "status": "completed",
+  "errors": [
+    {
+      "url": "https://www.space.com/astronomy/earth/namibian-salt-flats-look-like-an-alien-planet-space-photo-of-the-day-for-oct-12-2026",
+      "error": "Space.com: Reportagem curta: exige abertura e pelo menos três seções"
+    },
+    {
+      "url": "https://www.theguardian.com/uk-news/2026/oct/12/sas-personnel-refusing-to-answer-questions-afghanistan-inquiry-alleged-killings",
+      "error": "The Guardian — Space: A resposta da API gemini não contém JSON válido"
+    }
+  ],
+  "candidate_count": 168,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária."
 }
