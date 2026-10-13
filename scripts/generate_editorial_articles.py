@@ -437,11 +437,15 @@ def is_core_topic(title, description="", source_text=""):
     if entertainment.search(candidate):
         # Permit entertainment pieces only if their main subject is explicitly a real-world
         # paranormal case, UFO sighting, cryptid report or documented legend.
+        # Entertainment terms are a hard rejection unless the headline names a
+        # concrete real-world report/case; merely inserting "UFO" into a game title
+        # must not qualify the article.
         explicit_case = re.compile(
-            r"\b(ufo|ovni|uap|abdu[cç][aã]o extraterrestre|avistamento[s]? de ovni|"
-            r"criptozoolog\w*|bigfoot|sasquatch|yeti|nessie|chupacabra|"
-            r"fantasma[s]?|assombra[cç][aã]o|poltergeist|caso paranormal|"
-            r"mist[eé]rio[s]? n[aã]o resolvido[s]?|desaparecimento[s]? inexplic[aá]vel)\b",
+            r"\b(avistamento[s]?|abdu[cç][aã]o|contato imediato|caso real|caso paranormal|"
+            r"investiga[cç][aã]o paranormal|relato[s]? de testemunha[s]?|"
+            r"documento[s]? desclassificado[s]?|relat[oó]rio[s]? oficial[ais]?|"
+            r"desaparecimento[s]? inexplic[aá]vel|criptozoolog\w*|bigfoot|sasquatch|"
+            r"yeti|nessie|chupacabra|fantasma[s]?|assombra[cç][aã]o|poltergeist)\b",
             re.IGNORECASE,
         )
         if not explicit_case.search(headline):
