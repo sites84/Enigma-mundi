@@ -565,7 +565,18 @@ def main():
     status["status"] = "running"
     ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
     generated = 0
-    for item in candidates[:MAX_PER_RUN]:
+    attempted = 0
+    source_attempts = {}
+    # Failures must not waste the entire hourly quota when more eligible stories exist.
+    # Try up to three times the target, while limiting repeated requests to one feed.
+    for item in candidates:
+        if generated >= MAX_PER_RUN or attempted >= MAX_PER_RUN * 3:
+            break
+        source_key = str(item.get("source_id") or item.get("source_name") or urllib.parse.urlsplit(str(item.get("url") or "")).netloc).strip().lower()
+        if source_attempts.get(source_key, 0) >= 3:
+            continue
+        source_attempts[source_key] = source_attempts.get(source_key, 0) + 1
+        attempted += 1
         url = canonical_url(item.get("url"))
         try:
             final_url, source_text = fetch_article(url)
@@ -630,7 +641,8 @@ def main():
         "existing_articles": len(existing_articles),
         "generated_this_run": generated,
         "candidate_count": len(candidates),
-        "message": "Geração automática ativa: até 10 artigos publicados por execução horária."
+        "attempted_this_run": attempted,
+        "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
     })
     write_json(STATUS_PATH, status)
     print(f"Artigos novos: {generated}; total publicado: {len(existing_articles)}; erros: {len(status['errors'])}")
