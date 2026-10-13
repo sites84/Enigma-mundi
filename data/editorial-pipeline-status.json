@@ -1,18 +1,22 @@
 {
-  "updated_at": "2026-10-13T20:21:53.222215+00:00",
+  "updated_at": "2026-10-13T20:25:56.360412+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 3,
+  "existing_articles": 4,
   "generated_this_run": 2,
   "status": "completed",
   "errors": [
     {
+      "url": "https://www.space.com/entertainment/space-games/how-the-impossible-geometry-of-tomb-raider-iiis-ufo-level-was-made",
+      "error": "Space.com: Reportagem curta: exige abertura e pelo menos três seções"
+    },
+    {
       "url": "https://www.theguardian.com/uk-news/2026/oct/12/sas-personnel-refusing-to-answer-questions-afghanistan-inquiry-alleged-killings",
-      "error": "The Guardian — Space: A resposta da API gemini não contém JSON válido"
+      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
-      "error": "Australian Skeptics: Conteúdo extraído insuficiente (75 caracteres); não gerar artigo a partir apenas de título/resumo"
+      "error": "Australian Skeptics: Conteúdo extraído insuficiente (73 caracteres); não gerar artigo a partir apenas de título/resumo"
     },
     {
       "url": "https://www.unexplained-mysteries.com/news/400179/new-records-could-provide-context-to-trumps-ufo-file-dumps",
@@ -28,17 +32,13 @@
     },
     {
       "url": "https://www.snopes.com/fact-check/musk-midterms-democrats",
-      "error": "Snopes Urban Legends: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.atlasobscura.com/articles/america-haunted-cemeteries",
-      "error": "Atlas Obscura: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Snopes Urban Legends: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/10/argentina-extraterrestrials-in-trevelin.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     }
   ],
-  "candidate_count": 110,
+  "candidate_count": 109,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária."
 }

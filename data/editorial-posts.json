@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T20:24:30.510Z",
-  "article_count": 2,
+  "generated_at": "2026-10-13T20:25:56.359814+00:00",
+  "article_count": 4,
   "articles": [
     {
       "id": "em-9616143318",
@@ -53,6 +53,58 @@
         "arquivos",
         "historia",
         "investigacao"
+      ]
+    },
+    {
+      "id": "em-3a4a4c211e",
+      "title": "Os cemitérios históricos dos Estados Unidos associados a lendas de assombrações",
+      "excerpt": "Um levantamento historiográfico e cultural examina cemitérios norte-americanos marcados por relatos de atividade paranormal, tragédias e lendas urbanas.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-09T12:54:00+00:00",
+      "generated_at": "2026-10-13T20:25:46.775110+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Atlas Obscura",
+      "source_url": "https://www.atlasobscura.com/articles/america-haunted-cemeteries",
+      "url": "https://www.atlasobscura.com/articles/america-haunted-cemeteries",
+      "path": "artigos/os-cemitérios-históricos-dos-estados-unidos-associados-a-len-3a4a4c211e.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://assets.atlasobscura.com/article_images/110447/image.jpg",
+      "image_source_url": "https://www.atlasobscura.com/articles/america-haunted-cemeteries",
+      "image_alt": "Os cemitérios históricos dos Estados Unidos associados a lendas de assombrações",
+      "tags": [
+        "cemitérios históricos",
+        "folclore americano",
+        "fenômenos paranormais",
+        "lendas urbanas",
+        "história dos eua"
+      ]
+    },
+    {
+      "id": "em-df2e6c80cf",
+      "title": "Documentos revelam impasses regulatórios sobre OVNIs em áreas nucleares",
+      "excerpt": "Registros internos da Comissão Reguladora Nuclear dos EUA obtidos via Lei de Liberdade de Informação expõem lacunas na fiscalização de intrusões.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-10-08T17:49:39+00:00",
+      "generated_at": "2026-10-13T20:25:55.359462+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "MUFON UFO News",
+      "source_url": "https://mufon.com/2026/10/08/ufos-breach-nuclear-airspace-the-briefing-room-with-richard-beckwith/",
+      "url": "https://mufon.com/2026/10/08/ufos-breach-nuclear-airspace-the-briefing-room-with-richard-beckwith/",
+      "path": "artigos/documentos-revelam-impasses-regulatórios-sobre-ovnis-em-área-df2e6c80cf.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "OVNI",
+        "Nuclear Regulatory Commission",
+        "Segurança Nacional",
+        "Ufologia",
+        "Documentos oficiais"
       ]
     }
   ]
