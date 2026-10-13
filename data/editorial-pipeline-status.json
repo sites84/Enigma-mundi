@@ -1,0 +1,5 @@
+{
+  "status": "waiting_for_api_key",
+  "generated_this_run": 0,
+  "message": "Configure OPENAI_API_KEY in GitHub repository secrets to enable original article generation."
+}

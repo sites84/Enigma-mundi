@@ -41,7 +41,7 @@
     const date = escapeHtml(dateLabel(dateValue));
     const source = escapeHtml(post.source_name || "Fonte externa");
     const image = safeUrl(post.image_url || post.cover_image);
-    const link = safeUrl(post.source_url || post.url || post.path);
+    const link = safeUrl(post.post_type === "original_article" ? post.path : (post.source_url || post.url || post.path));
     const imageCredit = escapeHtml(post.image_credit || "");
     const imageLicense = escapeHtml(post.image_license || "");
     const imageSource = safeUrl(post.image_source_url);
@@ -54,8 +54,11 @@
     const titleMarkup = link
       ? `<a href="${escapeHtml(link)}" class="post-title" target="_blank" rel="noopener noreferrer">${title}</a>`
       : `<h3 class="post-title">${title}</h3>`;
+    const isOriginal = post.post_type === "original_article";
     const readMarkup = link
-      ? `<a class="read-more" href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Ler na fonte original <span aria-hidden="true">↗</span></a>`
+      ? (isOriginal
+        ? `<a class="read-more" href="${escapeHtml(link)}">Ler reportagem completa <span aria-hidden="true">↗</span></a>`
+        : `<a class="read-more" href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Ler na fonte original <span aria-hidden="true">↗</span></a>`)
       : '<span class="read-more">Em preparação</span>';
     return `<article class="post-card"><div class="post-image">${imageMarkup}<span class="post-category">${category}</span></div>${attribution}<div class="post-body"><div class="post-meta"><span>${source}</span><time datetime="${escapeHtml(dateValue)}">${date}</time></div>${titleMarkup}<p class="post-excerpt">${excerpt}</p>${readMarkup}</div></article>`;
   }
@@ -103,12 +106,31 @@
 
   async function loadPosts() {
     try {
-      const response = await fetch("data/posts.json", { cache: "no-cache" });
-      if (!response.ok) throw new Error("posts.json indisponível");
-      const payload = await response.json();
-      allPosts = (Array.isArray(payload) ? payload : payload.posts || [])
+      const fetchJson = async (url, fallback) => {
+        try {
+          const response = await fetch(url, { cache: "no-cache" });
+          if (!response.ok) return fallback;
+          return await response.json();
+        } catch {
+          return fallback;
+        }
+      };
+      const [editorialPayload, curatedPayload] = await Promise.all([
+        fetchJson("data/editorial-posts.json", { articles: [] }),
+        fetchJson("data/posts.json", { posts: [] })
+      ]);
+      const editorialPosts = Array.isArray(editorialPayload)
+        ? editorialPayload
+        : (editorialPayload.articles || []);
+      const curatedPosts = Array.isArray(curatedPayload)
+        ? curatedPayload
+        : (curatedPayload.posts || []);
+      allPosts = [...editorialPosts, ...curatedPosts]
         .filter(post => post && post.status !== "draft")
-        .sort((a, b) => new Date(postDate(b) || 0) - new Date(postDate(a) || 0));
+        .sort((a, b) => {
+          const priority = Number(b.post_type === "original_article") - Number(a.post_type === "original_article");
+          return priority || (new Date(postDate(b) || 0) - new Date(postDate(a) || 0));
+        });
       if (!allPosts.length) {
         status.textContent = "";
         grid.innerHTML = '<div class="empty-state"><strong>O arquivo está sendo preparado.</strong><br>As primeiras publicações aparecerão aqui após a validação das fontes.</div>';
