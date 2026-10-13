@@ -248,7 +248,7 @@ def call_model_with_fallback(api_key, provider, model, title, description, sourc
             return result, candidate
         except RuntimeError as exc:
             message = str(exc)
-            if provider != "gemini" or not re.search(r"HTTP (?:404|429|503)", message):
+            if provider != "gemini" or not re.search(r"HTTP (?:404|429|500|503)", message):
                 raise
             errors.append(f"{candidate}: {message[:180]}")
             print(f"[WARN] Modelo '{candidate}' indisponível/ocupado; tentando alternativa.", flush=True)
