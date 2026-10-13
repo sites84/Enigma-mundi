@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-13T19:08:19.330163+00:00",
+  "updated_at": "2026-10-13T19:10:21.465883+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 8,
-  "generated_this_run": 3,
+  "existing_articles": 13,
+  "generated_this_run": 8,
   "status": "completed",
   "errors": [
     {
@@ -11,8 +11,8 @@
       "error": "The Guardian — Space: Conteúdo extraído insuficiente (798 caracteres); não gerar artigo a partir apenas de título/resumo"
     },
     {
-      "url": "https://www.theguardian.com/world/2026/oct/13/ukrainian-strikes-russian-datacentres-online-disinformation-bots",
-      "error": "The Guardian — Space: Nenhum modelo Gemini alternativo respondeu. gemini-3-flash-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-2.5-flash: API gemini retornou HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer avail"
+      "url": "https://www.theguardian.com/politics/2026/oct/13/russia-brexit-eu-referendum-interference-mi5",
+      "error": "The Guardian — Space: A resposta da API gemini não contém JSON válido"
     }
   ],
   "candidate_count": 2333
