@@ -419,7 +419,7 @@ CORE_TOPIC_PATTERNS = [
 CORE_TOPIC_RE = re.compile("|".join(f"(?:{p})" for p in CORE_TOPIC_PATTERNS), re.IGNORECASE)
 
 
-def is_core_topic(title, description=""):
+def is_core_topic(title, description="", source_text=""):
     """Accept only explicit site-topic signals in the headline or feed summary."""
     headline = re.sub(r"\s+", " ", str(title or "")).strip()
     summary = re.sub(r"\s+", " ", str(description or "")).strip()
@@ -499,6 +499,8 @@ def main():
             draft, used_model = call_model_with_fallback(api_key, provider, model, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
             status["model"] = used_model
             article = validate_article(draft)
+            if not is_core_topic(article["title"], article["excerpt"]):
+                raise ValueError("Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado")
             fingerprint = hashlib.sha256(url.encode("utf-8")).hexdigest()[:10]
             slug = slugify(article["title"])[:60] + "-" + fingerprint
             output_path = ARTICLES_DIR / f"{slug}.html"
