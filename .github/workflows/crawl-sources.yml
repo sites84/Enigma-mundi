@@ -35,7 +35,7 @@ jobs:
       - name: Check Python syntax before running the crawler
         run: python -m py_compile scripts/discover_feeds.py scripts/crawl_sources.py scripts/build_recent_posts.py
 
-      - name: Validate RSS and Atom feeds for all 21 configured sources
+      - name: Validate RSS and Atom feeds for all 41 configured sources
         run: python scripts/discover_feeds.py
 
       - name: Discover new article URLs using validated feeds and sitemaps
