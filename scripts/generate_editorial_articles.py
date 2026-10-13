@@ -469,8 +469,8 @@ def is_core_topic(title, description="", source_text=""):
 
 def candidate_priority(item):
     """Rank eligible feed items by direct relevance and source specialization."""
-    title = re.sub(r"\\s+", " ", str(item.get("title") or "")).strip()
-    description = re.sub(r"\\s+", " ", str(item.get("description") or "")).strip()
+    title = re.sub(r"\s+", " ", str(item.get("title") or "")).strip()
+    description = re.sub(r"\s+", " ", str(item.get("description") or "")).strip()
     combined = f"{title} {description}"
     score = 0
     # A direct signal in the headline is stronger than a passing mention in the summary.
@@ -488,7 +488,7 @@ def candidate_priority(item):
     if any(marker in source for marker in specialist_sources):
         score += 3
     # Briefings/roundups rarely provide enough depth for a standalone original article.
-    if re.search(r"\\b(news briefs?|roundup|weekly roundup|daily briefing|not[ií]cias da semana|resumo de not[ií]cias)\\b", title, re.IGNORECASE):
+    if re.search(r"\b(news briefs?|roundup|weekly roundup|daily briefing|not[ií]cias da semana|resumo de not[ií]cias)\b", title, re.IGNORECASE):
         score -= 5
     # General astronomy/science feeds remain eligible only for directly relevant stories,
     # but should not crowd out specialist reports when the relevance is otherwise equal.
