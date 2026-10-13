@@ -442,18 +442,14 @@ def is_core_topic(title, description="", source_text=""):
         r"\b(new issue|latest issue|journal issue|issue of folklore|folklore now out|"
         r"call for papers|academic journal|journal publication|book review|conference proceedings|"
         r"edi[cç][aã]o acad[eê]mica|novo n[uú]mero do peri[oó]dico|chamada para artigos|"
-        r"revista acad[eê]mica|peri[oó]dico revisado por pares)\b",
-        re.IGNORECASE,
-    )
-    strong_mystery_signal = re.compile(
-        r"\b(ufo|uap|ovni|extraterrestrial|alien abduction|cryptozoolog\w*|bigfoot|sasquatch|"
-        r"yeti|nessie|chupacabra|paranormal|ghost|haunted|haunting|poltergeist|possession|"
-        r"urban legend|conspiracy|illuminati|new world order|unexplained|unsolved mystery|"
-        r"mysterious disappearance|crop circles|oopart|wow signal|fantasma[s]?|assombra[cç][aã]o|"
-        r"mist[eé]rio[s]? n[aã]o resolvido[s]?|fen[oô]meno[s]? inexplic[aá]vel|teoria[s]? da conspira[cç][aã]o)\b",
+        r"revista acad[eê]mica|peri[oó]dico revisado por pares|pr[eê]mios acad[eê]micos?|"
+        r"pesquisa[s]? acad[eê]mica[s]? sobre folclore|bolsa[s]? de pesquisa)\b",
         re.IGNORECASE,
     )
     if generic_folklore_announcement.search(candidate) and not strong_mystery_signal.search(candidate):
+        return False
+    # Comic/satirical columns are not factual paranormal reporting.
+    if re.search(r"\b(sunday funnies|comic strip|cartoon|cartoons|comic[s]? strip)\b", candidate, re.IGNORECASE):
         return False
     # A standalone "alien" or a horror/film/game title is not evidence of a real mystery.
     entertainment = re.compile(
