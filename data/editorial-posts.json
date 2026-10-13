@@ -1,6 +1,33 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T18:30:42.605605+00:00",
-  "article_count": 0,
-  "articles": []
+  "generated_at": "2026-10-13T18:32:20.972117+00:00",
+  "article_count": 1,
+  "articles": [
+    {
+      "id": "em-08c25809ae",
+      "title": "Geometria tridimensional ganha inédita forma aperiodica baseada em blocos",
+      "excerpt": "Desenvolvedor relata a descoberta de um formato tridimensional inédito que preenche o espaço infinito sem repetições periódicas.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-13T15:30:01+00:00",
+      "generated_at": "2026-10-13T18:31:59.217150+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Phys.org — Space",
+      "source_url": "https://phys.org/news/2026-10-newly-3d-chair-space-patterns.html",
+      "url": "https://phys.org/news/2026-10-newly-3d-chair-space-patterns.html",
+      "path": "artigos/geometria-tridimensional-ganha-inédita-forma-aperiodica-base-08c25809ae.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://scx1.b-cdn.net/csz/news/tmb/2026/newly-discovered-3d-ch.jpg",
+      "image_source_url": "https://phys.org/news/2026-10-newly-3d-chair-space-patterns.html",
+      "image_alt": "Geometria tridimensional ganha inédita forma aperiodica baseada em blocos",
+      "tags": [
+        "matemática",
+        "geometria",
+        "inteligência artificial",
+        "espaço tridimensional",
+        "ciência"
+      ]
+    }
+  ]
 }

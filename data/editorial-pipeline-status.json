@@ -1,22 +1,18 @@
 {
-  "updated_at": "2026-10-13T18:30:42.605886+00:00",
+  "updated_at": "2026-10-13T18:32:20.972655+00:00",
   "provider": "gemini",
-  "model": "gemini-3.8-flash",
-  "existing_articles": 0,
-  "generated_this_run": 0,
-  "status": "errors",
+  "model": "gemini-3.5-flash-lite",
+  "existing_articles": 1,
+  "generated_this_run": 1,
+  "status": "completed",
   "errors": [
     {
-      "url": "https://phys.org/news/2026-10-newly-3d-chair-space-patterns.html",
-      "error": "Phys.org — Space: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
-    },
-    {
       "url": "https://www.theguardian.com/world/2026/oct/13/britons-travelling-to-europe-told-not-to-apply-for-delayed-etias-visa-waiver",
-      "error": "The Guardian — Space: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+      "error": "The Guardian — Space: API gemini retornou HTTP 500: {\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"Internal error encountered.\",\n    \"status\": \"INTERNAL\"\n  }\n}\n"
     },
     {
       "url": "https://www.theguardian.com/commentisfree/2026/oct/13/brexit-vladimir-putin-russia-referendum-result-eu",
-      "error": "The Guardian — Space: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+      "error": "The Guardian — Space: Nenhum modelo Gemini alternativo respondeu. gemini-3-flash-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-2.5-flash: API gemini retornou HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer avail"
     }
   ],
   "candidate_count": 2338
