@@ -568,6 +568,39 @@ def publisher_image_lookup(url, title):
         return None
     return {"image_url": candidate, "image_alt": title[:250], "image_source_url": url}
 
+
+def openverse_image_lookup(title):
+    """Search a public image index for a title-relevant illustrative image."""
+    words = re.findall(r"[a-z0-9]{3,}", str(title or "").lower())
+    stop = {"the","and","for","with","from","that","this","about","after","what","when","where","who","new","says","said","uma","umas","uns","que","para","por","com","sem","sobre","entre","como","quando","onde","mais","menos","novo","nova","diz","disse","segundo","pode","podem","ser","foi","sao","dos","das"}
+    query_words = [w for w in words if w not in stop]
+    if not query_words:
+        return None
+    query = " ".join(query_words[:8])
+    params = urllib.parse.urlencode({"q": query, "page_size": "20", "license_type": "commercial,modification", "aspect_ratio": "wide", "size": "medium"})
+    request = urllib.request.Request("https://api.openverse.org/v1/images/?" + params, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+    try:
+        with urllib.request.urlopen(request, timeout=12) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except Exception:
+        return None
+    title_terms = set(query_words)
+    best = None
+    best_score = 0
+    for item in data.get("results", []):
+        image_url = item.get("thumbnail") or item.get("url")
+        if not image_url or not image_url.startswith("https://"):
+            continue
+        desc = " ".join(str(item.get(k) or "") for k in ("title", "tags", "creator", "source")).lower()
+        desc_terms = set(re.findall(r"[a-z0-9]{3,}", desc))
+        overlap = title_terms & desc_terms
+        score = len(overlap) + sum(1 for word in overlap if len(word) >= 7)
+        if len(overlap) < 2 or score <= best_score:
+            continue
+        best_score = score
+        best = {"image_url": image_url, "image_alt": str(item.get("title") or title)[:250], "image_source_url": item.get("foreign_landing_url") or item.get("detail_url") or ""}
+    return best
+
 def main():
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
     openai_key = os.getenv("OPENAI_API_KEY", "").strip()
@@ -674,6 +707,8 @@ def main():
             image_data = {"image_url": item.get("image_url"), "image_alt": article["title"] if item.get("image_url") else None, "image_source_url": final_url if item.get("image_url") else None}
             if not image_data["image_url"]:
                 image_data = publisher_image_lookup(final_url, article["title"]) or image_data
+            if not image_data.get("image_url"):
+                image_data = openverse_image_lookup(article["title"]) or image_data
             record = {
                 "id": "em-" + fingerprint,
                 "title": article["title"],
