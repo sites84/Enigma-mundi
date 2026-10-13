@@ -24,7 +24,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE_PATH = ROOT / "data" / "discovered-articles.json"
 OUTPUT_PATH = ROOT / "data" / "editorial-posts.json"
-SELECTION_PATH = ROOT / "data" / "editorial-queue-selection.json"
 STATUS_PATH = ROOT / "data" / "editorial-pipeline-status.json"
 ARTICLES_DIR = ROOT / "artigos"
 OPENAI_API_URL = os.getenv("OPENAI_API_URL", "https://api.openai.com/v1/chat/completions")
@@ -438,12 +437,10 @@ def main():
 
     queue = read_json(QUEUE_PATH, {"articles": []})
     articles = queue.get("articles", []) if isinstance(queue, dict) else []
-    selection_payload = read_json(SELECTION_PATH, {"urls": []})
-    selected_urls = {canonical_url(url) for url in selection_payload.get("urls", []) if canonical_url(url)}
     candidates = []
     for item in articles:
         url = canonical_url(item.get("url"))
-        if not url or url in existing_urls or item.get("status") != "discovered" or url not in selected_urls:
+        if not url or url in existing_urls or item.get("status") != "discovered":
             continue
         title = str(item.get("title") or "").strip()
         description = str(item.get("description") or "").strip()
@@ -485,7 +482,7 @@ def main():
                 "source_url": final_url,
                 "url": final_url,
                 "path": "artigos/" + output_path.name,
-                "status": "draft",
+                "status": "published",
                 "post_type": "original_article",
                 "image_url": item.get("image_url"),
                 "image_source_url": final_url if item.get("image_url") else None,
@@ -513,7 +510,7 @@ def main():
         "existing_articles": len(existing_articles),
         "generated_this_run": generated,
         "candidate_count": len(candidates),
-        "message": "Artigos gerados ficam como rascunho até aprovação no painel editorial."
+        "message": "Geração automática ativa: até 10 artigos publicados por execução horária."
     })
     write_json(STATUS_PATH, status)
     print(f"Artigos novos: {generated}; total publicado: {len(existing_articles)}; erros: {len(status['errors'])}")
