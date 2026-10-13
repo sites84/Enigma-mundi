@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T18:54:35.638991+00:00",
-  "article_count": 5,
+  "generated_at": "2026-10-13T19:08:19.329460+00:00",
+  "article_count": 8,
   "articles": [
     {
       "id": "em-08c25809ae",
@@ -131,6 +131,84 @@
         "Parker Solar Probe",
         "campo magnético",
         "clima espacial"
+      ]
+    },
+    {
+      "id": "em-14954086ef",
+      "title": "Chefia do MI5 confirma interferência russa no pleito do Brexit de 2016",
+      "excerpt": "Investigação da inteligência britânica aponta que o Kremlin tentou influenciar o referendo do Brexit por redes sociais e emissoras, sem sucesso expressivo no resultado.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-10-13T15:15:45+00:00",
+      "generated_at": "2026-10-13T19:07:34.357670+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Guardian — Space",
+      "source_url": "https://www.theguardian.com/politics/2026/oct/13/russia-brexit-eu-referendum-interference-mi5",
+      "url": "https://www.theguardian.com/politics/2026/oct/13/russia-brexit-eu-referendum-interference-mi5",
+      "path": "artigos/chefia-do-mi5-confirma-interferência-russa-no-pleito-do-brex-14954086ef.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "Brexit",
+        "MI5",
+        "Rússia",
+        "Segurança Nacional",
+        "Desinformación"
+      ]
+    },
+    {
+      "id": "em-7d3edbfb4d",
+      "title": "Populações de aves silvestres no Reino Unido atingem menor nível histórico",
+      "excerpt": "Dados divulgados por órgãos de conservação apontam que quase metade das espécies monitoradas no Reino Unido está em declínio, com aves agrícolas e marinhas entre as mais afetadas.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-13T15:08:25+00:00",
+      "generated_at": "2026-10-13T19:08:00.313057+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Guardian — Space",
+      "source_url": "https://www.theguardian.com/environment/2026/oct/13/uk-bird-populations-fall-to-lowest-level-on-record",
+      "url": "https://www.theguardian.com/environment/2026/oct/13/uk-bird-populations-fall-to-lowest-level-on-record",
+      "path": "artigos/populações-de-aves-silvestres-no-reino-unido-atingem-menor-n-7d3edbfb4d.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "aves",
+        "meio ambiente",
+        "reino unido",
+        "conservacao",
+        "biodiversidade"
+      ]
+    },
+    {
+      "id": "em-a202a9d4db",
+      "title": "Documento técnico da NASA detalha modos complexos em estruturas",
+      "excerpt": "Novo boletim técnico emitido pelo Centro de Pesquisa Langley da NASA examina como sistemas estruturais leves podem desenvolver modos complexos.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-10-13T15:02:21+00:00",
+      "generated_at": "2026-10-13T19:08:18.329056+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "NASA News",
+      "source_url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-08-complex-modes-in-lightly-damped-structural-systemsa-two-mode-interaction-perspective/",
+      "url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-08-complex-modes-in-lightly-damped-structural-systemsa-two-mode-interaction-perspective/",
+      "path": "artigos/documento-técnico-da-nasa-detalha-modos-complexos-em-estrutu-a202a9d4db.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.nasa.gov/wp-content/uploads/2026/10/two-mode-interaction-in-a-lightly-damped-system.png?w=989",
+      "image_source_url": "https://www.nasa.gov/centers-and-facilities/nesc/tb-26-08-complex-modes-in-lightly-damped-structural-systemsa-two-mode-interaction-perspective/",
+      "image_alt": "Documento técnico da NASA detalha modos complexos em estruturas",
+      "tags": [
+        "NASA",
+        "engenharia",
+        "dinamica_estrutural",
+        "arquivos_oficiais",
+        "pesquisa_cientifica"
       ]
     }
   ]
