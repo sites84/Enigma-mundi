@@ -530,6 +530,44 @@ def candidate_priority(item):
     return score
 
 
+
+def publisher_image_lookup(url, title):
+    """Get the image attached to the original article when its feed has no image."""
+    if not url:
+        return None
+    request = urllib.request.Request(url, headers={
+        "User-Agent": USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml",
+    })
+    try:
+        with urllib.request.urlopen(request, timeout=10) as response:
+            if "html" not in response.headers.get("Content-Type", "").lower():
+                return None
+            page = response.read(900000).decode("utf-8", "replace")
+    except Exception:
+        return None
+    patterns = [
+        r'<meta[^>]+property=["\']og:image(?::secure_url)?["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image(?::secure_url)?["\']',
+        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']',
+    ]
+    candidate = None
+    for pattern in patterns:
+        match = re.search(pattern, page, re.I)
+        if match:
+            candidate = html.unescape(match.group(1).strip())
+            break
+    if not candidate:
+        return None
+    candidate = urllib.parse.urljoin(url, candidate)
+    parts = urllib.parse.urlsplit(candidate)
+    if parts.scheme != "https" or not parts.netloc:
+        return None
+    if any(word in candidate.lower() for word in ("logo", "avatar", "favicon", "sprite", "icon-")):
+        return None
+    return {"image_url": candidate, "image_alt": title[:250], "image_source_url": url}
+
 def main():
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
     openai_key = os.getenv("OPENAI_API_KEY", "").strip()
@@ -633,6 +671,9 @@ def main():
                 existing_urls.add(url)
                 continue
             published_at = item.get("published_at") or now_iso()
+            image_data = {"image_url": item.get("image_url"), "image_alt": article["title"] if item.get("image_url") else None, "image_source_url": final_url if item.get("image_url") else None}
+            if not image_data["image_url"]:
+                image_data = publisher_image_lookup(final_url, article["title"]) or image_data
             record = {
                 "id": "em-" + fingerprint,
                 "title": article["title"],
@@ -648,9 +689,9 @@ def main():
                 "path": "artigos/" + output_path.name,
                 "status": "published",
                 "post_type": "original_article",
-                "image_url": item.get("image_url"),
-                "image_source_url": final_url if item.get("image_url") else None,
-                "image_alt": article["title"] if item.get("image_url") else None,
+                "image_url": image_data.get("image_url"),
+                "image_source_url": image_data.get("image_source_url"),
+                "image_alt": image_data.get("image_alt"),
                 "tags": article["tags"],
             }
             output_path.write_text(render_article_page(article, record, slug), encoding="utf-8")
