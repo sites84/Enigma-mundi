@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T23:06:16.499132+00:00",
-  "article_count": 48,
+  "generated_at": "2026-10-13T23:09:17.523528+00:00",
+  "article_count": 47,
   "articles": [
     {
       "id": "em-07a2bacc44",
@@ -160,29 +160,29 @@
       ]
     },
     {
-      "id": "em-9d523b2907",
-      "title": "Os enigmas luminosos da Amazônia: entre o folclore e a investigação ufológica",
-      "excerpt": "A região amazônica acumula relatos históricos e contemporâneos sobre luzes misteriosas e fenômenos aéreos que desafiam a compreensão convencional.",
+      "id": "em-5d396420a0",
+      "title": "Administrador da NASA adota postura aberta sobre vídeos de óvnis",
+      "excerpt": "Em entrevista recente, o chefe da agência espacial americana comentou registros militares de objetos não identificados e a busca por vida extraterrestre.",
       "category": "ufologia",
       "category_label": "Ufologia",
-      "published_at": "2026-10-05T07:22:53-03:00",
-      "generated_at": "2026-10-13T23:04:47.313854+00:00",
+      "published_at": "2026-10-07T09:33:31+00:00",
+      "generated_at": "2026-10-13T23:07:01.070372+00:00",
       "source_name": "Enigma Mundi",
-      "primary_source_name": "Revista UFO Brasil",
-      "source_url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia/",
-      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia/",
-      "path": "artigos/os-enigmas-luminosos-da-amazônia-entre-o-folclore-e-a-invest-9d523b2907.html",
+      "primary_source_name": "Unexplained Mysteries",
+      "source_url": "https://www.unexplained-mysteries.com/news/400175/nasa-administrator-says-he-is-open-minded-about-ufo-videos",
+      "url": "https://www.unexplained-mysteries.com/news/400175/nasa-administrator-says-he-is-open-minded-about-ufo-videos",
+      "path": "artigos/administrador-da-nasa-adota-postura-aberta-sobre-vídeos-de-ó-5d396420a0.html",
       "status": "published",
       "post_type": "original_article",
-      "image_url": "https://ufo.com.br/wp-content/uploads/2019/10/imagem_final.jpeg",
-      "image_source_url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia/",
-      "image_alt": "Os enigmas luminosos da Amazônia: entre o folclore e a investigação ufológica",
+      "image_url": "https://www.unexplained-mysteries.com/images/news_large/news-hq-jared-isaacman.jpg",
+      "image_source_url": "https://www.unexplained-mysteries.com/news/400175/nasa-administrator-says-he-is-open-minded-about-ufo-videos",
+      "image_alt": "Administrador da NASA adota postura aberta sobre vídeos de óvnis",
       "tags": [
-        "Amazônia",
-        "Operação Prato",
-        "Ufologia",
-        "Mistérios",
-        "Fenômenos Luminosos"
+        "NASA",
+        "ufologia",
+        "fenomenos aereos",
+        "seguranca nacional",
+        "espaco"
       ]
     },
     {
@@ -840,28 +840,28 @@
     },
     {
       "id": "em-b3f41029e1",
-      "title": "O enigma de Barney e Betty Hill: seis décadas de debate ufológico",
-      "excerpt": "A suposta abdução do casal Barney e Betty Hill em 1961 continua a moldar as discussões sobre OVNIs e experiências de contato extraterrestre.",
+      "title": "O caso clássico de abdução de Betty e Barney Hill completa 65 anos",
+      "excerpt": "A intrigante e debatida história do casal norte-americano que relatou encontro com objeto voador não identificado e perda temporal na década de 1960.",
       "category": "ufologia",
       "category_label": "Ufologia",
       "published_at": "2026-09-12T00:00:00+00:00",
-      "generated_at": "2026-10-13T23:04:21.665962+00:00",
+      "generated_at": "2026-10-13T23:07:14.194632+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Unexplained Mysteries",
       "source_url": "https://www.unexplained-mysteries.com/news/400150/barney-and-betty-hill-alien-abduction-mystery-still-endures-65-years-on",
       "url": "https://www.unexplained-mysteries.com/news/400150/barney-and-betty-hill-alien-abduction-mystery-still-endures-65-years-on",
-      "path": "artigos/o-enigma-de-barney-e-betty-hill-seis-décadas-de-debate-ufoló-b3f41029e1.html",
+      "path": "artigos/o-caso-clássico-de-abdução-de-betty-e-barney-hill-completa-6-b3f41029e1.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": "https://www.unexplained-mysteries.com/images/news_large_retina/news-hq-abduction-car.jpg",
       "image_source_url": "https://www.unexplained-mysteries.com/news/400150/barney-and-betty-hill-alien-abduction-mystery-still-endures-65-years-on",
-      "image_alt": "O enigma de Barney e Betty Hill: seis décadas de debate ufológico",
+      "image_alt": "O caso clássico de abdução de Betty e Barney Hill completa 65 anos",
       "tags": [
-        "Ufologia",
-        "Abdução",
-        "Barney e Betty Hill",
-        "Fenômenos Anômalos",
-        "Mistérios Históricos"
+        "ufologia",
+        "abducao",
+        "betty e barney hill",
+        "misterios",
+        "fenomeno ovni"
       ]
     },
     {
@@ -1022,28 +1022,54 @@
     },
     {
       "id": "em-72d1254961",
-      "title": "O labirinto da ufologia moderna: A persistência do mito do acobertamento",
-      "excerpt": "Uma análise detalhada sobre como o movimento de revelação ufológica se sustenta em narrativas acumulativas ao longo de décadas sem apresentar provas materiais verificáveis.",
+      "title": "O labirinto da ufologia moderna: mitos, segredos e a busca por evidências",
+      "excerpt": "Uma análise detalhada sobre a persistência das narrativas de conspiração ufológica, a evolução do folclore e a ausência de provas materiais tangíveis.",
       "category": "ufologia",
       "category_label": "Ufologia",
       "published_at": "2026-08-22T20:29:35+00:00",
-      "generated_at": "2026-10-13T23:05:48.108582+00:00",
+      "generated_at": "2026-10-13T23:08:49.052958+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Skeptic Magazine",
       "source_url": "https://www.skeptic.com/article/ufo-disclosure-myth-explained/",
       "url": "https://www.skeptic.com/article/ufo-disclosure-myth-explained/",
-      "path": "artigos/o-labirinto-da-ufologia-moderna-a-persistência-do-mito-do-ac-72d1254961.html",
+      "path": "artigos/o-labirinto-da-ufologia-moderna-mitos-segredos-e-a-busca-por-72d1254961.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": "https://storage.ghost.io/c/36/db/36db2d53-b96a-4b7f-9ea6-1e48a1d7715e/content/images/size/w1200/2026/08/ufology-campfire-smoke-myth.webp",
       "image_source_url": "https://www.skeptic.com/article/ufo-disclosure-myth-explained/",
-      "image_alt": "O labirinto da ufologia moderna: A persistência do mito do acobertamento",
+      "image_alt": "O labirinto da ufologia moderna: mitos, segredos e a busca por evidências",
       "tags": [
         "ufologia",
         "misterios",
-        "conspiracoes",
         "arquivos_oficiais",
-        "analise"
+        "conspiracoes",
+        "fact_checking"
+      ]
+    },
+    {
+      "id": "em-87242163d8",
+      "title": "Sociologia analisa os métodos e a busca persistente dos caçadores de Bigfoot",
+      "excerpt": "Uma nova pesquisa acadêmica investiga o universo dos entusiastas que buscam o Sasquatch, examinando como coletam dados nas fronteiras da ciência.",
+      "category": "criptozoologia_lendas",
+      "category_label": "Lendas e fenômenos incomuns",
+      "published_at": "2026-08-12T17:45:37+00:00",
+      "generated_at": "2026-10-13T23:08:20.318955+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Metabunk",
+      "source_url": "https://www.metabunk.org/threads/sasquatch-science-bigfooters-and-scientific-inquiry-essay-and-book.15050/",
+      "url": "https://www.metabunk.org/threads/sasquatch-science-bigfooters-and-scientific-inquiry-essay-and-book.15050/",
+      "path": "artigos/sociologia-analisa-os-métodos-e-a-busca-persistente-dos-caça-87242163d8.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "Bigfoot",
+        "Sasquatch",
+        "Criptozoologia",
+        "Sociologia da Ciência",
+        "Metabunk"
       ]
     },
     {
@@ -1122,6 +1148,32 @@
         "transparência",
         "segurança nacional",
         "fenômenos anômalos"
+      ]
+    },
+    {
+      "id": "em-03e1ed2ea0",
+      "title": "A Odisseia Ufológica de Janice Leslie e os Protocolos de Contato Psíquico",
+      "excerpt": "Relatos de Janice Leslie conectam treinamento psíquico, luzes misteriosas e o fenômeno OVNI após perdas pessoais marcantes.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-07-31T11:40:00+00:00",
+      "generated_at": "2026-10-13T23:08:27.252559+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Mysterious Universe",
+      "source_url": "https://mysteriousuniverse.org/2026/07/36.04-MU-Podcast-Contact-Protocol-Janice-Leslie-s-UFO-Odyssey",
+      "url": "https://mysteriousuniverse.org/2026/07/36.04-MU-Podcast-Contact-Protocol-Janice-Leslie-s-UFO-Odyssey",
+      "path": "artigos/a-odisseia-ufológica-de-janice-leslie-e-os-protocolos-de-con-03e1ed2ea0.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://megaphone.imgix.net/podcasts/27eccf5a-8c65-11f1-87b0-87a771ddd09d/image/f711a7c722161c56638840e0f8607123.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "image_source_url": "https://mysteriousuniverse.org/2026/07/36.04-MU-Podcast-Contact-Protocol-Janice-Leslie-s-UFO-Odyssey",
+      "image_alt": "A Odisseia Ufológica de Janice Leslie e os Protocolos de Contato Psíquico",
+      "tags": [
+        "ufologia",
+        "fenômenos anômalos",
+        "Ted Owens",
+        "Janice Leslie",
+        "mistérios"
       ]
     },
     {
@@ -1231,28 +1283,28 @@
     },
     {
       "id": "em-8864496a81",
-      "title": "Fenômenos Aéreos Não Identificados sob uma nova perspectiva biológica",
-      "excerpt": "Uma análise propõe que óvnis e fenõmenos aéreos possam ser formas de vida desconhecidas na atmosfera terrestre em vez de naves espaciais.",
+      "title": "Fenômenos Aéreos Não Identificados sob a Ótica da Biologia Atmosférica",
+      "excerpt": "Uma análise publicada recentemente propõe que parte dos OVNIs observados nos céus seja composta por formas de vida desconhecidas na alta atmosfera.",
       "category": "ufologia",
       "category_label": "Ufologia",
       "published_at": "2026-07-16T18:45:00+00:00",
-      "generated_at": "2026-10-13T23:06:09.987500+00:00",
+      "generated_at": "2026-10-13T23:09:10.233290+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Skeptic Magazine",
       "source_url": "https://www.skeptic.com/article/flying-organisms-not-flying-saucers-the-biological-case-for-uaps/",
       "url": "https://www.skeptic.com/article/flying-organisms-not-flying-saucers-the-biological-case-for-uaps/",
-      "path": "artigos/fenômenos-aéreos-não-identificados-sob-uma-nova-perspectiva--8864496a81.html",
+      "path": "artigos/fenômenos-aéreos-não-identificados-sob-a-ótica-da-biologia-a-8864496a81.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": "https://storage.ghost.io/c/36/db/36db2d53-b96a-4b7f-9ea6-1e48a1d7715e/content/images/size/w1200/2026/07/atmospheric-jellyfish-radar.webp",
       "image_source_url": "https://www.skeptic.com/article/flying-organisms-not-flying-saucers-the-biological-case-for-uaps/",
-      "image_alt": "Fenômenos Aéreos Não Identificados sob uma nova perspectiva biológica",
+      "image_alt": "Fenômenos Aéreos Não Identificados sob a Ótica da Biologia Atmosférica",
       "tags": [
-        "ufologia",
+        "uap",
         "biologia",
+        "atmosfera",
         "misterios",
-        "ciencia",
-        "atmosfera"
+        "ciencia"
       ]
     }
   ]

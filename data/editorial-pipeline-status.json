@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-13T23:06:16.500458+00:00",
+  "updated_at": "2026-10-13T23:09:17.524702+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 48,
-  "generated_this_run": 7,
+  "existing_articles": 47,
+  "generated_this_run": 6,
   "status": "completed",
   "errors": [
     {
@@ -20,15 +20,11 @@
     },
     {
       "url": "https://mufon.com/2026/09/15/department-of-war-issues-legal-waiver-to-authorize-unidentified-anomalous-phenomena-uap-disclosures-to-pursue",
-      "error": "MUFON UFO News: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "MUFON UFO News: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/the-conspiracy-theories-in-they-cloned-tyrone-and-its-link-with-jamie-foxxs-mysterious-hospitalization",
       "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.unexplained-mysteries.com/news/400175/nasa-administrator-says-he-is-open-minded-about-ufo-videos",
-      "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
@@ -48,7 +44,7 @@
     },
     {
       "url": "https://vigilantcitizen.com/latestnews/theres-something-terribly-wrong-happening-to-kate-beckinsale",
-      "error": "Vigilant Citizen Symbolism: A resposta da API gemini não contém JSON válido"
+      "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
@@ -61,14 +57,6 @@
     {
       "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026",
       "error": "The Folklore Society UK: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.metabunk.org/threads/sasquatch-science-bigfooters-and-scientific-inquiry-essay-and-book.15050",
-      "error": "Metabunk: A resposta da API gemini não contém JSON válido"
-    },
-    {
-      "url": "https://mysteriousuniverse.org/2026/07/36.04-MU-Podcast-Contact-Protocol-Janice-Leslie-s-UFO-Odyssey",
-      "error": "Mysterious Universe: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
@@ -87,12 +75,16 @@
       "error": "Mysterious Universe: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
+      "url": "https://mysteriousuniverse.org/2026/08/36.05-MU-Podcast-Visitors-From-Within-Extraterrestrial-Sexuality-part-04",
+      "error": "Mysterious Universe: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
       "url": "https://www.skeptics.com.au/bent-spoon-award-for-2026",
       "error": "Australian Skeptics: Conteúdo extraído insuficiente (67 caracteres); não gerar artigo a partir apenas de título/resumo"
     },
     {
       "url": "https://www.theguardian.com/uk-news/2026/oct/12/sas-personnel-refusing-to-answer-questions-afghanistan-inquiry-alleged-killings",
-      "error": "The Guardian — Space: A resposta da API gemini não contém JSON válido"
+      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
   "candidate_count": 62,
