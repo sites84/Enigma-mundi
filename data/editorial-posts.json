@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T22:16:30.894892+00:00",
-  "article_count": 32,
+  "generated_at": "2026-10-13T22:59:15.854241+00:00",
+  "article_count": 40,
   "articles": [
+    {
+      "id": "em-07a2bacc44",
+      "title": "A geometria impossível da fase de OVNIs em Tomb Raider III e seus segredos",
+      "excerpt": "Uma análise sobre a construção espacial e o design arquitetônico da icônica fase de OVNIs no clássico jogo Tomb Raider III.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-12T14:00:00+00:00",
+      "generated_at": "2026-10-13T22:58:53.777121+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Space.com",
+      "source_url": "https://www.space.com/entertainment/space-games/how-the-impossible-geometry-of-tomb-raider-iiis-ufo-level-was-made",
+      "url": "https://www.space.com/entertainment/space-games/how-the-impossible-geometry-of-tomb-raider-iiis-ufo-level-was-made",
+      "path": "artigos/a-geometria-impossível-da-fase-de-ovnis-em-tomb-raider-iii-e-07a2bacc44.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://cdn.mos.cms.futurecdn.net/db6MS6EerbxBAGqaPynzfd-1920-80.jpg",
+      "image_source_url": "https://www.space.com/entertainment/space-games/how-the-impossible-geometry-of-tomb-raider-iiis-ufo-level-was-made",
+      "image_alt": "A geometria impossível da fase de OVNIs em Tomb Raider III e seus segredos",
+      "tags": [
+        "Tomb Raider",
+        "OVNI",
+        "Geometria Impossível",
+        "Games",
+        "Design"
+      ]
+    },
     {
       "id": "em-9616143318",
       "title": "Forte romano descoberto no País de Gales desafia lendas medievais",
@@ -131,6 +157,32 @@
         "Segurança Nacional",
         "Ufologia",
         "Documentos oficiais"
+      ]
+    },
+    {
+      "id": "em-986a41a005",
+      "title": "Prêmio Katharine Briggs 2026 divulga finalistas de folclore e crenças",
+      "excerpt": "A The Folklore Society divulgou a lista de obras finalistas ao Katharine Briggs Award 2026, destacando pesquisas sobre o insólito e o folclore britânico.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-04T08:00:00+00:00",
+      "generated_at": "2026-10-13T22:59:07.862629+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Folklore Society UK",
+      "source_url": "https://www.folklore-society.com/blog/post/the-katharine-briggs-award-2026-shortlist/",
+      "url": "https://www.folklore-society.com/blog/post/the-katharine-briggs-award-2026-shortlist/",
+      "path": "artigos/prêmio-katharine-briggs-2026-divulga-finalistas-de-folclore--986a41a005.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "folclore",
+        "parlamento",
+        "misterios",
+        "literatura",
+        "reino unido"
       ]
     },
     {
@@ -448,6 +500,32 @@
       ]
     },
     {
+      "id": "em-2b52605483",
+      "title": "A Ilusão da Sombra: O que Fenômenos Anômalos e IAs Revelam sobre a Nossa Mente",
+      "excerpt": "Analisamos um ensaio recente sobre como interpretamos evidências incomuns, de OVNIs a imagens sintéticas, e os limites da nossa capacidade de dedução.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-09-22T22:58:43+00:00",
+      "generated_at": "2026-10-13T22:59:14.853859+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/shadow-evidence-what-uaps-ghosts-and-ai-images-teach-us-about-inference/",
+      "url": "https://www.skeptic.com/article/shadow-evidence-what-uaps-ghosts-and-ai-images-teach-us-about-inference/",
+      "path": "artigos/a-ilusão-da-sombra-o-que-fenômenos-anômalos-e-ias-revelam-so-2b52605483.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "ufologia",
+        "misterios",
+        "fact_checking",
+        "ciencia",
+        "tecnologia"
+      ]
+    },
+    {
       "id": "em-6976da81a7",
       "title": "Documentos e depoimentos apontam suposto contato extraterrestre em 1964",
       "excerpt": "Novas alegações apresentadas em um documentário indicam que o ex-presidente americano George H.W. Bush teria conhecimento de um pouso de OVNIs no Novo México.",
@@ -526,6 +604,32 @@
       ]
     },
     {
+      "id": "em-fc332c163a",
+      "title": "Análise de vídeo militar de OVNIs aponta para possibilidade de aves",
+      "excerpt": "Investigações sobre um registro desclassificado de Fenômenos Anômalos Não Identificados no Oriente Médio sugerem que pontos de luz podem ser aves em voo.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-09-18T23:23:28+00:00",
+      "generated_at": "2026-10-13T22:58:14.252116+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Metabunk",
+      "source_url": "https://www.metabunk.org/threads/dow-uap-pr135-d108.15102/",
+      "url": "https://www.metabunk.org/threads/dow-uap-pr135-d108.15102/",
+      "path": "artigos/análise-de-vídeo-militar-de-ovnis-aponta-para-possibilidade--fc332c163a.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "UAP",
+        "Ufologia",
+        "Metabunk",
+        "Fact-Checking",
+        "Aviação"
+      ]
+    },
+    {
       "id": "em-1ee0a384a3",
       "title": "Novos vídeos militares de OVNIs no Oriente Médio geram debate analítico",
       "excerpt": "Arquivos liberados mostram registros de objetos voadores não identificados na região do Oriente Médio, dividindo opiniões sobre a natureza das trajetórias captadas.",
@@ -549,6 +653,59 @@
         "Oriente Médio",
         "Metabunk",
         "Análise"
+      ]
+    },
+    {
+      "id": "em-6862d1b863",
+      "title": "Novo decreto dos EUA busca destravar sigilo sobre Fenômenos Anômalos",
+      "excerpt": "Autoridades norte-americanas emitem isenção legal para permitir que funcionários compartilhem dados confidenciais sobre OVNIs sem risco de punição.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-09-15T01:21:18+00:00",
+      "generated_at": "2026-10-13T22:56:47.425136+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "MUFON UFO News",
+      "source_url": "https://mufon.com/2026/09/15/department-of-war-issues-legal-waiver-to-authorize-unidentified-anomalous-phenomena-uap-disclosures-to-pursue/",
+      "url": "https://mufon.com/2026/09/15/department-of-war-issues-legal-waiver-to-authorize-unidentified-anomalous-phenomena-uap-disclosures-to-pursue/",
+      "path": "artigos/novo-decreto-dos-eua-busca-destravar-sigilo-sobre-fenômenos--6862d1b863.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "UAPs",
+        "OVNIs",
+        "Departamento de Guerra",
+        "Transparência Governamental",
+        "PURSUE",
+        "Sigilo Militar"
+      ]
+    },
+    {
+      "id": "em-616a50cd5d",
+      "title": "Pentágono emite isenção para facilitar relatos de OVNIs por militares",
+      "excerpt": "Nova diretriz do governo americano busca remover barreiras legais e sigilosas para funcionários que desejam relatar encontros com OVNIs.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-09-15T00:00:00+00:00",
+      "generated_at": "2026-10-13T22:57:11.189376+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Unexplained Mysteries",
+      "source_url": "https://www.unexplained-mysteries.com/news/400153/pentagon-issues-waiver-to-enable-personnel-to-report-ufo-sightings",
+      "url": "https://www.unexplained-mysteries.com/news/400153/pentagon-issues-waiver-to-enable-personnel-to-report-ufo-sightings",
+      "path": "artigos/pentágono-emite-isenção-para-facilitar-relatos-de-ovnis-por--616a50cd5d.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.unexplained-mysteries.com/images/news_large_retina/news-hq-ufo-huge.jpg",
+      "image_source_url": "https://www.unexplained-mysteries.com/news/400153/pentagon-issues-waiver-to-enable-personnel-to-report-ufo-sightings",
+      "image_alt": "Pentágono emite isenção para facilitar relatos de OVNIs por militares",
+      "tags": [
+        "Pentágono",
+        "OVNI",
+        "UAP",
+        "transparência",
+        "governo americano"
       ]
     },
     {
@@ -631,6 +788,32 @@
       ]
     },
     {
+      "id": "em-c96dce6d83",
+      "title": "As múltiplas faces do Incidente Roswell e o fascínio persistente por UFOs",
+      "excerpt": "Explore os fatos, as contradições governamentais e o impacto cultural do célebre incidente em Roswell, um marco histórico para os entusiastas da ufologia.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-09-09T10:56:18-03:00",
+      "generated_at": "2026-10-13T22:57:18.757574+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Revista UFO Brasil",
+      "source_url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua/",
+      "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua/",
+      "path": "artigos/as-múltiplas-faces-do-incidente-roswell-e-o-fascínio-persist-c96dce6d83.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "Roswell",
+        "Ufologia",
+        "Arquivos Oficiais",
+        "Conspirações",
+        "Jesse Marcel"
+      ]
+    },
+    {
       "id": "em-8ac1d9d96b",
       "title": "Novas perspectivas e arquivos históricos marcam edição recente da Revista UFO",
       "excerpt": "Publicação traz análises sobre inteligência artificial em arquivos ufológicos, relatos tradicionais indígenas e discussões sobre a consciência humana.",
@@ -680,6 +863,32 @@
         "folclore",
         "assombracoes",
         "historia"
+      ]
+    },
+    {
+      "id": "em-0a715b20c2",
+      "title": "A ciência do ceticismo: testando alegações paranormais em sala de aula",
+      "excerpt": "Estudantes universitários colaboram com um grupo de investigação cética para analisar pedidos de um prêmio em dinheiro destinado ao paranormal.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-08-24T14:35:15+00:00",
+      "generated_at": "2026-10-13T22:58:41.929531+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Skeptical Inquirer",
+      "source_url": "https://skepticalinquirer.org/2026/08/teaching-science-and-skepticism-through-the-paranormal-challenge/",
+      "url": "https://skepticalinquirer.org/2026/08/teaching-science-and-skepticism-through-the-paranormal-challenge/",
+      "path": "artigos/a-ciência-do-ceticismo-testando-alegações-paranormais-em-sal-0a715b20c2.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "ceticismo",
+        "parapsicologia",
+        "educação",
+        "pseudociencia",
+        "metodologia"
       ]
     },
     {

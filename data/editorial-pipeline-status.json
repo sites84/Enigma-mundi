@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-13T22:16:30.895955+00:00",
+  "updated_at": "2026-10-13T22:59:15.855616+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 33,
-  "generated_this_run": 7,
+  "existing_articles": 40,
+  "generated_this_run": 8,
   "status": "completed",
   "errors": [
     {
@@ -16,15 +16,11 @@
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/mexico-year-of-ufo-and-paranormal.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/is-the-assessment-a-script-for-a-globalist-new-world-order",
       "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://mufon.com/2026/09/15/department-of-war-issues-legal-waiver-to-authorize-unidentified-anomalous-phenomena-uap-disclosures-to-pursue",
-      "error": "MUFON UFO News: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/the-conspiracy-theories-in-they-cloned-tyrone-and-its-link-with-jamie-foxxs-mysterious-hospitalization",
@@ -32,15 +28,11 @@
     },
     {
       "url": "https://www.unexplained-mysteries.com/news/400175/nasa-administrator-says-he-is-open-minded-about-ufo-videos",
-      "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
-    },
-    {
-      "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
-      "error": "Revista UFO Brasil: A resposta da API gemini não contém JSON válido"
+      "error": "Unexplained Mysteries: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: A resposta da API gemini não contém JSON válido"
+      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.skeptic.com/article/you-cant-handle-the-truthers-the-9-11-conspiracy-theories",
@@ -64,7 +56,11 @@
     },
     {
       "url": "https://vigilantcitizen.com/latestnews/theres-something-terribly-wrong-happening-to-kate-beckinsale",
-      "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Vigilant Citizen Symbolism: A resposta da API gemini não contém JSON válido"
+    },
+    {
+      "url": "https://ufo.com.br/contatos-imediatos-de-segundo-e-terceiro-grau-na-amazonia",
+      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
@@ -83,19 +79,19 @@
       "error": "The Folklore Society UK: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://skepticalinquirer.org/2026/08/teaching-science-and-skepticism-through-the-paranormal-challenge",
-      "error": "Skeptical Inquirer: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
       "url": "https://mysteriousuniverse.org/2026/07/36.04-MU-Podcast-Contact-Protocol-Janice-Leslie-s-UFO-Odyssey",
       "error": "Mysterious Universe: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://www.space.com/entertainment/space-games/how-the-impossible-geometry-of-tomb-raider-iiis-ufo-level-was-made",
-      "error": "Space.com: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
+      "error": "Australian Skeptics: Conteúdo extraído insuficiente (75 caracteres); não gerar artigo a partir apenas de título/resumo"
+    },
+    {
+      "url": "https://www.snopes.com/fact-check/musk-midterms-democrats",
+      "error": "Snopes Urban Legends: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
-  "candidate_count": 78,
+  "candidate_count": 71,
   "attempted_this_run": 30,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
 }
