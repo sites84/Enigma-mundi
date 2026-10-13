@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Inventário com 21 fontes preexistentes e 20 fontes internacionais adicionais. As fontes novas entram na descoberta; enabled=false mantém a aprovação editorial separada da coleta. A validação diária registra quais feeds funcionam e quais exigem adaptação.",
+  "note": "Inventário com 21 fontes preexistentes e 20 fontes internacionais adicionais. Endpoints corrigidos com base no relatório real de validação; executar novamente o workflow para confirmar a disponibilidade atual.",
   "sources": [
     {
       "id": "the_black_vault",
@@ -266,18 +266,19 @@
     },
     {
       "id": "jpl_news_us",
-      "name": "NASA Jet Propulsion Laboratory",
+      "name": "NASA/JPL Center for Near Earth Object Studies",
       "country": "Estados Unidos",
       "language": "en",
-      "feed_url": "https://www.jpl.nasa.gov/feeds/news/",
+      "feed_url": "https://cneos.jpl.nasa.gov/feed/news.xml",
       "category": "arquivos_oficiais",
       "feed_type": "rss",
       "enabled": false,
-      "site_url": "https://www.jpl.nasa.gov",
+      "site_url": "https://cneos.jpl.nasa.gov",
       "topic_focus": [
-        "sistema solar",
-        "missões espaciais",
-        "astrobiologia"
+        "asteroides",
+        "cometas",
+        "objetos próximos da Terra",
+        "riscos de impacto"
       ]
     },
     {
@@ -350,11 +351,11 @@
       "name": "Sky & Telescope",
       "country": "Estados Unidos",
       "language": "en",
-      "feed_url": "https://skyandtelescope.org/feed/",
+      "feed_url": "https://www.skyandtelescope.com/astronomy-news/feed/",
       "category": "fact_checking",
       "feed_type": "rss",
       "enabled": false,
-      "site_url": "https://skyandtelescope.org",
+      "site_url": "https://www.skyandtelescope.com",
       "topic_focus": [
         "astronomia",
         "fenômenos celestes",
@@ -461,19 +462,20 @@
       ]
     },
     {
-      "id": "american_folklore_society_us",
-      "name": "American Folklore Society",
-      "country": "Estados Unidos",
+      "id": "public_domain_review_uk",
+      "name": "The Public Domain Review",
+      "country": "Reino Unido",
       "language": "en",
-      "feed_url": "https://americanfolklore.org/feed/",
+      "feed_url": "https://publicdomainreview.org/feed/",
       "category": "criptozoologia_lendas",
       "feed_type": "rss",
       "enabled": false,
-      "site_url": "https://americanfolklore.org",
+      "site_url": "https://publicdomainreview.org",
       "topic_focus": [
+        "história cultural",
         "folclore",
-        "tradições orais",
-        "lendas"
+        "imagens históricas",
+        "fenômenos incomuns"
       ]
     },
     {
