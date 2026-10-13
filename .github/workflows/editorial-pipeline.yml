@@ -1,0 +1,79 @@
+name: Generate original editorial articles
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/generate_editorial_articles.py"
+      - ".github/workflows/editorial-pipeline.yml"
+      - "data/discovered-articles.json"
+  schedule:
+    # Runs after the daily discovery crawl.
+    - cron: "30 8 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: enigma-editorial-generation
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate generator syntax
+        run: python -m py_compile scripts/generate_editorial_articles.py
+
+      - name: Generate original Portuguese articles
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          MAX_ARTICLES_PER_RUN: "3"
+        run: python scripts/generate_editorial_articles.py
+
+      - name: Validate editorial output
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          payload = json.loads(Path("data/editorial-posts.json").read_text(encoding="utf-8"))
+          status = json.loads(Path("data/editorial-pipeline-status.json").read_text(encoding="utf-8"))
+          articles = payload.get("articles")
+          assert isinstance(articles, list), "editorial-posts.json must contain articles"
+          assert payload.get("article_count") == len(articles), "article_count mismatch"
+          seen = set()
+          for item in articles:
+              assert item.get("post_type") == "original_article"
+              assert item.get("status") == "published"
+              assert item.get("title") and item.get("excerpt")
+              assert item.get("path", "").startswith("artigos/")
+              assert item.get("source_url", "").startswith(("https://", "http://"))
+              assert item["source_url"] not in seen, "duplicate source URL"
+              seen.add(item["source_url"])
+              assert (Path(item["path"])).is_file(), f"missing article page: {item['path']}"
+          print(f"Editorial articles validated: {len(articles)}; pipeline status: {status.get('status')}; new this run: {status.get('generated_this_run', 0)}")
+          PY
+
+      - name: Commit generated articles and pipeline status
+        run: |
+          git add -A data/editorial-posts.json data/editorial-pipeline-status.json artigos/
+          if git diff --cached --quiet; then
+            echo "No editorial output changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: generate original Enigma Mundi articles"
+          git pull --rebase -X theirs origin main
+          git push
