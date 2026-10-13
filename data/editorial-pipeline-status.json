@@ -1,44 +1,48 @@
 {
-  "updated_at": "2026-10-13T20:25:56.360412+00:00",
+  "updated_at": "2026-10-13T20:41:18.793575+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 4,
-  "generated_this_run": 2,
+  "existing_articles": 5,
+  "generated_this_run": 1,
   "status": "completed",
   "errors": [
-    {
-      "url": "https://www.space.com/entertainment/space-games/how-the-impossible-geometry-of-tomb-raider-iiis-ufo-level-was-made",
-      "error": "Space.com: Reportagem curta: exige abertura e pelo menos três seções"
-    },
-    {
-      "url": "https://www.theguardian.com/uk-news/2026/oct/12/sas-personnel-refusing-to-answer-questions-afghanistan-inquiry-alleged-killings",
-      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
-      "error": "Australian Skeptics: Conteúdo extraído insuficiente (73 caracteres); não gerar artigo a partir apenas de título/resumo"
-    },
     {
       "url": "https://www.unexplained-mysteries.com/news/400179/new-records-could-provide-context-to-trumps-ufo-file-dumps",
       "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/10/argentina-multidisciplinary-research.html",
+      "url": "https://inexplicata.blogspot.com/2026/10/argentina-extraterrestrials-in-trevelin.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/10/havana-syndrome-mystery-cia-russia",
-      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://www.atlasobscura.com/articles/best-haunted-hotels-for-a-spooky-getaway",
+      "error": "Atlas Obscura: A resposta da API gemini não contém JSON válido"
     },
     {
-      "url": "https://www.snopes.com/fact-check/musk-midterms-democrats",
-      "error": "Snopes Urban Legends: A resposta da API gemini não contém JSON válido"
+      "url": "https://inexplicata.blogspot.com/2026/09/a-lost-police-report-48-years-later.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/10/argentina-extraterrestrials-in-trevelin.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/mexico-year-of-ufo-and-paranormal.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://cryptomundo.com/bigfoot-report/mountain-dew-bigfoot-bounty",
+      "error": "Cryptomundo Monster Hunting: A resposta da API gemini não contém JSON válido"
+    },
+    {
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-caused-massive-greater.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     }
   ],
-  "candidate_count": 109,
+  "candidate_count": 107,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária."
 }
