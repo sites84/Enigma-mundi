@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T20:10:15.497428+00:00",
-  "article_count": 1,
+  "generated_at": "2026-10-13T20:21:53.221633+00:00",
+  "article_count": 3,
   "articles": [
     {
       "id": "em-07a2bacc44",
@@ -27,6 +27,58 @@
         "retrogaming",
         "design de jogos",
         "misterios"
+      ]
+    },
+    {
+      "id": "em-9616143318",
+      "title": "Forte romano descoberto no País de Gales desafia lendas medievais",
+      "excerpt": "Escavações arqueológicas em Pembrokeshire encontram indícios de um forte do século IV que pode dar base real a antigos relatos do folclore galês.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-12T07:00:48+00:00",
+      "generated_at": "2026-10-13T20:21:10.997282+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Guardian — Space",
+      "source_url": "https://www.theguardian.com/uk-news/2026/oct/12/mythical-roman-fort-frenni-fawr-wales-emperor",
+      "url": "https://www.theguardian.com/uk-news/2026/oct/12/mythical-roman-fort-frenni-fawr-wales-emperor",
+      "path": "artigos/forte-romano-descoberto-no-país-de-gales-desafia-lendas-medi-9616143318.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "arqueologia",
+        "roma antiga",
+        "pais de gales",
+        "mabinogion",
+        "historia medieval"
+      ]
+    },
+    {
+      "id": "em-dba273726c",
+      "title": "Novas perspectivas e debates sobre arquivos ufológicos e mistérios históricos",
+      "excerpt": "Uma análise recente aborda o cenário de investigações sobre OVNIs, o debate em torno de figuras centrais e registros históricos intrigantes divulgados recentemente.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-12T01:17:01+00:00",
+      "generated_at": "2026-10-13T20:21:23.606639+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Daily Grail",
+      "source_url": "https://www.dailygrail.com/2026/10/news-briefs-12-10-2026/",
+      "url": "https://www.dailygrail.com/2026/10/news-briefs-12-10-2026/",
+      "path": "artigos/novas-perspectivas-e-debates-sobre-arquivos-ufológicos-e-mis-dba273726c.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "ufologia",
+        "misterios",
+        "arquivos",
+        "historia",
+        "investigacao"
       ]
     }
   ]
