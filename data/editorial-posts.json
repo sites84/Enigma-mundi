@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T22:13:33.570Z",
-  "article_count": 25,
+  "generated_at": "2026-10-13T22:16:30.894892+00:00",
+  "article_count": 33,
   "articles": [
     {
       "id": "em-9616143318",
@@ -52,6 +52,32 @@
         "misterios",
         "arquivos",
         "historia",
+        "investigacao"
+      ]
+    },
+    {
+      "id": "em-f6422963f1",
+      "title": "Novos registros oficiais buscam dar contexto a arquivos de OVNIs divulgados",
+      "excerpt": "Esforços recentes buscam compilar documentações adicionais para suprir lacunas e metadados ausentes em pacotes anteriores de registros sobre OVNIs.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-10-11T10:16:49+00:00",
+      "generated_at": "2026-10-13T22:13:46.614719+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Unexplained Mysteries",
+      "source_url": "https://www.unexplained-mysteries.com/news/400179/new-records-could-provide-context-to-trumps-ufo-file-dumps",
+      "url": "https://www.unexplained-mysteries.com/news/400179/new-records-could-provide-context-to-trumps-ufo-file-dumps",
+      "path": "artigos/novos-registros-oficiais-buscam-dar-contexto-a-arquivos-de-o-f6422963f1.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.unexplained-mysteries.com/images/news_large/news-hq-conspiracies.jpg",
+      "image_source_url": "https://www.unexplained-mysteries.com/news/400179/new-records-could-provide-context-to-trumps-ufo-file-dumps",
+      "image_alt": "Novos registros oficiais buscam dar contexto a arquivos de OVNIs divulgados",
+      "tags": [
+        "ovni",
+        "ufologia",
+        "arquivos oficiais",
+        "governo",
         "investigacao"
       ]
     },
@@ -108,6 +134,33 @@
       ]
     },
     {
+      "id": "em-8e07f8f0b5",
+      "title": "Maleta com pesquisas ufológicas históricas é entregue a organização em Nova Jersey",
+      "excerpt": "Um arquivo inédito contendo manuscritos e investigações antigas sobre OVNIs foi repassado à rede civil MUFON após décadas guardado por familiares.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-10-04T05:48:48+00:00",
+      "generated_at": "2026-10-13T22:15:27.287909+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "MUFON UFO News",
+      "source_url": "https://mufon.com/2026/10/04/a-mysterious-briefcase-comes-mufons-way-by-bob-spearing/",
+      "url": "https://mufon.com/2026/10/04/a-mysterious-briefcase-comes-mufons-way-by-bob-spearing/",
+      "path": "artigos/maleta-com-pesquisas-ufológicas-históricas-é-entregue-a-orga-8e07f8f0b5.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "MUFON",
+        "UFO",
+        "historia",
+        "manuscrito",
+        "Nova Jersey",
+        "misterio"
+      ]
+    },
+    {
       "id": "em-4052e116b2",
       "title": "Nova rede de alerta em tempo real para pesquisa de OVNIs é anunciada",
       "excerpt": "A organização MUFON prepara o lançamento de um sistema automatizado para monitorar anomalias atmosféricas e assinaturas tecnológicas no campo.",
@@ -131,6 +184,32 @@
         "Tecnologia",
         "Pesquisa",
         "Fenômenos Anômalos"
+      ]
+    },
+    {
+      "id": "em-e0b9cdb778",
+      "title": "Hospedagens históricas ao redor do mundo celebram tradições de assombrações",
+      "excerpt": "Hotéis seculares em vários países integram relatos de fantasmas e tragédias do passado à experiência de seus hóspedes, unindo arquitetura e folclore.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-09-30T16:53:00+00:00",
+      "generated_at": "2026-10-13T22:13:53.404498+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Atlas Obscura",
+      "source_url": "https://www.atlasobscura.com/articles/best-haunted-hotels-for-a-spooky-getaway",
+      "url": "https://www.atlasobscura.com/articles/best-haunted-hotels-for-a-spooky-getaway",
+      "path": "artigos/hospedagens-históricas-ao-redor-do-mundo-celebram-tradições--e0b9cdb778.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://assets.atlasobscura.com/article_images/110379/image.jpg",
+      "image_source_url": "https://www.atlasobscura.com/articles/best-haunted-hotels-for-a-spooky-getaway",
+      "image_alt": "Hospedagens históricas ao redor do mundo celebram tradições de assombrações",
+      "tags": [
+        "fantasmas",
+        "hotéis",
+        "misterios",
+        "folclore",
+        "historia"
       ]
     },
     {
@@ -526,6 +605,32 @@
       ]
     },
     {
+      "id": "em-1076881de0",
+      "title": "Ex-piloto da Força Aérea dos EUA relata encontro com OVNI em 1980",
+      "excerpt": "Veterano militar que atuou como engenheiro aeroespacial quebra silêncio de décadas para detalhar avistamento de objeto triangular na década de 1980.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-09-13T07:28:42-03:00",
+      "generated_at": "2026-10-13T22:14:33.942453+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Revista UFO Brasil",
+      "source_url": "https://ufo.com.br/ex-piloto-rompe-silencio-apos-decadas-e-relata-encontro-com-ufo-caso-rendlesham/",
+      "url": "https://ufo.com.br/ex-piloto-rompe-silencio-apos-decadas-e-relata-encontro-com-ufo-caso-rendlesham/",
+      "path": "artigos/ex-piloto-da-força-aérea-dos-eua-relata-encontro-com-ovni-em-1076881de0.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "ufologia",
+        "militar",
+        "inglaterra",
+        "misterios",
+        "avistamentos"
+      ]
+    },
+    {
       "id": "em-8ac1d9d96b",
       "title": "Novas perspectivas e arquivos históricos marcam edição recente da Revista UFO",
       "excerpt": "Publicação traz análises sobre inteligência artificial em arquivos ufológicos, relatos tradicionais indígenas e discussões sobre a consciência humana.",
@@ -575,6 +680,84 @@
         "folclore",
         "assombracoes",
         "historia"
+      ]
+    },
+    {
+      "id": "em-b25fd3c0df",
+      "title": "Duas décadas investigando o ceticismo científico e lendas urbanas",
+      "excerpt": "O podcast Skeptoid alcançou a marca de mil episódios e vinte anos de trajetória focados na análise de mitos, teorias da conspiração e fraudes.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-08-24T14:34:15+00:00",
+      "generated_at": "2026-10-13T22:16:08.816227+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Skeptical Inquirer",
+      "source_url": "https://skepticalinquirer.org/2026/08/skeptoid-20-years-of-covering-over-1000-urban-legends/",
+      "url": "https://skepticalinquirer.org/2026/08/skeptoid-20-years-of-covering-over-1000-urban-legends/",
+      "path": "artigos/duas-décadas-investigando-o-ceticismo-científico-e-lendas-ur-b25fd3c0df.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "ceticismo",
+        "lendas urbanas",
+        "fatos",
+        "ciencia",
+        "podcasts"
+      ]
+    },
+    {
+      "id": "em-8a16c1d0f5",
+      "title": "Investigação de Ian Stevenson sobre caso poltergeist na Califórnia",
+      "excerpt": "Um arquivo da década de 1980 examinado pelo pesquisador Ian Stevenson descreve manifestações anômalas em uma residência de Kern City sem a presença de adolescentes.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-08-09T19:41:25+00:00",
+      "generated_at": "2026-10-13T20:58:08.926045+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Daily Grail",
+      "source_url": "https://www.dailygrail.com/2026/08/sunday-funnies-pictorial-poltergeist-based-on-true-events/",
+      "url": "https://www.dailygrail.com/2026/08/sunday-funnies-pictorial-poltergeist-based-on-true-events/",
+      "path": "artigos/investigação-de-ian-stevenson-sobre-caso-poltergeist-na-cali-8a16c1d0f5.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.dailygrail.com/wp-content/uploads/2026/08/PictorialPoltergeist_banner02.jpg",
+      "image_source_url": "https://www.dailygrail.com/2026/08/sunday-funnies-pictorial-poltergeist-based-on-true-events/",
+      "image_alt": "Investigação de Ian Stevenson sobre caso poltergeist na Califórnia",
+      "tags": [
+        "poltergeist",
+        "ian stevenson",
+        "paranormal",
+        "california",
+        "misterio"
+      ]
+    },
+    {
+      "id": "em-20065e0637",
+      "title": "Nova leva de arquivos sobre OVNIs do governo dos EUA alimenta debates",
+      "excerpt": "A publicação da quinta tranche de relatórios de Fenômenos Anômalos Não Identificados reacende discussões sobre transparência, dados vagos e teorias.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-08-07T12:49:49+00:00",
+      "generated_at": "2026-10-13T22:15:07.126725+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Metabunk",
+      "source_url": "https://www.metabunk.org/threads/us-department-of-war-uap-files-tranche-5.15045/",
+      "url": "https://www.metabunk.org/threads/us-department-of-war-uap-files-tranche-5.15045/",
+      "path": "artigos/nova-leva-de-arquivos-sobre-ovnis-do-governo-dos-eua-aliment-20065e0637.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "UAP",
+        "OVNI",
+        "Governo dos EUA",
+        "Transparência",
+        "Investigação"
       ]
     },
     {
@@ -653,6 +836,32 @@
         "saúde pública",
         "conspiração",
         "EUA"
+      ]
+    },
+    {
+      "id": "em-128b05fb97",
+      "title": "A Farsa do Hospital Ferroviário: Análise do Caso de 1975 na Argentina",
+      "excerpt": "Investigação detalhada de 1975 revela que a suposta abdução e teletransporte de 650 quilômetros de um operário ferroviário argentino foi uma fraude planejada.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-07-17T19:12:30+00:00",
+      "generated_at": "2026-10-13T22:16:24.261537+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Fenomenum Brasil",
+      "source_url": "https://fenomenum.com.br/o-caso-do-hospital-ferroviario/",
+      "url": "https://fenomenum.com.br/o-caso-do-hospital-ferroviario/",
+      "path": "artigos/a-farsa-do-hospital-ferroviário-análise-do-caso-de-1975-na-a-128b05fb97.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "ufologia",
+        "fact checking",
+        "argentina",
+        "misterios",
+        "fraude"
       ]
     }
   ]

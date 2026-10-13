@@ -1,22 +1,14 @@
 {
-  "updated_at": "2026-10-13T21:52:59.921003+00:00",
+  "updated_at": "2026-10-13T22:16:30.895955+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 27,
-  "generated_this_run": 6,
+  "existing_articles": 33,
+  "generated_this_run": 7,
   "status": "completed",
   "errors": [
     {
-      "url": "https://www.unexplained-mysteries.com/news/400179/new-records-could-provide-context-to-trumps-ufo-file-dumps",
-      "error": "Unexplained Mysteries: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
       "url": "https://inexplicata.blogspot.com/2026/10/argentina-extraterrestrials-in-trevelin.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
-    },
-    {
-      "url": "https://www.atlasobscura.com/articles/best-haunted-hotels-for-a-spooky-getaway",
-      "error": "Atlas Obscura: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/a-lost-police-report-48-years-later.html",
@@ -28,11 +20,11 @@
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/is-the-assessment-a-script-for-a-globalist-new-world-order",
-      "error": "Vigilant Citizen Symbolism: A resposta da API gemini não contém JSON válido"
+      "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://mufon.com/2026/09/15/department-of-war-issues-legal-waiver-to-authorize-unidentified-anomalous-phenomena-uap-disclosures-to-pursue",
-      "error": "MUFON UFO News: Reportagem curta: exige abertura e pelo menos três seções"
+      "error": "MUFON UFO News: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/the-conspiracy-theories-in-they-cloned-tyrone-and-its-link-with-jamie-foxxs-mysterious-hospitalization",
@@ -43,16 +35,8 @@
       "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
     },
     {
-      "url": "https://www.unexplained-mysteries.com/news/400155/bizarre-conspiracy-theory-claims-traffic-lights-are-assault-weapons",
-      "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
-    },
-    {
-      "url": "https://ufo.com.br/ex-piloto-rompe-silencio-apos-decadas-e-relata-encontro-com-ufo-caso-rendlesham",
-      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
       "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
-      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Revista UFO Brasil: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
@@ -71,20 +55,12 @@
       "error": "The Black Vault: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://www.dailygrail.com/2026/10/sunday-funnies-alpha-douche",
-      "error": "The Daily Grail: HTTP Error 403: Forbidden"
+      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
+      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.conspiracywatch.info/cw_video/derniere-semaine-de-la-campagne-ulule-pour-complorama",
       "error": "Conspiracy Watch: Conteúdo extraído insuficiente (520 caracteres); não gerar artigo a partir apenas de título/resumo"
-    },
-    {
-      "url": "https://mufon.com/2026/10/04/a-mysterious-briefcase-comes-mufons-way-by-bob-spearing",
-      "error": "MUFON UFO News: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.dailygrail.com/2026/09/sunday-funnies-those-damned-xippies-as-seen-on-fate-magazine",
-      "error": "The Daily Grail: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://vigilantcitizen.com/latestnews/theres-something-terribly-wrong-happening-to-kate-beckinsale",
@@ -101,9 +77,25 @@
     {
       "url": "https://fenomenum.com.br/o-monstro-de-flatwoods",
       "error": "Fenomenum Brasil: A resposta da API gemini não contém JSON válido"
+    },
+    {
+      "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026",
+      "error": "The Folklore Society UK: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://skepticalinquirer.org/2026/08/teaching-science-and-skepticism-through-the-paranormal-challenge",
+      "error": "Skeptical Inquirer: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://mysteriousuniverse.org/2026/07/36.04-MU-Podcast-Contact-Protocol-Janice-Leslie-s-UFO-Odyssey",
+      "error": "Mysterious Universe: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.space.com/entertainment/space-games/how-the-impossible-geometry-of-tomb-raider-iiis-ufo-level-was-made",
+      "error": "Space.com: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
-  "candidate_count": 85,
+  "candidate_count": 78,
   "attempted_this_run": 30,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
 }
