@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-13T21:28:17.721298+00:00",
+  "updated_at": "2026-10-13T21:31:19.148464+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 25,
+  "existing_articles": 22,
   "generated_this_run": 10,
   "status": "completed",
   "errors": [
@@ -13,6 +13,10 @@
     {
       "url": "https://inexplicata.blogspot.com/2026/10/argentina-extraterrestrials-in-trevelin.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.atlasobscura.com/articles/best-haunted-hotels-for-a-spooky-getaway",
+      "error": "Atlas Obscura: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/a-lost-police-report-48-years-later.html",
@@ -35,27 +39,51 @@
       "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
+      "url": "https://ufo.com.br/edicao-305-revista-ufo",
+      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
       "url": "https://www.unexplained-mysteries.com/news/400175/nasa-administrator-says-he-is-open-minded-about-ufo-videos",
-      "error": "Unexplained Mysteries: Reportagem curta: exige abertura e pelo menos três seções"
+      "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
     },
     {
-      "url": "https://ufo.com.br/steven-greer-diz-que-prazo-da-carta-unod-expirou-e-acusa-estado-profundo-de-impedir-divulgacao-completa-dos-ufos",
-      "error": "Revista UFO Brasil: A resposta da API gemini não contém JSON válido"
-    },
-    {
-      "url": "https://ufo.com.br/documentos-levantam-suspeitas-de-que-bush-sabia-de-contato-extraterrestre-em-1964",
-      "error": "Revista UFO Brasil: A resposta da API gemini não contém JSON válido"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/notice/deception-the-great-covid-cover-up",
-      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://www.dailygrail.com/2026/09/the-ufo-as-a-mirror-a-conversation-with-meredith-spearman",
+      "error": "The Daily Grail: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: A resposta da API gemini não contém JSON válido"
+      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.metabunk.org/threads/dow-uap-d109-dow-uap-pr140-141-apparent-sharp-turn.15101",
+      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.skeptic.com/article/you-cant-handle-the-truthers-the-9-11-conspiracy-theories",
+      "error": "Skeptic Magazine: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.metabunk.org/threads/uap-predictions-for-next-two-years.15079",
+      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.theblackvault.com/documentarchive/aaro-releases-fy2025-uap-report-months-after-statutory-deadline-citing-319-new-cases-and-expanded-satellite-analysis",
+      "error": "The Black Vault: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.dailygrail.com/2026/10/sunday-funnies-alpha-douche",
+      "error": "The Daily Grail: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.conspiracywatch.info/cw_video/derniere-semaine-de-la-campagne-ulule-pour-complorama",
+      "error": "Conspiracy Watch: Conteúdo extraído insuficiente (520 caracteres); não gerar artigo a partir apenas de título/resumo"
+    },
+    {
+      "url": "https://mufon.com/2026/10/04/a-mysterious-briefcase-comes-mufons-way-by-bob-spearing",
+      "error": "MUFON UFO News: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
-  "candidate_count": 96,
-  "attempted_this_run": 22,
+  "candidate_count": 95,
+  "attempted_this_run": 29,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
 }
