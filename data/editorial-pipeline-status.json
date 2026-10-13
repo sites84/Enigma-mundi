@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-13T21:50:03.398811+00:00",
+  "updated_at": "2026-10-13T21:52:59.921003+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
   "existing_articles": 27,
-  "generated_this_run": 5,
+  "generated_this_run": 6,
   "status": "completed",
   "errors": [
     {
@@ -28,31 +28,27 @@
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/is-the-assessment-a-script-for-a-globalist-new-world-order",
-      "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Vigilant Citizen Symbolism: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://mufon.com/2026/09/15/department-of-war-issues-legal-waiver-to-authorize-unidentified-anomalous-phenomena-uap-disclosures-to-pursue",
-      "error": "MUFON UFO News: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "MUFON UFO News: Reportagem curta: exige abertura e pelo menos três seções"
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/the-conspiracy-theories-in-they-cloned-tyrone-and-its-link-with-jamie-foxxs-mysterious-hospitalization",
       "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://ufo.com.br/edicao-305-revista-ufo",
-      "error": "Revista UFO Brasil: A resposta da API gemini não contém JSON válido"
-    },
-    {
       "url": "https://www.unexplained-mysteries.com/news/400175/nasa-administrator-says-he-is-open-minded-about-ufo-videos",
       "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
     },
     {
-      "url": "https://www.dailygrail.com/2026/09/the-ufo-as-a-mirror-a-conversation-with-meredith-spearman",
-      "error": "The Daily Grail: HTTP Error 403: Forbidden"
+      "url": "https://www.unexplained-mysteries.com/news/400155/bizarre-conspiracy-theory-claims-traffic-lights-are-assault-weapons",
+      "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://ufo.com.br/ex-piloto-rompe-silencio-apos-decadas-e-relata-encontro-com-ufo-caso-rendlesham",
-      "error": "Revista UFO Brasil: A resposta da API gemini não contém JSON válido"
+      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
@@ -63,8 +59,8 @@
       "error": "Metabunk: A resposta da API gemini não contém JSON válido"
     },
     {
-      "url": "https://www.metabunk.org/threads/dow-uap-d109-dow-uap-pr140-141-apparent-sharp-turn.15101",
-      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://www.skeptic.com/article/you-cant-handle-the-truthers-the-9-11-conspiracy-theories",
+      "error": "Skeptic Magazine: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.metabunk.org/threads/uap-predictions-for-next-two-years.15079",
@@ -88,7 +84,7 @@
     },
     {
       "url": "https://www.dailygrail.com/2026/09/sunday-funnies-those-damned-xippies-as-seen-on-fate-magazine",
-      "error": "The Daily Grail: HTTP Error 403: Forbidden"
+      "error": "The Daily Grail: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://vigilantcitizen.com/latestnews/theres-something-terribly-wrong-happening-to-kate-beckinsale",
