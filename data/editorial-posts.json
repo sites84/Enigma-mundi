@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-13T20:59:47.492651+00:00",
-  "article_count": 15,
+  "generated_at": "2026-10-13T21:25:45.322Z",
+  "article_count": 12,
   "articles": [
     {
       "id": "em-9616143318",
@@ -105,84 +105,6 @@
         "Segurança Nacional",
         "Ufologia",
         "Documentos oficiais"
-      ]
-    },
-    {
-      "id": "em-c3a88398d9",
-      "title": "Panorama da apuração para deputado federal no interior do Espírito Santo",
-      "excerpt": "Análise dos dados oficiais e da listagem de candidatos que disputam as vagas à Câmara dos Deputados pelo interior capixaba nas eleições de 2026.",
-      "category": "fact_checking",
-      "category_label": "Investigação e checagem",
-      "published_at": "2026-10-04T18:21:19+00:00",
-      "generated_at": "2026-10-13T20:59:26.661420+00:00",
-      "source_name": "Enigma Mundi",
-      "primary_source_name": "Boatos.org",
-      "source_url": "https://www.boatos.org/eleicoes-2026/resultado-eleicoes-2026-interior-espirito-santo-deputado-federal-1-turno.html",
-      "url": "https://www.boatos.org/eleicoes-2026/resultado-eleicoes-2026-interior-espirito-santo-deputado-federal-1-turno.html",
-      "path": "artigos/panorama-da-apuração-para-deputado-federal-no-interior-do-es-c3a88398d9.html",
-      "status": "published",
-      "post_type": "original_article",
-      "image_url": "https://www.boatos.org/wp-content/uploads/2026/10/resultado-2026-deputado-federal-interior-do-espirito-santo-tricolor.jpg",
-      "image_source_url": "https://www.boatos.org/eleicoes-2026/resultado-eleicoes-2026-interior-espirito-santo-deputado-federal-1-turno.html",
-      "image_alt": "Panorama da apuração para deputado federal no interior do Espírito Santo",
-      "tags": [
-        "Eleições 2026",
-        "Espírito Santo",
-        "Deputado Federal",
-        "Política",
-        "Justiça Eleitoral"
-      ]
-    },
-    {
-      "id": "em-6de4349dbc",
-      "title": "Os Registros e a Arquitetura da Disputa ao Senado no Espírito Santo em 2026",
-      "excerpt": "Uma análise detalhada sobre o cenário de candidaturas e as regras que estruturam a corrida eleitoral para o Senado no interior capixaba.",
-      "category": "fact_checking",
-      "category_label": "Investigação e checagem",
-      "published_at": "2026-10-04T18:21:16+00:00",
-      "generated_at": "2026-10-13T20:59:32.488840+00:00",
-      "source_name": "Enigma Mundi",
-      "primary_source_name": "Boatos.org",
-      "source_url": "https://www.boatos.org/eleicoes-2026/resultado-eleicoes-2026-interior-espirito-santo-senador-1-turno.html",
-      "url": "https://www.boatos.org/eleicoes-2026/resultado-eleicoes-2026-interior-espirito-santo-senador-1-turno.html",
-      "path": "artigos/os-registros-e-a-arquitetura-da-disputa-ao-senado-no-espírit-6de4349dbc.html",
-      "status": "published",
-      "post_type": "original_article",
-      "image_url": "https://www.boatos.org/wp-content/uploads/2026/10/resultado-2026-senador-interior-do-espirito-santo-tricolor.jpg",
-      "image_source_url": "https://www.boatos.org/eleicoes-2026/resultado-eleicoes-2026-interior-espirito-santo-senador-1-turno.html",
-      "image_alt": "Os Registros e a Arquitetura da Disputa ao Senado no Espírito Santo em 2026",
-      "tags": [
-        "Eleições 2026",
-        "Espírito Santo",
-        "Senado",
-        "Política",
-        "Justiça Eleitoral"
-      ]
-    },
-    {
-      "id": "em-7584a4ca33",
-      "title": "Análise dos registros e do cenário eleitoral de 2026 no Espírito Santo",
-      "excerpt": "Exame das candidaturas ao governo capixaba nas eleições de 2026, detalhando as regras de apuração e a dinâmica do pleito no interior do estado.",
-      "category": "fact_checking",
-      "category_label": "Investigação e checagem",
-      "published_at": "2026-10-04T18:21:12+00:00",
-      "generated_at": "2026-10-13T20:59:38.221153+00:00",
-      "source_name": "Enigma Mundi",
-      "primary_source_name": "Boatos.org",
-      "source_url": "https://www.boatos.org/eleicoes-2026/resultado-eleicoes-2026-interior-espirito-santo-governador-1-turno.html",
-      "url": "https://www.boatos.org/eleicoes-2026/resultado-eleicoes-2026-interior-espirito-santo-governador-1-turno.html",
-      "path": "artigos/análise-dos-registros-e-do-cenário-eleitoral-de-2026-no-espí-7584a4ca33.html",
-      "status": "published",
-      "post_type": "original_article",
-      "image_url": "https://www.boatos.org/wp-content/uploads/2026/10/resultado-2026-governador-interior-do-espirito-santo-tricolor.jpg",
-      "image_source_url": "https://www.boatos.org/eleicoes-2026/resultado-eleicoes-2026-interior-espirito-santo-governador-1-turno.html",
-      "image_alt": "Análise dos registros e do cenário eleitoral de 2026 no Espírito Santo",
-      "tags": [
-        "Eleições 2026",
-        "Espírito Santo",
-        "Política",
-        "Fact Checking",
-        "Urnas"
       ]
     },
     {
