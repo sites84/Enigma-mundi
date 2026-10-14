@@ -259,14 +259,36 @@ def call_model(api_key, provider, model, title, description, source_name, source
 
 
 def call_model_with_fallback(api_key, provider, model, title, description, source_name, source_url, source_text, category):
-    """Try fallback models for API outages and invalid/incomplete drafts; never return an unvalidated article."""
+    """Try API-supported fallback models for outages and invalid drafts; never return an unvalidated article."""
     models = [model]
     if provider == "gemini":
-        models.extend([
-            "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash",
-            "gemini-3.5-flash-lite", "gemini-3-flash-preview",
-            "gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash",
-        ])
+        # Build the fallback list from this key's actual API capabilities. Static
+        # model names caused repeated 404s and wasted attempts on retired/unavailable IDs.
+        try:
+            request = urllib.request.Request(
+                GEMINI_API_BASE,
+                headers={"x-goog-api-key": api_key, "User-Agent": USER_AGENT},
+            )
+            with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+                catalog = json.loads(response.read().decode("utf-8"))
+            supported = [
+                str(item.get("name", "")).removeprefix("models/")
+                for item in catalog.get("models", [])
+                if "generateContent" in item.get("supportedGenerationMethods", [])
+            ]
+            priorities = (
+                "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash",
+                "gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-3-flash-preview",
+                "gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash",
+            )
+            models.extend(name for name in priorities if name in supported)
+            models.extend(name for name in supported if "flash" in name.lower()
+                          and not any(marker in name.lower() for marker in
+                                      ("embedding", "image", "tts", "audio", "live")))
+        except (urllib.error.URLError, TimeoutError, ValueError, KeyError) as exc:
+            print(f"[WARN] Não foi possível listar modelos alternativos Gemini: {str(exc)[:160]}", flush=True)
+            # If model discovery fails, retain a small compatibility fallback list.
+            models.extend(["gemini-3.5-flash-lite", "gemini-2.5-flash", "gemini-2.0-flash"])
     errors = []
     content_failures = 0
     for candidate in dict.fromkeys(models):
