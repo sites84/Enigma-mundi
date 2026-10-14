@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-14T04:36:04.785793+00:00",
-  "article_count": 72,
+  "generated_at": "2026-10-14T04:53:01.103095+00:00",
+  "article_count": 73,
   "articles": [
     {
       "id": "em-07a2bacc44",
@@ -1435,6 +1435,32 @@
         "arquivos_oficiais",
         "conspiracoes",
         "fact_checking"
+      ]
+    },
+    {
+      "id": "em-61004c3cb2",
+      "title": "Livro sobre OVNIs utiliza imagem de filme de ficção científica como evidência real",
+      "excerpt": "Uma investigação revela que o livro 'Not for Disclosure', de Jonathan Caplan, apresenta uma foto de bastidores do filme 'O Dia em que a Terra Parou' como prova de uma nave recuperada.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-08-21T09:45:35+00:00",
+      "generated_at": "2026-10-14T04:52:41.720987+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Metabunk",
+      "source_url": "https://www.metabunk.org/threads/caplan-book-contains-photo-from-the-day-the-earth-stood-still-1951.15061/",
+      "url": "https://www.metabunk.org/threads/caplan-book-contains-photo-from-the-day-the-earth-stood-still-1951.15061/",
+      "path": "artigos/livro-sobre-ovnis-utiliza-imagem-de-filme-de-ficção-científi-61004c3cb2.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.metabunk.org/attachments/1787305312464-png.92754/?id=375009",
+      "image_source_url": "https://www.metabunk.org/threads/caplan-book-contains-photo-from-the-day-the-earth-stood-still-1951.15061/",
+      "image_alt": "Livro sobre OVNIs utiliza imagem de filme de ficção científica como evidência real",
+      "tags": [
+        "ufologia",
+        "fact-checking",
+        "conspiracoes",
+        "literatura",
+        "desinformacao"
       ]
     },
     {
