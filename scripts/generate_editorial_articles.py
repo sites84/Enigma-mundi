@@ -316,7 +316,8 @@ def validate_article(article):
     final_paragraphs = [article["lead"][-1]]
     final_paragraphs.extend(section["paragraphs"][-1] for section in article["sections"])
     final_paragraphs.extend([article["what_might_it_be"][-1], article["conclusion"][-1]])
-    if any(not re.search(r'[.!?…]["”’»)]?
+    if any(not re.search(r'[.!?…]["”’»)]?\s*$', paragraph.strip()) for paragraph in final_paragraphs):
+        raise ValueError("Reportagem aparentemente truncada: parágrafo final sem pontuação de encerramento")
     article["category"] = article["category"] if article["category"] in CATEGORY_LABELS else "misterios"
     tags = article.get("tags", [])
     article["tags"] = [str(t).strip()[:40] for t in tags if str(t).strip()][:6] if isinstance(tags, list) else []
