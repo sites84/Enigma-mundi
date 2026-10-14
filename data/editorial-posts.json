@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-14T20:19:55.212017+00:00",
-  "article_count": 78,
+  "generated_at": "2026-10-14T23:22:46.355753+00:00",
+  "article_count": 79,
   "articles": [
     {
       "id": "em-073f59e8e0",
@@ -1280,6 +1280,32 @@
         "Torres Gêmeas",
         "fact checking",
         "história"
+      ]
+    },
+    {
+      "id": "em-c96dce6d83",
+      "title": "Incidente em Roswell: Da Notícia do Disco Voador aos Segredos da Guerra Fria",
+      "excerpt": "Entenda a trajetória do Caso Roswell, desde os destroços achados por Mac Brazel até a divulgação do Projeto Mogul e as alegações persistentes de acobertamento.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-09-09T10:56:18-03:00",
+      "generated_at": "2026-10-14T23:22:32.381939+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Revista UFO Brasil",
+      "source_url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua/",
+      "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua/",
+      "path": "artigos/incidente-em-roswell-da-notícia-do-disco-voador-aos-segredos-c96dce6d83.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://ufo.com.br/wp-content/uploads/2025/04/rtoswel.png",
+      "image_source_url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua/",
+      "image_alt": "Incidente em Roswell: Da Notícia do Disco Voador aos Segredos da Guerra Fria",
+      "tags": [
+        "Caso Roswell",
+        "Ufologia",
+        "Projeto Mogul",
+        "Jesse Marcel",
+        "Mac Brazel"
       ]
     },
     {

@@ -1,41 +1,33 @@
 {
-  "updated_at": "2026-10-14T20:19:55.213455+00:00",
+  "updated_at": "2026-10-14T23:22:46.357995+00:00",
   "provider": "gemini",
-  "model": "gemini-3.5-flash-lite",
-  "existing_articles": 78,
-  "generated_this_run": 0,
-  "status": "quota_exhausted",
+  "model": "gemini-3.8-flash",
+  "existing_articles": 79,
+  "generated_this_run": 1,
+  "status": "partial_quota_exhausted",
   "errors": [
     {
-      "url": "https://ufo.com.br/ex-funcionario-do-pentagono-lanca-livro-com-revelacoes-sobre-ovnis",
-      "error": "Revista UFO Brasil: Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. gemini-3.8-flash: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.5-flash-lite: A resposta da API gemini não contém JSON válido; possível resposta interrompida, reportagem descartada | g"
-    },
-    {
-      "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-caused-massive-greater.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/a-ufo-or-satellite-researchers-analyze.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies",
-      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://inexplicata.blogspot.com/2026/09/the-ufo-phenomenon-in-mexico-1991-wave.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/antisemitic-conspiracies-blaming-jews-for-9-11-resurface-ahead-of-25th-anniversary-cyberwell-warns",
-      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://www.conspiracywatch.info/en/conspiracy-watch-joins-global-experts-to-stress-test-ai-systems-for-antisemitism-and-online-hate",
+      "error": "Conspiracy Watch: Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. gemini-3.8-flash: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.5-flash-lite: A resposta da API gemini não contém JSON válido; possível resposta interrompida, reportagem descartada | g"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
+      "url": "https://www.conspiracywatch.info/en/have-historians-really-failed-in-the-fight-against-holocaust-denial",
       "error": "Conspiracy Watch: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
-  "candidate_count": 34,
-  "attempted_this_run": 7,
+  "candidate_count": 30,
+  "attempted_this_run": 6,
   "message": "Limite/cota da API gemini atingido; geração interrompida para evitar tentativas inúteis. Aguarde a renovação da cota gratuita ou revise os limites da conta. Reportagens válidas já geradas foram preservadas."
 }
