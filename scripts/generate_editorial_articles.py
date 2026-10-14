@@ -160,8 +160,7 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "cobrindo os fatos relevantes disponíveis no material fornecido. Desenvolva contexto, cronologia quando houver, "
         "protagonistas, evidências citadas, explicações, controvérsias e limitações; não invente detalhes ausentes. "
         "Não traduza nem reproduza a estrutura parágrafo a parágrafo e não substitua o texto original por um resumo. "
-        "Mire em 800 a 1.200 palavras quando a fonte tiver conteúdo suficiente; se a fonte for curta, desenvolva o máximo "
-        "que os fatos permitirem, sem preencher lacunas. A seção 'O que pode ser?' deve apresentar hipóteses plausíveis "
+        "Não imponha limite mínimo ou máximo de palavras: o tamanho deve ser determinado pela cobertura completa dos fatos relevantes disponíveis, sem cortar a matéria para caber numa extensão predeterminada. A seção 'O que pode ser?' deve apresentar hipóteses plausíveis "
         "e limites da evidência, sem inventar uma resposta definitiva. Gere conteúdo substancial e legível, com ângulo próprio."
     )
     user = {
@@ -173,7 +172,7 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "requirements": [
             "Título de 45 a 95 caracteres, informativo e sem sensacionalismo.",
             "Resumo de 120 a 200 caracteres apenas para o campo excerpt; ele NÃO substitui a reportagem completa.",
-            "A reportagem completa deve ter preferencialmente 800 a 1.200 palavras, nunca ser apenas resumo ou sinopse.",
+            "Não imponha limite de palavras. Desenvolva a matéria até cobrir integralmente os fatos relevantes disponíveis na fonte; nunca corte conteúdo apenas para atingir um tamanho fixo.",
             "Abertura de 3 parágrafos substanciais, explicando o acontecimento, o contexto e sua importância.",
             "Entre 4 e 6 seções, cada uma com heading e 2 a 4 parágrafos substantivos que desenvolvam os fatos relevantes.",
             "Uma seção separada 'O que pode ser?' com hipóteses, evidências e limitações.",
@@ -288,10 +287,6 @@ def validate_article(article):
         raise ValueError("Título ou resumo curto demais")
     if len(article["lead"]) < 2 or len(article["sections"]) < 3:
         raise ValueError("Reportagem curta: exige abertura e pelo menos três seções")
-    body_paragraphs = article["lead"] + [p for section in article["sections"] for p in section["paragraphs"]] + article["what_might_it_be"] + article["conclusion"]
-    body_word_count = sum(len(re.findall(r"\b[\wÀ-ÿ-]+\b", paragraph)) for paragraph in body_paragraphs)
-    if body_word_count < 600:
-        raise ValueError(f"Reportagem insuficientemente desenvolvida: {body_word_count} palavras; mínimo de 600, não basta um resumo")
     if not article["what_might_it_be"] or not article["conclusion"]:
         raise ValueError("Faltam a seção de hipóteses ou a conclusão")
     article["category"] = article["category"] if article["category"] in CATEGORY_LABELS else "misterios"
