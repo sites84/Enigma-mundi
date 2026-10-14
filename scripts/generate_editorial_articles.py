@@ -779,6 +779,15 @@ def main():
         if fixed_images:
             print(f"[INFO] Imagens adicionadas a artigos antigos: {fixed_images}.", flush=True)
     existing_urls = {canonical_url(a.get("source_url")) for a in existing_articles if a.get("source_url")}
+    # Avoid spending every hourly run on the exact same URLs that failed in the
+    # immediately preceding run. They remain eligible again after one run, so
+    # temporary publisher blocks and model outages are retried rather than lost.
+    previous_status = read_json(STATUS_PATH, {})
+    previous_failed_urls = {
+        canonical_url(error.get("url"))
+        for error in previous_status.get("errors", [])
+        if isinstance(error, dict) and error.get("url")
+    } if isinstance(previous_status, dict) else set()
     status = {
         "updated_at": now_iso(), "provider": provider or None, "model": model or None,
         "existing_articles": len(existing_articles), "generated_this_run": 0,
@@ -805,6 +814,16 @@ def main():
         if not is_core_topic(title, description):
             continue
         candidates.append(item)
+    skipped_recent_failures = 0
+    eligible_candidates = []
+    for item in candidates:
+        if canonical_url(item.get("url")) in previous_failed_urls:
+            skipped_recent_failures += 1
+            continue
+        eligible_candidates.append(item)
+    candidates = eligible_candidates
+    if skipped_recent_failures:
+        print(f"[INFO] Adiando {skipped_recent_failures} URLs que falharam na execução anterior; serão reavaliadas depois de uma execução.", flush=True)
     candidates.sort(
         key=lambda item: (
             candidate_priority(item),
