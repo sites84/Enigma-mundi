@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-14T16:51:33.015610+00:00",
-  "article_count": 76,
+  "generated_at": "2026-10-14T16:57:38.740327+00:00",
+  "article_count": 77,
   "articles": [
     {
       "id": "em-073f59e8e0",
@@ -184,6 +184,32 @@
         "arquivos oficiais",
         "governo",
         "investigacao"
+      ]
+    },
+    {
+      "id": "em-6ceefd5d44",
+      "title": "A persistência da Síndrome de Havana: o enigma dos incidentes de saúde anômalos",
+      "excerpt": "Uma década após os primeiros relatos em Cuba, o mistério da Síndrome de Havana continua a gerar debates intensos entre espionagem, ciência e acusações de acobertamento.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-10T05:00:48+00:00",
+      "generated_at": "2026-10-14T16:57:28.047393+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Guardian — Space",
+      "source_url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/10/havana-syndrome-mystery-cia-russia",
+      "url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/10/havana-syndrome-mystery-cia-russia",
+      "path": "artigos/a-persistência-da-síndrome-de-havana-o-enigma-dos-incidentes-6ceefd5d44.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://i.guim.co.uk/img/media/dd86a3791de0721c9fae3aeb6def7ef9609df8bd/1_0_4998_4000/master/4998.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=95836f9f69501a2d4123f44862ec1cb7",
+      "image_source_url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/10/havana-syndrome-mystery-cia-russia",
+      "image_alt": "A persistência da Síndrome de Havana: o enigma dos incidentes de saúde anômalos",
+      "tags": [
+        "Síndrome de Havana",
+        "CIA",
+        "Rússia",
+        "Segurança Nacional",
+        "Misterios"
       ]
     },
     {
