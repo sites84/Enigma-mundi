@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-14T17:04:04.005179+00:00",
-  "article_count": 77,
+  "generated_at": "2026-10-14T17:05:13.099381+00:00",
+  "article_count": 78,
   "articles": [
     {
       "id": "em-073f59e8e0",
@@ -1777,6 +1777,32 @@
         "atlantida",
         "arqueologia proibida",
         "misterios"
+      ]
+    },
+    {
+      "id": "em-3e7208432b",
+      "title": "Fenômenos luminosos na Europa alimentam debates sobre OVNIs e satélites",
+      "excerpt": "Relatos de luzes misteriosas na Europa geram discussões online, enquanto analistas apontam semelhanças com lançamentos recentes de satélites Starlink.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-08-05T10:41:02+00:00",
+      "generated_at": "2026-10-14T17:05:05.268057+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Metabunk",
+      "source_url": "https://www.metabunk.org/threads/reddit-starlink-or-is-it-again.15040/",
+      "url": "https://www.metabunk.org/threads/reddit-starlink-or-is-it-again.15040/",
+      "path": "artigos/fenômenos-luminosos-na-europa-alimentam-debates-sobre-ovnis--3e7208432b.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.metabunk.org/attachments/1785927543426-png.92477/?id=374310",
+      "image_source_url": "https://www.metabunk.org/threads/reddit-starlink-or-is-it-again.15040/",
+      "image_alt": "Fenômenos luminosos na Europa alimentam debates sobre OVNIs e satélites",
+      "tags": [
+        "starlink",
+        "ovnis",
+        "astronomia",
+        "satelites",
+        "factchecking"
       ]
     },
     {
