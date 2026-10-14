@@ -1,18 +1,22 @@
 {
-  "updated_at": "2026-10-14T02:53:48.308457+00:00",
+  "updated_at": "2026-10-14T03:01:01.371796+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 66,
+  "existing_articles": 68,
   "generated_this_run": 2,
   "status": "completed",
   "errors": [
     {
       "url": "https://inexplicata.blogspot.com/2026/10/argentina-extraterrestrials-in-trevelin.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/is-the-assessment-a-script-for-a-globalist-new-world-order",
@@ -20,23 +24,15 @@
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/the-conspiracy-theories-in-they-cloned-tyrone-and-its-link-with-jamie-foxxs-mysterious-hospitalization",
-      "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Vigilant Citizen Symbolism: A resposta da API gemini não contém JSON válido; possível resposta interrompida, reportagem descartada"
     },
     {
       "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
       "error": "Revista UFO Brasil: A resposta da API gemini não contém JSON válido; possível resposta interrompida, reportagem descartada"
     },
     {
-      "url": "https://www.unexplained-mysteries.com/news/400115/another-fresh-batch-of-ufo-files-has-been-released-by-the-pentagon",
-      "error": "Unexplained Mysteries: Reportagem incompleta: exige três parágrafos de abertura e pelo menos quatro seções desenvolvidas"
-    },
-    {
       "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
       "error": "Metabunk: A resposta da API gemini não contém JSON válido; possível resposta interrompida, reportagem descartada"
-    },
-    {
-      "url": "https://www.unexplained-mysteries.com/news/400176/mystery-feline-sparks-reports-of-catfoot-roaming-english-countryside",
-      "error": "Unexplained Mysteries: Reportagem incompleta: exige três parágrafos de abertura e pelo menos quatro seções desenvolvidas"
     },
     {
       "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
@@ -52,7 +48,7 @@
     },
     {
       "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026",
-      "error": "The Folklore Society UK: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "The Folklore Society UK: Reportagem incompleta: exige três parágrafos de abertura e pelo menos quatro seções desenvolvidas"
     },
     {
       "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
@@ -76,7 +72,7 @@
     },
     {
       "url": "https://www.theguardian.com/uk-news/2026/oct/12/sas-personnel-refusing-to-answer-questions-afghanistan-inquiry-alleged-killings",
-      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "The Guardian — Space: A resposta da API gemini não contém JSON válido; possível resposta interrompida, reportagem descartada"
     },
     {
       "url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/10/havana-syndrome-mystery-cia-russia",
@@ -87,7 +83,7 @@
       "error": "ScienceAlert: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
-  "candidate_count": 39,
-  "attempted_this_run": 23,
+  "candidate_count": 37,
+  "attempted_this_run": 22,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
 }
