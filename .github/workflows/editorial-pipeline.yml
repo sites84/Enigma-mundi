@@ -9,8 +9,8 @@ on:
       - ".github/workflows/editorial-pipeline.yml"
       - "data/discovered-articles.json"
   schedule:
-    # Publish up to 10 original articles every hour.
-    - cron: "0 * * * *"
+    # Run after the hourly source-discovery job has refreshed the candidate queue.
+    - cron: "35 * * * *"
 
 permissions:
   contents: write
