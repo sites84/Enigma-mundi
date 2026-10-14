@@ -862,20 +862,7 @@ def main():
                 raise ValueError("Conteúdo fora do escopo editorial do Enigma Mundi; artigo descartado pelo filtro temático")
             category = item.get("category") or "misterios"
             source_name = item.get("source_name") or item.get("source_id") or "Fonte externa"
-            try:
-                article, used_model = call_model_with_fallback(api_key, provider, model, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
-            except Exception as primary_exc:
-                # If Gemini is overloaded or returns incomplete drafts, fall back to
-                # OpenAI for this same source before discarding the candidate.
-                if provider != "gemini" or not openai_key:
-                    raise
-                print(f"[WARN] Gemini falhou para este candidato; tentando OpenAI: {str(primary_exc)[:180]}", flush=True)
-                article, used_model = call_model_with_fallback(
-                    openai_key, "openai", OPENAI_MODEL, item["title"],
-                    item.get("description", ""), source_name, final_url,
-                    source_text, category,
-                )
-                status["provider"] = "openai"
+            article, used_model = call_model_with_fallback(api_key, provider, model, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
             status["model"] = used_model
             if not is_core_topic(article["title"], article["excerpt"]):
                 raise ValueError("Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado")
