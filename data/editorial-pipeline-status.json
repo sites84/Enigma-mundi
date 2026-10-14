@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-14T04:22:34.071714+00:00",
+  "updated_at": "2026-10-14T04:36:04.787782+00:00",
   "provider": "gemini",
-  "model": "gemini-3.1-flash-lite",
+  "model": "gemini-3.1-flash-lite-preview",
   "existing_articles": 72,
-  "generated_this_run": 3,
-  "status": "completed",
+  "generated_this_run": 0,
+  "status": "errors",
   "errors": [
     {
       "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
@@ -15,16 +15,20 @@
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-caused-massive-greater.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+    },
+    {
       "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
-      "error": "Revista UFO Brasil: HTTP Error 403: Forbidden"
+      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.1-flash-lite: Reportagem incompleta: exige três parágrafos de abertura e pelo menos quatro seções desenvolvidas "
+      "error": "Metabunk: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: Reportagem incompleta: exige três parágrafos de abertura e pelo menos quatro seções desenvolvidas | gemini-3.1-flash-lite: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a "
     },
     {
       "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
-      "error": "Revista UFO Brasil: HTTP Error 403: Forbidden"
+      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.conspiracywatch.info/cw_video/derniere-semaine-de-la-campagne-ulule-pour-complorama",
@@ -36,7 +40,7 @@
     },
     {
       "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026",
-      "error": "The Folklore Society UK: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "The Folklore Society UK: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.1-flash-lite: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is curren"
     },
     {
       "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
@@ -44,11 +48,11 @@
     },
     {
       "url": "https://www.metabunk.org/threads/wyoming-mystery-orbs.15112",
-      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Metabunk: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.1-flash-lite: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is curren"
     },
     {
       "url": "https://www.metabunk.org/threads/marc-dantonio-video.15066",
-      "error": "Metabunk: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.1-flash-lite: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is curren"
+      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://skepticalinquirer.org/2026/08/how-to-read-science-news",
@@ -68,10 +72,10 @@
     },
     {
       "url": "https://www.sciencealert.com/more-might-be-out-there-a-scorching-phoenix-planet-may-solve-a-3-decade-old-astronomical-cold-case",
-      "error": "ScienceAlert: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.1-flash-lite: Reportagem incompleta: exige três parágrafos de abertura e pelo menos quatro seções desenvolvidas "
+      "error": "ScienceAlert: The read operation timed out"
     }
   ],
-  "candidate_count": 34,
-  "attempted_this_run": 19,
+  "candidate_count": 31,
+  "attempted_this_run": 17,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
 }
