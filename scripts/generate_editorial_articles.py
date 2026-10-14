@@ -725,14 +725,18 @@ def main():
         try:
             model = resolve_gemini_model(api_key, model)
         except Exception as exc:
-            status = {
-                "updated_at": now_iso(), "provider": "gemini", "model": None,
-                "existing_articles": 0, "generated_this_run": 0,
-                "status": "errors", "errors": [{"error": str(exc)[:500]}],
-            }
-            write_json(STATUS_PATH, status)
-            print(f"[ERROR] {str(exc)[:500]}", flush=True)
-            return 0
+            if openai_key:
+                print(f"[WARN] Catálogo Gemini indisponível; usando OpenAI como alternativa: {str(exc)[:180]}", flush=True)
+                api_key, provider, model = openai_key, "openai", OPENAI_MODEL
+            else:
+                status = {
+                    "updated_at": now_iso(), "provider": "gemini", "model": None,
+                    "existing_articles": 0, "generated_this_run": 0,
+                    "status": "errors", "errors": [{"error": str(exc)[:500]}],
+                }
+                write_json(STATUS_PATH, status)
+                print(f"[ERROR] {str(exc)[:500]}", flush=True)
+                return 0
     elif openai_key:
         api_key, provider, model = openai_key, "openai", OPENAI_MODEL
     else:
@@ -858,7 +862,20 @@ def main():
                 raise ValueError("Conteúdo fora do escopo editorial do Enigma Mundi; artigo descartado pelo filtro temático")
             category = item.get("category") or "misterios"
             source_name = item.get("source_name") or item.get("source_id") or "Fonte externa"
-            article, used_model = call_model_with_fallback(api_key, provider, model, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
+            try:
+                article, used_model = call_model_with_fallback(api_key, provider, model, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
+            except Exception as primary_exc:
+                # If Gemini is overloaded or returns incomplete drafts, fall back to
+                # OpenAI for this same source before discarding the candidate.
+                if provider != "gemini" or not openai_key:
+                    raise
+                print(f"[WARN] Gemini falhou para este candidato; tentando OpenAI: {str(primary_exc)[:180]}", flush=True)
+                article, used_model = call_model_with_fallback(
+                    openai_key, "openai", OPENAI_MODEL, item["title"],
+                    item.get("description", ""), source_name, final_url,
+                    source_text, category,
+                )
+                status["provider"] = "openai"
             status["model"] = used_model
             if not is_core_topic(article["title"], article["excerpt"]):
                 raise ValueError("Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado")
