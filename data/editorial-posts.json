@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-14T00:47:14.058779+00:00",
+  "generated_at": "2026-10-14T00:50:46.922888+00:00",
   "article_count": 60,
   "articles": [
     {
@@ -996,6 +996,32 @@
       ]
     },
     {
+      "id": "em-a186208283",
+      "title": "O Futuro dos Fenômenos Anômalos: Debates e Ceticismo no Cenário Global",
+      "excerpt": "Investigadores e céticos debatem projeções de curto prazo sobre OVNIs, o papel de denunciantes, novos registros oficiais e o impacto da inteligência artificial.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-09-08T16:06:06+00:00",
+      "generated_at": "2026-10-14T00:48:41.649102+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Metabunk",
+      "source_url": "https://www.metabunk.org/threads/uap-predictions-for-next-two-years.15079/",
+      "url": "https://www.metabunk.org/threads/uap-predictions-for-next-two-years.15079/",
+      "path": "artigos/o-futuro-dos-fenômenos-anômalos-debates-e-ceticismo-no-cenár-a186208283.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.metabunk.org/attachments/today-time-put-aliens-on-the-front-cover-v0-2mxudkmocshh1-webp.93002/?id=375679",
+      "image_source_url": "https://www.metabunk.org/threads/uap-predictions-for-next-two-years.15079/",
+      "image_alt": "O Futuro dos Fenômenos Anômalos: Debates e Ceticismo no Cenário Global",
+      "tags": [
+        "UAP",
+        "Ufologia",
+        "Ceticismo",
+        "Inteligência Artificial",
+        "Mistérios"
+      ]
+    },
+    {
       "id": "em-8ac1d9d96b",
       "title": "Novas perspectivas e arquivos históricos marcam edição recente da Revista UFO",
       "excerpt": "Publicação traz análises sobre inteligência artificial em arquivos ufológicos, relatos tradicionais indígenas e discussões sobre a consciência humana.",
@@ -1019,6 +1045,32 @@
         "inteligencia artificial",
         "fenomenos anomalos",
         "arqueologia"
+      ]
+    },
+    {
+      "id": "em-a657983097",
+      "title": "A psicologia dos cultos e a reinterpretação de OVNIs como forças demoníacas",
+      "excerpt": "Uma análise detalhada sobre como alegações absurdas e profecias falhas atuam como ferramentas de seleção psicológica em seitas, OVNIs e teorias apocalípticas.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-09-05T22:01:36+00:00",
+      "generated_at": "2026-10-14T00:49:05.044033+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/appeal-of-the-irrational-pseudoscience-ufo-cults/",
+      "url": "https://www.skeptic.com/article/appeal-of-the-irrational-pseudoscience-ufo-cults/",
+      "path": "artigos/a-psicologia-dos-cultos-e-a-reinterpretação-de-ovnis-como-fo-a657983097.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://storage.ghost.io/c/36/db/36db2d53-b96a-4b7f-9ea6-1e48a1d7715e/content/images/size/w1200/2026/09/skeptics-warning-irrational-school-of-fish.webp",
+      "image_source_url": "https://www.skeptic.com/article/appeal-of-the-irrational-pseudoscience-ufo-cults/",
+      "image_alt": "A psicologia dos cultos e a reinterpretação de OVNIs como forças demoníacas",
+      "tags": [
+        "ufologia",
+        "misterios",
+        "conspiracoes",
+        "psicologia_social",
+        "seitas"
       ]
     },
     {
@@ -1101,12 +1153,12 @@
     },
     {
       "id": "em-fcbf9f3778",
-      "title": "Conselheiro de Trump sobre OVNIs afirma que extraterrestres ignorariam líderes terrestres",
-      "excerpt": "Avi Loeb, apontado como conselheiro de Donald Trump para temas ufológicos, argumenta que inteligências alienígenas avançadas não se importariam com quem governa os Estados Unidos.",
+      "title": "Conselheiro de Trump sobre OVNIs afirma que extraterrestres ignorariam governantes terrestres",
+      "excerpt": "Avi Loeb, nomeado conselheiro de Trump para questões de OVNIs, argumenta que civilizações alienígenas avançadas não demonstrariam interesse pela política terrestre ou líderes.",
       "category": "ufologia",
       "category_label": "Ufologia",
       "published_at": "2026-08-29T00:00:00+00:00",
-      "generated_at": "2026-10-14T00:44:10.288966+00:00",
+      "generated_at": "2026-10-14T00:48:16.887299+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Unexplained Mysteries",
       "source_url": "https://www.unexplained-mysteries.com/news/400136/trumps-ufo-advisor-aliens-wouldnt-care-who-the-president-is",
@@ -1116,13 +1168,13 @@
       "post_type": "original_article",
       "image_url": "https://www.unexplained-mysteries.com/images/news_large_retina/news-hq-alien-entity-7.jpg",
       "image_source_url": "https://www.unexplained-mysteries.com/news/400136/trumps-ufo-advisor-aliens-wouldnt-care-who-the-president-is",
-      "image_alt": "Conselheiro de Trump sobre OVNIs afirma que extraterrestres ignorariam líderes terrestres",
+      "image_alt": "Conselheiro de Trump sobre OVNIs afirma que extraterrestres ignorariam governantes terrestres",
       "tags": [
-        "avi loeb",
-        "ovnis",
+        "Avi Loeb",
+        "UFO",
         "ufologia",
-        "extraterrestres",
-        "politica"
+        "primeiro contato",
+        "governo americano"
       ]
     },
     {
@@ -1205,54 +1257,56 @@
     },
     {
       "id": "em-af8174c346",
-      "title": "Novas revelações do Pentágono, enchentes históricas e o debate sobre o cenário paranormal",
-      "excerpt": "Uma coletânea recente de boletins informativos traz à tona discussões sobre óvnis frios do Pentágono, enchentes medievais e estratégias de influência no oculto.",
+      "title": "Panorama Contemporâneo de Mistérios: Ofensores, OVNIs e Arquivos Incomuns",
+      "excerpt": "Uma análise detalhada sobre recentes divulgações do Pentágono, debates de influência no paranormal e descobertas arqueológicas e científicas.",
       "category": "misterios",
       "category_label": "Mistérios",
       "published_at": "2026-08-17T02:01:34+00:00",
-      "generated_at": "2026-10-14T00:46:52.828820+00:00",
+      "generated_at": "2026-10-14T00:50:36.755332+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "The Daily Grail",
       "source_url": "https://www.dailygrail.com/2026/08/news-briefs-14-08-2026/",
       "url": "https://www.dailygrail.com/2026/08/news-briefs-14-08-2026/",
-      "path": "artigos/novas-revelações-do-pentágono-enchentes-históricas-e-o-debat-af8174c346.html",
+      "path": "artigos/panorama-contemporâneo-de-mistérios-ofensores-ovnis-e-arquiv-af8174c346.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": "https://www.dailygrail.com/wp-content/uploads/2017/10/Grail-Placeholder.jpg",
       "image_source_url": "https://www.dailygrail.com/2026/08/news-briefs-14-08-2026/",
-      "image_alt": "Novas revelações do Pentágono, enchentes históricas e o debate sobre o cenário paranormal",
+      "image_alt": "Panorama Contemporâneo de Mistérios: Ofensores, OVNIs e Arquivos Incomuns",
       "tags": [
-        "ufologia",
-        "pentagono",
-        "arqueologia",
-        "misterios",
-        "historia"
+        "Ufologia",
+        "Pentágono",
+        "Arqueologia",
+        "Mistérios",
+        "Ciência",
+        "Conspirações"
       ]
     },
     {
       "id": "em-94292395a9",
-      "title": "A Bizarra Teoria da Conspiração que Afirmava que a Gravidade da Terra Desligaria",
-      "excerpt": "Uma narrativa infundada que circulou nas redes sociais previa a interrupção da gravidade terrestre por sete segundos. A data estipulada passou sem qualquer anomalia física.",
+      "title": "A suposta teoria da conspiração sobre a gravidade da Terra que falhou",
+      "excerpt": "A data estipulada por uma teoria da conspiração bizarra sobre a anulação da gravidade terrestre passou sem incidentes, desmascarando a narrativa.",
       "category": "fact_checking",
       "category_label": "Investigação e checagem",
       "published_at": "2026-08-16T00:00:00+00:00",
-      "generated_at": "2026-10-14T00:44:25.001609+00:00",
+      "generated_at": "2026-10-14T00:48:24.475467+00:00",
       "source_name": "Enigma Mundi",
       "primary_source_name": "Unexplained Mysteries",
       "source_url": "https://www.unexplained-mysteries.com/news/400123/bizarre-conspiracy-about-earths-gravity-is-proven-wrong-as-date-passes",
       "url": "https://www.unexplained-mysteries.com/news/400123/bizarre-conspiracy-about-earths-gravity-is-proven-wrong-as-date-passes",
-      "path": "artigos/a-bizarra-teoria-da-conspiração-que-afirmava-que-a-gravidade-94292395a9.html",
+      "path": "artigos/a-suposta-teoria-da-conspiração-sobre-a-gravidade-da-terra-q-94292395a9.html",
       "status": "published",
       "post_type": "original_article",
       "image_url": "https://www.unexplained-mysteries.com/images/news_large_retina/news-hq-falling-down.jpg",
       "image_source_url": "https://www.unexplained-mysteries.com/news/400123/bizarre-conspiracy-about-earths-gravity-is-proven-wrong-as-date-passes",
-      "image_alt": "A Bizarra Teoria da Conspiração que Afirmava que a Gravidade da Terra Desligaria",
+      "image_alt": "A suposta teoria da conspiração sobre a gravidade da Terra que falhou",
       "tags": [
         "gravidade",
-        "conspiracao",
+        "conspiração",
         "ciencia",
+        "nasa",
         "desinformacao",
-        "fact-checking"
+        "fatos"
       ]
     },
     {

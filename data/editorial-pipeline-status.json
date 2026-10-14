@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14T00:47:14.060874+00:00",
+  "updated_at": "2026-10-14T00:50:46.924755+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
   "existing_articles": 60,
@@ -27,15 +27,15 @@
       "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
+      "url": "https://www.unexplained-mysteries.com/news/400155/bizarre-conspiracy-theory-claims-traffic-lights-are-assault-weapons",
+      "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
+    },
+    {
       "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
-      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Revista UFO Brasil: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.metabunk.org/threads/uap-predictions-for-next-two-years.15079",
       "error": "Metabunk: A resposta da API gemini não contém JSON válido"
     },
     {
@@ -55,12 +55,8 @@
       "error": "The Folklore Society UK: Conteúdo extraído insuficiente (692 caracteres); não gerar artigo a partir apenas de título/resumo"
     },
     {
-      "url": "https://www.skeptic.com/article/appeal-of-the-irrational-pseudoscience-ufo-cults",
-      "error": "Skeptic Magazine: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
       "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026",
-      "error": "The Folklore Society UK: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "The Folklore Society UK: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
@@ -68,7 +64,7 @@
     },
     {
       "url": "https://www.metabunk.org/threads/wyoming-mystery-orbs.15112",
-      "error": "Metabunk: Reportagem curta: exige abertura e pelo menos três seções"
+      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://skepticalinquirer.org/2026/08/how-to-read-science-news",
@@ -93,6 +89,10 @@
     {
       "url": "https://www.sciencealert.com/more-might-be-out-there-a-scorching-phoenix-planet-may-solve-a-3-decade-old-astronomical-cold-case",
       "error": "ScienceAlert: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.dailygrail.com/2026/08/news-briefs-10-08-2026",
+      "error": "The Daily Grail: A reportagem gerada não contém todos os campos obrigatórios"
     }
   ],
   "candidate_count": 48,
