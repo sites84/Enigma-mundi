@@ -308,10 +308,15 @@ def validate_article(article):
     article["sections"] = [s for s in article["sections"] if s["heading"] and len(s["paragraphs"]) >= 2]
     if len(article["title"]) < 30 or len(article["excerpt"]) < 90:
         raise ValueError("Título ou resumo curto demais")
-    if len(article["lead"]) < 2 or len(article["sections"]) < 3:
-        raise ValueError("Reportagem curta: exige abertura e pelo menos três seções")
+    if len(article["lead"]) < 3 or len(article["sections"]) < 4:
+        raise ValueError("Reportagem incompleta: exige três parágrafos de abertura e pelo menos quatro seções desenvolvidas")
     if not article["what_might_it_be"] or not article["conclusion"]:
         raise ValueError("Faltam a seção de hipóteses ou a conclusão")
+    # Reject visibly cut-off final paragraphs without imposing any word-count limit.
+    final_paragraphs = [article["lead"][-1]]
+    final_paragraphs.extend(section["paragraphs"][-1] for section in article["sections"])
+    final_paragraphs.extend([article["what_might_it_be"][-1], article["conclusion"][-1]])
+    if any(not re.search(r'[.!?…]["”’»)]?
     article["category"] = article["category"] if article["category"] in CATEGORY_LABELS else "misterios"
     tags = article.get("tags", [])
     article["tags"] = [str(t).strip()[:40] for t in tags if str(t).strip()][:6] if isinstance(tags, list) else []
@@ -480,7 +485,525 @@ def is_core_topic(title, description="", source_text=""):
         r"call for papers|academic journal|journal publication|book review|conference proceedings|"
         r"edi[cç][aã]o acad[eê]mica|novo n[uú]mero do peri[oó]dico|chamada para artigos|"
         r"revista acad[eê]mica|peri[oó]dico revisado por pares|pr[eê]mios acad[eê]micos?|"
-        r"pesquisa[s]? acad[eê]mica[s]? sobre folclore|bolsa[s]? de pesquisa)\b",
+        r"pesquisa[s]? acad[eê]mica[s]? sobre folclore|bolsa[s]? de pesquisa|"
+        r"award shortlist|shortlist announced|award finalists|prize finalists|"
+        r"finalistas? (?:do|da|de) (?:pr[eê]mio|pr[eê]mios|concurso)|"
+        r"divulga(?:m|do|da) finalistas|abre (?:inscri[cç][oõ]es|premia[cç][aã]o)|"
+        r"premia[cç][aã]o para estudos acad[eê]micos|academic award|folklore award)\b",
+        re.IGNORECASE,
+    )
+    if generic_folklore_announcement.search(candidate) and not strong_mystery_signal.search(candidate):
+        return False
+    # Comic/satirical columns are not factual paranormal reporting.
+    if re.search(r"\b(sunday funnies|comic strip|cartoon|cartoons|comic[s]? strip)\b", candidate, re.IGNORECASE):
+        return False
+    # A standalone "alien" or a horror/film/game title is not evidence of a real mystery.
+    entertainment = re.compile(
+        r"\b(video game|videogame|videojogo|jogo[s]? eletr[oô]nico[s]?|game[s]? eletr[oô]nico[s]?|gameplay|gaming|trailer|teaser|sequel|franchise|"
+        r"box office|hollywood|movie|film|cinema|tv series|television series|"
+        r"streaming|netflix|playstation|xbox|nintendo|dlc|expansion pack|"
+        r"alien: isolation|resident evil|silent hill|clayface|comic book)\b",
+        re.IGNORECASE,
+    )
+    if entertainment.search(candidate):
+        # Permit entertainment pieces only if their main subject is explicitly a real-world
+        # paranormal case, UFO sighting, cryptid report or documented legend.
+        # Entertainment terms are a hard rejection unless the headline names a
+        # concrete real-world report/case; merely inserting "UFO" into a game title
+        # must not qualify the article.
+        explicit_case = re.compile(
+            r"\b(avistamento[s]?|abdu[cç][aã]o|contato imediato|caso real|caso paranormal|"
+            r"investiga[cç][aã]o paranormal|relato[s]? de testemunha[s]?|"
+            r"documento[s]? desclassificado[s]?|relat[oó]rio[s]? oficial[ais]?|"
+            r"desaparecimento[s]? inexplic[aá]vel|criptozoolog\w*|bigfoot|sasquatch|"
+            r"yeti|nessie|chupacabra|fantasma[s]?|assombra[cç][aã]o|poltergeist)\b",
+            re.IGNORECASE,
+        )
+        if not explicit_case.search(headline):
+            return False
+    # "alien" alone is too broad (often entertainment); extraterrestrial must be contextual.
+    generic_alien = re.search(r"\b(aliens?|extraterrestre[s]?)\b", headline, re.IGNORECASE)
+    contextual_extraterrestrial = re.search(
+        r"\b(vida|sinal|contato|abdu[cç][aã]o|avistamento|intelig[eê]ncia|"
+        r"civiliza[cç][aã]o|evid[eê]ncia|poss[ií]vel)\b.{0,55}\b(aliens?|extraterrestre[s]?)\b|"
+        r"\b(aliens?|extraterrestre[s]?)\b.{0,55}\b(vida|sinal|contato|abdu[cç][aã]o|"
+        r"avistamento|intelig[eê]ncia|civiliza[cç][aã]o|evid[eê]ncia|poss[ií]vel)\b",
+        headline,
+        re.IGNORECASE,
+    )
+    if generic_alien and not contextual_extraterrestrial:
+        headline_without_generic = re.sub(r"\b(aliens?|extraterrestre[s]?)\b", "", headline, flags=re.IGNORECASE)
+        if not CORE_TOPIC_RE.search(headline_without_generic):
+            return False
+    return bool(CORE_TOPIC_RE.search(headline) or CORE_TOPIC_RE.search(summary))
+
+
+def candidate_priority(item):
+    """Rank eligible feed items by direct relevance and source specialization."""
+    title = re.sub(r"\s+", " ", str(item.get("title") or "")).strip()
+    description = re.sub(r"\s+", " ", str(item.get("description") or "")).strip()
+    combined = f"{title} {description}"
+    score = 0
+    # A direct signal in the headline is stronger than a passing mention in the summary.
+    if CORE_TOPIC_RE.search(title):
+        score += 5
+    if CORE_TOPIC_RE.search(description):
+        score += 2
+    source = " ".join(str(item.get(key) or "") for key in ("source_name", "source_id", "url")).lower()
+    specialist_sources = (
+        "mufon", "cufos", "revista_ufo", "ufo.com.br", "fenomenum",
+        "cryptomundo", "unexplained-mysteries", "mysterious-universe",
+        "dailygrail", "inexplicata", "vigilant_citizen", "conspiracywatch",
+        "atlasobscura", "folklorethursday",
+    )
+    if any(marker in source for marker in specialist_sources):
+        score += 3
+    # Briefings/roundups rarely provide enough depth for a standalone original article.
+    if re.search(r"\b(news briefs?|roundup|weekly roundup|daily briefing|not[ií]cias da semana|resumo de not[ií]cias)\b", title, re.IGNORECASE):
+        score -= 5
+    # General astronomy/science feeds remain eligible only for directly relevant stories,
+    # but should not crowd out specialist reports when the relevance is otherwise equal.
+    if any(marker in source for marker in ("nasa", "space.com", "phys.org", "sciencealert", "earthsky", "guardian")):
+        score -= 1
+    return score
+
+
+
+def publisher_image_lookup(url, title):
+    """Get the image attached to the original article when its feed has no image."""
+    if not url:
+        return None
+    request = urllib.request.Request(url, headers={
+        "User-Agent": USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml",
+    })
+    try:
+        with urllib.request.urlopen(request, timeout=10) as response:
+            if "html" not in response.headers.get("Content-Type", "").lower():
+                return None
+            page = response.read(900000).decode("utf-8", "replace")
+    except Exception:
+        return None
+    patterns = [
+        r'<meta[^>]+property=["\']og:image(?::secure_url)?["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image(?::secure_url)?["\']',
+        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']',
+    ]
+    candidate = None
+    for pattern in patterns:
+        match = re.search(pattern, page, re.I)
+        if match:
+            candidate = html.unescape(match.group(1).strip())
+            break
+    if not candidate:
+        return None
+    candidate = urllib.parse.urljoin(url, candidate)
+    parts = urllib.parse.urlsplit(candidate)
+    if parts.scheme != "https" or not parts.netloc:
+        return None
+    if any(word in candidate.lower() for word in ("logo", "avatar", "favicon", "sprite", "icon-")):
+        return None
+    return {"image_url": candidate, "image_alt": title[:250], "image_source_url": url}
+
+
+def openverse_image_lookup(title):
+    """Search a public image index for a title-relevant illustrative image."""
+    words = re.findall(r"[a-z0-9]{3,}", str(title or "").lower())
+    stop = {"the","and","for","with","from","that","this","about","after","what","when","where","who","new","says","said","uma","umas","uns","que","para","por","com","sem","sobre","entre","como","quando","onde","mais","menos","novo","nova","diz","disse","segundo","pode","podem","ser","foi","sao","dos","das"}
+    query_words = [w for w in words if w not in stop]
+    if not query_words:
+        return None
+    query = " ".join(query_words[:8])
+    params = urllib.parse.urlencode({"q": query, "page_size": "20", "license_type": "commercial,modification", "aspect_ratio": "wide", "size": "medium"})
+    request = urllib.request.Request("https://api.openverse.org/v1/images/?" + params, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+    try:
+        with urllib.request.urlopen(request, timeout=12) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except Exception:
+        return None
+    title_terms = set(query_words)
+    best = None
+    best_score = 0
+    for item in data.get("results", []):
+        image_url = item.get("thumbnail") or item.get("url")
+        if not image_url or not image_url.startswith("https://"):
+            continue
+        desc = " ".join(str(item.get(k) or "") for k in ("title", "tags", "creator", "source")).lower()
+        desc_terms = set(re.findall(r"[a-z0-9]{3,}", desc))
+        overlap = title_terms & desc_terms
+        score = len(overlap) + sum(1 for word in overlap if len(word) >= 7)
+        if len(overlap) < 2 or score <= best_score:
+            continue
+        best_score = score
+        best = {"image_url": image_url, "image_alt": str(item.get("title") or title)[:250], "image_source_url": item.get("foreign_landing_url") or item.get("detail_url") or ""}
+    return best
+
+def main():
+    gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
+    openai_key = os.getenv("OPENAI_API_KEY", "").strip()
+    if gemini_key:
+        api_key, provider, model = gemini_key, "gemini", GEMINI_MODEL
+        try:
+            model = resolve_gemini_model(api_key, model)
+        except Exception as exc:
+            status = {
+                "updated_at": now_iso(), "provider": "gemini", "model": None,
+                "existing_articles": 0, "generated_this_run": 0,
+                "status": "errors", "errors": [{"error": str(exc)[:500]}],
+            }
+            write_json(STATUS_PATH, status)
+            print(f"[ERROR] {str(exc)[:500]}", flush=True)
+            return 0
+    elif openai_key:
+        api_key, provider, model = openai_key, "openai", OPENAI_MODEL
+    else:
+        api_key, provider, model = "", "", ""
+    existing_payload = read_json(OUTPUT_PATH, {"version": 1, "articles": []})
+    existing_articles = existing_payload.get("articles", []) if isinstance(existing_payload, dict) else []
+    if not isinstance(existing_articles, list):
+        existing_articles = []
+    # Retire legacy posts that were published before the strict topic gate existed.
+    relevant_articles = [a for a in existing_articles if isinstance(a, dict) and is_core_topic(a.get("title"), a.get("excerpt"))]
+    removed_legacy = len(existing_articles) - len(relevant_articles)
+    if removed_legacy:
+        print(f"[INFO] Removendo {removed_legacy} artigos antigos fora do escopo editorial.", flush=True)
+    existing_articles = relevant_articles
+    # Backfill images on already-published pages, without regenerating article text.
+    missing_images = [a for a in existing_articles if not a.get("image_url") and a.get("source_url")]
+    if missing_images:
+        print(f"[INFO] Recuperando imagens para artigos existentes: {len(missing_images)}.", flush=True)
+        fixed_images = 0
+        for item in missing_images:
+            title = str(item.get("title") or "")
+            found = publisher_image_lookup(item.get("source_url"), title)
+            if not found:
+                found = openverse_image_lookup(title)
+            if not found or not found.get("image_url"):
+                continue
+            item.update(found)
+            page_path = ROOT / str(item.get("path") or "")
+            if page_path.is_file():
+                page = page_path.read_text(encoding="utf-8")
+                if '<figure class="article-cover">' not in page:
+                    image = esc(found["image_url"])
+                    alt = esc(found.get("image_alt") or title)
+                    source = esc(item.get("source_url") or "")
+                    figure = f'<figure class="article-cover"><img src="{image}" alt="{alt}" loading="eager" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="article-image-fallback" hidden>ENIGMA MUNDI · ARQUIVO VISUAL</div><figcaption>Imagem ilustrativa. <a href="{source}" rel="noopener noreferrer">Fonte da matéria</a></figcaption></figure>'
+                    if '<article class="article-body">' in page:
+                        page = page.replace('<article class="article-body">', figure + '\\n<article class="article-body">', 1)
+                    elif '<div class="article-meta">' in page:
+                        page = re.sub(r'(<div class="article-meta">.*?</div>)', r'\\1' + figure, page, count=1, flags=re.S)
+                    else:
+                        page = page.replace('</main>', figure + '\\n</main>', 1)
+                    page_path.write_text(page, encoding="utf-8")
+                fixed_images += 1
+        if fixed_images:
+            print(f"[INFO] Imagens adicionadas a artigos antigos: {fixed_images}.", flush=True)
+    existing_urls = {canonical_url(a.get("source_url")) for a in existing_articles if a.get("source_url")}
+    status = {
+        "updated_at": now_iso(), "provider": provider or None, "model": model or None,
+        "existing_articles": len(existing_articles), "generated_this_run": 0,
+        "status": "waiting_for_api_key", "errors": [],
+    }
+    if not api_key:
+        status["message"] = "Configure GEMINI_API_KEY (recomendado) ou OPENAI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
+        write_json(STATUS_PATH, status)
+        print("Nenhuma chave GEMINI_API_KEY/OPENAI_API_KEY configurada. A fila foi preservada; nenhum conteúdo foi inventado ou publicado.")
+        return 0
+
+    queue = read_json(QUEUE_PATH, {"articles": []})
+    articles = queue.get("articles", []) if isinstance(queue, dict) else []
+    candidates = []
+    for item in articles:
+        url = canonical_url(item.get("url"))
+        if not url or url in existing_urls or item.get("status") != "discovered":
+            continue
+        title = str(item.get("title") or "").strip()
+        description = str(item.get("description") or "").strip()
+        if len(title) < 18 or len(description) < 35:
+            continue
+        # Reject irrelevant feed items before spending API calls or publishing them.
+        if not is_core_topic(title, description):
+            continue
+        candidates.append(item)
+    candidates.sort(
+        key=lambda item: (
+            candidate_priority(item),
+            item.get("published_at") or "",
+            item.get("discovered_at") or "",
+        ),
+        reverse=True,
+    )
+    status["status"] = "running"
+    ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
+    generated = 0
+    attempted = 0
+    source_attempts = {}
+    # Failures must not waste the entire hourly quota when more eligible stories exist.
+    # Try up to three times the target, while limiting repeated requests to one feed.
+    for item in candidates:
+        if generated >= MAX_PER_RUN or attempted >= MAX_PER_RUN * 3:
+            break
+        source_key = str(item.get("source_id") or item.get("source_name") or urllib.parse.urlsplit(str(item.get("url") or "")).netloc).strip().lower()
+        if source_attempts.get(source_key, 0) >= 3:
+            continue
+        source_attempts[source_key] = source_attempts.get(source_key, 0) + 1
+        attempted += 1
+        url = canonical_url(item.get("url"))
+        try:
+            final_url, source_text = fetch_article(url)
+            if len(source_text) < 900:
+                raise ValueError(f"Conteúdo extraído insuficiente ({len(source_text)} caracteres); não gerar artigo a partir apenas de título/resumo")
+            # Recheck the extracted article body. A relevant-looking headline must not
+            # bypass the gate if the fetched page is unrelated or a feed is misconfigured.
+            if not is_core_topic(item.get("title", ""), item.get("description", ""), source_text[:10000]):
+                raise ValueError("Conteúdo fora do escopo editorial do Enigma Mundi; artigo descartado pelo filtro temático")
+            category = item.get("category") or "misterios"
+            source_name = item.get("source_name") or item.get("source_id") or "Fonte externa"
+            draft, used_model = call_model_with_fallback(api_key, provider, model, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
+            status["model"] = used_model
+            article = validate_article(draft)
+            if not is_core_topic(article["title"], article["excerpt"]):
+                raise ValueError("Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado")
+            fingerprint = hashlib.sha256(url.encode("utf-8")).hexdigest()[:10]
+            slug = slugify(article["title"])[:60] + "-" + fingerprint
+            output_path = ARTICLES_DIR / f"{slug}.html"
+            if output_path.exists():
+                existing_urls.add(url)
+                continue
+            published_at = item.get("published_at") or now_iso()
+            image_data = {"image_url": item.get("image_url"), "image_alt": article["title"] if item.get("image_url") else None, "image_source_url": final_url if item.get("image_url") else None}
+            if not image_data["image_url"]:
+                image_data = publisher_image_lookup(final_url, article["title"]) or image_data
+            if not image_data.get("image_url"):
+                image_data = openverse_image_lookup(article["title"]) or image_data
+            record = {
+                "id": "em-" + fingerprint,
+                "title": article["title"],
+                "excerpt": article["excerpt"],
+                "category": article["category"],
+                "category_label": CATEGORY_LABELS[article["category"]],
+                "published_at": published_at,
+                "generated_at": now_iso(),
+                "source_name": "Enigma Mundi",
+                "primary_source_name": source_name,
+                "source_url": final_url,
+                "url": final_url,
+                "path": "artigos/" + output_path.name,
+                "status": "published",
+                "post_type": "original_article",
+                "image_url": image_data.get("image_url"),
+                "image_source_url": image_data.get("image_source_url"),
+                "image_alt": image_data.get("image_alt"),
+                "tags": article["tags"],
+            }
+            output_path.write_text(render_article_page(article, record, slug), encoding="utf-8")
+            existing_articles.append(record)
+            existing_urls.add(url)
+            generated += 1
+            print(f"[OK] Artigo criado: {record['path']} — {record['title']}", flush=True)
+            time.sleep(1)
+        except Exception as exc:
+            message = f"{item.get('source_name', item.get('source_id', 'fonte'))}: {str(exc)[:400]}"
+            status["errors"].append({"url": url, "error": message})
+            print(f"[WARN] {message}", flush=True)
+    existing_articles.sort(key=lambda a: (a.get("published_at", ""), a.get("generated_at", "")), reverse=True)
+    write_json(OUTPUT_PATH, {
+        "version": 1, "generated_at": now_iso(),
+        "article_count": len(existing_articles), "articles": existing_articles,
+    })
+    status.update({
+        "updated_at": now_iso(),
+        "status": "completed" if generated else ("errors" if status["errors"] else "no_new_candidates"),
+        "existing_articles": len(existing_articles),
+        "generated_this_run": generated,
+        "candidate_count": len(candidates),
+        "attempted_this_run": attempted,
+        "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
+    })
+    write_json(STATUS_PATH, status)
+    print(f"Artigos novos: {generated}; total publicado: {len(existing_articles)}; erros: {len(status['errors'])}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+, paragraph.strip()) for paragraph in final_paragraphs):
+        raise ValueError("Reportagem possivelmente interrompida: há parágrafo sem encerramento; artigo descartado")
+    article["category"] = article["category"] if article["category"] in CATEGORY_LABELS else "misterios"
+    tags = article.get("tags", [])
+    article["tags"] = [str(t).strip()[:40] for t in tags if str(t).strip()][:6] if isinstance(tags, list) else []
+    return article
+
+
+def esc(value):
+    return html.escape(str(value or ""), quote=True)
+
+
+def paragraphs(items):
+    return "\n".join(f"<p>{esc(p)}</p>" for p in items)
+
+
+def render_article_page(article, post, slug):
+    page_title = esc(article["title"])
+    excerpt = esc(article["excerpt"])
+    site_url = "https://sites84.github.io/Enigma-mundi/"
+    page_url = site_url + "artigos/" + slug + ".html"
+    image = post.get("image_url")
+    image_html = (f'<figure class="article-cover"><img src="{esc(image)}" alt="{esc(post.get("image_alt") or article["title"])}" loading="eager" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="article-image-fallback" hidden>ENIGMA MUNDI · ARQUIVO VISUAL</div><figcaption>Imagem relacionada ao tema. <a href="{esc(post["source_url"])}" rel="noopener noreferrer">Fonte da matéria</a></figcaption></figure>') if image else ""
+    sections_html = "\n".join(
+        f"<section><h2>{esc(section['heading'])}</h2>{paragraphs(section['paragraphs'])}</section>"
+        for section in article["sections"]
+    )
+    source_name = esc(post["primary_source_name"])
+    source_url = esc(post["source_url"])
+    tags = ", ".join(article["tags"])
+    return f'''<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{page_title} | Enigma Mundi</title>
+<meta name="description" content="{excerpt}">
+<link rel="canonical" href="{esc(page_url)}">
+<meta property="og:type" content="article"><meta property="og:title" content="{page_title}">
+<meta property="og:description" content="{excerpt}"><meta property="og:url" content="{esc(page_url)}">
+{f'<meta property="og:image" content="{esc(image)}">' if image else ''}
+<link rel="stylesheet" href="../assets/styles.css">
+<style>
+.article-page{{max-width:850px;margin:0 auto;padding:44px 22px 80px;color:var(--text,#ece9e2)}}
+.article-page .article-back{{display:inline-block;margin-bottom:28px;color:inherit}}
+.article-page .article-kicker{{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;opacity:.75}}
+.article-page h1{{font-size:clamp(2rem,5vw,3.8rem);line-height:1.12;margin:.7rem 0 1rem}}
+.article-page .article-deck{{font-size:1.2rem;line-height:1.7;opacity:.88}}
+.article-page .article-meta{{font-size:.88rem;opacity:.7;margin:20px 0 28px}}
+.article-page .article-cover img{{width:100%;max-height:520px;object-fit:cover;border-radius:14px}}\n.article-page .article-image-fallback{{min-height:220px;display:grid;place-items:center;border:1px solid #49463c;border-radius:14px;background:radial-gradient(ellipse at center,#343126,#171815 72%);color:#c5a66a;letter-spacing:.16em;font-size:.8rem;text-align:center}}\n.article-page .article-image-fallback[hidden]{{display:none}}
+.article-page figcaption{{font-size:.8rem;opacity:.7;margin-top:8px}}
+.article-page .article-body{{font-size:1.06rem;line-height:1.85}}
+.article-page .article-body h2{{font-size:1.65rem;line-height:1.25;margin:2.4rem 0 .8rem}}
+.article-page .article-body p{{margin:0 0 1.1rem}}
+.article-page .source-box{{margin-top:42px;padding:20px;border:1px solid #555;border-radius:12px;overflow-wrap:anywhere}}
+.article-page a{{color:inherit}}
+</style>
+<script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"NewsArticle","headline":article["title"],"description":article["excerpt"],"datePublished":post["published_at"],"dateModified":post["generated_at"],"author":{"@type":"Organization","name":"Enigma Mundi"},"publisher":{"@type":"Organization","name":"Enigma Mundi"},"mainEntityOfPage":page_url,"image":[image] if image else [],"isBasedOn":[post["source_url"]]},ensure_ascii=False).replace("</","<\\/")}</script>
+</head>
+<body>
+<div class="topline"><span>JORNALISMO DE INVESTIGAÇÃO • MISTÉRIOS SEM FRONTEIRAS</span><span>ENIGMA MUNDI</span></div>
+<header class="site-header"><a class="brand" href="../" aria-label="Enigma Mundi, página inicial"><span class="brand-mark" aria-hidden="true">E<span>M</span></span><span class="brand-copy"><strong>ENIGMA MUNDI</strong><small>O mundo ainda guarda segredos</small></span></a><nav aria-label="Navegação principal"><a href="../">Início</a><a href="../#ultimas">Últimas matérias</a></nav></header>
+<main class="article-page">
+<a class="article-back" href="../#ultimas">← Voltar às matérias</a>
+<div class="article-kicker">{esc(CATEGORY_LABELS[article["category"]])} · Reportagem original</div>
+<h1>{page_title}</h1><p class="article-deck">{excerpt}</p>
+<div class="article-meta">Enigma Mundi · Atualizado em {esc(post["generated_at"][:10])}</div>
+{image_html}
+<article class="article-body">
+{paragraphs(article["lead"])}
+{sections_html}
+<section><h2>O que pode ser?</h2>{paragraphs(article["what_might_it_be"])}</section>
+<section><h2>Conclusão</h2>{paragraphs(article["conclusion"])}</section>
+</article>
+<div class="source-box"><strong>Fonte consultada</strong><p>Esta reportagem foi produzida a partir das informações publicadas por {source_name}. A existência de uma publicação não significa, por si só, confirmação independente de suas alegações.</p><p><a href="{source_url}" target="_blank" rel="noopener noreferrer">Consultar a publicação original ↗</a></p>{f'<p>Temas: {esc(tags)}</p>' if tags else ''}</div>
+</main>
+<footer class="site-footer"><a class="footer-brand" href="../">ENIGMA MUNDI</a><span>Curiosidade, apuração e limites da evidência.</span><span>© Enigma Mundi</span></footer>
+</body></html>
+'''
+
+
+def resolve_gemini_model(api_key, preferred):
+    """Choose a model that this exact API key can access and that supports generateContent."""
+    request = urllib.request.Request(
+        GEMINI_API_BASE,
+        headers={"x-goog-api-key": api_key, "User-Agent": USER_AGENT},
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        detail = exc.read(1500).decode("utf-8", "replace")
+        raise RuntimeError(f"Não foi possível listar modelos Gemini (HTTP {exc.code}): {detail[:300]}") from exc
+    models = []
+    for item in payload.get("models", []):
+        methods = item.get("supportedGenerationMethods", [])
+        name = str(item.get("name", "")).removeprefix("models/")
+        if name and "generateContent" in methods:
+            models.append(name)
+    if not models:
+        raise RuntimeError("A API Gemini não listou modelos compatíveis com generateContent para esta chave.")
+    if preferred in models:
+        return preferred
+    priorities = ("gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash",
+                  "gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-3-flash-preview",
+                  "gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash")
+    for name in priorities:
+        if name in models:
+            print(f"[INFO] Modelo configurado '{preferred}' indisponível para esta chave; usando '{name}'.", flush=True)
+            return name
+    # Prefer a Flash model returned by the API, without selecting embedding/audio/image-only models.
+    flash_models = [name for name in models if "flash" in name.lower() and not any(
+        marker in name.lower() for marker in ("embedding", "image", "tts", "audio", "live"))]
+    if flash_models:
+        print(f"[INFO] Usando modelo Flash disponível: '{flash_models[0]}'.", flush=True)
+        return flash_models[0]
+    raise RuntimeError("A chave Gemini não tem nenhum modelo Flash de geração de texto disponível. Verifique o projeto e a API habilitada.")
+
+
+
+# Editorial gate: only admit stories directly related to the site's core subjects.
+# Broad science, politics, and general news are not eligible just because a feed
+# labels them as space, science, official archives, or fact-checking.
+# Strict topic gate: only title + feed description can qualify a candidate.
+# Never scan the entire article body for generic words like "mystery", "secret" or
+# "unexplained": those words occur in ordinary science and political reporting.
+CORE_TOPIC_PATTERNS = [
+    r"\b(ufo|ufos|ovni|ovnis|uap|uas|fen[oô]meno[s]? a[eé]reo[s]? n[aã]o identificado[s]?)\b",
+    r"\b(vida extraterrestre|intelig[eê]ncia extraterrestre|extraterrestre[s]?|alien[s]?|abdu[cç][aã]o|abduction|contato imediato|contato extraterrestre)\b",
+    r"\b(criptozoolog\w*|cryptozoolog\w*|bigfoot|sasquatch|yeti|nessie|monstro do lago ness|chupacabra|chupa[- ]?cabra|mokele[- ]?mbembe|pé[- ]?grande)\b",
+    r"\b(paranormal|sobrenatural|fantasma[s]?|assombra[cç][aã]o|poltergeist|possess[aã]o|esp[ií]rito[s]?|apari[cç][aã]o fantasmag[oó]rica|haunted|ghost sighting[s]?)\b",
+    r"\b(lenda[s]? urbana[s]?|folclore|folklore|criatura[s]? lend[aá]ria[s]?|monstro[s]? lend[aá]rio[s]?|urban legend[s]?|mythical creature[s]?)\b",
+    r"\b(teoria[s]? da conspira[cç][aã]o|conspira[cç][oõ]es?|conspiracy theor\w*|conspiracy|sociedade[s]? secreta[s]?|illuminati|nova ordem mundial|new world order|deep state|estado profundo|governo sombra|shadow government|acobertamento[s]?|encobrimento[s]? oficial|cover[- ]?up|ufo cover[- ]?up|documentos desclassificados sobre ovni|opera[cç][aã]o secreta inexplicada|experimento[s]? secreto[s]?|projeto[s]? secreto[s]?|arquivo[s]? secreto[s]?|agenda oculta|manipula[cç][aã]o global)\b",
+    r"\b(c[ií]rculos nas planta[cç][oõ]es|crop circles?|artefato[s]? fora do lugar|out[- ]of[- ]place artifact[s]?|oopart|civiliza[cç][aã]o perdida misteriosa|sinal wow|wow signal|fast radio burst inexplicado|sinal de r[aá]dio inexplic[aá]vel)\b",
+    r"\b(mist[eé]rio[s]? n[aã]o resolvido[s]?|unsolved mysteries|fen[oô]meno[s]? inexplic[aá]vel|fen[oô]meno[s]? paranormal|anomalia[s]? inexplic[aá]vel|mysterious disappearance[s]?|desaparecimento[s]? inexplic[aá]vel)\b",
+]
+CORE_TOPIC_RE = re.compile("|".join(f"(?:{p})" for p in CORE_TOPIC_PATTERNS), re.IGNORECASE)
+
+
+def is_core_topic(title, description="", source_text=""):
+    """Accept explicit paranormal/ufology/cryptid signals; reject generic entertainment news."""
+    headline = re.sub(r"\s+", " ", str(title or "")).strip()
+    summary = re.sub(r"\s+", " ", str(description or "")).strip()
+    if not headline:
+        return False
+    candidate = f"{headline} {summary}"
+    # Hard exclusion: election-result and vote-counting coverage is outside this site's remit,
+    # even if the feed/category incorrectly labels it as fact-checking or mystery content.
+    election_coverage = re.compile(
+        r"\b(apura[cç][aã]o|resultado[s]?|candidatura[s]?|candidato[s]?|disputa|corrida)\b.{0,100}\b(eleitoral|elei[cç][oõ]es?|deputado[s]?|senador(?:es)?|governador(?:es)?|prefeito[s]?)\b|"
+        r"\b(eleitoral|elei[cç][oõ]es?)\b.{0,100}\b(apura[cç][aã]o|resultado[s]?|deputado[s]?|senador(?:es)?|governador(?:es)?|prefeito[s]?)\b|"
+        r"\b(resultado[s]? das? elei[cç][oõ]es?|elei[cç][oõ]es? de 20\d{2}.*(?:1º|primeiro|segundo|2º) turno)\b",
+        re.IGNORECASE,
+    )
+    if election_coverage.search(candidate):
+        return False
+    # Reject generic academic/editorial announcements that mention folklore without
+    # describing a specific mystery, paranormal report, cryptid, UFO case or conspiracy.
+    strong_mystery_signal = re.compile(
+        r"\b(ufo|uap|ovni|extraterrestrial|alien abduction|cryptozoolog\w*|bigfoot|sasquatch|"
+        r"yeti|nessie|chupacabra|paranormal|ghost|haunted|haunting|poltergeist|possession|"
+        r"urban legend|conspiracy|illuminati|new world order|unexplained|unsolved mystery|"
+        r"mysterious disappearance|crop circles|oopart|wow signal|fantasma[s]?|assombra[cç][aã]o|"
+        r"mist[eé]rio[s]? n[aã]o resolvido[s]?|fen[oô]meno[s]? inexplic[aá]vel|teoria[s]? da conspira[cç][aã]o)\b",
+        re.IGNORECASE,
+    )
+    generic_folklore_announcement = re.compile(
+        r"\b(new issue|latest issue|journal issue|issue of folklore|folklore now out|"
+        r"call for papers|academic journal|journal publication|book review|conference proceedings|"
+        r"edi[cç][aã]o acad[eê]mica|novo n[uú]mero do peri[oó]dico|chamada para artigos|"
+        r"revista acad[eê]mica|peri[oó]dico revisado por pares|pr[eê]mios acad[eê]micos?|"
+        r"pesquisa[s]? acad[eê]mica[s]? sobre folclore|bolsa[s]? de pesquisa|"
+        r"award shortlist|shortlist announced|award finalists|prize finalists|"
+        r"finalistas? (?:do|da|de) (?:pr[eê]mio|pr[eê]mios|concurso)|"
+        r"divulga(?:m|do|da) finalistas|abre (?:inscri[cç][oõ]es|premia[cç][aã]o)|"
+        r"premia[cç][aã]o para estudos acad[eê]micos|academic award|folklore award)\b",
         re.IGNORECASE,
     )
     if generic_folklore_announcement.search(candidate) and not strong_mystery_signal.search(candidate):
