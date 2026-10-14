@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Generate original Portuguese editorial stories using Gemini or OpenAI API.
+"""Generate original Portuguese editorial stories using the configured Gemini API.
 
-Prefers GEMINI_API_KEY; falls back to OPENAI_API_KEY. The script creates original
-pieces with explicit source attribution and never claims independent corroboration
-when only one source has been consulted.
+The pipeline never assumes an OpenAI key exists. Articles must pass full
+structure and editorial relevance checks before publication.
 """
 from __future__ import annotations
 
@@ -26,9 +25,9 @@ QUEUE_PATH = ROOT / "data" / "discovered-articles.json"
 OUTPUT_PATH = ROOT / "data" / "editorial-posts.json"
 STATUS_PATH = ROOT / "data" / "editorial-pipeline-status.json"
 ARTICLES_DIR = ROOT / "artigos"
-OPENAI_API_URL = os.getenv("OPENAI_API_URL", "https://api.openai.com/v1/chat/completions")
+
 GEMINI_API_BASE = os.getenv("GEMINI_API_BASE", "https://generativelanguage.googleapis.com/v1beta/models")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
 MAX_PER_RUN = max(1, min(int(os.getenv("MAX_ARTICLES_PER_RUN", "10")), 10))
 TIMEOUT = 45
@@ -219,34 +218,15 @@ def call_model(api_key, provider, model, title, description, source_name, source
         ],
         "source_references": [{"name": source_name, "url": source_url}],
     }
-    if provider == "gemini":
-        endpoint = f"{GEMINI_API_BASE}/{urllib.parse.quote(model, safe='')}:generateContent"
-        payload = {
-            "systemInstruction": {"parts": [{"text": system}]},
-            "contents": [{"role": "user", "parts": [{"text": json.dumps(user, ensure_ascii=False)}]}],
-            "generationConfig": {"temperature": 0.4, "responseMimeType": "application/json"},
-        }
-        headers = {
-            "x-goog-api-key": api_key,
-            "Content-Type": "application/json",
-            "User-Agent": USER_AGENT,
-        }
-    else:
-        endpoint = OPENAI_API_URL
-        payload = {
-            "model": model,
-            "temperature": 0.4,
-            "response_format": {"type": "json_object"},
-            "messages": [
-                {"role": "system", "content": system},
-                {"role": "user", "content": json.dumps(user, ensure_ascii=False)},
-            ],
-        }
-        headers = {
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-            "User-Agent": USER_AGENT,
-        }
+    if provider != "gemini":
+        raise RuntimeError("Provedor não suportado: a geração editorial usa exclusivamente Gemini.")
+    endpoint = f"{GEMINI_API_BASE}/{urllib.parse.quote(model, safe='')}:generateContent"
+    payload = {
+        "systemInstruction": {"parts": [{"text": system}]},
+        "contents": [{"role": "user", "parts": [{"text": json.dumps(user, ensure_ascii=False)}]}],
+        "generationConfig": {"temperature": 0.4, "responseMimeType": "application/json"},
+    }
+    headers = {"x-goog-api-key": api_key, "Content-Type": "application/json", "User-Agent": USER_AGENT}
     request = urllib.request.Request(endpoint, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
     try:
         with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
@@ -254,31 +234,15 @@ def call_model(api_key, provider, model, title, description, source_name, source
     except urllib.error.HTTPError as exc:
         detail = exc.read(3000).decode("utf-8", "replace")
         raise RuntimeError(f"API {provider} retornou HTTP {exc.code}: {detail[:500]}") from exc
-    if provider == "gemini":
-        candidates = result.get("candidates") or []
-        if not candidates:
-            raise RuntimeError("A API Gemini não retornou candidatos de resposta")
-        candidate = candidates[0]
-        finish_reason = candidate.get("finishReason")
-        if finish_reason and finish_reason != "STOP":
-            raise RuntimeError(
-                f"Resposta Gemini incompleta (finishReason={finish_reason}); "
-                "a reportagem não será publicada para evitar texto cortado"
-            )
-        parts = candidate.get("content", {}).get("parts", [])
-        content = next((part.get("text", "") for part in parts if part.get("text")), "")
-    else:
-        choices = result.get("choices") or []
-        if not choices:
-            raise RuntimeError("A API OpenAI não retornou opções de resposta")
-        choice = choices[0]
-        finish_reason = choice.get("finish_reason")
-        if finish_reason and finish_reason != "stop":
-            raise RuntimeError(
-                f"Resposta OpenAI incompleta (finish_reason={finish_reason}); "
-                "a reportagem não será publicada para evitar texto cortado"
-            )
-        content = choice.get("message", {}).get("content", "")
+    candidates = result.get("candidates") or []
+    if not candidates:
+        raise RuntimeError("A API Gemini não retornou candidatos de resposta")
+    candidate = candidates[0]
+    finish_reason = candidate.get("finishReason")
+    if finish_reason and finish_reason != "STOP":
+        raise RuntimeError(f"Resposta Gemini incompleta (finishReason={finish_reason}); a reportagem não será publicada para evitar texto cortado")
+    parts = candidate.get("content", {}).get("parts", [])
+    content = next((part.get("text", "") for part in parts if part.get("text")), "")
     if not content:
         raise RuntimeError(f"A API {provider} não retornou conteúdo")
     try:
@@ -294,72 +258,41 @@ def call_model(api_key, provider, model, title, description, source_name, source
 
 
 def call_model_with_fallback(api_key, provider, model, title, description, source_name, source_url, source_text, category):
-    """Try API-supported fallback models for outages and invalid drafts; never return an unvalidated article."""
-    models = [model]
-    if provider == "gemini":
-        # Build the fallback list from this key's actual API capabilities. Static
-        # model names caused repeated 404s and wasted attempts on retired/unavailable IDs.
-        try:
-            request = urllib.request.Request(
-                GEMINI_API_BASE,
-                headers={"x-goog-api-key": api_key, "User-Agent": USER_AGENT},
-            )
-            with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
-                catalog = json.loads(response.read().decode("utf-8"))
-            supported = [
-                str(item.get("name", "")).removeprefix("models/")
-                for item in catalog.get("models", [])
-                if "generateContent" in item.get("supportedGenerationMethods", [])
-            ]
-            priorities = (
-                "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash",
-                "gemini-3.5-flash", "gemini-3.5-flash-lite", "gemini-3-flash-preview",
-                "gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash",
-            )
-            models.extend(name for name in priorities if name in supported)
-            models.extend(name for name in supported if "flash" in name.lower()
-                          and not any(marker in name.lower() for marker in
-                                      ("embedding", "image", "tts", "audio", "live")))
-        except (urllib.error.URLError, TimeoutError, ValueError, KeyError) as exc:
-            print(f"[WARN] Não foi possível listar modelos alternativos Gemini: {str(exc)[:160]}", flush=True)
-            # If model discovery fails, retain a small compatibility fallback list.
-            models.extend(["gemini-3.5-flash-lite", "gemini-2.5-flash", "gemini-2.0-flash"])
+    """Try only a small, API-confirmed Gemini model set; preserve strict article validation."""
+    if provider != "gemini":
+        raise RuntimeError("Provedor não suportado: a geração editorial usa exclusivamente Gemini.")
+    try:
+        request = urllib.request.Request(GEMINI_API_BASE, headers={"x-goog-api-key": api_key, "User-Agent": USER_AGENT})
+        with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+            catalog = json.loads(response.read().decode("utf-8"))
+        supported = {str(item.get("name", "")).removeprefix("models/") for item in catalog.get("models", [])
+                     if "generateContent" in item.get("supportedGenerationMethods", [])}
+    except (urllib.error.URLError, TimeoutError, ValueError, KeyError) as exc:
+        raise RuntimeError(f"Não foi possível confirmar os modelos Gemini disponíveis: {str(exc)[:250]}") from exc
+    # Primary model first, followed by at most two confirmed alternatives.
+    priorities = (model, "gemini-3.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash")
+    models = list(dict.fromkeys(name for name in priorities if name in supported))[:3]
+    if not models:
+        raise RuntimeError("A API não confirmou nenhum dos modelos Gemini de geração priorizados.")
     errors = []
-    content_failures = 0
-    for candidate in dict.fromkeys(models):
+    for index, candidate in enumerate(models):
         try:
-            draft = call_model(api_key, provider, candidate, title, description,
-                               source_name, source_url, source_text, category)
-            # Structural validation happens inside the fallback loop so a malformed
-            # or incomplete draft can be regenerated by another model, not published.
+            draft = call_model(api_key, "gemini", candidate, title, description, source_name, source_url, source_text, category)
             article = validate_article(draft)
             if candidate != model:
-                print(f"[INFO] Geração concluída e validada usando modelo alternativo '{candidate}'.", flush=True)
+                print(f"[INFO] Reportagem completa validada com modelo alternativo '{candidate}'.", flush=True)
             return article, candidate
         except (RuntimeError, ValueError) as exc:
             message = str(exc)
-            api_unavailable = bool(re.search(r"HTTP (?:404|429|500|503)", message))
-            invalid_content = any(marker in message.lower() for marker in (
-                "não contém json válido", "não retornou um objeto json",
-                "não retornou conteúdo", "não retornou candidatos",
-                "não retornou opções", "resposta gemini incompleta",
-                "resposta openai incompleta", "reportagem incompleta",
-                "faltam a seção de hipóteses", "reportagem aparentemente truncada",
-                "não contém todos os campos obrigatórios", "título ou resumo curto demais",
-            ))
-            if provider != "gemini" or not (api_unavailable or invalid_content):
-                raise
-            if invalid_content:
-                content_failures += 1
-                # Limit extra generation cost for malformed drafts, while allowing
-                # two alternative attempts before rejecting the source.
-                if content_failures > 3:
-                    raise RuntimeError("Modelos alternativos produziram reportagens inválidas. " + message) from exc
             errors.append(f"{candidate}: {message[:180]}")
-            reason = "resposta inválida/incompleta" if invalid_content else "indisponível/ocupado"
-            print(f"[WARN] Modelo '{candidate}' com {reason}; tentando alternativa.", flush=True)
-    raise RuntimeError("Nenhum modelo Gemini alternativo produziu uma reportagem válida. " + " | ".join(errors[-4:]))
-
+            retryable = bool(re.search(r"HTTP (?:429|500|503)", message)) or any(marker in message.lower() for marker in (
+                "não contém json válido", "não retornou um objeto json", "não retornou conteúdo",
+                "não retornou candidatos", "resposta gemini incompleta", "reportagem incompleta",
+                "reportagem aparentemente truncada", "não contém todos os campos obrigatórios", "título ou resumo curto demais"))
+            if not retryable or index == len(models) - 1:
+                break
+            print(f"[WARN] Modelo Gemini '{candidate}' indisponível ou resposta inválida; tentando uma alternativa confirmada.", flush=True)
+    raise RuntimeError("Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. " + " | ".join(errors))
 
 def clean_paragraphs(value, minimum=1):
     if not isinstance(value, list):
@@ -719,28 +652,17 @@ def openverse_image_lookup(title):
 
 def main():
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
-    openai_key = os.getenv("OPENAI_API_KEY", "").strip()
-    if gemini_key:
-        api_key, provider, model = gemini_key, "gemini", GEMINI_MODEL
+    api_key, provider, model = gemini_key, ("gemini" if gemini_key else ""), (GEMINI_MODEL if gemini_key else "")
+    if api_key:
         try:
             model = resolve_gemini_model(api_key, model)
         except Exception as exc:
-            if openai_key:
-                print(f"[WARN] Catálogo Gemini indisponível; usando OpenAI como alternativa: {str(exc)[:180]}", flush=True)
-                api_key, provider, model = openai_key, "openai", OPENAI_MODEL
-            else:
-                status = {
-                    "updated_at": now_iso(), "provider": "gemini", "model": None,
-                    "existing_articles": 0, "generated_this_run": 0,
-                    "status": "errors", "errors": [{"error": str(exc)[:500]}],
-                }
-                write_json(STATUS_PATH, status)
-                print(f"[ERROR] {str(exc)[:500]}", flush=True)
-                return 0
-    elif openai_key:
-        api_key, provider, model = openai_key, "openai", OPENAI_MODEL
-    else:
-        api_key, provider, model = "", "", ""
+            status = {"updated_at": now_iso(), "provider": "gemini", "model": None,
+                      "existing_articles": 0, "generated_this_run": 0, "status": "errors",
+                      "errors": [{"error": str(exc)[:500]}]}
+            write_json(STATUS_PATH, status)
+            print(f"[ERROR] {str(exc)[:500]}", flush=True)
+            return 0
     existing_payload = read_json(OUTPUT_PATH, {"version": 1, "articles": []})
     existing_articles = existing_payload.get("articles", []) if isinstance(existing_payload, dict) else []
     if not isinstance(existing_articles, list):
@@ -798,9 +720,9 @@ def main():
         "status": "waiting_for_api_key", "errors": [],
     }
     if not api_key:
-        status["message"] = "Configure GEMINI_API_KEY (recomendado) ou OPENAI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
+        status["message"] = "Configure GEMINI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
         write_json(STATUS_PATH, status)
-        print("Nenhuma chave GEMINI_API_KEY/OPENAI_API_KEY configurada. A fila foi preservada; nenhum conteúdo foi inventado ou publicado.")
+        print("Nenhuma chave GEMINI_API_KEY configurada. A fila foi preservada; nenhum conteúdo foi inventado ou publicado.")
         return 0
 
     queue = read_json(QUEUE_PATH, {"articles": []})
