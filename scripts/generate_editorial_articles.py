@@ -285,6 +285,9 @@ def call_model_with_fallback(api_key, provider, model, title, description, sourc
         except (RuntimeError, ValueError) as exc:
             message = str(exc)
             errors.append(f"{candidate}: {message[:180]}")
+            lowered = message.lower()
+            if ("exceeded your current quota" in lowered or "check your plan and billing" in lowered or "insufficient_quota" in lowered or "quota exceeded" in lowered):
+                raise RuntimeError("QUOTA_EXHAUSTED: " + message[:1200])
             # Billing/quota exhaustion is not a transient model outage.
             lowered = message.lower()
             if ("exceeded your current quota" in lowered or "check your plan and billing" in lowered
