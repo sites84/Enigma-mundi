@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-10-13T23:37:31.276057+00:00",
+  "updated_at": "2026-10-14T00:47:14.060874+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 54,
-  "generated_this_run": 4,
+  "existing_articles": 60,
+  "generated_this_run": 5,
   "status": "completed",
   "errors": [
     {
       "url": "https://inexplicata.blogspot.com/2026/10/argentina-extraterrestrials-in-trevelin.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/mexico-year-of-ufo-and-paranormal.html",
@@ -20,11 +20,7 @@
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/is-the-assessment-a-script-for-a-globalist-new-world-order",
-      "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://mufon.com/2026/09/15/department-of-war-issues-legal-waiver-to-authorize-unidentified-anomalous-phenomena-uap-disclosures-to-pursue",
-      "error": "MUFON UFO News: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Vigilant Citizen Symbolism: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/the-conspiracy-theories-in-they-cloned-tyrone-and-its-link-with-jamie-foxxs-mysterious-hospitalization",
@@ -32,15 +28,7 @@
     },
     {
       "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
-      "error": "Revista UFO Brasil: A resposta da API gemini não contém JSON válido"
-    },
-    {
-      "url": "https://www.unexplained-mysteries.com/news/400137/small-bipedal-bigfoot-like-creatures-spotted-twice-in-pennsylvania",
-      "error": "Unexplained Mysteries: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.unexplained-mysteries.com/news/400136/trumps-ufo-advisor-aliens-wouldnt-care-who-the-president-is",
-      "error": "Unexplained Mysteries: Reportagem curta: exige abertura e pelo menos três seções"
+      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
@@ -48,7 +36,7 @@
     },
     {
       "url": "https://www.metabunk.org/threads/uap-predictions-for-next-two-years.15079",
-      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Metabunk: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
@@ -60,7 +48,7 @@
     },
     {
       "url": "https://vigilantcitizen.com/latestnews/theres-something-terribly-wrong-happening-to-kate-beckinsale",
-      "error": "Vigilant Citizen Symbolism: A resposta da API gemini não contém JSON válido"
+      "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
@@ -80,11 +68,7 @@
     },
     {
       "url": "https://www.metabunk.org/threads/wyoming-mystery-orbs.15112",
-      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.metabunk.org/threads/wyoming-mystery-orbs.15112",
-      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Metabunk: Reportagem curta: exige abertura e pelo menos três seções"
     },
     {
       "url": "https://skepticalinquirer.org/2026/08/how-to-read-science-news",
@@ -100,18 +84,18 @@
     },
     {
       "url": "https://www.theguardian.com/uk-news/2026/oct/12/sas-personnel-refusing-to-answer-questions-afghanistan-inquiry-alleged-killings",
-      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "The Guardian — Space: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/10/havana-syndrome-mystery-cia-russia",
-      "error": "The Guardian — Space: A resposta da API gemini não contém JSON válido"
+      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.sciencealert.com/more-might-be-out-there-a-scorching-phoenix-planet-may-solve-a-3-decade-old-astronomical-cold-case",
       "error": "ScienceAlert: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
-  "candidate_count": 53,
-  "attempted_this_run": 30,
+  "candidate_count": 48,
+  "attempted_this_run": 28,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
 }
