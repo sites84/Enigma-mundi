@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-14T00:50:46.922888+00:00",
-  "article_count": 60,
+  "generated_at": "2026-10-14T01:51:35.308554+00:00",
+  "article_count": 65,
   "articles": [
     {
       "id": "em-07a2bacc44",
@@ -604,6 +604,32 @@
       ]
     },
     {
+      "id": "em-cd0d1f50b9",
+      "title": "O enigma de Kate Beckinsale: mensagens enigmáticas e alegações de vigilância",
+      "excerpt": "A atriz Kate Beckinsale intrigou seguidores ao apagar suas redes sociais e deixar mensagens sobre a \"nova ordem mundial\", levantando questões sobre sua saúde e segurança pessoal.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-09-23T23:19:34+00:00",
+      "generated_at": "2026-10-14T01:46:26.013238+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Vigilant Citizen Symbolism",
+      "source_url": "https://vigilantcitizen.com/latestnews/theres-something-terribly-wrong-happening-to-kate-beckinsale/",
+      "url": "https://vigilantcitizen.com/latestnews/theres-something-terribly-wrong-happening-to-kate-beckinsale/",
+      "path": "artigos/o-enigma-de-kate-beckinsale-mensagens-enigmáticas-e-alegaçõe-cd0d1f50b9.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://vigilantcitizen.com/wp-content/uploads/2026/09/leadkate.webp",
+      "image_source_url": "https://vigilantcitizen.com/latestnews/theres-something-terribly-wrong-happening-to-kate-beckinsale/",
+      "image_alt": "O enigma de Kate Beckinsale: mensagens enigmáticas e alegações de vigilância",
+      "tags": [
+        "Kate Beckinsale",
+        "Hollywood",
+        "Teorias de Conspiração",
+        "Saúde Mental",
+        "Vigilância"
+      ]
+    },
+    {
       "id": "em-c40c5e5768",
       "title": "Encontros Insólitos e Marcas na Mata: Relatos de UFOs na Amazônia",
       "excerpt": "Investigamos depoimentos de moradores da Amazônia que relatam avistamentos de naves, marcas na vegetação e contatos imediatos ao longo de décadas.",
@@ -1178,6 +1204,33 @@
       ]
     },
     {
+      "id": "em-6c404abd74",
+      "title": "Sociedade de Folclore do Reino Unido abre premiação para estudos acadêmicos em 2026",
+      "excerpt": "A prestigiada Folklore Society busca incentivar pesquisas universitárias sobre tradições e lendas, oferecendo prêmios em dinheiro para estudantes de graduação e pós-graduação.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-08-26T08:00:00+00:00",
+      "generated_at": "2026-10-14T01:46:53.674132+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Folklore Society UK",
+      "source_url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026/",
+      "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026/",
+      "path": "artigos/sociedade-de-folclore-do-reino-unido-abre-premiação-para-est-6c404abd74.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "folclore",
+        "Reino Unido",
+        "estudos acadêmicos",
+        "tradições",
+        "premiação",
+        "pesquisa científica"
+      ]
+    },
+    {
       "id": "em-0a715b20c2",
       "title": "A ciência do ceticismo: testando alegações paranormais em sala de aula",
       "excerpt": "Estudantes universitários colaboram com um grupo de investigação cética para analisar pedidos de um prêmio em dinheiro destinado ao paranormal.",
@@ -1569,6 +1622,33 @@
         "UAP",
         "The Black Vault",
         "Arquivos Oficiais"
+      ]
+    },
+    {
+      "id": "em-20ddeed01d",
+      "title": "57 anos da Apollo 11: teorias da conspiração ganham força em meio a novo ciclo lunar",
+      "excerpt": "Mesmo após décadas da histórica missão Apollo 11, o aniversário de 57 anos do pouso na Lua reacende debates e teorias conspiratórias sobre a veracidade da exploração espacial humana.",
+      "category": "conspiracoes",
+      "category_label": "Teorias da conspiração",
+      "published_at": "2026-07-21T00:00:00+00:00",
+      "generated_at": "2026-10-14T01:42:58.481358+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Unexplained Mysteries",
+      "source_url": "https://www.unexplained-mysteries.com/news/400097/57th-anniversary-of-apollo-11-triggers-new-wave-of-conspiracy-theories",
+      "url": "https://www.unexplained-mysteries.com/news/400097/57th-anniversary-of-apollo-11-triggers-new-wave-of-conspiracy-theories",
+      "path": "artigos/57-anos-da-apollo-11-teorias-da-conspiração-ganham-força-em--20ddeed01d.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.unexplained-mysteries.com/images/news_large_retina/news-hq-apollo-11-buzz.jpg",
+      "image_source_url": "https://www.unexplained-mysteries.com/news/400097/57th-anniversary-of-apollo-11-triggers-new-wave-of-conspiracy-theories",
+      "image_alt": "57 anos da Apollo 11: teorias da conspiração ganham força em meio a novo ciclo lunar",
+      "tags": [
+        "Apollo 11",
+        "NASA",
+        "Pouso na Lua",
+        "Teorias da Conspiração",
+        "Exploração Espacial",
+        "Programa Artemis"
       ]
     },
     {

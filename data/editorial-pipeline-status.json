@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-14T00:50:46.924755+00:00",
+  "updated_at": "2026-10-14T01:51:35.310335+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
-  "existing_articles": 60,
-  "generated_this_run": 5,
+  "existing_articles": 65,
+  "generated_this_run": 3,
   "status": "completed",
   "errors": [
     {
@@ -20,43 +20,35 @@
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/is-the-assessment-a-script-for-a-globalist-new-world-order",
-      "error": "Vigilant Citizen Symbolism: A resposta da API gemini não contém JSON válido"
+      "error": "Vigilant Citizen Symbolism: The read operation timed out"
     },
     {
       "url": "https://vigilantcitizen.com/moviesandtv/the-conspiracy-theories-in-they-cloned-tyrone-and-its-link-with-jamie-foxxs-mysterious-hospitalization",
       "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://www.unexplained-mysteries.com/news/400155/bizarre-conspiracy-theory-claims-traffic-lights-are-assault-weapons",
-      "error": "Unexplained Mysteries: A resposta da API gemini não contém JSON válido"
+      "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
+      "error": "Revista UFO Brasil: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
-      "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
-      "error": "Revista UFO Brasil: A resposta da API gemini não contém JSON válido"
+      "url": "https://www.unexplained-mysteries.com/news/400115/another-fresh-batch-of-ufo-files-has-been-released-by-the-pentagon",
+      "error": "Unexplained Mysteries: The read operation timed out"
     },
     {
       "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: A resposta da API gemini não contém JSON válido"
+      "error": "Metabunk: The read operation timed out"
     },
     {
       "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
-      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Revista UFO Brasil: <urlopen error [Errno 101] Network is unreachable>"
     },
     {
       "url": "https://www.conspiracywatch.info/cw_video/derniere-semaine-de-la-campagne-ulule-pour-complorama",
-      "error": "Conspiracy Watch: Conteúdo extraído insuficiente (520 caracteres); não gerar artigo a partir apenas de título/resumo"
-    },
-    {
-      "url": "https://vigilantcitizen.com/latestnews/theres-something-terribly-wrong-happening-to-kate-beckinsale",
-      "error": "Vigilant Citizen Symbolism: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Conspiracy Watch: <urlopen error timed out>"
     },
     {
       "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
       "error": "The Folklore Society UK: Conteúdo extraído insuficiente (692 caracteres); não gerar artigo a partir apenas de título/resumo"
-    },
-    {
-      "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026",
-      "error": "The Folklore Society UK: A resposta da API gemini não contém JSON válido"
     },
     {
       "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
@@ -64,15 +56,19 @@
     },
     {
       "url": "https://www.metabunk.org/threads/wyoming-mystery-orbs.15112",
-      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Metabunk: The read operation timed out"
+    },
+    {
+      "url": "https://www.metabunk.org/threads/marc-dantonio-video.15066",
+      "error": "Metabunk: The read operation timed out"
     },
     {
       "url": "https://skepticalinquirer.org/2026/08/how-to-read-science-news",
-      "error": "Skeptical Inquirer: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Skeptical Inquirer: HTTP Error 522: <none>"
     },
     {
       "url": "https://mysteriousuniverse.org/2026/08/36.06-MU-Podcast-The-Human-Torch-Spontaneous-Human-Combustion",
-      "error": "Mysterious Universe: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "Mysterious Universe: The read operation timed out"
     },
     {
       "url": "https://www.skeptics.com.au/bent-spoon-award-for-2026",
@@ -80,22 +76,18 @@
     },
     {
       "url": "https://www.theguardian.com/uk-news/2026/oct/12/sas-personnel-refusing-to-answer-questions-afghanistan-inquiry-alleged-killings",
-      "error": "The Guardian — Space: A resposta da API gemini não contém JSON válido"
+      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/10/havana-syndrome-mystery-cia-russia",
-      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "error": "The Guardian — Space: The read operation timed out"
     },
     {
       "url": "https://www.sciencealert.com/more-might-be-out-there-a-scorching-phoenix-planet-may-solve-a-3-decade-old-astronomical-cold-case",
       "error": "ScienceAlert: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.dailygrail.com/2026/08/news-briefs-10-08-2026",
-      "error": "The Daily Grail: A reportagem gerada não contém todos os campos obrigatórios"
     }
   ],
-  "candidate_count": 48,
-  "attempted_this_run": 28,
+  "candidate_count": 41,
+  "attempted_this_run": 24,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
 }
