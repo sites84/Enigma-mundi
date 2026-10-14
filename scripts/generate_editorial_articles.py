@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Generate original Portuguese editorial stories using the configured Gemini API.
+"""Generate original Portuguese editorial stories through free-tier Groq or Gemini APIs.
 
-The pipeline never assumes an OpenAI key exists. Articles must pass full
-structure and editorial relevance checks before publication.
+Groq is preferred when GROQ_API_KEY is configured; Gemini remains a fallback.
+Articles must pass full structure and editorial relevance checks before publication.
 """
 from __future__ import annotations
 
@@ -27,8 +27,10 @@ STATUS_PATH = ROOT / "data" / "editorial-pipeline-status.json"
 ARTICLES_DIR = ROOT / "artigos"
 
 GEMINI_API_BASE = os.getenv("GEMINI_API_BASE", "https://generativelanguage.googleapis.com/v1beta/models")
+GROQ_API_BASE = os.getenv("GROQ_API_BASE", "https://api.groq.com/openai/v1")
 
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.8-flash"
+GROQ_MODEL = os.getenv("GROQ_MODEL", "").strip() or "openai/gpt-oss-20b"
 MAX_PER_RUN = max(1, min(int(os.getenv("MAX_ARTICLES_PER_RUN", "10")), 10))
 TIMEOUT = 45
 USER_AGENT = "EnigmaMundiEditorialBot/1.0 (+https://github.com/sites84/Enigma-mundi)"
@@ -218,31 +220,60 @@ def call_model(api_key, provider, model, title, description, source_name, source
         ],
         "source_references": [{"name": source_name, "url": source_url}],
     }
-    if provider != "gemini":
-        raise RuntimeError("Provedor não suportado: a geração editorial usa exclusivamente Gemini.")
-    endpoint = f"{GEMINI_API_BASE}/{urllib.parse.quote(model, safe='')}:generateContent"
-    payload = {
-        "systemInstruction": {"parts": [{"text": system}]},
-        "contents": [{"role": "user", "parts": [{"text": json.dumps(user, ensure_ascii=False)}]}],
-        "generationConfig": {"temperature": 0.4, "responseMimeType": "application/json"},
-    }
-    headers = {"x-goog-api-key": api_key, "Content-Type": "application/json", "User-Agent": USER_AGENT}
+    serialized_user = json.dumps(user, ensure_ascii=False)
+    if provider == "groq":
+        endpoint = f"{GROQ_API_BASE}/chat/completions"
+        payload = {
+            "model": model,
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": serialized_user},
+            ],
+            "temperature": 0.4,
+            "response_format": {"type": "json_object"},
+        }
+        headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+            "User-Agent": USER_AGENT,
+        }
+    elif provider == "gemini":
+        endpoint = f"{GEMINI_API_BASE}/{urllib.parse.quote(model, safe='')}:generateContent"
+        payload = {
+            "systemInstruction": {"parts": [{"text": system}]},
+            "contents": [{"role": "user", "parts": [{"text": serialized_user}]}],
+            "generationConfig": {"temperature": 0.4, "responseMimeType": "application/json"},
+        }
+        headers = {"x-goog-api-key": api_key, "Content-Type": "application/json", "User-Agent": USER_AGENT}
+    else:
+        raise RuntimeError(f"Provedor de IA não suportado: {provider}")
     request = urllib.request.Request(endpoint, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
     try:
         with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
             result = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         detail = exc.read(3000).decode("utf-8", "replace")
-        raise RuntimeError(f"API {provider} retornou HTTP {exc.code}: {detail[:500]}") from exc
-    candidates = result.get("candidates") or []
-    if not candidates:
-        raise RuntimeError("A API Gemini não retornou candidatos de resposta")
-    candidate = candidates[0]
-    finish_reason = candidate.get("finishReason")
-    if finish_reason and finish_reason != "STOP":
-        raise RuntimeError(f"Resposta Gemini incompleta (finishReason={finish_reason}); a reportagem não será publicada para evitar texto cortado")
-    parts = candidate.get("content", {}).get("parts", [])
-    content = next((part.get("text", "") for part in parts if part.get("text")), "")
+        raise RuntimeError(f"API {provider} retornou HTTP {exc.code}: {detail[:700]}") from exc
+
+    if provider == "groq":
+        choices = result.get("choices") or []
+        if not choices:
+            raise RuntimeError("A API Groq não retornou candidatos de resposta")
+        choice = choices[0]
+        finish_reason = choice.get("finish_reason")
+        if finish_reason and finish_reason != "stop":
+            raise RuntimeError(f"Resposta Groq incompleta (finish_reason={finish_reason}); a reportagem não será publicada para evitar texto cortado")
+        content = (choice.get("message") or {}).get("content") or ""
+    else:
+        candidates = result.get("candidates") or []
+        if not candidates:
+            raise RuntimeError("A API Gemini não retornou candidatos de resposta")
+        candidate = candidates[0]
+        finish_reason = candidate.get("finishReason")
+        if finish_reason and finish_reason != "STOP":
+            raise RuntimeError(f"Resposta Gemini incompleta (finishReason={finish_reason}); a reportagem não será publicada para evitar texto cortado")
+        parts = candidate.get("content", {}).get("parts", [])
+        content = next((part.get("text", "") for part in parts if part.get("text")), "")
     if not content:
         raise RuntimeError(f"A API {provider} não retornou conteúdo")
     try:
@@ -258,9 +289,20 @@ def call_model(api_key, provider, model, title, description, source_name, source
 
 
 def call_model_with_fallback(api_key, provider, model, title, description, source_name, source_url, source_text, category):
-    """Try only a small, API-confirmed Gemini model set; preserve strict article validation."""
+    """Use Groq's free developer tier when configured; preserve strict article validation."""
+    if provider == "groq":
+        try:
+            draft = call_model(api_key, provider, model, title, description, source_name, source_url, source_text, category)
+            return validate_article(draft), model
+        except (RuntimeError, ValueError) as exc:
+            message = str(exc)
+            lowered = message.lower()
+            if ("http 429" in lowered or "rate limit" in lowered or "quota" in lowered
+                    or "tokens per minute" in lowered or "requests per day" in lowered):
+                raise RuntimeError("QUOTA_EXHAUSTED: limite gratuito da API Groq atingido: " + message[:1000]) from exc
+            raise
     if provider != "gemini":
-        raise RuntimeError("Provedor não suportado: a geração editorial usa exclusivamente Gemini.")
+        raise RuntimeError(f"Provedor não suportado: {provider}")
     try:
         request = urllib.request.Request(GEMINI_API_BASE, headers={"x-goog-api-key": api_key, "User-Agent": USER_AGENT})
         with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
@@ -659,9 +701,15 @@ def openverse_image_lookup(title):
     return best
 
 def main():
+    groq_key = os.getenv("GROQ_API_KEY", "").strip()
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
-    api_key, provider, model = gemini_key, ("gemini" if gemini_key else ""), (GEMINI_MODEL if gemini_key else "")
-    if api_key:
+    if groq_key:
+        api_key, provider, model = groq_key, "groq", GROQ_MODEL
+    elif gemini_key:
+        api_key, provider, model = gemini_key, "gemini", GEMINI_MODEL
+    else:
+        api_key, provider, model = "", "", ""
+    if provider == "gemini":
         try:
             model = resolve_gemini_model(api_key, model)
         except Exception as exc:
@@ -728,9 +776,9 @@ def main():
         "status": "waiting_for_api_key", "errors": [],
     }
     if not api_key:
-        status["message"] = "Configure GEMINI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
+        status["message"] = "Configure GROQ_API_KEY (gratuita no GroqCloud) ou GEMINI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
         write_json(STATUS_PATH, status)
-        print("Nenhuma chave GEMINI_API_KEY configurada. A fila foi preservada; nenhum conteúdo foi inventado ou publicado.")
+        print("Nenhuma chave GROQ_API_KEY ou GEMINI_API_KEY configurada. A fila foi preservada; nenhum conteúdo foi inventado ou publicado.")
         return 0
 
     queue = read_json(QUEUE_PATH, {"articles": []})
@@ -842,7 +890,7 @@ def main():
             print(f"[WARN] {message}", flush=True)
             if "QUOTA_EXHAUSTED:" in raw_error:
                 quota_exhausted = True
-                print("[ERROR] Cota/billing do Gemini esgotada. Interrompendo novas chamadas de IA; os critérios editoriais permanecem inalterados.", flush=True)
+                print(f"[ERROR] Limite/cota da API {provider} atingido. Interrompendo novas chamadas de IA; os critérios editoriais permanecem inalterados.", flush=True)
                 break
     existing_articles.sort(key=lambda a: (a.get("published_at", ""), a.get("generated_at", "")), reverse=True)
     write_json(OUTPUT_PATH, {
@@ -858,7 +906,7 @@ def main():
         "generated_this_run": generated,
         "candidate_count": len(candidates),
         "attempted_this_run": attempted,
-        "message": ("Cota/billing do Gemini esgotada; geração interrompida para evitar tentativas inúteis. Revise o plano e a cota da API. Reportagens válidas já geradas foram preservadas." if quota_exhausted else
+        "message": (f"Limite/cota da API {provider} atingido; geração interrompida para evitar tentativas inúteis. Aguarde a renovação da cota gratuita ou revise os limites da conta. Reportagens válidas já geradas foram preservadas." if quota_exhausted else
                     "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte.")
     })
     write_json(STATUS_PATH, status)
