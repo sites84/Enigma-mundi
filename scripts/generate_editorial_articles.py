@@ -199,11 +199,16 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "Não imponha limite mínimo ou máximo de palavras: o tamanho deve ser determinado pela cobertura completa dos fatos relevantes disponíveis, sem cortar a matéria para caber numa extensão predeterminada. A seção 'O que pode ser?' deve apresentar hipóteses plausíveis "
         "e limites da evidência, sem inventar uma resposta definitiva. Gere conteúdo substancial e legível, com ângulo próprio."
     )
+    model_source_text = source_text
+    if provider == "groq" and len(source_text) > 11000:
+        # Keep the opening/context plus the source's end within the free tier's
+        # token-per-minute budget. The article is still validated for completeness.
+        model_source_text = source_text[:8500] + "\n\n[... trecho final da matéria original ...]\n\n" + source_text[-2000:]
     user = {
         "task": "Criar uma reportagem editorial original para publicação no site.",
         "source": {"name": source_name, "url": source_url, "original_title": title,
                    "description": description, "category_hint": category},
-        "source_page_text": source_text,
+        "source_page_text": model_source_text,
         "output_language": "pt-BR",
         "requirements": [
             "Título de 45 a 95 caracteres, informativo e sem sensacionalismo.",
@@ -820,10 +825,13 @@ def main():
     attempted = 0
     source_attempts = {}
     quota_exhausted = False
+    # Keep Groq within its free per-minute and daily token budgets: one full article
+    # per hourly run. Gemini retains the configured maximum of up to ten.
+    max_per_run = min(MAX_PER_RUN, 1) if provider == "groq" else MAX_PER_RUN
     # Failures must not waste the entire hourly quota when more eligible stories exist.
     # Try up to three times the target, while limiting repeated requests to one feed.
     for item in candidates:
-        if generated >= MAX_PER_RUN or attempted >= MAX_PER_RUN * 3:
+        if generated >= max_per_run or attempted >= max_per_run * 3:
             break
         source_key = str(item.get("source_id") or item.get("source_name") or urllib.parse.urlsplit(str(item.get("url") or "")).netloc).strip().lower()
         if source_attempts.get(source_key, 0) >= 3:
@@ -907,7 +915,7 @@ def main():
         "candidate_count": len(candidates),
         "attempted_this_run": attempted,
         "message": (f"Limite/cota da API {provider} atingido; geração interrompida para evitar tentativas inúteis. Aguarde a renovação da cota gratuita ou revise os limites da conta. Reportagens válidas já geradas foram preservadas." if quota_exhausted else
-                    "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte.")
+                    f"Geração automática ativa: até {max_per_run} artigo(s) por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte.")
     })
     write_json(STATUS_PATH, status)
     print(f"Artigos novos: {generated}; total publicado: {len(existing_articles)}; erros: {len(status['errors'])}")
