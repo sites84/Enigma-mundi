@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14T18:38:19.677901+00:00",
+  "updated_at": "2026-10-14T18:38:38.177073+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 78,
@@ -16,14 +16,10 @@
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/the-ufo-phenomenon-in-mexico-1991-wave.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies",
-      "error": "Conspiracy Watch: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "error": "Inexplicata — Journal of Hispanic Ufology: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
   "candidate_count": 31,
-  "attempted_this_run": 4,
+  "attempted_this_run": 3,
   "message": "Limite/cota da API gemini atingido; geração interrompida para evitar tentativas inúteis. Aguarde a renovação da cota gratuita ou revise os limites da conta. Reportagens válidas já geradas foram preservadas."
 }
