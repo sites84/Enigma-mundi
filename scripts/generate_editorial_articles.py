@@ -155,8 +155,14 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "citações, documentos, especialistas, evidências ou fontes. Separe claramente fatos relatados, alegações e "
         "hipóteses. Se houver apenas uma fonte, diga isso de forma transparente e não afirme que houve confirmação "
         "independente. Não transforme especulação em fato. Evite clickbait enganoso. Não use citações diretas. "
-        "A seção 'O que pode ser?' deve apresentar hipóteses plausíveis e limites da evidência, sem inventar uma "
-        "resposta definitiva. Gere conteúdo substancial e legível, com ângulo e organização próprios."
+        "IMPORTANTE: nunca entregue apenas um resumo, sinopse, nota curta ou paráfrase superficial. Produza uma "
+        "reportagem completa, desenvolvida e autossuficiente, reescrita em linguagem original e com organização própria, "
+        "cobrindo os fatos relevantes disponíveis no material fornecido. Desenvolva contexto, cronologia quando houver, "
+        "protagonistas, evidências citadas, explicações, controvérsias e limitações; não invente detalhes ausentes. "
+        "Não traduza nem reproduza a estrutura parágrafo a parágrafo e não substitua o texto original por um resumo. "
+        "Mire em 800 a 1.200 palavras quando a fonte tiver conteúdo suficiente; se a fonte for curta, desenvolva o máximo "
+        "que os fatos permitirem, sem preencher lacunas. A seção 'O que pode ser?' deve apresentar hipóteses plausíveis "
+        "e limites da evidência, sem inventar uma resposta definitiva. Gere conteúdo substancial e legível, com ângulo próprio."
     )
     user = {
         "task": "Criar uma reportagem editorial original para publicação no site.",
@@ -166,9 +172,10 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "output_language": "pt-BR",
         "requirements": [
             "Título de 45 a 95 caracteres, informativo e sem sensacionalismo.",
-            "Resumo de 120 a 200 caracteres.",
-            "Abertura de 2 a 3 parágrafos, explicando o que aconteceu e por que importa.",
-            "Entre 3 e 5 seções, cada uma com heading e 2 a 4 parágrafos substantivos.",
+            "Resumo de 120 a 200 caracteres apenas para o campo excerpt; ele NÃO substitui a reportagem completa.",
+            "A reportagem completa deve ter preferencialmente 800 a 1.200 palavras, nunca ser apenas resumo ou sinopse.",
+            "Abertura de 3 parágrafos substanciais, explicando o acontecimento, o contexto e sua importância.",
+            "Entre 4 e 6 seções, cada uma com heading e 2 a 4 parágrafos substantivos que desenvolvam os fatos relevantes.",
             "Uma seção separada 'O que pode ser?' com hipóteses, evidências e limitações.",
             "Conclusão que informe o que se sabe e o que permanece sem resposta.",
             "Não copiar a redação da fonte. Não inventar fontes adicionais.",
@@ -281,6 +288,10 @@ def validate_article(article):
         raise ValueError("Título ou resumo curto demais")
     if len(article["lead"]) < 2 or len(article["sections"]) < 3:
         raise ValueError("Reportagem curta: exige abertura e pelo menos três seções")
+    body_paragraphs = article["lead"] + [p for section in article["sections"] for p in section["paragraphs"]] + article["what_might_it_be"] + article["conclusion"]
+    body_word_count = sum(len(re.findall(r"\b[\wÀ-ÿ-]+\b", paragraph)) for paragraph in body_paragraphs)
+    if body_word_count < 600:
+        raise ValueError(f"Reportagem insuficientemente desenvolvida: {body_word_count} palavras; mínimo de 600, não basta um resumo")
     if not article["what_might_it_be"] or not article["conclusion"]:
         raise ValueError("Faltam a seção de hipóteses ou a conclusão")
     article["category"] = article["category"] if article["category"] in CATEGORY_LABELS else "misterios"
