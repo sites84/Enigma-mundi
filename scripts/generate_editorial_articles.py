@@ -142,6 +142,41 @@ def fetch_article(url):
     parser.feed(raw)
     text = re.sub(r"[ \t]+\n", "\n", "".join(parser.parts))
     text = re.sub(r"\n{3,}", "\n\n", text).strip()
+
+    # Some publishers expose the complete story in JSON-LD while their visible
+    # HTML is mostly navigation or a JavaScript shell. Recover articleBody only
+    # when the normal page extraction is too short; never use metadata snippets
+    # as a substitute for the article itself.
+    if len(text) < 900:
+        def article_bodies(value):
+            found = []
+            if isinstance(value, dict):
+                body = value.get("articleBody")
+                if isinstance(body, str) and len(body.strip()) >= 900:
+                    found.append(body.strip())
+                for nested in value.values():
+                    found.extend(article_bodies(nested))
+            elif isinstance(value, list):
+                for nested in value:
+                    found.extend(article_bodies(nested))
+            return found
+
+        scripts = re.findall(
+            r'<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script\s*>',
+            raw, flags=re.IGNORECASE | re.DOTALL,
+        )
+        recovered = []
+        for script in scripts:
+            try:
+                recovered.extend(article_bodies(json.loads(html.unescape(script))))
+            except (json.JSONDecodeError, TypeError):
+                continue
+        if recovered:
+            recovered.sort(key=len, reverse=True)
+            if len(recovered[0]) > len(text):
+                text = re.sub(r"\s+", " ", recovered[0]).strip()
+                print(f"[INFO] Texto recuperado do articleBody JSON-LD: {len(text)} caracteres.", flush=True)
+
     # Avoid sending an entire book or the page's navigation boilerplate to the model.
     return final_url, text[:18000]
 
