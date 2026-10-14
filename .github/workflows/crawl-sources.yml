@@ -10,7 +10,8 @@ on:
       - "scripts/build_recent_posts.py"
       - ".github/workflows/crawl-sources.yml"
   schedule:
-    - cron: "47 7 * * *"
+    # Refresh the candidate queue hourly so the generator does not exhaust a stale daily batch.
+    - cron: "17 * * * *"
 
 permissions:
   contents: write
