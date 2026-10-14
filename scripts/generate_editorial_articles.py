@@ -285,6 +285,11 @@ def call_model_with_fallback(api_key, provider, model, title, description, sourc
         except (RuntimeError, ValueError) as exc:
             message = str(exc)
             errors.append(f"{candidate}: {message[:180]}")
+            # Billing/quota exhaustion is not a transient model outage.
+            lowered = message.lower()
+            if ("exceeded your current quota" in lowered or "check your plan and billing" in lowered
+                    or "insufficient_quota" in lowered or "quota exceeded" in lowered):
+                raise RuntimeError("QUOTA_EXHAUSTED: " + message[:1200])
             retryable = bool(re.search(r"HTTP (?:429|500|503)", message)) or any(marker in message.lower() for marker in (
                 "não contém json válido", "não retornou um objeto json", "não retornou conteúdo",
                 "não retornou candidatos", "resposta gemini incompleta", "reportagem incompleta",
@@ -763,6 +768,7 @@ def main():
     generated = 0
     attempted = 0
     source_attempts = {}
+    quota_exhausted = False
     # Failures must not waste the entire hourly quota when more eligible stories exist.
     # Try up to three times the target, while limiting repeated requests to one feed.
     for item in candidates:
@@ -827,9 +833,14 @@ def main():
             print(f"[OK] Artigo criado: {record['path']} — {record['title']}", flush=True)
             time.sleep(1)
         except Exception as exc:
-            message = f"{item.get('source_name', item.get('source_id', 'fonte'))}: {str(exc)[:400]}"
+            raw_error = str(exc)
+            message = f"{item.get('source_name', item.get('source_id', 'fonte'))}: {raw_error[:400]}"
             status["errors"].append({"url": url, "error": message})
             print(f"[WARN] {message}", flush=True)
+            if "QUOTA_EXHAUSTED:" in raw_error:
+                quota_exhausted = True
+                print("[ERROR] Cota/billing do Gemini esgotada. Interrompendo novas chamadas de IA; os critérios editoriais permanecem inalterados.", flush=True)
+                break
     existing_articles.sort(key=lambda a: (a.get("published_at", ""), a.get("generated_at", "")), reverse=True)
     write_json(OUTPUT_PATH, {
         "version": 1, "generated_at": now_iso(),
@@ -837,12 +848,15 @@ def main():
     })
     status.update({
         "updated_at": now_iso(),
-        "status": "completed" if generated else ("errors" if status["errors"] else "no_new_candidates"),
+        "status": ("partial_quota_exhausted" if quota_exhausted and generated else
+                   "quota_exhausted" if quota_exhausted else
+                   "completed" if generated else ("errors" if status["errors"] else "no_new_candidates")),
         "existing_articles": len(existing_articles),
         "generated_this_run": generated,
         "candidate_count": len(candidates),
         "attempted_this_run": attempted,
-        "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
+        "message": ("Cota/billing do Gemini esgotada; geração interrompida para evitar tentativas inúteis. Revise o plano e a cota da API. Reportagens válidas já geradas foram preservadas." if quota_exhausted else
+                    "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte.")
     })
     write_json(STATUS_PATH, status)
     print(f"Artigos novos: {generated}; total publicado: {len(existing_articles)}; erros: {len(status['errors'])}")
