@@ -221,17 +221,40 @@ def call_model(api_key, provider, model, title, description, source_name, source
         raise RuntimeError(f"API {provider} retornou HTTP {exc.code}: {detail[:500]}") from exc
     if provider == "gemini":
         candidates = result.get("candidates") or []
-        parts = (candidates[0].get("content", {}).get("parts", []) if candidates else [])
+        if not candidates:
+            raise RuntimeError("A API Gemini não retornou candidatos de resposta")
+        candidate = candidates[0]
+        finish_reason = candidate.get("finishReason")
+        if finish_reason and finish_reason != "STOP":
+            raise RuntimeError(
+                f"Resposta Gemini incompleta (finishReason={finish_reason}); "
+                "a reportagem não será publicada para evitar texto cortado"
+            )
+        parts = candidate.get("content", {}).get("parts", [])
         content = next((part.get("text", "") for part in parts if part.get("text")), "")
     else:
         choices = result.get("choices") or []
-        content = choices[0].get("message", {}).get("content", "") if choices else ""
+        if not choices:
+            raise RuntimeError("A API OpenAI não retornou opções de resposta")
+        choice = choices[0]
+        finish_reason = choice.get("finish_reason")
+        if finish_reason and finish_reason != "stop":
+            raise RuntimeError(
+                f"Resposta OpenAI incompleta (finish_reason={finish_reason}); "
+                "a reportagem não será publicada para evitar texto cortado"
+            )
+        content = choice.get("message", {}).get("content", "")
     if not content:
         raise RuntimeError(f"A API {provider} não retornou conteúdo")
     try:
         article = json.loads(content)
     except json.JSONDecodeError as exc:
-        raise RuntimeError(f"A resposta da API {provider} não contém JSON válido") from exc
+        raise RuntimeError(
+            f"A resposta da API {provider} não contém JSON válido; "
+            "possível resposta interrompida, reportagem descartada"
+        ) from exc
+    if not isinstance(article, dict):
+        raise RuntimeError(f"A API {provider} não retornou um objeto JSON de reportagem")
     return article
 
 
