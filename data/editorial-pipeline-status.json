@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14T16:37:51.127938+00:00",
+  "updated_at": "2026-10-14T16:51:33.017325+00:00",
   "provider": "gemini",
   "model": "gemini-3.5-flash-lite",
   "existing_articles": 76,
@@ -7,83 +7,39 @@
   "status": "errors",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/a-ufo-or-satellite-researchers-analyze.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-caused-massive-greater.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.1-flash-lite: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is curren"
+      "url": "https://inexplicata.blogspot.com/2026/09/the-ufo-phenomenon-in-mexico-1991-wave.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://ufo.com.br/caso-roswell-o-misterio-dos-ufos-que-ate-hoje-intriga-os-eua",
-      "error": "Revista UFO Brasil: The read operation timed out"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/en/conspiracy-watch-joins-global-experts-to-stress-test-ai-systems-for-antisemitism-and-online-hate",
-      "error": "Conspiracy Watch: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.1-flash-lite: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is curren"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/en/have-historians-really-failed-in-the-fight-against-holocaust-denial",
+      "url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies",
       "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/faucis-covid-origins-hearing-shows-how-conspiracy-theories-became-political-weapons",
+      "url": "https://www.conspiracywatch.info/en/antisemitic-conspiracies-blaming-jews-for-9-11-resurface-ahead-of-25th-anniversary-cyberwell-warns",
       "error": "Conspiracy Watch: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.1-flash-lite: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is curren"
     },
     {
-      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
+      "error": "Conspiracy Watch: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.1-flash-lite: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is curren"
     },
     {
-      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
-      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://www.metabunk.org/threads/reddit-starlink-or-is-it-again.15040",
+      "error": "Metabunk: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.1-flash-lite: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is curren"
     },
     {
-      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
-      "error": "The Folklore Society UK: Conteúdo extraído insuficiente (692 caracteres); não gerar artigo a partir apenas de título/resumo"
-    },
-    {
-      "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026",
-      "error": "The Folklore Society UK: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
-      "error": "Australian Skeptics: Conteúdo extraído insuficiente (75 caracteres); não gerar artigo a partir apenas de título/resumo"
-    },
-    {
-      "url": "https://www.metabunk.org/threads/wyoming-mystery-orbs.15112",
-      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.metabunk.org/threads/marc-dantonio-video.15066",
-      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://skepticalinquirer.org/2026/08/how-to-read-science-news",
-      "error": "Skeptical Inquirer: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.skeptics.com.au/bent-spoon-award-for-2026",
-      "error": "Australian Skeptics: Conteúdo extraído insuficiente (67 caracteres); não gerar artigo a partir apenas de título/resumo"
-    },
-    {
-      "url": "https://www.theguardian.com/uk-news/2026/oct/12/sas-personnel-refusing-to-answer-questions-afghanistan-inquiry-alleged-killings",
-      "error": "The Guardian — Space: Nenhum modelo Gemini alternativo produziu uma reportagem válida. gemini-3.1-flash-lite-preview: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.1-flash-lite: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is curren"
-    },
-    {
-      "url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/10/havana-syndrome-mystery-cia-russia",
-      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.sciencealert.com/more-might-be-out-there-a-scorching-phoenix-planet-may-solve-a-3-decade-old-astronomical-cold-case",
-      "error": "ScienceAlert: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://phys.org/news/2026-10-trailblazing-technique-uncovers-real-hot.html",
+      "error": "Phys.org — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
-  "candidate_count": 29,
-  "attempted_this_run": 19,
+  "candidate_count": 18,
+  "attempted_this_run": 8,
   "message": "Geração automática ativa: até 10 artigos publicados por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
 }
