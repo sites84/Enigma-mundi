@@ -708,7 +708,12 @@ def openverse_image_lookup(title):
 def main():
     groq_key = os.getenv("GROQ_API_KEY", "").strip()
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
-    if groq_key:
+    requested_provider = os.getenv("EDITORIAL_PROVIDER", "").strip().lower()
+    if requested_provider == "groq":
+        api_key, provider, model = groq_key, "groq", GROQ_MODEL
+    elif requested_provider == "gemini":
+        api_key, provider, model = gemini_key, "gemini", GEMINI_MODEL
+    elif groq_key:
         api_key, provider, model = groq_key, "groq", GROQ_MODEL
     elif gemini_key:
         api_key, provider, model = gemini_key, "gemini", GEMINI_MODEL
