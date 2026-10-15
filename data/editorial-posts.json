@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-15T21:02:31.443454+00:00",
-  "article_count": 84,
+  "generated_at": "2026-10-15T21:34:33.221875+00:00",
+  "article_count": 85,
   "articles": [
     {
       "id": "em-0f0b596a61",
@@ -1619,6 +1619,32 @@
         "ufologia",
         "primeiro contato",
         "governo americano"
+      ]
+    },
+    {
+      "id": "em-6c404abd74",
+      "title": "Sociedade de Folclore do Reino Unido anuncia prêmios para estudantes",
+      "excerpt": "A respeitada Folklore Society divulgou detalhes sobre suas premiações acadêmicas voltadas a pesquisas de folclore e tradições populares no Reino Unido e na Irlanda.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-08-26T08:00:00+00:00",
+      "generated_at": "2026-10-15T21:32:56.983012+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Folklore Society UK",
+      "source_url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026/",
+      "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026/",
+      "path": "artigos/sociedade-de-folclore-do-reino-unido-anuncia-prêmios-para-es-6c404abd74.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "folclore",
+        "pesquisa",
+        "reino-unido",
+        "academia",
+        "premiação"
       ]
     },
     {
