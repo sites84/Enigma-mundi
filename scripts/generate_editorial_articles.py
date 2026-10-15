@@ -224,10 +224,11 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "e limites da evidência, sem inventar uma resposta definitiva. Gere conteúdo substancial e legível, com ângulo próprio."
     )
     model_source_text = source_text
-    if provider == "groq" and len(source_text) > 11000:
-        # Keep the opening/context plus the source's end within the free tier's
-        # token-per-minute budget. The article is still validated for completeness.
-        model_source_text = source_text[:8500] + "\n\n[... trecho final da matéria original ...]\n\n" + source_text[-2000:]
+    if provider == "groq" and len(source_text) > 7500:
+        # Leave more room under Groq's free-tier token-per-minute cap for the
+        # structured article response. Preserve the source opening and ending;
+        # publication still requires the same full-structure quality gate.
+        model_source_text = source_text[:5500] + "\n\n[... trecho final da matéria original ...]\n\n" + source_text[-1800:]
     user = {
         "task": "Criar uma reportagem editorial original para publicação no site.",
         "source": {"name": source_name, "url": source_url, "original_title": title,
