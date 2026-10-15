@@ -133,10 +133,34 @@ def fetch_article(url):
         "User-Agent": USER_AGENT,
         "Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.5",
     })
-    with urllib.request.urlopen(req, timeout=TIMEOUT) as response:
-        final_url = response.geturl()
-        content_type = response.headers.get("Content-Type", "")
-        raw = response.read(2_000_000).decode("utf-8", "replace")
+    # Publisher feeds sometimes return short-lived 429/5xx responses or a
+    # transient timeout. Retry the source fetch once, with a bounded delay;
+    # never loop indefinitely or bypass the minimum-body quality gate.
+    for fetch_attempt in range(2):
+        try:
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as response:
+                final_url = response.geturl()
+                content_type = response.headers.get("Content-Type", "")
+                raw = response.read(2_000_000).decode("utf-8", "replace")
+            break
+        except urllib.error.HTTPError as exc:
+            retryable = exc.code == 429 or exc.code in (500, 502, 503, 504)
+            retry_after = exc.headers.get("Retry-After", "") if exc.headers else ""
+            if fetch_attempt == 0 and retryable:
+                try:
+                    delay = min(8.0, max(2.0, float(retry_after)))
+                except (TypeError, ValueError):
+                    delay = 3.0
+                print(f"[INFO] Fonte respondeu HTTP {exc.code}; nova tentativa única em {delay:.0f}s.", flush=True)
+                time.sleep(delay)
+                continue
+            raise
+        except (urllib.error.URLError, TimeoutError) as exc:
+            if fetch_attempt == 0:
+                print("[INFO] Falha temporária ao acessar a fonte; repetindo uma única vez em 2s.", flush=True)
+                time.sleep(2)
+                continue
+            raise
     if "html" not in content_type.lower() and "<html" not in raw[:1000].lower():
         raise ValueError("A URL não retornou uma página HTML")
     parser = ArticleTextParser()
