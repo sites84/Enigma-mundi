@@ -351,8 +351,25 @@ def call_model_with_fallback(api_key, provider, model, title, description, sourc
             lowered = message.lower()
             if "tokens per minute" in lowered and "http 429" in lowered:
                 raise RuntimeError("RATE_LIMITED: limite temporário de tokens por minuto da API Groq; a execução será pausada para não desperdiçar chamadas gratuitas: " + message[:850]) from exc
-            if ("http 429" in lowered or "rate limit" in lowered or "quota" in lowered
-                    or "requests per day" in lowered):
+            # If Groq returns malformed/truncated structured output, use the already
+            # configured free Gemini key instead of discarding a viable source.
+            # TPM throttling is handled above and deliberately pauses this run.
+            gemini_fallback_key = os.getenv("GEMINI_API_KEY", "").strip()
+            is_quota_error = ("http 429" in lowered or "rate limit" in lowered or "quota" in lowered
+                              or "requests per day" in lowered)
+            if gemini_fallback_key and not ("tokens per minute" in lowered and "http 429" in lowered):
+                print(f"[WARN] Groq não produziu reportagem válida ({message[:180]}). Tentando Gemini gratuito.", flush=True)
+                try:
+                    return call_model_with_fallback(
+                        gemini_fallback_key, "gemini", GEMINI_MODEL, title, description,
+                        source_name, source_url, source_text, category
+                    )
+                except (RuntimeError, ValueError) as fallback_exc:
+                    raise RuntimeError(
+                        "Groq falhou e o fallback Gemini também não produziu reportagem válida. "
+                        f"Groq: {message[:300]} | Gemini: {str(fallback_exc)[:500]}"
+                    ) from fallback_exc
+            if is_quota_error:
                 raise RuntimeError("QUOTA_EXHAUSTED: limite/cota gratuita da API Groq atingido: " + message[:1000]) from exc
             raise
     if provider != "gemini":
