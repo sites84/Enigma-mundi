@@ -292,10 +292,17 @@ def call_model(api_key, provider, model, title, description, source_name, source
                 provider == "groq" and exc.code == 429
                 and "tokens per minute" in detail.lower()
             )
-            delay_match = re.search(r"try again in ([0-9.]+)s", detail, re.IGNORECASE)
-            if request_attempt == 0 and is_groq_tpm and delay_match:
-                delay = min(60.0, max(1.0, float(delay_match.group(1)) + 1.0))
-                print(f"[INFO] Limite temporário de tokens/minuto do Groq; aguardando {delay:.0f}s e repetindo uma única vez.", flush=True)
+            delay_match = re.search(r"try again in ([0-9.]+)\\s*(ms|s)", detail, re.IGNORECASE)
+            if request_attempt == 0 and is_groq_tpm:
+                if delay_match:
+                    amount = float(delay_match.group(1))
+                    unit = delay_match.group(2).lower()
+                    retry_seconds = amount / 1000.0 if unit == "ms" else amount
+                    delay = min(60.0, max(1.0, retry_seconds + 0.5))
+                else:
+                    # TPM responses can omit a parseable Retry-After value.
+                    delay = 2.0
+                print(f"[INFO] Limite temporário de tokens/minuto do Groq; aguardando {delay:.1f}s e repetindo uma única vez.", flush=True)
                 time.sleep(delay)
                 continue
             raise RuntimeError(f"API {provider} retornou HTTP {exc.code}: {detail[:700]}") from exc
