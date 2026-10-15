@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-15T23:14:03.051596+00:00",
-  "article_count": 85,
+  "generated_at": "2026-10-15T23:14:32.075876+00:00",
+  "article_count": 86,
   "articles": [
     {
       "id": "em-0f0b596a61",
@@ -1072,6 +1072,32 @@
         "OVNI",
         "Fenômenos Incomuns",
         "Arquivos Históricos"
+      ]
+    },
+    {
+      "id": "em-5098b7045b",
+      "title": "O caso Ed Sheeran e Macklemore e a onda de teorias conspiratórias",
+      "excerpt": "Uma disputa sobre a participação do rapper Macklemore em turnê gerou teorias da conspiração antissemitas e debates sobre o papel de inteligências artificiais.",
+      "category": "conspiracoes",
+      "category_label": "Teorias da conspiração",
+      "published_at": "2026-09-19T09:38:09+00:00",
+      "generated_at": "2026-10-15T23:14:31.075386+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Conspiracy Watch",
+      "source_url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies/",
+      "url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies/",
+      "path": "artigos/o-caso-ed-sheeran-e-macklemore-e-a-onda-de-teorias-conspirat-5098b7045b.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.conspiracywatch.info/en/wp-content/uploads/2026/09/Macklemore-Affair.jpg",
+      "image_source_url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies/",
+      "image_alt": "O caso Ed Sheeran e Macklemore e a onda de teorias conspiratórias",
+      "tags": [
+        "antissemitismo",
+        "teorias da conspiração",
+        "inteligência artificial",
+        "Ed Sheeran",
+        "Macklemore"
       ]
     },
     {

@@ -1,37 +1,17 @@
 {
-  "updated_at": "2026-10-15T23:14:03.053732+00:00",
+  "updated_at": "2026-10-15T23:14:32.078357+00:00",
   "provider": "gemini",
-  "model": "gemini-3.8-flash",
-  "existing_articles": 85,
-  "generated_this_run": 0,
-  "status": "errors",
+  "model": "gemini-3.5-flash-lite",
+  "existing_articles": 86,
+  "generated_this_run": 1,
+  "status": "completed",
   "errors": [
     {
       "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies",
-      "error": "Conspiracy Watch: <urlopen error timed out>"
-    },
-    {
-      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://mufon.com/2026/10/15/join-us-at-the-mufon-world-symposium-july-22-25-2027-kansas-city-kansas",
-      "error": "MUFON UFO News: Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. gemini-3.8-flash: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.5-flash-lite: Faltam a seção de hipóteses ou a conclusão"
-    },
-    {
-      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
-      "error": "Revista UFO Brasil: <urlopen error [Errno 101] Network is unreachable>"
-    },
-    {
-      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
-      "error": "The Folklore Society UK: Conteúdo extraído insuficiente (692 caracteres); não gerar artigo a partir apenas de título/resumo"
     }
   ],
   "candidate_count": 34,
-  "attempted_this_run": 6,
-  "message": "Geração automática ativa: até 2 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
+  "attempted_this_run": 2,
+  "message": "Geração automática ativa: até 1 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }
