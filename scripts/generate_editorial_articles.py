@@ -771,6 +771,10 @@ def main():
         if fixed_images:
             print(f"[INFO] Imagens adicionadas a artigos antigos: {fixed_images}.", flush=True)
     existing_urls = {canonical_url(a.get("source_url")) for a in existing_articles if a.get("source_url")}
+    existing_fingerprints = {
+        hashlib.sha256(canonical_url(a.get("source_url")).encode("utf-8")).hexdigest()[:10]
+        for a in existing_articles if a.get("source_url")
+    }
     # Avoid spending every hourly run on the exact same URLs that failed in the
     # immediately preceding run. They remain eligible again after one run, so
     # temporary publisher blocks and model outages are retried rather than lost.
@@ -830,9 +834,9 @@ def main():
     attempted = 0
     source_attempts = {}
     quota_exhausted = False
-    # Keep Groq within its free per-minute and daily token budgets: one full article
-    # per hourly run. Gemini retains the configured maximum of up to ten.
-    max_per_run = min(MAX_PER_RUN, 1) if provider == "groq" else MAX_PER_RUN
+    # Each provider has its own half-hour slot. Attempt up to two complete articles
+    # per run, while stopping immediately if the provider quota is exhausted.
+    max_per_run = min(MAX_PER_RUN, 2)
     # Failures must not waste the entire hourly quota when more eligible stories exist.
     # Try up to three times the target, while limiting repeated requests to one feed.
     for item in candidates:
@@ -858,7 +862,10 @@ def main():
             status["model"] = used_model
             if not is_core_topic(article["title"], article["excerpt"]):
                 raise ValueError("Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado")
-            fingerprint = hashlib.sha256(url.encode("utf-8")).hexdigest()[:10]
+            fingerprint = hashlib.sha256(canonical_url(final_url).encode("utf-8")).hexdigest()[:10]
+            if canonical_url(final_url) in existing_urls or fingerprint in existing_fingerprints:
+                print(f"[SKIP] Fonte já publicada; duplicata bloqueada: {final_url}", flush=True)
+                continue
             slug = slugify(article["title"])[:60] + "-" + fingerprint
             output_path = ARTICLES_DIR / f"{slug}.html"
             if output_path.exists():
@@ -892,7 +899,8 @@ def main():
             }
             output_path.write_text(render_article_page(article, record, slug), encoding="utf-8")
             existing_articles.append(record)
-            existing_urls.add(url)
+            existing_urls.add(canonical_url(final_url))
+            existing_fingerprints.add(fingerprint)
             generated += 1
             print(f"[OK] Artigo criado: {record['path']} — {record['title']}", flush=True)
             time.sleep(1)
