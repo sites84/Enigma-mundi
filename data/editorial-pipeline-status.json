@@ -1,37 +1,25 @@
 {
-  "updated_at": "2026-10-15T01:43:34.331152+00:00",
-  "provider": "gemini",
-  "model": "gemini-3.5-flash-lite",
+  "updated_at": "2026-10-15T06:21:39.712778+00:00",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
   "existing_articles": 81,
-  "generated_this_run": 2,
-  "status": "partial_quota_exhausted",
+  "generated_this_run": 0,
+  "status": "errors",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-caused-massive-greater.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/a-ufo-or-satellite-researchers-analyze.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies",
-      "error": "Conspiracy Watch: The read operation timed out"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
-      "error": "Conspiracy Watch: The read operation timed out"
-    },
-    {
-      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://inexplicata.blogspot.com/2026/09/the-ufo-phenomenon-in-mexico-1991-wave.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     }
   ],
-  "candidate_count": 31,
-  "attempted_this_run": 8,
-  "message": "Limite/cota da API gemini atingido; geração interrompida para evitar tentativas inúteis. Aguarde a renovação da cota gratuita ou revise os limites da conta. Reportagens válidas já geradas foram preservadas."
+  "candidate_count": 29,
+  "attempted_this_run": 3,
+  "message": "Geração automática ativa: até 1 artigo(s) por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
 }
