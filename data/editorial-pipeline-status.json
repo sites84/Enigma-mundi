@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T06:21:39.712778+00:00",
+  "updated_at": "2026-10-15T06:21:54.451278+00:00",
   "provider": "groq",
   "model": "openai/gpt-oss-20b",
   "existing_articles": 81,
@@ -8,7 +8,7 @@
   "errors": [
     {
       "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "error": "Inexplicata — Journal of Hispanic Ufology: API groq retornou HTTP 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/a-ufo-or-satellite-researchers-analyze.html",
@@ -16,7 +16,7 @@
     },
     {
       "url": "https://inexplicata.blogspot.com/2026/09/the-ufo-phenomenon-in-mexico-1991-wave.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "error": "Inexplicata — Journal of Hispanic Ufology: API groq retornou HTTP 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
     }
   ],
   "candidate_count": 29,
