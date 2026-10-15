@@ -224,11 +224,10 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "e limites da evidência, sem inventar uma resposta definitiva. Gere conteúdo substancial e legível, com ângulo próprio."
     )
     model_source_text = source_text
-    if provider == "groq" and len(source_text) > 7500:
-        # Leave more room under Groq's free-tier token-per-minute cap for the
-        # structured article response. Preserve the source opening and ending;
-        # publication still requires the same full-structure quality gate.
-        model_source_text = source_text[:5500] + "\n\n[... trecho final da matéria original ...]\n\n" + source_text[-1800:]
+    if provider == "groq" and len(source_text) > 6000:
+        # Keep enough source context for a grounded report while reserving
+        # output budget for the required structured JSON on Groq's free tier.
+        model_source_text = source_text[:4400] + "\n\n[... trecho final da matéria original ...]\n\n" + source_text[-1400:]
     user = {
         "task": "Criar uma reportagem editorial original para publicação no site.",
         "source": {"name": source_name, "url": source_url, "original_title": title,
@@ -238,11 +237,11 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "requirements": [
             "Título de 45 a 95 caracteres, informativo e sem sensacionalismo.",
             "Resumo de 120 a 200 caracteres apenas para o campo excerpt; ele NÃO substitui a reportagem completa.",
-            "Escreva uma reportagem completa, mas eficiente: priorize os fatos relevantes da fonte e evite repetição ou introduções genéricas.",
-            "Abertura com 3 parágrafos claros e substanciais, cobrindo acontecimento, contexto e importância.",
-            "Use exatamente 4 seções temáticas, cada uma com heading e 2 parágrafos substantivos. Não repita a abertura.",
-            "Uma seção separada 'O que pode ser?' com 2 parágrafos sobre hipóteses, evidências e limitações.",
-            "Conclusão com 2 parágrafos que diferenciem fatos conhecidos e questões em aberto.",
+            "Escreva uma reportagem completa e objetiva, sem repetição nem introduções genéricas. Use somente fatos presentes no texto-fonte.",
+            "Abertura com 3 parágrafos substanciais, cobrindo acontecimento, contexto e importância.",
+            "Use exatamente 4 seções temáticas, cada uma com heading e 2 parágrafos concisos. Não repita a abertura.",
+            "Uma seção separada 'O que pode ser?' com 2 parágrafos concisos sobre hipóteses, evidências e limitações.",
+            "Conclusão com 2 parágrafos concisos que diferenciem fatos conhecidos e questões em aberto.",
             "Não copiar a redação da fonte. Não inventar fontes adicionais.",
             "Use apenas a fonte fornecida em source_references. Não alegue que outras fontes foram consultadas.",
             "Categoria deve ser uma destas: ufologia, conspiracoes, criptozoologia_lendas, fact_checking, arquivos_oficiais, misterios.",
@@ -259,7 +258,8 @@ def call_model(api_key, provider, model, title, description, source_name, source
                 {"role": "system", "content": system},
                 {"role": "user", "content": serialized_user},
             ],
-            "temperature": 0.4,
+            "temperature": 0.3,
+            "max_completion_tokens": 4096,
             "response_format": {"type": "json_object"},
         }
         headers = {
