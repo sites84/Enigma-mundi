@@ -253,12 +253,27 @@ def call_model(api_key, provider, model, title, description, source_name, source
     else:
         raise RuntimeError(f"Provedor de IA não suportado: {provider}")
     request = urllib.request.Request(endpoint, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
-    try:
-        with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
-            result = json.loads(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        detail = exc.read(3000).decode("utf-8", "replace")
-        raise RuntimeError(f"API {provider} retornou HTTP {exc.code}: {detail[:700]}") from exc
+    # Groq's free tier can return a short-lived tokens-per-minute 429 even
+    # when the key is valid. Honor its explicit retry delay once, rather than
+    # wasting the remaining candidate attempts or requiring a manual rerun.
+    for request_attempt in range(2):
+        try:
+            with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+                result = json.loads(response.read().decode("utf-8"))
+            break
+        except urllib.error.HTTPError as exc:
+            detail = exc.read(3000).decode("utf-8", "replace")
+            is_groq_tpm = (
+                provider == "groq" and exc.code == 429
+                and "tokens per minute" in detail.lower()
+            )
+            delay_match = re.search(r"try again in ([0-9.]+)s", detail, re.IGNORECASE)
+            if request_attempt == 0 and is_groq_tpm and delay_match:
+                delay = min(60.0, max(1.0, float(delay_match.group(1)) + 1.0))
+                print(f"[INFO] Limite temporário de tokens/minuto do Groq; aguardando {delay:.0f}s e repetindo uma única vez.", flush=True)
+                time.sleep(delay)
+                continue
+            raise RuntimeError(f"API {provider} retornou HTTP {exc.code}: {detail[:700]}") from exc
 
     if provider == "groq":
         choices = result.get("choices") or []
