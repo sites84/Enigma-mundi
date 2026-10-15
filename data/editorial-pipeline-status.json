@@ -1,30 +1,34 @@
 {
-  "updated_at": "2026-10-15T21:34:33.224117+00:00",
+  "updated_at": "2026-10-15T23:14:03.053732+00:00",
   "provider": "gemini",
-  "model": "gemini-3.5-flash-lite",
+  "model": "gemini-3.8-flash",
   "existing_articles": 85,
-  "generated_this_run": 1,
-  "status": "completed",
+  "generated_this_run": 0,
+  "status": "errors",
   "errors": [
     {
-      "url": "https://www.conspiracywatch.info/magazine-complorama",
-      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/10/noel-rigau-1973-ufo-wave-in-puerto-rico.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: API groq retornou HTTP 400: {\"error\":{\"message\":\"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '' does not validate with /required: missing properties: 'sections', 'what_might_it_be', 'conclusion', 'tags'\",\" | Gemini: Nenhum dos m"
+      "url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies",
+      "error": "Conspiracy Watch: <urlopen error timed out>"
     },
     {
-      "url": "https://www.theguardian.com/australia-news/2026/oct/15/anika-wells-dismisses-gov-censorship-claims-online-safety-national-press-club-ntwnfb",
-      "error": "The Guardian — Space: The read operation timed out"
+      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
+      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://www.scientificamerican.com/article/what-would-it-take-to-terraform-mars-erika-debenedictis-has-ideas",
-      "error": "Scientific American: The read operation timed out"
+      "url": "https://mufon.com/2026/10/15/join-us-at-the-mufon-world-symposium-july-22-25-2027-kansas-city-kansas",
+      "error": "MUFON UFO News: Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. gemini-3.8-flash: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.5-flash-lite: Faltam a seção de hipóteses ou a conclusão"
     },
     {
-      "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
-      "error": "Australian Skeptics: Conteúdo extraído insuficiente (75 caracteres); não gerar artigo a partir apenas de título/resumo"
+      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
+      "error": "Revista UFO Brasil: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
+      "error": "The Folklore Society UK: Conteúdo extraído insuficiente (692 caracteres); não gerar artigo a partir apenas de título/resumo"
     }
   ],
   "candidate_count": 34,
