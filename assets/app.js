@@ -32,6 +32,10 @@
 
   const postCategory = post => String(post.category_label || post.category || "Investigação").trim();
   const postDate = post => post.published_at || post.date || "";
+  // Reportagens originais recém-geradas devem aparecer primeiro, mesmo quando a fonte é antiga.
+  const postSortDate = post => post.post_type === "original_article"
+    ? (post.generated_at || post.updated_at || postDate(post))
+    : postDate(post);
 
   function renderPost(post) {
     const title = escapeHtml(post.title || "Matéria em preparação");
@@ -129,7 +133,7 @@
         .filter(post => post && post.status !== "draft")
         .sort((a, b) => {
           const priority = Number(b.post_type === "original_article") - Number(a.post_type === "original_article");
-          return priority || (new Date(postDate(b) || 0) - new Date(postDate(a) || 0));
+          return priority || (new Date(postSortDate(b) || 0) - new Date(postSortDate(a) || 0));
         });
       if (!allPosts.length) {
         status.textContent = "";
