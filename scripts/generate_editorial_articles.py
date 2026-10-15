@@ -292,7 +292,7 @@ def call_model(api_key, provider, model, title, description, source_name, source
                 provider == "groq" and exc.code == 429
                 and "tokens per minute" in detail.lower()
             )
-            delay_match = re.search(r"try again in ([0-9.]+)\\s*(ms|s)", detail, re.IGNORECASE)
+            delay_match = re.search(r"try again in ([0-9.]+)\s*(ms|s)", detail, re.IGNORECASE)
             if request_attempt == 0 and is_groq_tpm:
                 if delay_match:
                     amount = float(delay_match.group(1))
