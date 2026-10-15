@@ -220,14 +220,14 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "cobrindo os fatos relevantes disponíveis no material fornecido. Desenvolva contexto, cronologia quando houver, "
         "protagonistas, evidências citadas, explicações, controvérsias e limitações; não invente detalhes ausentes. "
         "Não traduza nem reproduza a estrutura parágrafo a parágrafo e não substitua o texto original por um resumo. "
-        "Não imponha limite mínimo ou máximo de palavras: o tamanho deve ser determinado pela cobertura completa dos fatos relevantes disponíveis, sem cortar a matéria para caber numa extensão predeterminada. A seção 'O que pode ser?' deve apresentar hipóteses plausíveis "
+        "Mantenha a reportagem entre 650 e 850 palavras no total, com parágrafos concisos de 2 a 4 frases. Priorize os fatos relevantes da fonte, sem repetição; respeite a estrutura solicitada e não ultrapasse a extensão para evitar truncamento do JSON. A seção 'O que pode ser?' deve apresentar hipóteses plausíveis "
         "e limites da evidência, sem inventar uma resposta definitiva. Gere conteúdo substancial e legível, com ângulo próprio."
     )
     model_source_text = source_text
     if provider == "groq" and len(source_text) > 4200:
         # Bound input tokens so the free-tier TPM limit leaves room for a complete
         # structured report. Preserve the opening and ending of the source.
-        model_source_text = source_text[:3200] + "\n\n[... trecho final da matéria original ...]\n\n" + source_text[-1000:]
+        model_source_text = source_text[:2400] + "\n\n[... trecho final da matéria original ...]\n\n" + source_text[-800:]
     user = {
         "task": "Criar uma reportagem editorial original para publicação no site.",
         "source": {"name": source_name, "url": source_url, "original_title": title,
@@ -928,6 +928,7 @@ def main():
             source_name = item.get("source_name") or item.get("source_id") or "Fonte externa"
             article, used_model = call_model_with_fallback(api_key, provider, model, item["title"], item.get("description", ""), source_name, final_url, source_text, category)
             status["model"] = used_model
+            status["provider"] = "gemini" if used_model.startswith("gemini-") else provider
             if not is_core_topic(article["title"], article["excerpt"]):
                 raise ValueError("Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado")
             fingerprint = hashlib.sha256(canonical_url(final_url).encode("utf-8")).hexdigest()[:10]
