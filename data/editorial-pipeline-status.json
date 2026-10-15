@@ -1,37 +1,33 @@
 {
-  "updated_at": "2026-10-15T06:28:05.679532+00:00",
-  "provider": "groq",
-  "model": "openai/gpt-oss-20b",
-  "existing_articles": 81,
-  "generated_this_run": 0,
-  "status": "errors",
+  "updated_at": "2026-10-15T11:50:49.833028+00:00",
+  "provider": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "existing_articles": 82,
+  "generated_this_run": 1,
+  "status": "completed",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: API groq retornou HTTP 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: API groq retornou HTTP 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+      "url": "https://inexplicata.blogspot.com/2026/09/a-ufo-or-satellite-researchers-analyze.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-caused-massive-greater.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: API groq retornou HTTP 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+      "url": "https://www.conspiracywatch.info/en/have-historians-really-failed-in-the-fight-against-holocaust-denial",
+      "error": "Conspiracy Watch: The read operation timed out"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies",
-      "error": "Conspiracy Watch: API groq retornou HTTP 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+      "url": "https://www.conspiracywatch.info/en/faucis-covid-origins-hearing-shows-how-conspiracy-theories-became-political-weapons",
+      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
-      "error": "Conspiracy Watch: API groq retornou HTTP 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/en/conspiracy-watch-joins-global-experts-to-stress-test-ai-systems-for-antisemitism-and-online-hate",
-      "error": "Conspiracy Watch: API groq retornou HTTP 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
+      "error": "Metabunk: The read operation timed out"
     }
   ],
-  "candidate_count": 32,
+  "candidate_count": 29,
   "attempted_this_run": 6,
   "message": "Geração automática ativa: até 2 artigo(s) por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
 }
