@@ -206,6 +206,51 @@ def fetch_article(url):
     return final_url, text[:18000]
 
 
+def parse_json_object(content, provider):
+    """Parse a complete JSON object, tolerating code fences or harmless surrounding text."""
+    cleaned = str(content or "").strip()
+    cleaned = re.sub(r"^\s*```(?:json)?\s*", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\s*```\s*$", "", cleaned)
+    try:
+        parsed = json.loads(cleaned)
+        if isinstance(parsed, dict):
+            return parsed
+    except json.JSONDecodeError:
+        pass
+
+    # Find a balanced JSON object without mistaking braces inside quoted strings.
+    start = cleaned.find("{")
+    while start >= 0:
+        depth = 0
+        in_string = False
+        escaped = False
+        for pos in range(start, len(cleaned)):
+            char = cleaned[pos]
+            if in_string:
+                if escaped:
+                    escaped = False
+                elif char == "\\\\":
+                    escaped = True
+                elif char == '"':
+                    in_string = False
+                continue
+            if char == '"':
+                in_string = True
+            elif char == "{":
+                depth += 1
+            elif char == "}":
+                depth -= 1
+                if depth == 0:
+                    try:
+                        parsed = json.loads(cleaned[start:pos + 1])
+                        if isinstance(parsed, dict):
+                            return parsed
+                    except json.JSONDecodeError:
+                        break
+        start = cleaned.find("{", start + 1)
+    raise RuntimeError(f"A resposta da API {provider} não contém um objeto JSON completo e válido")
+
+
 def call_model(api_key, provider, model, title, description, source_name, source_url, source_text, category):
     system = (
         "Você é editor de um portal jornalístico brasileiro chamado Enigma Mundi, especializado em mistérios, "
@@ -220,7 +265,7 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "cobrindo os fatos relevantes disponíveis no material fornecido. Desenvolva contexto, cronologia quando houver, "
         "protagonistas, evidências citadas, explicações, controvérsias e limitações; não invente detalhes ausentes. "
         "Não traduza nem reproduza a estrutura parágrafo a parágrafo e não substitua o texto original por um resumo. "
-        "Mantenha a reportagem entre 650 e 850 palavras no total, com parágrafos concisos de 2 a 4 frases. Priorize os fatos relevantes da fonte, sem repetição; respeite a estrutura solicitada e não ultrapasse a extensão para evitar truncamento do JSON. A seção 'O que pode ser?' deve apresentar hipóteses plausíveis "
+        "Mantenha o corpo entre 550 e 700 palavras no total. Cada parágrafo deve ter em média 30 a 45 palavras e 2 a 3 frases. Priorize os fatos relevantes da fonte, sem repetições, e respeite a estrutura solicitada. A resposta final deve ser somente um objeto JSON válido, sem Markdown nem texto externo. A seção 'O que pode ser?' deve apresentar hipóteses plausíveis "
         "e limites da evidência, sem inventar uma resposta definitiva. Gere conteúdo substancial e legível, com ângulo próprio."
     )
     model_source_text = source_text
@@ -237,7 +282,7 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "requirements": [
             "Título de 45 a 95 caracteres, informativo e sem sensacionalismo.",
             "Resumo de 120 a 200 caracteres apenas para o campo excerpt; ele NÃO substitui a reportagem completa.",
-            "Escreva uma reportagem completa e objetiva, sem repetição nem introduções genéricas. Use somente fatos presentes no texto-fonte.",
+            "Escreva uma reportagem completa e objetiva, sem repetição nem introduções genéricas. Use somente fatos presentes no texto-fonte; mantenha o corpo entre 550 e 700 palavras e parágrafos concisos.",
             "Abertura com 3 parágrafos substanciais, cobrindo acontecimento, contexto e importância.",
             "Use exatamente 4 seções temáticas, cada uma com heading e 2 parágrafos concisos. Não repita a abertura.",
             "Uma seção separada 'O que pode ser?' com 2 parágrafos concisos sobre hipóteses, evidências e limitações.",
@@ -260,7 +305,6 @@ def call_model(api_key, provider, model, title, description, source_name, source
             ],
             "temperature": 0.3,
             "max_completion_tokens": 2600,
-            "response_format": {"type": "json_object"},
         }
         headers = {
             "Authorization": f"Bearer {api_key}",
@@ -328,16 +372,7 @@ def call_model(api_key, provider, model, title, description, source_name, source
         content = next((part.get("text", "") for part in parts if part.get("text")), "")
     if not content:
         raise RuntimeError(f"A API {provider} não retornou conteúdo")
-    try:
-        article = json.loads(content)
-    except json.JSONDecodeError as exc:
-        raise RuntimeError(
-            f"A resposta da API {provider} não contém JSON válido; "
-            "possível resposta interrompida, reportagem descartada"
-        ) from exc
-    if not isinstance(article, dict):
-        raise RuntimeError(f"A API {provider} não retornou um objeto JSON de reportagem")
-    return article
+    return parse_json_object(content, provider)
 
 
 def call_model_with_fallback(api_key, provider, model, title, description, source_name, source_url, source_text, category):
@@ -437,6 +472,24 @@ def validate_article(article):
         for section in article["sections"] if isinstance(section, dict)
     ][:5]
     article["sections"] = [s for s in article["sections"] if s["heading"] and len(s["paragraphs"]) >= 2]
+    # Repair an undersized summary from the model's own opening paragraphs rather
+    # than spending another API call. Never invent facts or weaken title validation.
+    if len(article["excerpt"]) < 120 and article["lead"]:
+        lead_text = re.sub(r"\s+", " ", " ".join(article["lead"])).strip()
+        sentences = re.split(r"(?<=[.!?])\s+", lead_text)
+        summary_parts = []
+        for sentence in sentences:
+            proposed = " ".join(summary_parts + [sentence]).strip()
+            if len(proposed) > 200:
+                break
+            summary_parts.append(sentence)
+            if len(" ".join(summary_parts)) >= 120:
+                break
+        summary = " ".join(summary_parts).strip()
+        if len(summary) < 120:
+            summary = lead_text[:200].rsplit(" ", 1)[0].rstrip(" ,;:") + "…"
+        if len(summary) >= 90:
+            article["excerpt"] = summary[:260]
     if len(article["title"]) < 30 or len(article["excerpt"]) < 90:
         raise ValueError("Título ou resumo curto demais")
     if len(article["lead"]) < 3 or len(article["sections"]) < 4:
