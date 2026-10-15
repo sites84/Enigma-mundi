@@ -1,37 +1,29 @@
 {
-  "updated_at": "2026-10-15T17:57:35.041116+00:00",
+  "updated_at": "2026-10-15T18:00:32.857566+00:00",
   "provider": "groq",
   "model": "openai/gpt-oss-20b",
   "existing_articles": 83,
   "generated_this_run": 0,
-  "status": "errors",
+  "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
+      "url": "https://inexplicata.blogspot.com/2026/10/noel-rigau-1973-ufo-wave-in-puerto-rico.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
-      "error": "Conspiracy Watch: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: API groq retornou HTTP 400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}}\n | Gemini: Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. gemini-3.8-f"
+      "url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies",
+      "error": "Conspiracy Watch: The read operation timed out"
     },
     {
-      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: API groq retornou HTTP 400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}}\n | Gemini: Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. gemini-3.8-f"
+      "url": "https://www.folklore-society.com/blog/post/presidents-prizes-for-student-work-2026",
+      "error": "The Folklore Society UK: The read operation timed out"
     },
     {
-      "url": "https://mufon.com/2026/10/15/join-us-at-the-mufon-world-symposium-july-22-25-2027-kansas-city-kansas",
-      "error": "MUFON UFO News: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: API groq retornou HTTP 400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}}\n | Gemini: Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. gemini-3.8-f"
-    },
-    {
-      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
-      "error": "Revista UFO Brasil: The read operation timed out"
-    },
-    {
-      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
-      "error": "The Folklore Society UK: Conteúdo extraído insuficiente (692 caracteres); não gerar artigo a partir apenas de título/resumo"
+      "url": "https://www.scientificamerican.com/article/what-would-it-take-to-terraform-mars-erika-debenedictis-has-ideas",
+      "error": "Scientific American: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: Resposta Groq incompleta (finish_reason=length); a reportagem não será publicada para evitar texto cortado | Gemini: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error"
     }
   ],
   "candidate_count": 31,
-  "attempted_this_run": 6,
-  "message": "Geração automática ativa: até 2 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
+  "attempted_this_run": 4,
+  "message": "Cota da API groq atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
