@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-10-14T23:22:46.355753+00:00",
-  "article_count": 79,
+  "generated_at": "2026-10-15T01:43:34.327912+00:00",
+  "article_count": 81,
   "articles": [
+    {
+      "id": "em-f66682e49e",
+      "title": "Ex-líder de força-tarefa do Pentágono publica livro com alegações sobre OVNIs",
+      "excerpt": "Jay Stratton, veterano da inteligência militar e ex-diretor da UAPTF, relata supostos projetos de resgate de naves e engenharia reversa mantidos em sigilo por décadas.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-10-14T18:34:28+00:00",
+      "generated_at": "2026-10-15T01:41:38.048887+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Revista UFO Brasil",
+      "source_url": "https://ufo.com.br/ex-funcionario-do-pentagono-lanca-livro-com-revelacoes-sobre-ovnis/",
+      "url": "https://ufo.com.br/ex-funcionario-do-pentagono-lanca-livro-com-revelacoes-sobre-ovnis/",
+      "path": "artigos/ex-líder-de-força-tarefa-do-pentágono-publica-livro-com-aleg-f66682e49e.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://ufo.com.br/wp-content/uploads/2026/10/images.jpg",
+      "image_source_url": "https://ufo.com.br/ex-funcionario-do-pentagono-lanca-livro-com-revelacoes-sobre-ovnis/",
+      "image_alt": "Ex-líder de força-tarefa do Pentágono publica livro com alegações sobre OVNIs",
+      "tags": [
+        "ufologia",
+        "pentagono",
+        "uap",
+        "jay stratton",
+        "inteligencia militar"
+      ]
+    },
     {
       "id": "em-073f59e8e0",
       "title": "Os arquivos de Larry W. Bryant: O embate histórico com a CIA sobre OVNIs",
@@ -1280,6 +1306,32 @@
         "Torres Gêmeas",
         "fact checking",
         "história"
+      ]
+    },
+    {
+      "id": "em-121aed405c",
+      "title": "Conspirações antissemitas sobre o 11 de Setembro ressurgem nas redes",
+      "excerpt": "Organização não governamental alerta para o retorno de teorias conspiratórias que culpam judeus pelos ataques de 11 de setembro, às vésperas do 25º aniversário.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-09-11T11:27:17+00:00",
+      "generated_at": "2026-10-15T01:42:45.298135+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Conspiracy Watch",
+      "source_url": "https://www.conspiracywatch.info/en/antisemitic-conspiracies-blaming-jews-for-9-11-resurface-ahead-of-25th-anniversary-cyberwell-warns/",
+      "url": "https://www.conspiracywatch.info/en/antisemitic-conspiracies-blaming-jews-for-9-11-resurface-ahead-of-25th-anniversary-cyberwell-warns/",
+      "path": "artigos/conspirações-antissemitas-sobre-o-11-de-setembro-ressurgem-n-121aed405c.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.conspiracywatch.info/en/wp-content/uploads/2026/09/miniature-9-11-JPost.jpg",
+      "image_source_url": "https://www.conspiracywatch.info/en/antisemitic-conspiracies-blaming-jews-for-9-11-resurface-ahead-of-25th-anniversary-cyberwell-warns/",
+      "image_alt": "Conspirações antissemitas sobre o 11 de Setembro ressurgem nas redes",
+      "tags": [
+        "antisemitismo",
+        "11 de setembro",
+        "teorias da conspiração",
+        "redes sociais",
+        "desinformação"
       ]
     },
     {
