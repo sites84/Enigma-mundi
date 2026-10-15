@@ -1,29 +1,37 @@
 {
-  "updated_at": "2026-10-15T17:28:06.781424+00:00",
+  "updated_at": "2026-10-15T17:30:48.638613+00:00",
   "provider": "groq",
   "model": "openai/gpt-oss-20b",
   "existing_articles": 82,
   "generated_this_run": 0,
-  "status": "quota_exhausted",
+  "status": "errors",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
+      "url": "https://inexplicata.blogspot.com/2026/10/noel-rigau-1973-ufo-wave-in-puerto-rico.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: API groq retornou HTTP 400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}}\n"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/conspiracy-watch-joins-global-experts-to-stress-test-ai-systems-for-antisemitism-and-online-hate",
-      "error": "Conspiracy Watch: API groq retornou HTTP 400: {\"error\":{\"message\":\"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"{\\\"title\\\":\\\"Red‑Teaming de IA revela brechas em filtros anti‑odião e antissemitismo\\\",\\\"excerpt\\\":\\\"Especialistas reuniram‑se em Nova‑Iorque para testar chatbots e descobrir"
+      "url": "https://www.unexplained-mysteries.com/news/400183/james-bond-purchases-a-haunted-18th-century-pub-in-london",
+      "error": "Unexplained Mysteries: A reportagem gerada não contém todos os campos obrigatórios"
     },
     {
-      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: A reportagem gerada não contém todos os campos obrigatórios"
+      "url": "https://www.conspiracywatch.info/en/ed-sheeran-vs-macklemore-affair-used-to-spread-wild-anti-jewish-conspiracies",
+      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://mufon.com/2026/10/15/join-us-at-the-mufon-world-symposium-july-22-25-2027-kansas-city-kansas",
-      "error": "MUFON UFO News: QUOTA_EXHAUSTED: limite gratuito da API Groq atingido: API groq retornou HTTP 429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m4y5t6w8eefasjjvkvtxrxf8` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5106, Requested 3589. Please try again in 5.212499999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com"
+      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
+      "error": "Revista UFO Brasil: API groq retornou HTTP 400: {\"error\":{\"message\":\"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"max completion tokens reached before generating a valid document\"}}\n"
+    },
+    {
+      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
+      "error": "The Folklore Society UK: Conteúdo extraído insuficiente (692 caracteres); não gerar artigo a partir apenas de título/resumo"
+    },
+    {
+      "url": "https://www.scientificamerican.com/article/what-would-it-take-to-terraform-mars-erika-debenedictis-has-ideas",
+      "error": "Scientific American: API groq retornou HTTP 400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}}\n"
     }
   ],
-  "candidate_count": 32,
-  "attempted_this_run": 4,
-  "message": "Limite/cota da API groq atingido; geração interrompida para evitar tentativas inúteis. Aguarde a renovação da cota gratuita ou revise os limites da conta. Reportagens válidas já geradas foram preservadas."
+  "candidate_count": 34,
+  "attempted_this_run": 6,
+  "message": "Geração automática ativa: até 2 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }
