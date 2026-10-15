@@ -229,7 +229,7 @@ def parse_json_object(content, provider):
             if in_string:
                 if escaped:
                     escaped = False
-                elif char == "\\\\":
+                elif char == "\\":
                     escaped = True
                 elif char == '"':
                     in_string = False
@@ -304,7 +304,47 @@ def call_model(api_key, provider, model, title, description, source_name, source
                 {"role": "user", "content": serialized_user},
             ],
             "temperature": 0.3,
-            "max_completion_tokens": 2600,
+            "max_completion_tokens": 2200,
+            # GPT-OSS spends part of its completion budget on reasoning. Keep it low
+            # so the actual article JSON is not cut off on the free tier.
+            "reasoning_effort": "low",
+            "reasoning_format": "hidden",
+            "response_format": {
+                "type": "json_schema",
+                "json_schema": {
+                    "name": "enigma_mundi_article",
+                    "strict": True,
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "title": {"type": "string"},
+                            "excerpt": {"type": "string"},
+                            "category": {"type": "string", "enum": list(CATEGORY_LABELS)},
+                            "lead": {"type": "array", "items": {"type": "string"}},
+                            "sections": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "heading": {"type": "string"},
+                                        "paragraphs": {"type": "array", "items": {"type": "string"}},
+                                    },
+                                    "required": ["heading", "paragraphs"],
+                                    "additionalProperties": False,
+                                },
+                            },
+                            "what_might_it_be": {"type": "array", "items": {"type": "string"}},
+                            "conclusion": {"type": "array", "items": {"type": "string"}},
+                            "tags": {"type": "array", "items": {"type": "string"}},
+                        },
+                        "required": [
+                            "title", "excerpt", "category", "lead", "sections",
+                            "what_might_it_be", "conclusion", "tags",
+                        ],
+                        "additionalProperties": False,
+                    },
+                },
+            },
         }
         headers = {
             "Authorization": f"Bearer {api_key}",
@@ -953,6 +993,7 @@ def main():
     attempted = 0
     source_attempts = {}
     quota_exhausted = False
+    fallback_quota_exhausted = False
     rate_limited = False
     # Each provider has its own half-hour slot. Attempt up to two complete articles
     # per run, while stopping immediately if the provider quota is exhausted.
@@ -1032,9 +1073,15 @@ def main():
             status["errors"].append({"url": url, "error": message})
             print(f"[WARN] {message}", flush=True)
             if "QUOTA_EXHAUSTED:" in raw_error:
-                quota_exhausted = True
-                print(f"[ERROR] Cota da API {provider} esgotada. Interrompendo novas chamadas de IA; os critérios editoriais permanecem inalterados.", flush=True)
-                break
+                gemini_fallback_quota = provider == "groq" and "fallback Gemini" in raw_error
+                groq_quota_also_exhausted = "Groq: API groq retornou HTTP 429" in raw_error
+                if gemini_fallback_quota and not groq_quota_also_exhausted:
+                    fallback_quota_exhausted = True
+                    print("[WARN] A cota gratuita do Gemini fallback foi atingida; continuando as tentativas Groq com os demais candidatos.", flush=True)
+                else:
+                    quota_exhausted = True
+                    print(f"[ERROR] Cota do provedor principal {provider} esgotada. Interrompendo novas chamadas de IA; os critérios editoriais permanecem inalterados.", flush=True)
+                    break
             if "RATE_LIMITED:" in raw_error:
                 rate_limited = True
                 print(f"[WARN] Limite temporário de tokens/minuto da API {provider}. Interrompendo esta execução; novas tentativas ocorrerão no próximo horário agendado.", flush=True)
@@ -1048,6 +1095,8 @@ def main():
         "updated_at": now_iso(),
         "status": ("partial_quota_exhausted" if quota_exhausted and generated else
                    "quota_exhausted" if quota_exhausted else
+                   "partial_fallback_quota_exhausted" if fallback_quota_exhausted and generated else
+                   "fallback_quota_exhausted" if fallback_quota_exhausted else
                    "partial_rate_limited" if rate_limited and generated else
                    "rate_limited" if rate_limited else
                    "completed" if generated else ("errors" if status["errors"] else "no_new_candidates")),
@@ -1055,8 +1104,9 @@ def main():
         "generated_this_run": generated,
         "candidate_count": len(candidates),
         "attempted_this_run": attempted,
-        "message": (f"Cota da API {provider} atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas." if quota_exhausted else
-                    f"Limite temporário de tokens/minuto da API {provider}; a execução foi pausada e será retomada no próximo horário agendado. Reportagens válidas já geradas foram preservadas." if rate_limited else
+        "message": (f"Cota do provedor principal {provider} atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas." if quota_exhausted else
+                    "Cota gratuita do Gemini fallback atingida; a execução tentou continuar com o Groq. Reportagens válidas já geradas foram preservadas." if fallback_quota_exhausted else
+                    f"Limite temporário de tokens/minuto do {provider}; a execução foi pausada e será retomada no próximo horário agendado. Reportagens válidas já geradas foram preservadas." if rate_limited else
                     f"Geração automática ativa: até {max_per_run} artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios.")
     })
     write_json(STATUS_PATH, status)
