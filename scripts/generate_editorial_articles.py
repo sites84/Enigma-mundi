@@ -224,10 +224,10 @@ def call_model(api_key, provider, model, title, description, source_name, source
         "e limites da evidência, sem inventar uma resposta definitiva. Gere conteúdo substancial e legível, com ângulo próprio."
     )
     model_source_text = source_text
-    if provider == "groq" and len(source_text) > 6000:
-        # Keep enough source context for a grounded report while reserving
-        # output budget for the required structured JSON on Groq's free tier.
-        model_source_text = source_text[:4400] + "\n\n[... trecho final da matéria original ...]\n\n" + source_text[-1400:]
+    if provider == "groq" and len(source_text) > 4200:
+        # Bound input tokens so the free-tier TPM limit leaves room for a complete
+        # structured report. Preserve the opening and ending of the source.
+        model_source_text = source_text[:3200] + "\n\n[... trecho final da matéria original ...]\n\n" + source_text[-1000:]
     user = {
         "task": "Criar uma reportagem editorial original para publicação no site.",
         "source": {"name": source_name, "url": source_url, "original_title": title,
@@ -259,7 +259,7 @@ def call_model(api_key, provider, model, title, description, source_name, source
                 {"role": "user", "content": serialized_user},
             ],
             "temperature": 0.3,
-            "max_completion_tokens": 4096,
+            "max_completion_tokens": 2600,
             "response_format": {"type": "json_object"},
         }
         headers = {
@@ -349,9 +349,11 @@ def call_model_with_fallback(api_key, provider, model, title, description, sourc
         except (RuntimeError, ValueError) as exc:
             message = str(exc)
             lowered = message.lower()
+            if "tokens per minute" in lowered and "http 429" in lowered:
+                raise RuntimeError("RATE_LIMITED: limite temporário de tokens por minuto da API Groq; a execução será pausada para não desperdiçar chamadas gratuitas: " + message[:850]) from exc
             if ("http 429" in lowered or "rate limit" in lowered or "quota" in lowered
-                    or "tokens per minute" in lowered or "requests per day" in lowered):
-                raise RuntimeError("QUOTA_EXHAUSTED: limite gratuito da API Groq atingido: " + message[:1000]) from exc
+                    or "requests per day" in lowered):
+                raise RuntimeError("QUOTA_EXHAUSTED: limite/cota gratuita da API Groq atingido: " + message[:1000]) from exc
             raise
     if provider != "gemini":
         raise RuntimeError(f"Provedor não suportado: {provider}")
@@ -881,6 +883,7 @@ def main():
     attempted = 0
     source_attempts = {}
     quota_exhausted = False
+    rate_limited = False
     # Each provider has its own half-hour slot. Attempt up to two complete articles
     # per run, while stopping immediately if the provider quota is exhausted.
     max_per_run = min(MAX_PER_RUN, 2)
@@ -959,7 +962,11 @@ def main():
             print(f"[WARN] {message}", flush=True)
             if "QUOTA_EXHAUSTED:" in raw_error:
                 quota_exhausted = True
-                print(f"[ERROR] Limite/cota da API {provider} atingido. Interrompendo novas chamadas de IA; os critérios editoriais permanecem inalterados.", flush=True)
+                print(f"[ERROR] Cota da API {provider} esgotada. Interrompendo novas chamadas de IA; os critérios editoriais permanecem inalterados.", flush=True)
+                break
+            if "RATE_LIMITED:" in raw_error:
+                rate_limited = True
+                print(f"[WARN] Limite temporário de tokens/minuto da API {provider}. Interrompendo esta execução; novas tentativas ocorrerão no próximo horário agendado.", flush=True)
                 break
     existing_articles.sort(key=lambda a: (a.get("published_at", ""), a.get("generated_at", "")), reverse=True)
     write_json(OUTPUT_PATH, {
@@ -970,12 +977,15 @@ def main():
         "updated_at": now_iso(),
         "status": ("partial_quota_exhausted" if quota_exhausted and generated else
                    "quota_exhausted" if quota_exhausted else
+                   "partial_rate_limited" if rate_limited and generated else
+                   "rate_limited" if rate_limited else
                    "completed" if generated else ("errors" if status["errors"] else "no_new_candidates")),
         "existing_articles": len(existing_articles),
         "generated_this_run": generated,
         "candidate_count": len(candidates),
         "attempted_this_run": attempted,
-        "message": (f"Limite/cota da API {provider} atingido; geração interrompida para evitar tentativas inúteis. Aguarde a renovação da cota gratuita ou revise os limites da conta. Reportagens válidas já geradas foram preservadas." if quota_exhausted else
+        "message": (f"Cota da API {provider} atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas." if quota_exhausted else
+                    f"Limite temporário de tokens/minuto da API {provider}; a execução foi pausada e será retomada no próximo horário agendado. Reportagens válidas já geradas foram preservadas." if rate_limited else
                     f"Geração automática ativa: até {max_per_run} artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios.")
     })
     write_json(STATUS_PATH, status)
