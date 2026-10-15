@@ -1,33 +1,25 @@
 {
-  "updated_at": "2026-10-15T11:50:49.833028+00:00",
-  "provider": "gemini",
-  "model": "gemini-3.5-flash-lite",
+  "updated_at": "2026-10-15T12:29:49.691905+00:00",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
   "existing_articles": 82,
-  "generated_this_run": 1,
-  "status": "completed",
+  "generated_this_run": 0,
+  "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
+      "url": "https://inexplicata.blogspot.com/2026/09/spain-alleged-ufo-that-brought.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: A reportagem gerada não contém todos os campos obrigatórios"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/a-ufo-or-satellite-researchers-analyze.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: Resposta Groq incompleta (finish_reason=length); a reportagem não será publicada para evitar texto cortado"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/have-historians-really-failed-in-the-fight-against-holocaust-denial",
-      "error": "Conspiracy Watch: The read operation timed out"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/en/faucis-covid-origins-hearing-shows-how-conspiracy-theories-became-political-weapons",
-      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: The read operation timed out"
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-caused-massive-greater.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: QUOTA_EXHAUSTED: limite gratuito da API Groq atingido: API groq retornou HTTP 429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01m4y5t6w8eefasjjvkvtxrxf8` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7973, Requested 2425. Please try again in 17.985s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/sett"
     }
   ],
   "candidate_count": 29,
-  "attempted_this_run": 6,
-  "message": "Geração automática ativa: até 2 artigo(s) por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte."
+  "attempted_this_run": 3,
+  "message": "Limite/cota da API groq atingido; geração interrompida para evitar tentativas inúteis. Aguarde a renovação da cota gratuita ou revise os limites da conta. Reportagens válidas já geradas foram preservadas."
 }
