@@ -876,13 +876,14 @@ def main():
     # Each provider has its own half-hour slot. Attempt up to two complete articles
     # per run, while stopping immediately if the provider quota is exhausted.
     max_per_run = min(MAX_PER_RUN, 2)
-    # Failures must not waste the entire hourly quota when more eligible stories exist.
-    # Try up to three times the target, while limiting repeated requests to one feed.
+    # Keep source failures isolated: one candidate per publisher per run.
+    # This prevents a blocked feed from consuming all attempts while healthy
+    # publishers have eligible stories waiting in the queue.
     for item in candidates:
         if generated >= max_per_run or attempted >= max_per_run * 3:
             break
         source_key = str(item.get("source_id") or item.get("source_name") or urllib.parse.urlsplit(str(item.get("url") or "")).netloc).strip().lower()
-        if source_attempts.get(source_key, 0) >= 3:
+        if source_attempts.get(source_key, 0) >= 1:
             continue
         source_attempts[source_key] = source_attempts.get(source_key, 0) + 1
         attempted += 1
@@ -967,7 +968,7 @@ def main():
         "candidate_count": len(candidates),
         "attempted_this_run": attempted,
         "message": (f"Limite/cota da API {provider} atingido; geração interrompida para evitar tentativas inúteis. Aguarde a renovação da cota gratuita ou revise os limites da conta. Reportagens válidas já geradas foram preservadas." if quota_exhausted else
-                    f"Geração automática ativa: até {max_per_run} artigo(s) por execução horária; tenta candidatos adicionais quando há falhas, com limite de três tentativas por fonte.")
+                    f"Geração automática ativa: até {max_per_run} artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios.")
     })
     write_json(STATUS_PATH, status)
     print(f"Artigos novos: {generated}; total publicado: {len(existing_articles)}; erros: {len(status['errors'])}")
