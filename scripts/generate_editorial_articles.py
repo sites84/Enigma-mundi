@@ -457,38 +457,63 @@ def call_model_with_fallback(api_key, provider, model, title, description, sourc
                      if "generateContent" in item.get("supportedGenerationMethods", [])}
     except (urllib.error.URLError, TimeoutError, ValueError, KeyError) as exc:
         raise RuntimeError(f"Não foi possível confirmar os modelos Gemini disponíveis: {str(exc)[:250]}") from exc
-    # Primary model first, followed by at most two confirmed alternatives.
-    priorities = (model, "gemini-3.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash")
-    models = list(dict.fromkeys(name for name in priorities if name in supported))[:3]
+    # Prefer the configured model, then try every confirmed text-capable Flash model.
+    # The previous implementation tried only three models and abandoned the source
+    # after a transient 503 overload, which made scheduled runs look successful while
+    # publishing nothing.
+    priorities = [
+        model, "gemini-2.5-flash", "gemini-2.5-flash-lite",
+        "gemini-2.0-flash", "gemini-3.5-flash-lite", "gemini-3.5-flash",
+        "gemini-3.1-flash-lite", "gemini-3-flash-preview",
+    ]
+    discovered_flash = sorted(
+        name for name in supported
+        if "flash" in name.lower()
+        and not any(marker in name.lower() for marker in ("embedding", "image", "tts", "audio", "live"))
+    )
+    models = list(dict.fromkeys(name for name in priorities if name in supported))
+    models.extend(name for name in discovered_flash if name not in models)
     if not models:
-        raise RuntimeError("A API não confirmou nenhum dos modelos Gemini de geração priorizados.")
+        raise RuntimeError("A API não confirmou nenhum dos modelos Gemini Flash de geração priorizados.")
     errors = []
-    for index, candidate in enumerate(models):
-        try:
-            draft = call_model(api_key, "gemini", candidate, title, description, source_name, source_url, source_text, category)
-            article = validate_article(draft)
-            if candidate != model:
-                print(f"[INFO] Reportagem completa validada com modelo alternativo '{candidate}'.", flush=True)
-            return article, candidate
-        except (RuntimeError, ValueError) as exc:
-            message = str(exc)
-            errors.append(f"{candidate}: {message[:180]}")
-            lowered = message.lower()
-            if ("exceeded your current quota" in lowered or "check your plan and billing" in lowered or "insufficient_quota" in lowered or "quota exceeded" in lowered):
-                raise RuntimeError("QUOTA_EXHAUSTED: " + message[:1200])
-            # Billing/quota exhaustion is not a transient model outage.
-            lowered = message.lower()
-            if ("exceeded your current quota" in lowered or "check your plan and billing" in lowered
-                    or "insufficient_quota" in lowered or "quota exceeded" in lowered):
-                raise RuntimeError("QUOTA_EXHAUSTED: " + message[:1200])
-            retryable = bool(re.search(r"HTTP (?:429|500|503)", message)) or any(marker in message.lower() for marker in (
-                "não contém json válido", "não retornou um objeto json", "não retornou conteúdo",
-                "não retornou candidatos", "resposta gemini incompleta", "reportagem incompleta",
-                "reportagem aparentemente truncada", "não contém todos os campos obrigatórios", "título ou resumo curto demais"))
-            if not retryable or index == len(models) - 1:
+    for candidate in models:
+        # 503 is commonly a temporary model-capacity problem. Retry that same
+        # model twice before moving to the next available model; do not retry hard quota errors.
+        for attempt in range(3):
+            try:
+                draft = call_model(api_key, "gemini", candidate, title, description, source_name, source_url, source_text, category)
+                article = validate_article(draft)
+                if candidate != model:
+                    print(f"[INFO] Reportagem completa validada com modelo alternativo '{candidate}'.", flush=True)
+                return article, candidate
+            except (RuntimeError, ValueError) as exc:
+                message = str(exc)
+                lowered = message.lower()
+                if any(marker in lowered for marker in (
+                    "exceeded your current quota", "check your plan and billing",
+                    "insufficient_quota", "quota exceeded"
+                )):
+                    raise RuntimeError("QUOTA_EXHAUSTED: " + message[:1200])
+                transient_capacity = "http 503" in lowered or "high demand" in lowered or "currently experiencing high demand" in lowered
+                if transient_capacity and attempt < 2:
+                    delay = 3 * (attempt + 1)
+                    print(f"[WARN] Gemini '{candidate}' com sobrecarga temporária; nova tentativa em {delay}s ({attempt + 2}/3).", flush=True)
+                    time.sleep(delay)
+                    continue
+                errors.append(f"{candidate}: {message[:180]}")
+                retryable = bool(re.search(r"HTTP (?:429|500|503)", message)) or any(marker in lowered for marker in (
+                    "não contém json válido", "não retornou um objeto json", "não retornou conteúdo",
+                    "não retornou candidatos", "resposta gemini incompleta", "reportagem incompleta",
+                    "reportagem aparentemente truncada", "não contém todos os campos obrigatórios",
+                    "título ou resumo curto demais"
+                ))
+                if not retryable:
+                    # Invalid source/content is not repaired by switching models.
+                    break
                 break
-            print(f"[WARN] Modelo Gemini '{candidate}' indisponível ou resposta inválida; tentando uma alternativa confirmada.", flush=True)
-    raise RuntimeError("Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. " + " | ".join(errors))
+            break
+        print(f"[WARN] Modelo Gemini '{candidate}' falhou; tentando o próximo modelo compatível.", flush=True)
+    raise RuntimeError("Nenhum dos modelos Gemini disponíveis produziu uma reportagem válida. " + " | ".join(errors))
 
 def clean_paragraphs(value, minimum=1):
     if not isinstance(value, list):
