@@ -1,17 +1,25 @@
 {
-  "updated_at": "2026-10-15T23:14:32.078357+00:00",
+  "updated_at": "2026-10-16T01:36:16.863774+00:00",
   "provider": "gemini",
-  "model": "gemini-3.5-flash-lite",
+  "model": "gemini-3.8-flash",
   "existing_articles": 86,
-  "generated_this_run": 1,
-  "status": "completed",
+  "generated_this_run": 0,
+  "status": "errors",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "url": "https://www.conspiracywatch.info/magazine-complorama",
+      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://inexplicata.blogspot.com/2026/10/noel-rigau-1973-ufo-wave-in-puerto-rico.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
+      "error": "Metabunk: Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. gemini-3.8-flash: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.5-flash-lite: A reportagem gerada não contém todos os campos obrigatórios | gemini-2.5-flash: API gemini retornou HTTP 4"
     }
   ],
-  "candidate_count": 34,
-  "attempted_this_run": 2,
+  "candidate_count": 37,
+  "attempted_this_run": 3,
   "message": "Geração automática ativa: até 1 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }
