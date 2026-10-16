@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T01:36:16.863774+00:00",
+  "updated_at": "2026-10-16T06:52:18.688125+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 86,
@@ -7,19 +7,19 @@
   "status": "errors",
   "errors": [
     {
-      "url": "https://www.conspiracywatch.info/magazine-complorama",
-      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://inexplicata.blogspot.com/2026/10/noel-rigau-1973-ufo-wave-in-puerto-rico.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. gemini-3.8-flash: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.5-flash-lite: A reportagem gerada não contém todos os campos obrigatórios | gemini-2.5-flash: API gemini retornou HTTP 4"
+      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
+      "error": "Conspiracy Watch: Nenhum dos modelos Gemini priorizados produziu uma reportagem válida. gemini-3.8-flash: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-3.5-flash-lite: A resposta da API gemini não contém um objeto JSON completo e válido"
+    },
+    {
+      "url": "https://mufon.com/2026/10/15/join-us-at-the-mufon-world-symposium-july-22-25-2027-kansas-city-kansas",
+      "error": "MUFON UFO News: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
-  "candidate_count": 37,
+  "candidate_count": 35,
   "attempted_this_run": 3,
   "message": "Geração automática ativa: até 1 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }
