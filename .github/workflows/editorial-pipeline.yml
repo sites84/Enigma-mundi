@@ -9,8 +9,9 @@ on:
       - ".github/workflows/editorial-pipeline.yml"
       - "data/discovered-articles.json"
   schedule:
-    # Run Gemini every 30 minutes. GitHub Actions cron uses UTC.
-    - cron: "*/30 * * * *"
+    # Run away from the busy minute 00/30 slots to reduce schedule contention.
+    # One article per run; GitHub Actions cron uses UTC.
+    - cron: "7,37 * * * *"
 
 permissions:
   contents: write
