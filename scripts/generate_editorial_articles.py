@@ -473,6 +473,8 @@ def call_model_with_fallback(api_key, provider, model, title, description, sourc
     )
     models = list(dict.fromkeys(name for name in priorities if name in supported))
     models.extend(name for name in discovered_flash if name not in models)
+    # Bound the worst-case runtime: the workflow has a 20-minute job timeout.
+    models = models[:5]
     if not models:
         raise RuntimeError("A API não confirmou nenhum dos modelos Gemini Flash de geração priorizados.")
     errors = []
