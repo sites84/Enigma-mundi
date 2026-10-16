@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-10-16T06:52:18.685870+00:00",
-  "article_count": 86,
+  "generated_at": "2026-10-16T12:10:13.895403+00:00",
+  "article_count": 87,
   "articles": [
+    {
+      "id": "em-2274528f4e",
+      "title": "Observatório lança nova revista impressa sobre teorias da conspiração",
+      "excerpt": "Projeto editorial busca aprofundar investigações sobre a desinformação e o impacto das narrativas conspiracionistas na democracia contemporânea.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-10-15T15:44:12+00:00",
+      "generated_at": "2026-10-16T12:10:12.894976+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Conspiracy Watch",
+      "source_url": "https://www.conspiracywatch.info/magazine-complorama",
+      "url": "https://www.conspiracywatch.info/magazine-complorama",
+      "path": "artigos/observatório-lança-nova-revista-impressa-sobre-teorias-da-co-2274528f4e.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.conspiracywatch.info/wp-content/uploads/2026/10/COMPLORAMA_-square.png",
+      "image_source_url": "https://www.conspiracywatch.info/magazine-complorama",
+      "image_alt": "Observatório lança nova revista impressa sobre teorias da conspiração",
+      "tags": [
+        "Conspiracy Watch",
+        "Complorama",
+        "desinformacao",
+        "fact-checking",
+        "midia"
+      ]
+    },
     {
       "id": "em-0f0b596a61",
       "title": "Daniel Craig compra pub do século XVIII em Londres, conhecido por suposto fantasma",
