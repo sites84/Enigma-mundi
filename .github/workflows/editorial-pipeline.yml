@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "scripts/generate_editorial_articles.py"
+      - "scripts/sync_editorial_to_supabase.py"
       - ".github/workflows/editorial-pipeline.yml"
       - "data/discovered-articles.json"
   schedule:
@@ -67,6 +68,12 @@ jobs:
               assert (Path(item["path"])).is_file(), f"missing article page: {item['path']}"
           print(f"Editorial articles validated: {len(articles)}; pipeline status: {status.get('status')}; new this run: {status.get('generated_this_run', 0)}")
           PY
+
+      - name: Sync editorial data to Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python scripts/sync_editorial_to_supabase.py
 
       - name: Commit generated articles and pipeline status
         run: |
