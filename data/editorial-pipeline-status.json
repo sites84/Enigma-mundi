@@ -1,18 +1,22 @@
 {
-  "updated_at": "2026-10-17T10:35:08.435832+00:00",
+  "updated_at": "2026-10-17T13:56:00.403104+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 88,
-  "generated_this_run": 1,
-  "status": "completed",
+  "generated_this_run": 0,
+  "status": "errors",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "url": "https://inexplicata.blogspot.com/2026/10/noel-rigau-1973-ufo-wave-in-puerto-rico.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/conspiracy-watch-joins-global-experts-to-stress-test-ai-systems-for-antisemitism-and-online-hate",
+      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
       "error": "Conspiracy Watch: The read operation timed out"
+    },
+    {
+      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
+      "error": "Metabunk: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
   "candidate_count": 34,
