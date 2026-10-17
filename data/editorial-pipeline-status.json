@@ -1,25 +1,21 @@
 {
-  "updated_at": "2026-10-17T06:05:55.800289+00:00",
+  "updated_at": "2026-10-17T10:35:08.435832+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
-  "existing_articles": 87,
-  "generated_this_run": 0,
-  "status": "quota_exhausted",
+  "existing_articles": 88,
+  "generated_this_run": 1,
+  "status": "completed",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/10/noel-rigau-1973-ufo-wave-in-puerto-rico.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
-      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://www.conspiracywatch.info/en/conspiracy-watch-joins-global-experts-to-stress-test-ai-systems-for-antisemitism-and-online-hate",
+      "error": "Conspiracy Watch: The read operation timed out"
     }
   ],
-  "candidate_count": 36,
+  "candidate_count": 34,
   "attempted_this_run": 3,
-  "message": "Cota do provedor principal gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
+  "message": "Geração automática ativa: até 1 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }

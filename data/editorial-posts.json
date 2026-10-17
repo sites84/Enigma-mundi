@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-17T06:05:55.798586+00:00",
-  "article_count": 87,
+  "generated_at": "2026-10-17T10:35:08.434185+00:00",
+  "article_count": 88,
   "articles": [
     {
       "id": "em-2274528f4e",
@@ -54,6 +54,32 @@
         "Clerkenwell",
         "Assombração",
         "James Bond"
+      ]
+    },
+    {
+      "id": "em-82a401cb23",
+      "title": "MUFON anuncia realização do simpósio mundial de ufologia de 2027 no Kansas",
+      "excerpt": "A Mutual UFO Network divulgou os preparativos para o Simpósio Mundial de 2027 em Overland Park, reunindo especialistas, oficinas práticas e debates sobre fenômenos aéreos não identificados.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-10-15T01:06:25+00:00",
+      "generated_at": "2026-10-17T10:35:07.433788+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "MUFON UFO News",
+      "source_url": "https://mufon.com/2026/10/15/join-us-at-the-mufon-world-symposium-july-22-25-2027-kansas-city-kansas/",
+      "url": "https://mufon.com/2026/10/15/join-us-at-the-mufon-world-symposium-july-22-25-2027-kansas-city-kansas/",
+      "path": "artigos/mufon-anuncia-realização-do-simpósio-mundial-de-ufologia-de--82a401cb23.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://mufon.com/wp-content/uploads/2026/10/3B7B8829-F35B-4EFE-822D-7BB3149C7DF5.png",
+      "image_source_url": "https://mufon.com/2026/10/15/join-us-at-the-mufon-world-symposium-july-22-25-2027-kansas-city-kansas/",
+      "image_alt": "MUFON anuncia realização do simpósio mundial de ufologia de 2027 no Kansas",
+      "tags": [
+        "MUFON",
+        "ufologia",
+        "Simpósio Mundial",
+        "UAP",
+        "Kansas"
       ]
     },
     {
