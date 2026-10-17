@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-17T19:17:04.646432+00:00",
-  "article_count": 88,
+  "generated_at": "2026-10-17T21:42:30.031258+00:00",
+  "article_count": 89,
   "articles": [
     {
       "id": "em-2274528f4e",
@@ -1827,6 +1827,32 @@
         "conspiracoes",
         "literatura",
         "desinformacao"
+      ]
+    },
+    {
+      "id": "em-544856cadf",
+      "title": "Testes de segurança revelam falhas graves de inteligência artificial sobre conspirações",
+      "excerpt": "Especialistas em direitos digitais identificam brechas em modelos de inteligência artificial que facilitam a difusão de teorias conspiratórias e conteúdos extremistas.",
+      "category": "conspiracoes",
+      "category_label": "Teorias da conspiração",
+      "published_at": "2026-08-18T16:43:06+00:00",
+      "generated_at": "2026-10-17T21:42:29.030463+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Conspiracy Watch",
+      "source_url": "https://www.conspiracywatch.info/en/conspiracy-watch-joins-global-experts-to-stress-test-ai-systems-for-antisemitism-and-online-hate/",
+      "url": "https://www.conspiracywatch.info/en/conspiracy-watch-joins-global-experts-to-stress-test-ai-systems-for-antisemitism-and-online-hate/",
+      "path": "artigos/testes-de-segurança-revelam-falhas-graves-de-inteligência-ar-544856cadf.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.conspiracywatch.info/en/wp-content/uploads/2026/08/AI-Summit-2026.jpeg",
+      "image_source_url": "https://www.conspiracywatch.info/en/conspiracy-watch-joins-global-experts-to-stress-test-ai-systems-for-antisemitism-and-online-hate/",
+      "image_alt": "Testes de segurança revelam falhas graves de inteligência artificial sobre conspirações",
+      "tags": [
+        "inteligencia artificial",
+        "teorias da conspiracao",
+        "red teaming",
+        "moderacao de conteudo",
+        "seguranca digital"
       ]
     },
     {
