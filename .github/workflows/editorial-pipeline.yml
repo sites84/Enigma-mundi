@@ -10,8 +10,8 @@ on:
       - ".github/workflows/editorial-pipeline.yml"
       - "data/discovered-articles.json"
   schedule:
-    # Run away from the busy minute 00/30 slots to reduce schedule contention.
-    # One article per run; GitHub Actions cron uses UTC.
+    # Run every 30 minutes; GitHub Actions cron uses UTC.
+    # Batch up to three original articles per run, like Tech Check's batch pipeline.
     - cron: "7,37 * * * *"
 
 permissions:
@@ -39,7 +39,7 @@ jobs:
 
       - name: Generate original Portuguese articles
         env:
-          # Gemini only: one article per scheduled run.
+          # Gemini only: batch up to three articles per scheduled run.
           EDITORIAL_PROVIDER: gemini
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
