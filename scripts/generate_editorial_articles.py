@@ -31,9 +31,8 @@ GROQ_API_BASE = os.getenv("GROQ_API_BASE", "https://api.groq.com/openai/v1")
 
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.8-flash"
 GROQ_MODEL = os.getenv("GROQ_MODEL", "").strip() or "openai/gpt-oss-20b"
-MAX_PER_RUN = max(1, min(int(os.getenv("MAX_ARTICLES_PER_RUN", "3")), 3))
+MAX_PER_RUN = max(1, min(int(os.getenv("MAX_ARTICLES_PER_RUN", "10")), 10))
 TIMEOUT = 45
-SOURCE_TIMEOUT = 12  # Do not let one blocked publisher stall the whole publishing run.
 USER_AGENT = "EnigmaMundiEditorialBot/1.0 (+https://github.com/sites84/Enigma-mundi)"
 SKIP_TAGS = {"script", "style", "nav", "header", "footer", "aside", "form", "button", "noscript", "svg"}
 CATEGORY_LABELS = {
@@ -139,7 +138,7 @@ def fetch_article(url):
     # never loop indefinitely or bypass the minimum-body quality gate.
     for fetch_attempt in range(2):
         try:
-            with urllib.request.urlopen(req, timeout=SOURCE_TIMEOUT) as response:
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as response:
                 final_url = response.geturl()
                 content_type = response.headers.get("Content-Type", "")
                 raw = response.read(2_000_000).decode("utf-8", "replace")
@@ -1023,8 +1022,9 @@ def main():
     quota_exhausted = False
     fallback_quota_exhausted = False
     rate_limited = False
-    # Process up to the configured limit per run. Stop immediately on provider quota errors.
-    max_per_run = MAX_PER_RUN
+    # Each provider has its own half-hour slot. Attempt up to two complete articles
+    # per run, while stopping immediately if the provider quota is exhausted.
+    max_per_run = min(MAX_PER_RUN, 2)
     # Keep source failures isolated: one candidate per publisher per run.
     # This prevents a blocked feed from consuming all attempts while healthy
     # publishers have eligible stories waiting in the queue.
