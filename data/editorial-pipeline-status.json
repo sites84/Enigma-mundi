@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T00:00:00.956651+00:00",
+  "updated_at": "2026-10-18T01:55:42.743430+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 89,
@@ -7,16 +7,16 @@
   "status": "errors",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/10/noel-rigau-1973-ufo-wave-in-puerto-rico.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
-      "error": "Conspiracy Watch: The read operation timed out"
+      "url": "https://www.conspiracywatch.info/en/have-historians-really-failed-in-the-fight-against-holocaust-denial",
+      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
-      "error": "Revista UFO Brasil: The read operation timed out"
+      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
+      "error": "Metabunk: The read operation timed out"
     }
   ],
   "candidate_count": 36,
