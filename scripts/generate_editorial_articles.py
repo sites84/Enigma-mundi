@@ -1038,7 +1038,7 @@ def main():
                 if len(description) >= 250:
                     source_text = (
                         "[TEXTO INTEGRAL DA PÁGINA NÃO DISPONÍVEL; USAR SOMENTE A DESCRIÇÃO RSS ABAIXO. "
-                        "Não inferir fatos ausentes nem apresentar detalhes não confirmados.]\\n\\n"
+                        "Não inferir fatos ausentes nem apresentar detalhes não confirmados.]\n\n"
                         + description[:5000]
                     )
                     print(f"[INFO] Usando descrição RSS como fonte limitada ({len(description)} caracteres): {url}", flush=True)
