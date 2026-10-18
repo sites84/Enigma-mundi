@@ -31,7 +31,7 @@ GROQ_API_BASE = os.getenv("GROQ_API_BASE", "https://api.groq.com/openai/v1")
 
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.8-flash"
 GROQ_MODEL = os.getenv("GROQ_MODEL", "").strip() or "openai/gpt-oss-20b"
-MAX_PER_RUN = max(1, min(int(os.getenv("MAX_ARTICLES_PER_RUN", "10")), 10))
+MAX_PER_RUN = max(1, min(int(os.getenv("MAX_ARTICLES_PER_RUN", "3")), 3))
 TIMEOUT = 45
 USER_AGENT = "EnigmaMundiEditorialBot/1.0 (+https://github.com/sites84/Enigma-mundi)"
 SKIP_TAGS = {"script", "style", "nav", "header", "footer", "aside", "form", "button", "noscript", "svg"}
@@ -1022,9 +1022,8 @@ def main():
     quota_exhausted = False
     fallback_quota_exhausted = False
     rate_limited = False
-    # Each provider has its own half-hour slot. Attempt up to two complete articles
-    # per run, while stopping immediately if the provider quota is exhausted.
-    max_per_run = min(MAX_PER_RUN, 2)
+    # Process up to the configured limit per run. Stop immediately on provider quota errors.
+    max_per_run = MAX_PER_RUN
     # Keep source failures isolated: one candidate per publisher per run.
     # This prevents a blocked feed from consuming all attempts while healthy
     # publishers have eligible stories waiting in the queue.
