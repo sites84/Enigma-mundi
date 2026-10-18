@@ -1,25 +1,49 @@
 {
-  "updated_at": "2026-10-18T01:57:26.780682+00:00",
-  "provider": "gemini",
-  "model": "gemini-3.8-flash",
+  "updated_at": "2026-10-18T01:58:47.379971+00:00",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
   "existing_articles": 89,
   "generated_this_run": 0,
-  "status": "quota_exhausted",
+  "status": "fallback_quota_exhausted",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://inexplicata.blogspot.com/2026/10/noel-rigau-1973-ufo-wave-in-puerto-rico.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: API groq retornou HTTP 400: {\"error\":{\"message\":\"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '' does not validate with /required: missing properties: 'sections', 'what_might_it_be', 'conclusion', 'tags'\",\" | Gemini: QUOTA_EXHAUS"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/have-historians-really-failed-in-the-fight-against-holocaust-denial",
-      "error": "Conspiracy Watch: Nenhum dos modelos Gemini disponíveis produziu uma reportagem válida. gemini-3.8-flash: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-2.5-flash: API gemini retornou HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flas"
+      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
+      "error": "Conspiracy Watch: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: API groq retornou HTTP 400: {\"error\":{\"message\":\"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '' does not validate with /required: missing properties: 'sections', 'what_might_it_be', 'conclusion', 'tags'\",\" | Gemini: QUOTA_EXHAUS"
     },
     {
-      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
+      "error": "Revista UFO Brasil: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: API groq retornou HTTP 400: {\"error\":{\"message\":\"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"{\\\"title\\\":\\\"Luzes na Amazônia: Operação Prato e os mistérios que ainda pe | Gemini: QUOTA_EXHAUS"
+    },
+    {
+      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
+      "error": "The Folklore Society UK: Conteúdo extraído insuficiente (692 caracteres); não gerar artigo a partir apenas de título/resumo"
+    },
+    {
+      "url": "https://www.theguardian.com/australia-news/2026/oct/15/anika-wells-dismisses-gov-censorship-claims-online-safety-national-press-club-ntwnfb",
+      "error": "The Guardian — Space: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: API groq retornou HTTP 400: {\"error\":{\"message\":\"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '/conclusion/0' does not validate with /properties/conclusion/items/type: expected string, but got object\",\"type | Gemini: QUOTA_EXHAUS"
+    },
+    {
+      "url": "https://www.scientificamerican.com/article/what-would-it-take-to-terraform-mars-erika-debenedictis-has-ideas",
+      "error": "Scientific American: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: API groq retornou HTTP 400: {\"error\":{\"message\":\"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"{\\\"title\\\":\\\"Microbios de Marte: a primeira tentativa de tornar o planeta  | Gemini: QUOTA_EXHAUS"
+    },
+    {
+      "url": "https://www.metabunk.org/threads/what-is-this-white-water-can-it-tied-back-to-nimitz-tic-tac-encounter.15135",
+      "error": "Metabunk: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: API groq retornou HTTP 400: {\"error\":{\"message\":\"Generated JSON does not match the expected schema. Please adjust your prompt. See 'failed_generation' for more details. Error: jsonschema: '' does not validate with /required: missing properties: 'sections', 'what_might_it_be', 'conclusion', 'tags'\",\" | Gemini: QUOTA_EXHAUS"
+    },
+    {
+      "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
+      "error": "Australian Skeptics: Conteúdo extraído insuficiente (75 caracteres); não gerar artigo a partir apenas de título/resumo"
+    },
+    {
+      "url": "https://skepticalinquirer.org/2026/08/how-to-read-science-news",
+      "error": "Skeptical Inquirer: Groq falhou e o fallback Gemini também não produziu reportagem válida. Groq: API groq retornou HTTP 400: {\"error\":{\"message\":\"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"{\\\"title\\\":\\\"Como Ler Notícias Científicas: Entre o Fato e o Click‑bait\\\", | Gemini: QUOTA_EXHAUS"
     }
   ],
   "candidate_count": 36,
-  "attempted_this_run": 3,
-  "message": "Cota do provedor principal gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
+  "attempted_this_run": 9,
+  "message": "Cota gratuita do Gemini fallback atingida; a execução tentou continuar com o Groq. Reportagens válidas já geradas foram preservadas."
 }
