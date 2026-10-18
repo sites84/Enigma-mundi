@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T02:04:13.259169+00:00",
+  "updated_at": "2026-10-18T02:05:12.507447+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 89,
@@ -8,7 +8,7 @@
   "errors": [
     {
       "url": "https://inexplicata.blogspot.com/2026/10/noel-rigau-1973-ufo-wave-in-puerto-rico.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
       "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
