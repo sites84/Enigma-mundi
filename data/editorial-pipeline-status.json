@@ -1,45 +1,41 @@
 {
-  "updated_at": "2026-10-18T07:15:07.350845+00:00",
+  "updated_at": "2026-10-18T12:16:44.804417+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
-  "existing_articles": 91,
+  "existing_articles": 92,
   "generated_this_run": 1,
   "status": "completed",
   "errors": [
     {
-      "url": "https://ufo.com.br/as-pessoas-estao-cansadas-e-frustradas-com-o-desacobertamento-dos-ufos",
-      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-caused-massive-greater.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
+      "error": "Conspiracy Watch: The read operation timed out"
     },
     {
-      "url": "https://www.metabunk.org/threads/sept-2026-al-jazeera-report-of-ufo-over-tehran.15106",
-      "error": "Metabunk: The read operation timed out"
+      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
+      "error": "Revista UFO Brasil: The read operation timed out"
     },
     {
-      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
-      "error": "The Folklore Society UK: Texto da página insuficiente (692 caracteres) e descrição RSS curta (73 caracteres); candidato preservado para próxima execução"
-    },
-    {
-      "url": "https://www.theguardian.com/australia-news/2026/oct/15/anika-wells-dismisses-gov-censorship-claims-online-safety-national-press-club-ntwnfb",
+      "url": "https://www.theguardian.com/technology/video/2026/oct/15/digital-duty-laws-still-allow-manosphere-content-and-conspiracy-theories-says-wells-video",
       "error": "The Guardian — Space: The read operation timed out"
     },
     {
-      "url": "https://www.scientificamerican.com/article/what-would-it-take-to-terraform-mars-erika-debenedictis-has-ideas",
-      "error": "Scientific American: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://www.metabunk.org/threads/what-is-this-white-water-can-it-tied-back-to-nimitz-tic-tac-encounter.15135",
+      "error": "Metabunk: The read operation timed out"
     },
     {
-      "url": "https://www.skeptics.com.au/australian-skeptics-video-archive",
+      "url": "https://www.skeptics.com.au/bent-spoon-award-for-2026",
       "error": "Australian Skeptics: The read operation timed out"
     },
     {
-      "url": "https://skepticalinquirer.org/2026/08/how-to-read-science-news",
-      "error": "Skeptical Inquirer: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://phys.org/news/2026-10-roman-fort-wales-key-ancient.html",
+      "error": "Phys.org — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
-  "candidate_count": 37,
-  "attempted_this_run": 9,
+  "candidate_count": 30,
+  "attempted_this_run": 8,
   "message": "Geração automática ativa: até 3 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }
