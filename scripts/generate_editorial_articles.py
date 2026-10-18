@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Generate original Portuguese editorial stories through free-tier Groq or Gemini APIs.
+"""Generate original Portuguese editorial stories with Gemini only.
 
-Groq is preferred when GROQ_API_KEY is configured; Gemini remains a fallback.
+Source extraction can fall back to an RSS description when the publisher blocks
+automated reading, while preserving strict topic and evidence constraints.
 Articles must pass full structure and editorial relevance checks before publication.
 """
 from __future__ import annotations
@@ -27,10 +28,8 @@ STATUS_PATH = ROOT / "data" / "editorial-pipeline-status.json"
 ARTICLES_DIR = ROOT / "artigos"
 
 GEMINI_API_BASE = os.getenv("GEMINI_API_BASE", "https://generativelanguage.googleapis.com/v1beta/models")
-GROQ_API_BASE = os.getenv("GROQ_API_BASE", "https://api.groq.com/openai/v1")
 
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.8-flash"
-GROQ_MODEL = os.getenv("GROQ_MODEL", "").strip() or "openai/gpt-oss-20b"
 MAX_PER_RUN = max(1, min(int(os.getenv("MAX_ARTICLES_PER_RUN", "3")), 3))
 TIMEOUT = 45
 SOURCE_TIMEOUT = 12  # Match Tech Check: do not let a single publisher block a run.
@@ -893,19 +892,10 @@ def openverse_image_lookup(title):
     return best
 
 def main():
-    groq_key = os.getenv("GROQ_API_KEY", "").strip()
-    gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
-    requested_provider = os.getenv("EDITORIAL_PROVIDER", "").strip().lower()
-    if requested_provider == "groq":
-        api_key, provider, model = groq_key, "groq", GROQ_MODEL
-    elif requested_provider == "gemini":
-        api_key, provider, model = gemini_key, "gemini", GEMINI_MODEL
-    elif groq_key:
-        api_key, provider, model = groq_key, "groq", GROQ_MODEL
-    elif gemini_key:
-        api_key, provider, model = gemini_key, "gemini", GEMINI_MODEL
-    else:
-        api_key, provider, model = "", "", ""
+    # Enigma Mundi uses Gemini exclusively; never select another provider from secrets.
+    api_key = os.getenv("GEMINI_API_KEY", "").strip()
+    provider = "gemini" if api_key else ""
+    model = GEMINI_MODEL if api_key else ""
     if provider == "gemini":
         try:
             model = resolve_gemini_model(api_key, model)
@@ -977,9 +967,9 @@ def main():
         "status": "waiting_for_api_key", "errors": [],
     }
     if not api_key:
-        status["message"] = "Configure GROQ_API_KEY (gratuita no GroqCloud) ou GEMINI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
+        status["message"] = "Configure GEMINI_API_KEY em Settings > Secrets and variables > Actions para ativar a geração editorial."
         write_json(STATUS_PATH, status)
-        print("Nenhuma chave GROQ_API_KEY ou GEMINI_API_KEY configurada. A fila foi preservada; nenhum conteúdo foi inventado ou publicado.")
+        print("GEMINI_API_KEY não configurada. A fila foi preservada; nenhum conteúdo foi inventado ou publicado.")
         return 0
 
     queue = read_json(QUEUE_PATH, {"articles": []})
@@ -1040,8 +1030,23 @@ def main():
         url = canonical_url(item.get("url"))
         try:
             final_url, source_text = fetch_article(url)
+            description = re.sub(r"\\s+", " ", str(item.get("description", "") or "")).strip()
             if len(source_text) < 900:
-                raise ValueError(f"Conteúdo extraído insuficiente ({len(source_text)} caracteres); não gerar artigo a partir apenas de título/resumo")
+                # Mirror Tech Check's resilient behavior: a failed article-page fetch
+                # must not automatically discard a candidate when its RSS entry has
+                # a meaningful description. Clearly label the limited evidence for Gemini.
+                if len(description) >= 250:
+                    source_text = (
+                        "[TEXTO INTEGRAL DA PÁGINA NÃO DISPONÍVEL; USAR SOMENTE A DESCRIÇÃO RSS ABAIXO. "
+                        "Não inferir fatos ausentes nem apresentar detalhes não confirmados.]\\n\\n"
+                        + description[:5000]
+                    )
+                    print(f"[INFO] Usando descrição RSS como fonte limitada ({len(description)} caracteres): {url}", flush=True)
+                else:
+                    raise ValueError(
+                        f"Texto da página insuficiente ({len(source_text)} caracteres) e descrição RSS curta "
+                        f"({len(description)} caracteres); candidato preservado para próxima execução"
+                    )
             # Recheck the extracted article body. A relevant-looking headline must not
             # bypass the gate if the fetched page is unrelated or a feed is misconfigured.
             if not is_core_topic(item.get("title", ""), item.get("description", ""), source_text[:10000]):
