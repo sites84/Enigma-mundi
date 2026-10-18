@@ -12,7 +12,7 @@ on:
   schedule:
     # Run away from the busy minute 00/30 slots to reduce schedule contention.
     # One article per run; GitHub Actions cron uses UTC.
-    - cron: "7,37 * * * *"
+    - cron: "7,27,47 * * * *"
 
 permissions:
   contents: write
@@ -43,7 +43,7 @@ jobs:
           EDITORIAL_PROVIDER: gemini
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
-          MAX_ARTICLES_PER_RUN: "1"
+          MAX_ARTICLES_PER_RUN: "3"
         run: python scripts/generate_editorial_articles.py
 
       - name: Validate editorial output
