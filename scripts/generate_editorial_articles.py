@@ -416,51 +416,25 @@ def call_model(api_key, provider, model, title, description, source_name, source
 
 
 def call_model_with_fallback(api_key, provider, model, title, description, source_name, source_url, source_text, category):
-    """Use Groq's free developer tier when configured; preserve strict article validation."""
-    if provider == "groq":
-        try:
-            draft = call_model(api_key, provider, model, title, description, source_name, source_url, source_text, category)
-            return validate_article(draft), model
-        except (RuntimeError, ValueError) as exc:
-            message = str(exc)
-            lowered = message.lower()
-            if "tokens per minute" in lowered and "http 429" in lowered:
-                raise RuntimeError("RATE_LIMITED: limite temporário de tokens por minuto da API Groq; a execução será pausada para não desperdiçar chamadas gratuitas: " + message[:850]) from exc
-            # If Groq returns malformed/truncated structured output, use the already
-            # configured free Gemini key instead of discarding a viable source.
-            # TPM throttling is handled above and deliberately pauses this run.
-            gemini_fallback_key = os.getenv("GEMINI_API_KEY", "").strip()
-            is_quota_error = ("http 429" in lowered or "rate limit" in lowered or "quota" in lowered
-                              or "requests per day" in lowered)
-            if gemini_fallback_key and not ("tokens per minute" in lowered and "http 429" in lowered):
-                print(f"[WARN] Groq não produziu reportagem válida ({message[:180]}). Tentando Gemini gratuito.", flush=True)
-                try:
-                    return call_model_with_fallback(
-                        gemini_fallback_key, "gemini", GEMINI_MODEL, title, description,
-                        source_name, source_url, source_text, category
-                    )
-                except (RuntimeError, ValueError) as fallback_exc:
-                    raise RuntimeError(
-                        "Groq falhou e o fallback Gemini também não produziu reportagem válida. "
-                        f"Groq: {message[:300]} | Gemini: {str(fallback_exc)[:500]}"
-                    ) from fallback_exc
-            if is_quota_error:
-                raise RuntimeError("QUOTA_EXHAUSTED: limite/cota gratuita da API Groq atingido: " + message[:1000]) from exc
-            raise
+    """Generate with Gemini only, retry transient API failures, and stop on exhausted quota."""
     if provider != "gemini":
-        raise RuntimeError(f"Provedor não suportado: {provider}")
+        raise RuntimeError(f"Provedor não suportado: {provider}; este pipeline usa somente Gemini.")
+
     try:
-        request = urllib.request.Request(GEMINI_API_BASE, headers={"x-goog-api-key": api_key, "User-Agent": USER_AGENT})
+        request = urllib.request.Request(
+            GEMINI_API_BASE,
+            headers={"x-goog-api-key": api_key, "User-Agent": USER_AGENT},
+        )
         with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
             catalog = json.loads(response.read().decode("utf-8"))
-        supported = {str(item.get("name", "")).removeprefix("models/") for item in catalog.get("models", [])
-                     if "generateContent" in item.get("supportedGenerationMethods", [])}
+        supported = {
+            str(item.get("name", "")).removeprefix("models/")
+            for item in catalog.get("models", [])
+            if "generateContent" in item.get("supportedGenerationMethods", [])
+        }
     except (urllib.error.URLError, TimeoutError, ValueError, KeyError) as exc:
         raise RuntimeError(f"Não foi possível confirmar os modelos Gemini disponíveis: {str(exc)[:250]}") from exc
-    # Prefer the configured model, then try every confirmed text-capable Flash model.
-    # The previous implementation tried only three models and abandoned the source
-    # after a transient 503 overload, which made scheduled runs look successful while
-    # publishing nothing.
+
     priorities = [
         model, "gemini-2.5-flash", "gemini-2.5-flash-lite",
         "gemini-2.0-flash", "gemini-3.5-flash-lite", "gemini-3.5-flash",
@@ -473,17 +447,24 @@ def call_model_with_fallback(api_key, provider, model, title, description, sourc
     )
     models = list(dict.fromkeys(name for name in priorities if name in supported))
     models.extend(name for name in discovered_flash if name not in models)
-    # Bound the worst-case runtime: the workflow has a 20-minute job timeout.
     models = models[:5]
     if not models:
         raise RuntimeError("A API não confirmou nenhum dos modelos Gemini Flash de geração priorizados.")
+
     errors = []
+    quota_markers = (
+        "exceeded your current quota", "check your plan and billing",
+        "insufficient_quota", "quota exceeded", "quota_exhausted",
+    )
+    transient_status = re.compile(r"HTTP (?:429|500|502|503|504)\\b", re.IGNORECASE)
+
     for candidate in models:
-        # 503 is commonly a temporary model-capacity problem. Retry that same
-        # model twice before moving to the next available model; do not retry hard quota errors.
         for attempt in range(3):
             try:
-                draft = call_model(api_key, "gemini", candidate, title, description, source_name, source_url, source_text, category)
+                draft = call_model(
+                    api_key, "gemini", candidate, title, description,
+                    source_name, source_url, source_text, category
+                )
                 article = validate_article(draft)
                 if candidate != model:
                     print(f"[INFO] Reportagem completa validada com modelo alternativo '{candidate}'.", flush=True)
@@ -491,30 +472,31 @@ def call_model_with_fallback(api_key, provider, model, title, description, sourc
             except (RuntimeError, ValueError) as exc:
                 message = str(exc)
                 lowered = message.lower()
-                if any(marker in lowered for marker in (
-                    "exceeded your current quota", "check your plan and billing",
-                    "insufficient_quota", "quota exceeded"
-                )):
-                    raise RuntimeError("QUOTA_EXHAUSTED: " + message[:1200])
-                transient_capacity = "http 503" in lowered or "high demand" in lowered or "currently experiencing high demand" in lowered
-                if transient_capacity and attempt < 2:
-                    delay = 3 * (attempt + 1)
-                    print(f"[WARN] Gemini '{candidate}' com sobrecarga temporária; nova tentativa em {delay}s ({attempt + 2}/3).", flush=True)
+                if any(marker in lowered for marker in quota_markers):
+                    raise RuntimeError("QUOTA_EXHAUSTED: " + message[:1200]) from exc
+
+                is_transient = bool(transient_status.search(message)) or any(
+                    marker in lowered for marker in (
+                        "high demand", "currently experiencing high demand",
+                        "temporarily unavailable", "timed out", "timeout",
+                    )
+                )
+                if is_transient and attempt < 2:
+                    delay = 2 ** (attempt + 1)
+                    print(
+                        f"[WARN] Gemini '{candidate}' falhou temporariamente; "
+                        f"nova tentativa em {delay}s ({attempt + 2}/3).",
+                        flush=True,
+                    )
                     time.sleep(delay)
                     continue
+
                 errors.append(f"{candidate}: {message[:180]}")
-                retryable = bool(re.search(r"HTTP (?:429|500|503)", message)) or any(marker in lowered for marker in (
-                    "não contém json válido", "não retornou um objeto json", "não retornou conteúdo",
-                    "não retornou candidatos", "resposta gemini incompleta", "reportagem incompleta",
-                    "reportagem aparentemente truncada", "não contém todos os campos obrigatórios",
-                    "título ou resumo curto demais"
-                ))
-                if not retryable:
-                    # Invalid source/content is not repaired by switching models.
-                    break
+                # Invalid generated JSON or article structure may be repaired by another model.
+                # Hard quota exhaustion was handled above; do not spend calls after it.
                 break
-            break
         print(f"[WARN] Modelo Gemini '{candidate}' falhou; tentando o próximo modelo compatível.", flush=True)
+
     raise RuntimeError("Nenhum dos modelos Gemini disponíveis produziu uma reportagem válida. " + " | ".join(errors))
 
 def clean_paragraphs(value, minimum=1):
