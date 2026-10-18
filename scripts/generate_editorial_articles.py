@@ -993,7 +993,6 @@ def main():
     attempted = 0
     source_attempts = {}
     quota_exhausted = False
-    fallback_quota_exhausted = False
     rate_limited = False
     # Try up to three valid articles and inspect up to three candidates per target article.
     # Skip blocked publishers quickly; stop immediately when Gemini quota is exhausted.
@@ -1088,18 +1087,12 @@ def main():
             status["errors"].append({"url": url, "error": message})
             print(f"[WARN] {message}", flush=True)
             if "QUOTA_EXHAUSTED:" in raw_error:
-                gemini_fallback_quota = provider == "groq" and "fallback Gemini" in raw_error
-                groq_quota_also_exhausted = "Groq: API groq retornou HTTP 429" in raw_error
-                if gemini_fallback_quota and not groq_quota_also_exhausted:
-                    fallback_quota_exhausted = True
-                    print("[WARN] A cota gratuita do Gemini fallback foi atingida; continuando as tentativas Groq com os demais candidatos.", flush=True)
-                else:
-                    quota_exhausted = True
-                    print(f"[ERROR] Cota do provedor principal {provider} esgotada. Interrompendo novas chamadas de IA; os critérios editoriais permanecem inalterados.", flush=True)
-                    break
+                quota_exhausted = True
+                print("[ERROR] Cota do Gemini esgotada. Interrompendo novas chamadas de IA; os critérios editoriais permanecem inalterados.", flush=True)
+                break
             if "RATE_LIMITED:" in raw_error:
                 rate_limited = True
-                print(f"[WARN] Limite temporário de tokens/minuto da API {provider}. Interrompendo esta execução; novas tentativas ocorrerão no próximo horário agendado.", flush=True)
+                print("[WARN] Limite temporário do Gemini. Interrompendo esta execução; nova tentativa no próximo horário agendado.", flush=True)
                 break
     existing_articles.sort(key=lambda a: (a.get("published_at", ""), a.get("generated_at", "")), reverse=True)
     write_json(OUTPUT_PATH, {
@@ -1110,8 +1103,6 @@ def main():
         "updated_at": now_iso(),
         "status": ("partial_quota_exhausted" if quota_exhausted and generated else
                    "quota_exhausted" if quota_exhausted else
-                   "partial_fallback_quota_exhausted" if fallback_quota_exhausted and generated else
-                   "fallback_quota_exhausted" if fallback_quota_exhausted else
                    "partial_rate_limited" if rate_limited and generated else
                    "rate_limited" if rate_limited else
                    "completed" if generated else ("errors" if status["errors"] else "no_new_candidates")),
@@ -1119,9 +1110,8 @@ def main():
         "generated_this_run": generated,
         "candidate_count": len(candidates),
         "attempted_this_run": attempted,
-        "message": (f"Cota do provedor principal {provider} atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas." if quota_exhausted else
-                    "Cota gratuita do Gemini fallback atingida; a execução tentou continuar com o Groq. Reportagens válidas já geradas foram preservadas." if fallback_quota_exhausted else
-                    f"Limite temporário de tokens/minuto do {provider}; a execução foi pausada e será retomada no próximo horário agendado. Reportagens válidas já geradas foram preservadas." if rate_limited else
+        "message": ("Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas." if quota_exhausted else
+                    "Limite temporário do Gemini; execução pausada e retomada no próximo horário agendado. Reportagens válidas já geradas foram preservadas." if rate_limited else
                     f"Geração automática ativa: até {max_per_run} artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios.")
     })
     write_json(STATUS_PATH, status)
