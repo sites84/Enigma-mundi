@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-18T05:13:38.478368+00:00",
-  "article_count": 90,
+  "generated_at": "2026-10-18T07:15:07.349332+00:00",
+  "article_count": 91,
   "articles": [
     {
       "id": "em-2274528f4e",
@@ -1985,6 +1985,32 @@
         "Criptozoologia",
         "Sociologia da Ciência",
         "Metabunk"
+      ]
+    },
+    {
+      "id": "em-7ff8c08f7e",
+      "title": "O embate entre a verdade documental e a desinformação histórica na era algorítmica",
+      "excerpt": "Análise publicada pelo Conspiracy Watch avalia o confronto entre o rigor da pesquisa acadêmica e a rápida disseminação de teses negacionistas nas redes.",
+      "category": "conspiracoes",
+      "category_label": "Teorias da conspiração",
+      "published_at": "2026-08-11T13:12:58+00:00",
+      "generated_at": "2026-10-18T07:11:40.252011+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Conspiracy Watch",
+      "source_url": "https://www.conspiracywatch.info/en/have-historians-really-failed-in-the-fight-against-holocaust-denial/",
+      "url": "https://www.conspiracywatch.info/en/have-historians-really-failed-in-the-fight-against-holocaust-denial/",
+      "path": "artigos/o-embate-entre-a-verdade-documental-e-a-desinformação-histór-7ff8c08f7e.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.conspiracywatch.info/en/wp-content/uploads/2026/08/Have-Historians-Really-Failed-in-the-Fight-Against-Holocaust-Denial.jpg",
+      "image_source_url": "https://www.conspiracywatch.info/en/have-historians-really-failed-in-the-fight-against-holocaust-denial/",
+      "image_alt": "O embate entre a verdade documental e a desinformação histórica na era algorítmica",
+      "tags": [
+        "negacionismo",
+        "historiografia",
+        "desinformacao",
+        "redes sociais",
+        "inteligencia artificial"
       ]
     },
     {
