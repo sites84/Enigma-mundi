@@ -33,6 +33,7 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "").strip() or "gemini-3.8-flash"
 GROQ_MODEL = os.getenv("GROQ_MODEL", "").strip() or "openai/gpt-oss-20b"
 MAX_PER_RUN = max(1, min(int(os.getenv("MAX_ARTICLES_PER_RUN", "3")), 3))
 TIMEOUT = 45
+SOURCE_TIMEOUT = 12  # Do not let one blocked publisher stall the whole publishing run.
 USER_AGENT = "EnigmaMundiEditorialBot/1.0 (+https://github.com/sites84/Enigma-mundi)"
 SKIP_TAGS = {"script", "style", "nav", "header", "footer", "aside", "form", "button", "noscript", "svg"}
 CATEGORY_LABELS = {
@@ -138,7 +139,7 @@ def fetch_article(url):
     # never loop indefinitely or bypass the minimum-body quality gate.
     for fetch_attempt in range(2):
         try:
-            with urllib.request.urlopen(req, timeout=TIMEOUT) as response:
+            with urllib.request.urlopen(req, timeout=SOURCE_TIMEOUT) as response:
                 final_url = response.geturl()
                 content_type = response.headers.get("Content-Type", "")
                 raw = response.read(2_000_000).decode("utf-8", "replace")
