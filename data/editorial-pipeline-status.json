@@ -1,33 +1,25 @@
 {
-  "updated_at": "2026-10-19T19:16:48.325770+00:00",
+  "updated_at": "2026-10-19T23:03:06.726360+00:00",
   "provider": "gemini",
-  "model": "gemini-3.5-flash-lite",
+  "model": "gemini-3.8-flash",
   "existing_articles": 94,
-  "generated_this_run": 1,
-  "status": "partial_quota_exhausted",
+  "generated_this_run": 0,
+  "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://www.unexplained-mysteries.com/news/400187/former-pentagon-uap-chief-claims-to-have-seen-non-human-beings",
-      "error": "Unexplained Mysteries: The read operation timed out"
-    },
-    {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-caused-massive-greater.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
-      "error": "Conspiracy Watch: The read operation timed out"
-    },
-    {
-      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
+      "url": "https://ufo.com.br/as-pessoas-estao-cansadas-e-frustradas-com-o-desacobertamento-dos-ufos",
       "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://www.theguardian.com/technology/video/2026/oct/15/digital-duty-laws-still-allow-manosphere-content-and-conspiracy-theories-says-wells-video",
-      "error": "The Guardian — Space: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.conspiracywatch.info/en/faucis-covid-origins-hearing-shows-how-conspiracy-theories-became-political-weapons",
+      "error": "Conspiracy Watch: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
-  "candidate_count": 31,
-  "attempted_this_run": 6,
+  "candidate_count": 34,
+  "attempted_this_run": 3,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
