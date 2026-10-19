@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-10-19T05:59:49.062605+00:00",
-  "article_count": 92,
+  "generated_at": "2026-10-19T12:59:39.748525+00:00",
+  "article_count": 93,
   "articles": [
+    {
+      "id": "em-a13100897e",
+      "title": "Equação de Drake completa 65 anos como guia para o enigma da vida no cosmos",
+      "excerpt": "Criada em 1961 por Frank Drake, formulação matemática organiza o raciocínio científico sobre civilizações extraterrestres e evidencia limites do conhecimento cósmico.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-19T08:00:00+00:00",
+      "generated_at": "2026-10-19T12:57:22.349125+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "New Scientist — Space",
+      "source_url": "https://www.newscientist.com/article/2594385-why-the-drake-equation-is-still-important-65-years-after-its-creation/",
+      "url": "https://www.newscientist.com/article/2594385-why-the-drake-equation-is-still-important-65-years-after-its-creation/",
+      "path": "artigos/equação-de-drake-completa-65-anos-como-guia-para-o-enigma-da-a13100897e.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.newscientist.com/wp-content/uploads/2026/10/SEI_316868490.jpg",
+      "image_source_url": "https://www.newscientist.com/article/2594385-why-the-drake-equation-is-still-important-65-years-after-its-creation/",
+      "image_alt": "Equação de Drake completa 65 anos como guia para o enigma da vida no cosmos",
+      "tags": [
+        "Equação de Drake",
+        "Astrobiologia",
+        "SETI",
+        "Vida Extraterrestre",
+        "Astronomia"
+      ]
+    },
     {
       "id": "em-548d641ffd",
       "title": "Chip elétrico inovador pode identificar sinais de vida extraterrestre no espaço",
