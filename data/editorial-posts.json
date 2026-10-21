@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-10-21T14:41:58.498649+00:00",
-  "article_count": 95,
+  "generated_at": "2026-10-21T18:54:23.295143+00:00",
+  "article_count": 96,
   "articles": [
+    {
+      "id": "em-f2ca2971a5",
+      "title": "Nova edição da Revista UFO explora arquivos do Pentágono e mistérios ufológicos",
+      "excerpt": "A edição 306 da Revista UFO traz entrevistas com Avi Loeb, análise de arquivos do Pentágono e investigações sobre fenômenos aéreos no Brasil e no mundo.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-10-20T12:20:03+00:00",
+      "generated_at": "2026-10-21T18:54:18.683223+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Revista UFO Brasil",
+      "source_url": "https://ufo.com.br/revista-ufo-nova-edicao-306-reune-entrevista-exclusiva-documentos-do-pentagono-e-grandes-misterios-da-humanidade/",
+      "url": "https://ufo.com.br/revista-ufo-nova-edicao-306-reune-entrevista-exclusiva-documentos-do-pentagono-e-grandes-misterios-da-humanidade/",
+      "path": "artigos/nova-edição-da-revista-ufo-explora-arquivos-do-pentágono-e-m-f2ca2971a5.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://ufo.com.br/wp-content/uploads/2026/10/Revista-UFO-e-Guardioes-da-Amazonia.png",
+      "image_source_url": "https://ufo.com.br/revista-ufo-nova-edicao-306-reune-entrevista-exclusiva-documentos-do-pentagono-e-grandes-misterios-da-humanidade/",
+      "image_alt": "Nova edição da Revista UFO explora arquivos do Pentágono e mistérios ufológicos",
+      "tags": [
+        "revista ufo",
+        "ufologia",
+        "avi loeb",
+        "pentagono",
+        "fenomenos aereos"
+      ]
+    },
     {
       "id": "em-a13100897e",
       "title": "Equação de Drake completa 65 anos como guia para o enigma da vida no cosmos",
