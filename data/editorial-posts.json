@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-10-22T11:43:12.880965+00:00",
-  "article_count": 96,
+  "generated_at": "2026-10-22T17:06:54.871433+00:00",
+  "article_count": 97,
   "articles": [
+    {
+      "id": "em-ef495fbdc3",
+      "title": "Novo documentário sobre Pé-Grande gera debate sobre gravação histórica",
+      "excerpt": "Uma nova produção cinematográfica levanta velhas dúvidas sobre a veracidade do famoso registro do Pé-Grande feito por Patterson e Gimlin em 1967.",
+      "category": "criptozoologia_lendas",
+      "category_label": "Lendas e fenômenos incomuns",
+      "published_at": "2026-10-22T02:41:44+00:00",
+      "generated_at": "2026-10-22T17:03:51.751637+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Daily Grail",
+      "source_url": "https://www.dailygrail.com/2026/10/researcher-says-new-capturing-bigfoot-documentary-doesnt-actually-disprove-the-patterson-gimlin-film/",
+      "url": "https://www.dailygrail.com/2026/10/researcher-says-new-capturing-bigfoot-documentary-doesnt-actually-disprove-the-patterson-gimlin-film/",
+      "path": "artigos/novo-documentário-sobre-pé-grande-gera-debate-sobre-gravação-ef495fbdc3.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.dailygrail.com/wp-content/uploads/2018/07/Patterson-Gimlin-Bigfoot.jpg",
+      "image_source_url": "https://www.dailygrail.com/2026/10/researcher-says-new-capturing-bigfoot-documentary-doesnt-actually-disprove-the-patterson-gimlin-film/",
+      "image_alt": "Novo documentário sobre Pé-Grande gera debate sobre gravação histórica",
+      "tags": [
+        "Pé-Grande",
+        "Patterson-Gimlin",
+        "Criptozoologia",
+        "Misterios",
+        "Documentario"
+      ]
+    },
     {
       "id": "em-f2ca2971a5",
       "title": "Nova edição da Revista UFO explora arquivos do Pentágono e mistérios ufológicos",

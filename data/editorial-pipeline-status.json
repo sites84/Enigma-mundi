@@ -1,49 +1,37 @@
 {
-  "updated_at": "2026-10-22T11:43:12.883766+00:00",
+  "updated_at": "2026-10-22T17:06:54.873593+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
-  "existing_articles": 96,
-  "generated_this_run": 0,
-  "status": "errors",
+  "existing_articles": 97,
+  "generated_this_run": 1,
+  "status": "partial_quota_exhausted",
   "errors": [
     {
-      "url": "https://www.unexplained-mysteries.com/news/400187/former-pentagon-uap-chief-claims-to-have-seen-non-human-beings",
-      "error": "Unexplained Mysteries: The read operation timed out"
+      "url": "https://www.unexplained-mysteries.com/news/400188/us-may-be-in-a-ufo-transparency-arms-race-claims-burlison",
+      "error": "Unexplained Mysteries: Nenhum dos modelos Gemini disponíveis produziu uma reportagem válida. gemini-3.8-flash: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-2.5-flash: API gemini retornou HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flas"
     },
     {
-      "url": "https://ufo.com.br/as-pessoas-estao-cansadas-e-frustradas-com-o-desacobertamento-dos-ufos",
-      "error": "Revista UFO Brasil: The read operation timed out"
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
+      "url": "https://www.globalresearch.ca/the-global-crisis-food-water-and-fuel-three-fundamental-necessities-of-life-in-jeopardy-2/5446025",
+      "error": "Global Research Geopolitics: The read operation timed out"
     },
     {
-      "url": "https://skepticalinquirer.org/2026/10/americans-still-not-skeptical-enough-about-ufos",
-      "error": "Skeptical Inquirer: The read operation timed out"
+      "url": "https://earthsky.org/human-world/pentagon-uap-files-batch-5-ufos-orbs-triangles",
+      "error": "EarthSky: The read operation timed out"
     },
     {
-      "url": "https://korybko.substack.com/p/there-might-be-a-cover-up-going-on",
-      "error": "Global Research Geopolitics: HTTP Error 403: Forbidden"
+      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
+      "error": "The Folklore Society UK: Texto da página insuficiente (692 caracteres) e descrição RSS curta (73 caracteres); candidato preservado para próxima execução"
     },
     {
-      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
-      "error": "The Folklore Society UK: Texto da página insuficiente (699 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
-    },
-    {
-      "url": "https://earthsky.org/human-world/6th-batch-of-pentagon-uap-files-ufos-pursue",
-      "error": "EarthSky: Nenhum dos modelos Gemini disponíveis produziu uma reportagem válida. gemini-3.8-flash: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-2.5-flash: API gemini retornou HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flas"
-    },
-    {
-      "url": "https://www.skeptic.com/article/the-mind-weapon-panic-from-cia-psychics-and-ufos-to-ai-apocalypse",
-      "error": "Skeptic Magazine: The read operation timed out"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/cw_video/derniere-semaine-de-la-campagne-ulule-pour-complorama",
-      "error": "Conspiracy Watch: The read operation timed out"
+      "url": "https://www.theguardian.com/business/2026/oct/19/concerning-issues-found-at-gb-power-grid-by-inquiry-into-cover-up-claims",
+      "error": "The Guardian — Space: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
-  "candidate_count": 36,
-  "attempted_this_run": 9,
-  "message": "Geração automática ativa: até 3 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
+  "candidate_count": 30,
+  "attempted_this_run": 7,
+  "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
