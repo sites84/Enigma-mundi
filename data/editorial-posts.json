@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-10-23T07:27:29.618556+00:00",
-  "article_count": 97,
+  "generated_at": "2026-10-23T12:55:21.586354+00:00",
+  "article_count": 98,
   "articles": [
+    {
+      "id": "em-75b381dee3",
+      "title": "A origem medieval e o impacto econômico da tradição das abóboras de Halloween",
+      "excerpt": "Conheça a transformação histórica das lanternas de Halloween, de raízes no folclore irlandês com nabos esculpidos a um fenômeno de consumo milionário.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-10-22T13:00:00+00:00",
+      "generated_at": "2026-10-23T12:55:17.494317+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Snopes Urban Legends",
+      "source_url": "https://www.snopes.com/news/2026/10/26/halloween-pumpkins-carving-history/",
+      "url": "https://www.snopes.com/news/2026/10/26/halloween-pumpkins-carving-history/",
+      "path": "artigos/a-origem-medieval-e-o-impacto-econômico-da-tradição-das-abób-75b381dee3.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2026/10/pumpkin.png",
+      "image_source_url": "https://www.snopes.com/news/2026/10/26/halloween-pumpkins-carving-history/",
+      "image_alt": "A origem medieval e o impacto econômico da tradição das abóboras de Halloween",
+      "tags": [
+        "Halloween",
+        "Folclore",
+        "Jack-o-lantern",
+        "História",
+        "Tradições"
+      ]
+    },
     {
       "id": "em-ef495fbdc3",
       "title": "Novo documentário sobre Pé-Grande gera debate sobre gravação histórica",

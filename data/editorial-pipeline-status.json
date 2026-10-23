@@ -1,49 +1,45 @@
 {
-  "updated_at": "2026-10-23T07:27:29.620241+00:00",
+  "updated_at": "2026-10-23T12:55:21.590158+00:00",
   "provider": "gemini",
-  "model": "gemini-3.8-flash",
-  "existing_articles": 97,
-  "generated_this_run": 0,
-  "status": "errors",
+  "model": "gemini-3.5-flash",
+  "existing_articles": 98,
+  "generated_this_run": 1,
+  "status": "partial_quota_exhausted",
   "errors": [
     {
-      "url": "https://www.unexplained-mysteries.com/news/400188/us-may-be-in-a-ufo-transparency-arms-race-claims-burlison",
+      "url": "https://www.unexplained-mysteries.com/news/400187/former-pentagon-uap-chief-claims-to-have-seen-non-human-beings",
       "error": "Unexplained Mysteries: The read operation timed out"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
-    },
-    {
-      "url": "https://skepticalinquirer.org/2026/10/americans-still-not-skeptical-enough-about-ufos",
-      "error": "Skeptical Inquirer: The read operation timed out"
-    },
-    {
-      "url": "https://korybko.substack.com/p/there-might-be-a-cover-up-going-on",
-      "error": "Global Research Geopolitics: HTTP Error 403: Forbidden"
-    },
-    {
-      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
-      "error": "The Folklore Society UK: Texto da página insuficiente (699 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
-    },
-    {
-      "url": "https://earthsky.org/human-world/6th-batch-of-pentagon-uap-files-ufos-pursue",
-      "error": "EarthSky: The read operation timed out"
-    },
-    {
-      "url": "https://www.skeptic.com/article/the-mind-weapon-panic-from-cia-psychics-and-ufos-to-ai-apocalypse",
-      "error": "Skeptic Magazine: The read operation timed out"
-    },
-    {
-      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
+      "url": "https://ufo.com.br/as-pessoas-estao-cansadas-e-frustradas-com-o-desacobertamento-dos-ufos",
       "error": "Revista UFO Brasil: The read operation timed out"
     },
     {
-      "url": "https://www.conspiracywatch.info/cw_video/derniere-semaine-de-la-campagne-ulule-pour-complorama",
-      "error": "Conspiracy Watch: The read operation timed out"
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
+    },
+    {
+      "url": "https://www.skeptic.org.uk/2026/10/cryptozoology-and-the-circus-train-wreck-on-the-track-of-escaped-animals",
+      "error": "The Skeptic: The read operation timed out"
+    },
+    {
+      "url": "https://www.globalresearch.ca/the-global-crisis-food-water-and-fuel-three-fundamental-necessities-of-life-in-jeopardy-2/5446025",
+      "error": "Global Research Geopolitics: The read operation timed out"
+    },
+    {
+      "url": "https://earthsky.org/human-world/pentagon-uap-files-batch-5-ufos-orbs-triangles",
+      "error": "EarthSky: The read operation timed out"
+    },
+    {
+      "url": "https://www.theguardian.com/business/2026/oct/19/concerning-issues-found-at-gb-power-grid-by-inquiry-into-cover-up-claims",
+      "error": "The Guardian — Space: The read operation timed out"
+    },
+    {
+      "url": "https://skepticalinquirer.org/2026/10/what-martin-gardners-puzzles-teach-us-about-thinking",
+      "error": "Skeptical Inquirer: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
-  "candidate_count": 38,
+  "candidate_count": 30,
   "attempted_this_run": 9,
-  "message": "Geração automática ativa: até 3 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
+  "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
