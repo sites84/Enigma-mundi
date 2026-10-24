@@ -1,49 +1,45 @@
 {
-  "updated_at": "2026-10-24T13:21:05.938331+00:00",
+  "updated_at": "2026-10-24T16:56:32.028064+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 98,
   "generated_this_run": 0,
-  "status": "errors",
+  "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://www.unexplained-mysteries.com/news/400187/former-pentagon-uap-chief-claims-to-have-seen-non-human-beings",
+      "url": "https://www.unexplained-mysteries.com/news/400192/roswell-ufo-witness-testimony-included-in-latest-ufo-files-drop",
       "error": "Unexplained Mysteries: The read operation timed out"
     },
     {
-      "url": "https://ufo.com.br/as-pessoas-estao-cansadas-e-frustradas-com-o-desacobertamento-dos-ufos",
-      "error": "Revista UFO Brasil: The read operation timed out"
+      "url": "https://mufon.com/2026/10/23/war-gov-ufo-disclosure-roswell-alien",
+      "error": "MUFON UFO News: The read operation timed out"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
     },
     {
-      "url": "https://www.skeptic.org.uk/2026/10/cryptozoology-and-the-circus-train-wreck-on-the-track-of-escaped-animals",
-      "error": "The Skeptic: The read operation timed out"
+      "url": "https://skepticalinquirer.org/2026/10/americans-still-not-skeptical-enough-about-ufos",
+      "error": "Skeptical Inquirer: HTTP Error 500: Internal Server Error"
     },
     {
-      "url": "https://www.globalresearch.ca/the-global-crisis-food-water-and-fuel-three-fundamental-necessities-of-life-in-jeopardy-2/5446025",
-      "error": "Global Research Geopolitics: The read operation timed out"
+      "url": "https://korybko.substack.com/p/there-might-be-a-cover-up-going-on",
+      "error": "Global Research Geopolitics: HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://earthsky.org/human-world/pentagon-uap-files-batch-5-ufos-orbs-triangles",
-      "error": "EarthSky: The read operation timed out"
+      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
+      "error": "The Folklore Society UK: Texto da página insuficiente (699 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
     },
     {
-      "url": "https://www.skeptic.com/article/the-mind-weapon-panic-from-cia-psychics-and-ufos-to-ai-apocalypse",
-      "error": "Skeptic Magazine: The read operation timed out"
-    },
-    {
-      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
-      "error": "The Folklore Society UK: Texto da página insuficiente (692 caracteres) e descrição RSS curta (73 caracteres); candidato preservado para próxima execução"
-    },
-    {
-      "url": "https://www.theguardian.com/business/2026/oct/19/concerning-issues-found-at-gb-power-grid-by-inquiry-into-cover-up-claims",
+      "url": "https://www.theguardian.com/world/2026/oct/23/ufo-pentagon-files",
       "error": "The Guardian — Space: The read operation timed out"
+    },
+    {
+      "url": "https://earthsky.org/human-world/6th-batch-of-pentagon-uap-files-ufos-pursue",
+      "error": "EarthSky: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
-  "candidate_count": 32,
-  "attempted_this_run": 9,
-  "message": "Geração automática ativa: até 3 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
+  "candidate_count": 33,
+  "attempted_this_run": 8,
+  "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
