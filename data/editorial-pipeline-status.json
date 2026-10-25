@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T00:12:21.933232+00:00",
+  "updated_at": "2026-10-25T05:10:41.308264+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 98,
@@ -7,15 +7,15 @@
   "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://www.unexplained-mysteries.com/news/400188/us-may-be-in-a-ufo-transparency-arms-race-claims-burlison",
+      "url": "https://www.unexplained-mysteries.com/news/400192/roswell-ufo-witness-testimony-included-in-latest-ufo-files-drop",
       "error": "Unexplained Mysteries: The read operation timed out"
     },
     {
-      "url": "https://ufo.com.br/as-pessoas-estao-cansadas-e-frustradas-com-o-desacobertamento-dos-ufos",
-      "error": "Revista UFO Brasil: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://mufon.com/2026/10/23/war-gov-ufo-disclosure-roswell-alien",
+      "error": "MUFON UFO News: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
-  "candidate_count": 39,
+  "candidate_count": 40,
   "attempted_this_run": 2,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
