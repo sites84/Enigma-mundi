@@ -1,8 +1,60 @@
 {
   "version": 1,
-  "generated_at": "2026-10-25T10:10:37.622906+00:00",
-  "article_count": 98,
+  "generated_at": "2026-10-25T14:17:41.488543+00:00",
+  "article_count": 100,
   "articles": [
+    {
+      "id": "em-cd7f74a53e",
+      "title": "Encontro Imediato no Bosque Estadual de Maricao em 1973",
+      "excerpt": "Engenheiros registram avistamento de OVNI durante testes de rádio na Cordillera Central de Porto Rico em outubro de 1973.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-10-25T11:42:28+00:00",
+      "generated_at": "2026-10-25T14:17:24.903023+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Inexplicata — Journal of Hispanic Ufology",
+      "source_url": "https://inexplicata.blogspot.com/2026/10/1973-maricao-state-forest-ce-1.html",
+      "url": "https://inexplicata.blogspot.com/2026/10/1973-maricao-state-forest-ce-1.html",
+      "path": "artigos/encontro-imediato-no-bosque-estadual-de-maricao-em-1973-cd7f74a53e.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9tnT78mX6uJdPW4TVjtEh7cZDSZQGIsZmgT5zYyYFDwXI84uWvSIRCIR8Y2wSzpUAzkXEI7tAMllIOhWnsN9DRgek_oegobRqWWEByvO86eDh6Pg8ekibjFtOJLEnDLmTH0UL5qu_1IcGUyxPaPQQoOO3jbEEWfhbJOa75fVfZiFKHwMD64ND/s320/UFO%201973%20Telephone%20Engineers%20Puerto%20Rico.png",
+      "image_source_url": "https://inexplicata.blogspot.com/2026/10/1973-maricao-state-forest-ce-1.html",
+      "image_alt": "Encontro Imediato no Bosque Estadual de Maricao em 1973",
+      "tags": [
+        "ufologia",
+        "porto rico",
+        "1973",
+        "maricao",
+        "misterios"
+      ]
+    },
+    {
+      "id": "em-f45b9e40e7",
+      "title": "Testemunho sobre Roswell ressurge em arquivos oficiais de UFOs",
+      "excerpt": "O célebre caso do incidente de Roswell, ocorrido em 1947, voltou a ocupar o centro das atenções após menções em um recente pacote de documentos divulgados pelo governo dos Estados Unidos.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-10-24T12:47:10+00:00",
+      "generated_at": "2026-10-25T14:17:40.027250+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Unexplained Mysteries",
+      "source_url": "https://www.unexplained-mysteries.com/news/400192/roswell-ufo-witness-testimony-included-in-latest-ufo-files-drop",
+      "url": "https://www.unexplained-mysteries.com/news/400192/roswell-ufo-witness-testimony-included-in-latest-ufo-files-drop",
+      "path": "artigos/testemunho-sobre-roswell-ressurge-em-arquivos-oficiais-de-uf-f45b9e40e7.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.unexplained-mysteries.com/images/news_large/news-hq-area-51-hangar.jpg",
+      "image_source_url": "https://www.unexplained-mysteries.com/news/400192/roswell-ufo-witness-testimony-included-in-latest-ufo-files-drop",
+      "image_alt": "Testemunho sobre Roswell ressurge em arquivos oficiais de UFOs",
+      "tags": [
+        "Roswell",
+        "UFO",
+        "Pentágono",
+        "Walter Haut",
+        "arquivos oficiais"
+      ]
+    },
     {
       "id": "em-75b381dee3",
       "title": "A origem medieval e o impacto econômico da tradição das abóboras de Halloween",
