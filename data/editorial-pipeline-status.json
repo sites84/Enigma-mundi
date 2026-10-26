@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T23:09:59.004671+00:00",
+  "updated_at": "2026-10-26T01:34:11.814708+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 100,
@@ -7,15 +7,11 @@
   "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
-      "error": "Vigilant Citizen Symbolism: The read operation timed out"
-    },
-    {
-      "url": "https://www.unexplained-mysteries.com/news/400188/us-may-be-in-a-ufo-transparency-arms-race-claims-burlison",
-      "error": "Unexplained Mysteries: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://mufon.com/2026/10/23/war-gov-ufo-disclosure-roswell-alien",
+      "error": "MUFON UFO News: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
-  "candidate_count": 42,
-  "attempted_this_run": 2,
+  "candidate_count": 41,
+  "attempted_this_run": 1,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
