@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-26T06:53:19.980726+00:00",
-  "article_count": 100,
+  "generated_at": "2026-10-26T14:15:15.404604+00:00",
+  "article_count": 102,
   "articles": [
     {
       "id": "em-cd7f74a53e",
@@ -53,6 +53,32 @@
         "Pentágono",
         "Walter Haut",
         "arquivos oficiais"
+      ]
+    },
+    {
+      "id": "em-d6e08dcba8",
+      "title": "A narrativa dos trens de circo e o mistério dos animais fugitivos",
+      "excerpt": "Investigação analisa como acidentes ferroviários históricos alimentam a criptozoologia ao explicar avistamentos de animais exóticos e fora de lugar.",
+      "category": "criptozoologia_lendas",
+      "category_label": "Lendas e fenômenos incomuns",
+      "published_at": "2026-10-23T09:00:00+00:00",
+      "generated_at": "2026-10-26T14:12:57.560651+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Skeptic",
+      "source_url": "https://www.skeptic.org.uk/2026/10/cryptozoology-and-the-circus-train-wreck-on-the-track-of-escaped-animals/",
+      "url": "https://www.skeptic.org.uk/2026/10/cryptozoology-and-the-circus-train-wreck-on-the-track-of-escaped-animals/",
+      "path": "artigos/a-narrativa-dos-trens-de-circo-e-o-mistério-dos-animais-fugi-d6e08dcba8.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.skeptic.org.uk/wp-content/uploads/2026/10/image-1.jpeg",
+      "image_source_url": "https://www.skeptic.org.uk/2026/10/cryptozoology-and-the-circus-train-wreck-on-the-track-of-escaped-animals/",
+      "image_alt": "A narrativa dos trens de circo e o mistério dos animais fugitivos",
+      "tags": [
+        "criptozoologia",
+        "historia",
+        "lendas_urbanas",
+        "misterios",
+        "folclore"
       ]
     },
     {
@@ -157,6 +183,32 @@
         "SETI",
         "Vida Extraterrestre",
         "Astronomia"
+      ]
+    },
+    {
+      "id": "em-22eaa71985",
+      "title": "Divulgação de arquivos sobre OVNIs gera frustração por falta de provas definitivas",
+      "excerpt": "A liberação contínua de relatórios sobre fenômenos aéreos não identificados atrai críticas por falta de evidências biológicas e de gravações em alta resolução.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-10-18T01:55:19+00:00",
+      "generated_at": "2026-10-26T14:11:27.824362+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Revista UFO Brasil",
+      "source_url": "https://ufo.com.br/as-pessoas-estao-cansadas-e-frustradas-com-o-desacobertamento-dos-ufos/",
+      "url": "https://ufo.com.br/as-pessoas-estao-cansadas-e-frustradas-com-o-desacobertamento-dos-ufos/",
+      "path": "artigos/divulgação-de-arquivos-sobre-ovnis-gera-frustração-por-falta-22eaa71985.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://ufo.com.br/wp-content/uploads/2026/10/IMG_5512.jpeg",
+      "image_source_url": "https://ufo.com.br/as-pessoas-estao-cansadas-e-frustradas-com-o-desacobertamento-dos-ufos/",
+      "image_alt": "Divulgação de arquivos sobre OVNIs gera frustração por falta de provas definitivas",
+      "tags": [
+        "ufologia",
+        "uap",
+        "nasa",
+        "pentagono",
+        "desacobertamento"
       ]
     },
     {
