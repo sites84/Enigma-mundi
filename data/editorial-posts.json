@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-28T11:39:43.448726+00:00",
-  "article_count": 103,
+  "generated_at": "2026-10-28T17:24:42.022820+00:00",
+  "article_count": 105,
   "articles": [
     {
       "id": "em-cd7f74a53e",
@@ -53,6 +53,32 @@
         "Pentágono",
         "Walter Haut",
         "arquivos oficiais"
+      ]
+    },
+    {
+      "id": "em-99df0e4721",
+      "title": "Departamento de Guerra dos EUA libera novo pacote de arquivos sobre óvnis",
+      "excerpt": "O Departamento de Guerra publicou o sétimo lote de documentos desclassificados sobre Fenômenos Anômalos Não Identificados na plataforma oficial WAR.GOV/UFO.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-10-23T22:28:36+00:00",
+      "generated_at": "2026-10-28T17:21:01.242565+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "MUFON UFO News",
+      "source_url": "https://mufon.com/2026/10/23/war-gov-ufo-disclosure-roswell-alien/",
+      "url": "https://mufon.com/2026/10/23/war-gov-ufo-disclosure-roswell-alien/",
+      "path": "artigos/departamento-de-guerra-dos-eua-libera-novo-pacote-de-arquivo-99df0e4721.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://mufon.com/wp-content/uploads/2024/12/Roswell-UFO-Retrieval-1947-300x175.png",
+      "image_source_url": "https://mufon.com/2026/10/23/war-gov-ufo-disclosure-roswell-alien/",
+      "image_alt": "Departamento de Guerra dos EUA libera novo pacote de arquivos sobre óvnis",
+      "tags": [
+        "Ufologia",
+        "Pentágono",
+        "WAR.GOV/UFO",
+        "Documentos Desclassificados",
+        "Fenômenos Anômalos"
       ]
     },
     {
@@ -131,6 +157,32 @@
         "Criptozoologia",
         "Misterios",
         "Documentario"
+      ]
+    },
+    {
+      "id": "em-bf25615fbc",
+      "title": "O Pânico das Armas Mentais: Da Guerra Fria aos Riscos da Inteligência Artificial",
+      "excerpt": "Investigação analisa como o medo, o sigilo e o financiamento criam narrativas autorrealimentáveis, ligando pesquisas psíquicas da Guerra Fria e OVNIs aos alertas atuais sobre inteligência artificial.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-10-21T18:17:13+00:00",
+      "generated_at": "2026-10-28T17:24:28.561787+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Skeptic Magazine",
+      "source_url": "https://www.skeptic.com/article/the-mind-weapon-panic-from-cia-psychics-and-ufos-to-ai-apocalypse/",
+      "url": "https://www.skeptic.com/article/the-mind-weapon-panic-from-cia-psychics-and-ufos-to-ai-apocalypse/",
+      "path": "artigos/o-pânico-das-armas-mentais-da-guerra-fria-aos-riscos-da-inte-bf25615fbc.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://storage.ghost.io/c/36/db/36db2d53-b96a-4b7f-9ea6-1e48a1d7715e/content/images/2026/10/mind_weapon_panic_room.webp",
+      "image_source_url": "https://www.skeptic.com/article/the-mind-weapon-panic-from-cia-psychics-and-ufos-to-ai-apocalypse/",
+      "image_alt": "O Pânico das Armas Mentais: Da Guerra Fria aos Riscos da Inteligência Artificial",
+      "tags": [
+        "Inteligência Artificial",
+        "Guerra Fria",
+        "Ufologia",
+        "Parapsicologia",
+        "Segurança Nacional"
       ]
     },
     {
