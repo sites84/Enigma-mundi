@@ -1,33 +1,29 @@
 {
-  "updated_at": "2026-10-29T15:34:08.335491+00:00",
+  "updated_at": "2026-10-29T20:33:33.185210+00:00",
   "provider": "gemini",
-  "model": "gemini-3.5-flash-lite",
+  "model": "gemini-3.8-flash",
   "existing_articles": 106,
-  "generated_this_run": 1,
-  "status": "partial_quota_exhausted",
+  "generated_this_run": 0,
+  "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
+      "error": "Vigilant Citizen Symbolism: The read operation timed out"
+    },
+    {
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
     },
     {
-      "url": "https://earthsky.org/human-world/6th-batch-of-pentagon-uap-files-ufos-pursue",
-      "error": "EarthSky: The read operation timed out"
+      "url": "https://www.unexplained-mysteries.com/news/400197/pilots-spot-pill-shaped-ufo-hovering-near-their-plane-over-ohio",
+      "error": "Unexplained Mysteries: The read operation timed out"
     },
     {
-      "url": "https://ufo.com.br/uma-jornada-ufologica-na-amazonia",
-      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
-      "error": "The Folklore Society UK: Texto da página insuficiente (692 caracteres) e descrição RSS curta (73 caracteres); candidato preservado para próxima execução"
-    },
-    {
-      "url": "https://www.newscientist.com/article/2595718-this-weeks-new-questions-369",
-      "error": "New Scientist — Space: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://skepticalinquirer.org/2026/10/americans-still-not-skeptical-enough-about-ufos",
+      "error": "Skeptical Inquirer: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
-  "candidate_count": 32,
-  "attempted_this_run": 6,
+  "candidate_count": 39,
+  "attempted_this_run": 4,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
