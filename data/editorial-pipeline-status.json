@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T00:13:10.028967+00:00",
+  "updated_at": "2026-10-30T06:21:20.297336+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 106,
@@ -7,19 +7,15 @@
   "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
+      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
+      "error": "Vigilant Citizen Symbolism: The read operation timed out"
     },
     {
-      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
-      "error": "The Folklore Society UK: Texto da página insuficiente (699 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
-    },
-    {
-      "url": "https://earthsky.org/human-world/pentagon-uap-files-ufos-batch-7",
-      "error": "EarthSky: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
-  "candidate_count": 39,
-  "attempted_this_run": 3,
+  "candidate_count": 42,
+  "attempted_this_run": 2,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
