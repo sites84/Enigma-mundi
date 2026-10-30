@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-30T06:21:20.293956+00:00",
-  "article_count": 106,
+  "generated_at": "2026-10-30T13:32:53.072234+00:00",
+  "article_count": 107,
   "articles": [
     {
       "id": "em-cd7f74a53e",
@@ -131,6 +131,32 @@
         "Jack-o-lantern",
         "História",
         "Tradições"
+      ]
+    },
+    {
+      "id": "em-4622abcb48",
+      "title": "Cresce o número de americanos que afirmam ter avistado óvnis",
+      "excerpt": "Pesquisa recente da Gallup aponta aumento nos relatos de óvnis nos Estados Unidos, revelando que mais de um terço da população acredita na hipótese extraterrestre.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-10-22T03:52:58+00:00",
+      "generated_at": "2026-10-30T13:29:15.389158+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Skeptical Inquirer",
+      "source_url": "https://skepticalinquirer.org/2026/10/americans-still-not-skeptical-enough-about-ufos/",
+      "url": "https://skepticalinquirer.org/2026/10/americans-still-not-skeptical-enough-about-ufos/",
+      "path": "artigos/cresce-o-número-de-americanos-que-afirmam-ter-avistado-óvnis-4622abcb48.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": null,
+      "image_source_url": null,
+      "image_alt": null,
+      "tags": [
+        "ufologia",
+        "ceticismo",
+        "pesquisa",
+        "galup",
+        "espaco"
       ]
     },
     {

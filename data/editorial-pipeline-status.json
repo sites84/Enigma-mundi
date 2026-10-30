@@ -1,21 +1,45 @@
 {
-  "updated_at": "2026-10-30T06:21:20.297336+00:00",
+  "updated_at": "2026-10-30T13:32:53.073903+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
-  "existing_articles": 106,
-  "generated_this_run": 0,
-  "status": "quota_exhausted",
+  "existing_articles": 107,
+  "generated_this_run": 1,
+  "status": "completed",
   "errors": [
     {
-      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
-      "error": "Vigilant Citizen Symbolism: The read operation timed out"
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://www.unexplained-mysteries.com/news/400197/pilots-spot-pill-shaped-ufo-hovering-near-their-plane-over-ohio",
+      "error": "Unexplained Mysteries: The read operation timed out"
+    },
+    {
+      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
+      "error": "The Folklore Society UK: Texto da página insuficiente (699 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
+    },
+    {
+      "url": "https://www.theguardian.com/lifeandstyle/2026/oct/30/experience-i-live-in-the-house-from-the-80s-horror-movie-poltergeist",
+      "error": "The Guardian — Space: The read operation timed out"
+    },
+    {
+      "url": "https://earthsky.org/human-world/pentagon-uap-files-ufos-batch-7",
+      "error": "EarthSky: The read operation timed out"
+    },
+    {
+      "url": "https://www.conspiracywatch.info/cw_video/grace-a-vous-le-n1-de-complorama-va-voir-le-jour-%f0%9f%8e%89",
+      "error": "Conspiracy Watch: Texto da página insuficiente (211 caracteres) e descrição RSS curta (210 caracteres); candidato preservado para próxima execução"
+    },
+    {
+      "url": "https://ufo.com.br/marinheiros-relatam-encontro-com-objetos-luminosos-no-atlantico-que-desafiavam-o-radar",
+      "error": "Revista UFO Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.boatos.org/ciencia/bolsonarista-afirma-que-ets-chegaram-em-ovni-em-porto-alegre-para-trocar-corpos-de-lula-e-bolsonaro.html",
+      "error": "Boatos.org: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     }
   ],
-  "candidate_count": 42,
-  "attempted_this_run": 2,
-  "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
+  "candidate_count": 41,
+  "attempted_this_run": 9,
+  "message": "Geração automática ativa: até 3 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }
