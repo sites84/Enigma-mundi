@@ -1,37 +1,49 @@
 {
-  "updated_at": "2026-10-31T02:16:21.810227+00:00",
+  "updated_at": "2026-10-31T08:52:24.161979+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 107,
   "generated_this_run": 0,
-  "status": "quota_exhausted",
+  "status": "errors",
   "errors": [
     {
-      "url": "https://www.conspiracywatch.info/en/elections-in-israel-brazil-and-serbia-lies-damned-lies-and-conspiracy-theories",
-      "error": "Conspiracy Watch: The read operation timed out"
-    },
-    {
-      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
-      "error": "Vigilant Citizen Symbolism: The read operation timed out"
-    },
-    {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
     },
     {
-      "url": "https://ufo.com.br/pentagono-divulga-novo-caso-de-ovni-triangular-silencioso-observado-por-agentes-federais-nos-eua",
+      "url": "https://www.unexplained-mysteries.com/news/400197/pilots-spot-pill-shaped-ufo-hovering-near-their-plane-over-ohio",
+      "error": "Unexplained Mysteries: The read operation timed out"
+    },
+    {
+      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
+      "error": "Conspiracy Watch: The read operation timed out"
+    },
+    {
+      "url": "https://earthsky.org/human-world/pentagon-uap-files-ufos-batch-7",
+      "error": "EarthSky: The read operation timed out"
+    },
+    {
+      "url": "https://ufo.com.br/marinheiros-relatam-encontro-com-objetos-luminosos-no-atlantico-que-desafiavam-o-radar",
       "error": "Revista UFO Brasil: The read operation timed out"
     },
     {
-      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
-      "error": "The Folklore Society UK: Texto da página insuficiente (699 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
+      "url": "https://www.scientificamerican.com/article/strange-triangular-craft-reported-in-new-u-s-government-ufo-release",
+      "error": "Scientific American: The read operation timed out"
     },
     {
-      "url": "https://www.theguardian.com/lifeandstyle/2026/oct/30/experience-i-live-in-the-house-from-the-80s-horror-movie-poltergeist",
-      "error": "The Guardian — Space: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://www.folklore-society.com/blog/post/save-the-date-the-folklore-society-annual-conference-2027",
+      "error": "The Folklore Society UK: Texto da página insuficiente (692 caracteres) e descrição RSS curta (73 caracteres); candidato preservado para próxima execução"
+    },
+    {
+      "url": "https://mysteriousuniverse.org/2026/10/36.16-MU-Podcast-Super-Special-Spooky-Halloween-Special",
+      "error": "Mysterious Universe: The read operation timed out"
+    },
+    {
+      "url": "https://www.boatos.org/ciencia/bolsonarista-afirma-que-ets-chegaram-em-ovni-em-porto-alegre-para-trocar-corpos-de-lula-e-bolsonaro.html",
+      "error": "Boatos.org: The read operation timed out"
     }
   ],
-  "candidate_count": 50,
-  "attempted_this_run": 6,
-  "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
+  "candidate_count": 48,
+  "attempted_this_run": 9,
+  "message": "Geração automática ativa: até 3 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }
