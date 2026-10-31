@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T22:57:38.833960+00:00",
+  "updated_at": "2026-10-31T02:16:21.810227+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 107,
@@ -7,19 +7,31 @@
   "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "url": "https://www.conspiracywatch.info/en/elections-in-israel-brazil-and-serbia-lies-damned-lies-and-conspiracy-theories",
+      "error": "Conspiracy Watch: The read operation timed out"
+    },
+    {
+      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
+      "error": "Vigilant Citizen Symbolism: The read operation timed out"
+    },
+    {
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
       "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
     },
     {
-      "url": "https://www.unexplained-mysteries.com/news/400197/pilots-spot-pill-shaped-ufo-hovering-near-their-plane-over-ohio",
-      "error": "Unexplained Mysteries: The read operation timed out"
+      "url": "https://ufo.com.br/pentagono-divulga-novo-caso-de-ovni-triangular-silencioso-observado-por-agentes-federais-nos-eua",
+      "error": "Revista UFO Brasil: The read operation timed out"
     },
     {
-      "url": "https://www.conspiracywatch.info/en/a-french-far-left-political-scientist-and-a-notorious-convicted-holocaust-denier-debate-antisemitism",
-      "error": "Conspiracy Watch: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
+      "error": "The Folklore Society UK: Texto da página insuficiente (699 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
+    },
+    {
+      "url": "https://www.theguardian.com/lifeandstyle/2026/oct/30/experience-i-live-in-the-house-from-the-80s-horror-movie-poltergeist",
+      "error": "The Guardian — Space: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
-  "candidate_count": 47,
-  "attempted_this_run": 3,
+  "candidate_count": 50,
+  "attempted_this_run": 6,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
