@@ -1,21 +1,21 @@
 {
-  "updated_at": "2026-11-01T23:50:47.085886+00:00",
+  "updated_at": "2026-11-02T05:47:13.517730+00:00",
   "provider": "gemini",
-  "model": "gemini-3.8-flash",
+  "model": "gemini-3.5-flash-lite",
   "existing_articles": 107,
   "generated_this_run": 0,
   "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
+      "url": "https://www.conspiracywatch.info/en/elections-in-israel-brazil-and-serbia-lies-damned-lies-and-conspiracy-theories",
+      "error": "Conspiracy Watch: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
     },
     {
-      "url": "https://ufo.com.br/pentagono-divulga-novo-caso-de-ovni-triangular-silencioso-observado-por-agentes-federais-nos-eua",
-      "error": "Revista UFO Brasil: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
+      "error": "Vigilant Citizen Symbolism: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
     }
   ],
-  "candidate_count": 55,
+  "candidate_count": 54,
   "attempted_this_run": 2,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
