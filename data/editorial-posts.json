@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-11-03T11:54:49.504703+00:00",
-  "article_count": 111,
+  "generated_at": "2026-11-03T19:26:32.083081+00:00",
+  "article_count": 112,
   "articles": [
     {
       "id": "em-3a804eba9f",
@@ -79,6 +79,32 @@
         "misterios",
         "Simi Valley",
         "casas famosas"
+      ]
+    },
+    {
+      "id": "em-404e211ff6",
+      "title": "A Reconfiguração do Pizzagate: Uma Análise da Conexão com o Caso Epstein",
+      "excerpt": "Uma década após sua emergência, teorias da conspiração da era Trump ganham nova roupagem ao se fundirem com o escândalo envolvendo Jeffrey Epstein.",
+      "category": "conspiracoes",
+      "category_label": "Teorias da conspiração",
+      "published_at": "2026-10-29T23:35:46+00:00",
+      "generated_at": "2026-11-03T19:26:22.814422+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Conspiracy Watch",
+      "source_url": "https://www.conspiracywatch.info/en/the-epstein-pizzagate-connection/",
+      "url": "https://www.conspiracywatch.info/en/the-epstein-pizzagate-connection/",
+      "path": "artigos/a-reconfiguração-do-pizzagate-uma-análise-da-conexão-com-o-c-404e211ff6.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.conspiracywatch.info/en/wp-content/uploads/2026/11/image-1024x576.png",
+      "image_source_url": "https://www.conspiracywatch.info/en/the-epstein-pizzagate-connection/",
+      "image_alt": "A Reconfiguração do Pizzagate: Uma Análise da Conexão com o Caso Epstein",
+      "tags": [
+        "pizzagate",
+        "jeffrey-epstein",
+        "conspiracoes",
+        "midia",
+        "politica-eua"
       ]
     },
     {
