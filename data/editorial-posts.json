@@ -1,8 +1,60 @@
 {
   "version": 1,
-  "generated_at": "2026-11-03T04:02:55.440307+00:00",
-  "article_count": 108,
+  "generated_at": "2026-11-03T11:54:49.504703+00:00",
+  "article_count": 111,
   "articles": [
+    {
+      "id": "em-3a804eba9f",
+      "title": "Discussão sobre Inteligência Não Humana e Consciência no Podcast Oficial da MUFON",
+      "excerpt": "O podcast oficial da MUFON reuniu Richard Beckwith e Alan Steinfeld para debater a interseção entre OVNIs, consciência e os limites da ciência tradicional.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-11-03T00:38:22+00:00",
+      "generated_at": "2026-11-03T11:54:48.504246+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "MUFON UFO News",
+      "source_url": "https://mufon.com/2026/11/03/the-official-mufon-podcast-with-richard-beckwith-why-the-pentagon-cant-hide-nhi-with-guest-alan-steinfeld/",
+      "url": "https://mufon.com/2026/11/03/the-official-mufon-podcast-with-richard-beckwith-why-the-pentagon-cant-hide-nhi-with-guest-alan-steinfeld/",
+      "path": "artigos/discussão-sobre-inteligência-não-humana-e-consciência-no-pod-3a804eba9f.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://mufon.com/wp-content/uploads/2026/11/ScreenHunter-218.jpg",
+      "image_source_url": "https://mufon.com/2026/11/03/the-official-mufon-podcast-with-richard-beckwith-why-the-pentagon-cant-hide-nhi-with-guest-alan-steinfeld/",
+      "image_alt": "Discussão sobre Inteligência Não Humana e Consciência no Podcast Oficial da MUFON",
+      "tags": [
+        "MUFON",
+        "OVNIs",
+        "conspiracao",
+        "ufologia",
+        "Alan Steinfeld"
+      ]
+    },
+    {
+      "id": "em-f9d031f365",
+      "title": "A crise de Nuno Espírito Santo no comando técnico do West Ham",
+      "excerpt": "O futuro do treinador Nuno Espírito Santo no West Ham está sob forte ameaça após um início irregular na segunda divisão inglesa.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-11-02T12:01:16+00:00",
+      "generated_at": "2026-11-03T11:54:10.528492+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Guardian — Space",
+      "source_url": "https://www.theguardian.com/football/2026/nov/02/nuno-espirito-santo-west-ham-under-threat-poor-season-start-championship",
+      "url": "https://www.theguardian.com/football/2026/nov/02/nuno-espirito-santo-west-ham-under-threat-poor-season-start-championship",
+      "path": "artigos/a-crise-de-nuno-espírito-santo-no-comando-técnico-do-west-ha-f9d031f365.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://i.guim.co.uk/img/media/375c3cae2dd7d1829e5f22c7796447709a055706/694_453_4991_3993/master/4991.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=09ec5a5e7137ea90fde14e94dd849e1c",
+      "image_source_url": "https://www.theguardian.com/football/2026/nov/02/nuno-espirito-santo-west-ham-under-threat-poor-season-start-championship",
+      "image_alt": "A crise de Nuno Espírito Santo no comando técnico do West Ham",
+      "tags": [
+        "West Ham",
+        "Futebol Inglês",
+        "Championship",
+        "Nuno Espírito Santo",
+        "Esportes"
+      ]
+    },
     {
       "id": "em-5813e45a8c",
       "title": "A moradora que comprou a verdadeira casa do clássico terror Poltergeist",
@@ -27,6 +79,32 @@
         "misterios",
         "Simi Valley",
         "casas famosas"
+      ]
+    },
+    {
+      "id": "em-db91c86b00",
+      "title": "Pentagono libera setimo lote de arquivos sobre Fenomenos Anomalos Nao Identificados",
+      "excerpt": "O Departamento de Defesa dos Estados Unidos divulgou mais vinte e oito documentos desclassificados sobre avistamentos de OVNIs e UAPs ocorridos ao longo de decadas.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-10-29T12:42:27+00:00",
+      "generated_at": "2026-11-03T11:54:32.935062+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "EarthSky",
+      "source_url": "https://earthsky.org/human-world/pentagon-uap-files-ufos-batch-7/",
+      "url": "https://earthsky.org/human-world/pentagon-uap-files-ufos-batch-7/",
+      "path": "artigos/pentagono-libera-setimo-lote-de-arquivos-sobre-fenomenos-ano-db91c86b00.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://earthsky.org/upl/2026/10/triangle-UAP-western-United-States-June-2026.png",
+      "image_source_url": "https://earthsky.org/human-world/pentagon-uap-files-ufos-batch-7/",
+      "image_alt": "Pentagono libera setimo lote de arquivos sobre Fenomenos Anomalos Nao Identificados",
+      "tags": [
+        "pentagono",
+        "uap",
+        "ovni",
+        "aaro",
+        "arquivos_oficiais"
       ]
     },
     {
