@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-11-03T19:26:32.083081+00:00",
-  "article_count": 112,
+  "generated_at": "2026-11-04T00:12:35.565243+00:00",
+  "article_count": 113,
   "articles": [
     {
       "id": "em-3a804eba9f",
@@ -53,6 +53,32 @@
         "Championship",
         "Nuno Espírito Santo",
         "Esportes"
+      ]
+    },
+    {
+      "id": "em-2a2c593a82",
+      "title": "Eleições recentes em Israel, Brasil e Sérvia viram alvo de teorias da conspiração",
+      "excerpt": "Três grandes eleições ocorridas na mesma semana compartilharam um traço marcante: o uso de desinformação e teorias conspiratórias para tentar desestabilizar processos democráticos.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-10-30T13:09:29+00:00",
+      "generated_at": "2026-11-04T00:12:31.832626+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Conspiracy Watch",
+      "source_url": "https://www.conspiracywatch.info/en/elections-in-israel-brazil-and-serbia-lies-damned-lies-and-conspiracy-theories/",
+      "url": "https://www.conspiracywatch.info/en/elections-in-israel-brazil-and-serbia-lies-damned-lies-and-conspiracy-theories/",
+      "path": "artigos/eleições-recentes-em-israel-brasil-e-sérvia-viram-alvo-de-te-2a2c593a82.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.conspiracywatch.info/en/wp-content/uploads/2026/10/Neta-toundra.jpg",
+      "image_source_url": "https://www.conspiracywatch.info/en/elections-in-israel-brazil-and-serbia-lies-damned-lies-and-conspiracy-theories/",
+      "image_alt": "Eleições recentes em Israel, Brasil e Sérvia viram alvo de teorias da conspiração",
+      "tags": [
+        "eleicoes",
+        "conspiracao",
+        "israel",
+        "desinformacao",
+        "politica"
       ]
     },
     {
