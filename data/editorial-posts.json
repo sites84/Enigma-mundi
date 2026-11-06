@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-11-06T03:21:35.803458+00:00",
-  "article_count": 114,
+  "generated_at": "2026-11-06T11:30:58.469925+00:00",
+  "article_count": 115,
   "articles": [
     {
       "id": "em-edf8c81539",
@@ -105,6 +105,32 @@
         "israel",
         "desinformacao",
         "politica"
+      ]
+    },
+    {
+      "id": "em-703a1d47cd",
+      "title": "Documentos oficiais revelam avistamento de OVNI triangular por agentes nos EUA",
+      "excerpt": "Arquivos liberados pelo Pentágono detalham um relato de agentes federais que observaram um objeto triangular silencioso realizando manobras em 2026.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-10-30T13:06:05+00:00",
+      "generated_at": "2026-11-06T11:26:53.538462+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Revista UFO Brasil",
+      "source_url": "https://ufo.com.br/pentagono-divulga-novo-caso-de-ovni-triangular-silencioso-observado-por-agentes-federais-nos-eua/",
+      "url": "https://ufo.com.br/pentagono-divulga-novo-caso-de-ovni-triangular-silencioso-observado-por-agentes-federais-nos-eua/",
+      "path": "artigos/documentos-oficiais-revelam-avistamento-de-ovni-triangular-p-703a1d47cd.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://ufo.com.br/wp-content/uploads/2026/10/0627a91b554974595303cb4ec1dfedda1259fe33.avif",
+      "image_source_url": "https://ufo.com.br/pentagono-divulga-novo-caso-de-ovni-triangular-silencioso-observado-por-agentes-federais-nos-eua/",
+      "image_alt": "Documentos oficiais revelam avistamento de OVNI triangular por agentes nos EUA",
+      "tags": [
+        "Pentágono",
+        "UAPs",
+        "OVNI triangular",
+        "Arquivos oficiais",
+        "Fenômenos anômalos"
       ]
     },
     {

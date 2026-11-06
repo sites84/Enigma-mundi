@@ -1,17 +1,45 @@
 {
-  "updated_at": "2026-11-06T03:21:35.806662+00:00",
+  "updated_at": "2026-11-06T11:30:58.472961+00:00",
   "provider": "gemini",
-  "model": "gemini-3.8-flash",
-  "existing_articles": 114,
-  "generated_this_run": 0,
-  "status": "quota_exhausted",
+  "model": "gemini-3.5-flash",
+  "existing_articles": 115,
+  "generated_this_run": 1,
+  "status": "completed",
   "errors": [
     {
-      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
-      "error": "Vigilant Citizen Symbolism: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/"
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
+    },
+    {
+      "url": "https://www.conspiracywatch.info/en/brieffing_notes/jacob-creech",
+      "error": "Conspiracy Watch: The read operation timed out"
+    },
+    {
+      "url": "https://www.unexplained-mysteries.com/news/400197/pilots-spot-pill-shaped-ufo-hovering-near-their-plane-over-ohio",
+      "error": "Unexplained Mysteries: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.boatos.org/ciencia/bolsonarista-afirma-que-ets-chegaram-em-ovni-em-porto-alegre-para-trocar-corpos-de-lula-e-bolsonaro.html",
+      "error": "Boatos.org: The read operation timed out"
+    },
+    {
+      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
+      "error": "The Folklore Society UK: Texto da página insuficiente (775 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
+    },
+    {
+      "url": "https://www.theguardian.com/football/2026/nov/03/west-ham-sack-nuno-espirito-santo-as-head-coach",
+      "error": "The Guardian — Space: The read operation timed out"
+    },
+    {
+      "url": "https://earthsky.org/human-world/6th-batch-of-pentagon-uap-files-ufos-pursue",
+      "error": "EarthSky: The read operation timed out"
+    },
+    {
+      "url": "https://mufon.com/2026/11/02/watch-the-2026-mufon-symposium-now-on-mufon-television",
+      "error": "MUFON UFO News: The read operation timed out"
     }
   ],
-  "candidate_count": 57,
-  "attempted_this_run": 1,
-  "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
+  "candidate_count": 58,
+  "attempted_this_run": 9,
+  "message": "Geração automática ativa: até 3 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }
