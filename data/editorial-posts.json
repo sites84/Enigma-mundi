@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-11-07T10:02:39.989229+00:00",
-  "article_count": 115,
+  "generated_at": "2026-11-07T16:20:24.826932+00:00",
+  "article_count": 116,
   "articles": [
     {
       "id": "em-edf8c81539",
@@ -27,6 +27,32 @@
         "trancas",
         "arquivos militares",
         "fenomenos aereos"
+      ]
+    },
+    {
+      "id": "em-adfb62fef5",
+      "title": "Mudanças no comando técnico agitam os bastidores do futebol britânico",
+      "excerpt": "A demissão de Nuno Espírito Santo e a busca por Scott Parker revelam crises internas, disputas de poder e pressões financeiras no clube.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-11-03T09:43:49+00:00",
+      "generated_at": "2026-11-07T16:19:43.503090+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Guardian — Space",
+      "source_url": "https://www.theguardian.com/football/2026/nov/03/west-ham-sack-nuno-espirito-santo-as-head-coach",
+      "url": "https://www.theguardian.com/football/2026/nov/03/west-ham-sack-nuno-espirito-santo-as-head-coach",
+      "path": "artigos/mudanças-no-comando-técnico-agitam-os-bastidores-do-futebol--adfb62fef5.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://i.guim.co.uk/img/media/ab427d8292256e66cac217e71c35f6e4f924ca92/0_0_5000_4000/master/5000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=cffd6157b09cbe300a9e92338223710e",
+      "image_source_url": "https://www.theguardian.com/football/2026/nov/03/west-ham-sack-nuno-espirito-santo-as-head-coach",
+      "image_alt": "Mudanças no comando técnico agitam os bastidores do futebol britânico",
+      "tags": [
+        "futebol",
+        "esportes",
+        "bastidores",
+        "crise",
+        "inglaterra"
       ]
     },
     {
