@@ -1,21 +1,49 @@
 {
-  "updated_at": "2026-11-11T05:55:18.226277+00:00",
+  "updated_at": "2026-11-11T14:08:14.606251+00:00",
   "provider": "gemini",
-  "model": "gemini-3.8-flash",
+  "model": "gemini-3.5-flash-lite",
   "existing_articles": 116,
   "generated_this_run": 0,
-  "status": "quota_exhausted",
+  "status": "errors",
   "errors": [
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
+      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
+      "error": "Vigilant Citizen Symbolism: The read operation timed out"
     },
     {
-      "url": "https://ufo.com.br/pentagono-revela-novo-caso-de-ovni-triangular-negro-observado-por-agentes-federais-nos-eua",
-      "error": "Revista UFO Brasil: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.unexplained-mysteries.com/news/400197/pilots-spot-pill-shaped-ufo-hovering-near-their-plane-over-ohio",
+      "error": "Unexplained Mysteries: The read operation timed out"
+    },
+    {
+      "url": "https://www.boatos.org/ciencia/bolsonarista-afirma-que-ets-chegaram-em-ovni-em-porto-alegre-para-trocar-corpos-de-lula-e-bolsonaro.html",
+      "error": "Boatos.org: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
+      "error": "The Folklore Society UK: Texto da página insuficiente (775 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
+    },
+    {
+      "url": "https://www.theguardian.com/stage/2026/nov/06/marilyn-monroe-speculations-conspiracy-drama-marylebone-theatre-london-trevor-nunn",
+      "error": "The Guardian — Space: The read operation timed out"
+    },
+    {
+      "url": "https://earthsky.org/human-world/6th-batch-of-pentagon-uap-files-ufos-pursue",
+      "error": "EarthSky: The read operation timed out"
+    },
+    {
+      "url": "https://www.dailygrail.com/2026/11/forbidden-archeologist-michael-cremo-passed-away-last-month-1948-2026",
+      "error": "The Daily Grail: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.newscientist.com/article/2595461-is-schrodingers-cat-both-dead-and-alive-no-its-just-haunted-by-its-past",
+      "error": "New Scientist — Space: The read operation timed out"
     }
   ],
-  "candidate_count": 50,
-  "attempted_this_run": 2,
-  "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
+  "candidate_count": 52,
+  "attempted_this_run": 9,
+  "message": "Geração automática ativa: até 3 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }
