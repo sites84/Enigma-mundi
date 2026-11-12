@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T18:37:36.638484+00:00",
+  "updated_at": "2026-11-12T23:50:35.534772+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 117,
@@ -7,35 +7,11 @@
   "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
-      "error": "Vigilant Citizen Symbolism: The read operation timed out"
-    },
-    {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
-    },
-    {
-      "url": "https://ufo.com.br/pentagono-revela-novo-caso-de-ovni-triangular-negro-observado-por-agentes-federais-nos-eua",
-      "error": "Revista UFO Brasil: The read operation timed out"
-    },
-    {
-      "url": "https://www.atlasobscura.com/places/facade-of-the-old-mental-hospital",
-      "error": "Atlas Obscura: The read operation timed out"
-    },
-    {
-      "url": "https://www.dailygrail.com/2026/11/forbidden-archeologist-michael-cremo-passed-away-last-month-1948-2026",
-      "error": "The Daily Grail: The read operation timed out"
-    },
-    {
-      "url": "https://www.newscientist.com/article/2595461-is-schrodingers-cat-both-dead-and-alive-no-its-just-haunted-by-its-past",
-      "error": "New Scientist — Space: The read operation timed out"
-    },
-    {
-      "url": "https://www.folklore-society.com/blog/post/deadline-for-2026-the-estella-canziani-post-graduate-bursary-for-research",
-      "error": "The Folklore Society UK: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
+      "url": "https://inexplicata.blogspot.com/2026/11/november-1973-ufos-over-san-juan-puerto.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
     }
   ],
-  "candidate_count": 45,
-  "attempted_this_run": 7,
+  "candidate_count": 46,
+  "attempted_this_run": 1,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
