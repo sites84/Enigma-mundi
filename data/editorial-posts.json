@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-11-12T02:28:30.523581+00:00",
-  "article_count": 116,
+  "generated_at": "2026-11-12T10:16:42.241778+00:00",
+  "article_count": 117,
   "articles": [
+    {
+      "id": "em-40be81cb4d",
+      "title": "Drama teatral explora teorias da conspiração sobre a morte de Marilyn Monroe",
+      "excerpt": "Nova peça em Londres revisita as investigações da jornalista Dorothy Kilgallen sobre ligações políticas e o submundo na morte de Marilyn Monroe.",
+      "category": "conspiracoes",
+      "category_label": "Teorias da conspiração",
+      "published_at": "2026-11-06T15:31:34+00:00",
+      "generated_at": "2026-11-12T10:15:06.299209+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Guardian — Space",
+      "source_url": "https://www.theguardian.com/stage/2026/nov/06/marilyn-monroe-speculations-conspiracy-drama-marylebone-theatre-london-trevor-nunn",
+      "url": "https://www.theguardian.com/stage/2026/nov/06/marilyn-monroe-speculations-conspiracy-drama-marylebone-theatre-london-trevor-nunn",
+      "path": "artigos/drama-teatral-explora-teorias-da-conspiração-sobre-a-morte-d-40be81cb4d.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://i.guim.co.uk/img/media/0b5abc07224fca7105d008efc0c6999928832232/0_604_2304_1842/master/2304.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctcmV2aWV3LTMucG5n&enable=upscale&s=1eb37ef5edad7809b248e987c8825ea3",
+      "image_source_url": "https://www.theguardian.com/stage/2026/nov/06/marilyn-monroe-speculations-conspiracy-drama-marylebone-theatre-london-trevor-nunn",
+      "image_alt": "Drama teatral explora teorias da conspiração sobre a morte de Marilyn Monroe",
+      "tags": [
+        "Marilyn Monroe",
+        "Conspirações",
+        "Teatro",
+        "História",
+        "Jornalismo"
+      ]
+    },
     {
       "id": "em-edf8c81539",
       "title": "Documento militar desclassificado em 2026 reabre debate sobre avistamentos em Tucumán",
