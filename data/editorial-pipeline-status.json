@@ -1,17 +1,41 @@
 {
-  "updated_at": "2026-11-13T06:23:17.733839+00:00",
+  "updated_at": "2026-11-13T14:59:03.875606+00:00",
   "provider": "gemini",
-  "model": "gemini-3.8-flash",
-  "existing_articles": 117,
-  "generated_this_run": 0,
-  "status": "quota_exhausted",
+  "model": "gemini-3.5-flash-lite",
+  "existing_articles": 119,
+  "generated_this_run": 2,
+  "status": "completed",
   "errors": [
     {
-      "url": "https://www.dailygrail.com/2026/11/pat-robertson-widow-of-bigfoot-hunter-roger-patterson-dies-at-86",
-      "error": "The Daily Grail: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
+      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
+      "error": "Vigilant Citizen Symbolism: The read operation timed out"
+    },
+    {
+      "url": "https://www.unexplained-mysteries.com/news/400197/pilots-spot-pill-shaped-ufo-hovering-near-their-plane-over-ohio",
+      "error": "Unexplained Mysteries: The read operation timed out"
+    },
+    {
+      "url": "https://www.newscientist.com/article/2597850-killer-bigfoot-evidence-rejected-by-bigfoots-biggest-fans",
+      "error": "New Scientist — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
+      "error": "The Folklore Society UK: Texto da página insuficiente (775 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
+    },
+    {
+      "url": "https://earthsky.org/human-world/6th-batch-of-pentagon-uap-files-ufos-pursue",
+      "error": "EarthSky: The read operation timed out"
+    },
+    {
+      "url": "https://www.atlasobscura.com/places/st-patrick-s-church",
+      "error": "Atlas Obscura: The read operation timed out"
+    },
+    {
+      "url": "https://www.metabunk.org/threads/ufos-seen-by-oil-rig-worker-in-gulf-of-mexico.15183",
+      "error": "Metabunk: The read operation timed out"
     }
   ],
-  "candidate_count": 56,
-  "attempted_this_run": 1,
-  "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
+  "candidate_count": 57,
+  "attempted_this_run": 9,
+  "message": "Geração automática ativa: até 3 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }

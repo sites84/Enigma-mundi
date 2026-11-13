@@ -1,8 +1,60 @@
 {
   "version": 1,
-  "generated_at": "2026-11-13T06:23:17.730440+00:00",
-  "article_count": 117,
+  "generated_at": "2026-11-13T14:59:03.872551+00:00",
+  "article_count": 119,
   "articles": [
+    {
+      "id": "em-9cf0f0b82c",
+      "title": "A onda de avistamentos de OVNIs em San Juan no mês de novembro de 1973",
+      "excerpt": "Registros do Instituto de Ufologia Hispânica detalham múltiplos avistamentos de objetos voadores não identificados na região metropolitana de San Juan, em Porto Rico, no ano de 1973.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-11-12T15:24:00+00:00",
+      "generated_at": "2026-11-13T14:51:44.612197+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Inexplicata — Journal of Hispanic Ufology",
+      "source_url": "https://inexplicata.blogspot.com/2026/11/november-1973-ufos-over-san-juan-puerto.html",
+      "url": "https://inexplicata.blogspot.com/2026/11/november-1973-ufos-over-san-juan-puerto.html",
+      "path": "artigos/a-onda-de-avistamentos-de-ovnis-em-san-juan-no-mês-de-novemb-9cf0f0b82c.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxkFdh9eDrGb-I3foA2lQD2Nku6vEaP6vI8TUiPONqdGP8TdspVd3hAI2zkybxRy00tPJeOpbrtEaOG8jwIF84v2SWMRBmmL6_-hB7ItEbyBFABox4yA3Qme4isnL4M0dKcQetPHAb2KiZtuNcfdaARJHgXffhxg8ptdfoJzFDQcKSqaXgEBMO/s320/San%20Juan%20Bay%20UFO%20002.png",
+      "image_source_url": "https://inexplicata.blogspot.com/2026/11/november-1973-ufos-over-san-juan-puerto.html",
+      "image_alt": "A onda de avistamentos de OVNIs em San Juan no mês de novembro de 1973",
+      "tags": [
+        "ufologia",
+        "porto rico",
+        "san juan",
+        "ovni",
+        "anos 70"
+      ]
+    },
+    {
+      "id": "em-e7a638eedb",
+      "title": "Pico da chuva de meteoros Táuridas exige cautela contra confusões",
+      "excerpt": "O ápice das Táuridas do Norte traz clarões intensos aos céus brasileiros, gerando dúvidas entre observadores que frequentemente confundem bólidos com OVNIs.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-11-11T14:16:21+00:00",
+      "generated_at": "2026-11-13T14:54:13.075309+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Revista UFO Brasil",
+      "source_url": "https://ufo.com.br/chuva-de-meteoros-tauridas-atinge-pico-nesta-semana-saiba-como-diferenciar-bolidos-de-ovnis/",
+      "url": "https://ufo.com.br/chuva-de-meteoros-tauridas-atinge-pico-nesta-semana-saiba-como-diferenciar-bolidos-de-ovnis/",
+      "path": "artigos/pico-da-chuva-de-meteoros-táuridas-exige-cautela-contra-conf-e7a638eedb.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://ufo.com.br/wp-content/uploads/2026/11/e7aca0cc-d2e9-4c95-9bfc-1c28434ede39.webp",
+      "image_source_url": "https://ufo.com.br/chuva-de-meteoros-tauridas-atinge-pico-nesta-semana-saiba-como-diferenciar-bolidos-de-ovnis/",
+      "image_alt": "Pico da chuva de meteoros Táuridas exige cautela contra confusões",
+      "tags": [
+        "Tauridas",
+        "Meteoros",
+        "Bolidos",
+        "Astronomia",
+        "Ufologia"
+      ]
+    },
     {
       "id": "em-40be81cb4d",
       "title": "Drama teatral explora teorias da conspiração sobre a morte de Marilyn Monroe",
