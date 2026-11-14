@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T21:22:54.068443+00:00",
+  "updated_at": "2026-11-14T01:42:39.534222+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 119,
@@ -7,15 +7,23 @@
   "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://www.dailygrail.com/2026/11/pat-robertson-widow-of-bigfoot-hunter-roger-patterson-dies-at-86",
-      "error": "The Daily Grail: The read operation timed out"
+      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
+      "error": "Vigilant Citizen Symbolism: The read operation timed out"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
+      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://www.unexplained-mysteries.com/news/400212/fresh-doubts-surround-declassified-fbi-report-of-black-triangle-ufo",
+      "error": "Unexplained Mysteries: The read operation timed out"
+    },
+    {
+      "url": "https://ufo.com.br/pentagono-revela-novo-caso-de-ovni-triangular-negro-observado-por-agentes-federais-nos-eua",
+      "error": "Revista UFO Brasil: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
     }
   ],
-  "candidate_count": 50,
-  "attempted_this_run": 2,
+  "candidate_count": 58,
+  "attempted_this_run": 4,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
