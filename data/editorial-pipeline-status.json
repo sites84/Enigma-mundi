@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-11-15T00:11:57.230037+00:00",
+  "updated_at": "2026-11-15T07:05:26.438673+00:00",
   "provider": "gemini",
-  "model": "gemini-3.8-flash",
-  "existing_articles": 119,
-  "generated_this_run": 0,
-  "status": "quota_exhausted",
+  "model": "gemini-3.5-flash",
+  "existing_articles": 120,
+  "generated_this_run": 1,
+  "status": "partial_quota_exhausted",
   "errors": [
     {
-      "url": "https://www.dailygrail.com/2026/11/pat-robertson-widow-of-bigfoot-hunter-roger-patterson-dies-at-86",
-      "error": "The Daily Grail: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
+      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
+      "error": "Vigilant Citizen Symbolism: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
     }
   ],
-  "candidate_count": 62,
-  "attempted_this_run": 1,
+  "candidate_count": 63,
+  "attempted_this_run": 2,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
