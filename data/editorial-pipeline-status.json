@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T20:36:35.292868+00:00",
+  "updated_at": "2026-11-15T00:11:57.230037+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 119,
@@ -7,19 +7,11 @@
   "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://www.dailygrail.com/2026/11/pat-patterson-widow-of-bigfoot-hunter-roger-patterson-dies-at-86",
-      "error": "The Daily Grail: The read operation timed out"
-    },
-    {
-      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/en/the-conspiracy-sphere-live-with-rudy-reichstadt",
-      "error": "Conspiracy Watch: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
+      "url": "https://www.dailygrail.com/2026/11/pat-robertson-widow-of-bigfoot-hunter-roger-patterson-dies-at-86",
+      "error": "The Daily Grail: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
     }
   ],
-  "candidate_count": 60,
-  "attempted_this_run": 3,
+  "candidate_count": 62,
+  "attempted_this_run": 1,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
