@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-11-16T17:28:34.135056+00:00",
-  "article_count": 120,
+  "generated_at": "2026-11-17T01:01:09.035928+00:00",
+  "article_count": 121,
   "articles": [
+    {
+      "id": "em-1d4ab1cbf6",
+      "title": "Viúva de Roger Patterson morre aos 86 anos e encerra era do Pé-Grande",
+      "excerpt": "O falecimento de Patricia Patterson encerra uma era na criptozoologia, deixando dúvidas sobre a famosa gravação de 1967.",
+      "category": "criptozoologia_lendas",
+      "category_label": "Lendas e fenômenos incomuns",
+      "published_at": "2026-11-15T11:43:04+00:00",
+      "generated_at": "2026-11-17T01:00:31.159007+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Unexplained Mysteries",
+      "source_url": "https://www.unexplained-mysteries.com/news/400214/bigfoot-filmmaker-roger-pattersons-widow-has-died-aged-86",
+      "url": "https://www.unexplained-mysteries.com/news/400214/bigfoot-filmmaker-roger-pattersons-widow-has-died-aged-86",
+      "path": "artigos/viúva-de-roger-patterson-morre-aos-86-anos-e-encerra-era-do--1d4ab1cbf6.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.unexplained-mysteries.com/images/news_large/news-hq-bigfoot-woods.jpg",
+      "image_source_url": "https://www.unexplained-mysteries.com/news/400214/bigfoot-filmmaker-roger-pattersons-widow-has-died-aged-86",
+      "image_alt": "Viúva de Roger Patterson morre aos 86 anos e encerra era do Pé-Grande",
+      "tags": [
+        "Pé-Grande",
+        "Criptozoologia",
+        "Mistérios",
+        "Califórnia",
+        "Lendas"
+      ]
+    },
     {
       "id": "em-048a1a1846",
       "title": "Morre Pat Patterson, viúva do autor da famosa filmagem do Pé-Grande de 1967",
