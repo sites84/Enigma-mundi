@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-11-18T01:15:23.231247+00:00",
-  "article_count": 121,
+  "generated_at": "2026-11-18T09:08:53.973825+00:00",
+  "article_count": 122,
   "articles": [
     {
       "id": "em-1d4ab1cbf6",
@@ -339,6 +339,32 @@
         "conspiracoes",
         "midia",
         "politica-eua"
+      ]
+    },
+    {
+      "id": "em-dc28a02652",
+      "title": "Vídeo satírico sobre ETs em Porto Alegre retorna às redes",
+      "excerpt": "Gravação humorística de 2022 sobre troca de corpos entre Lula e Bolsonaro por extraterrestres volta a circular nas redes após eleições.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-10-29T22:36:17+00:00",
+      "generated_at": "2026-11-18T09:08:52.973381+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Boatos.org",
+      "source_url": "https://www.boatos.org/ciencia/bolsonarista-afirma-que-ets-chegaram-em-ovni-em-porto-alegre-para-trocar-corpos-de-lula-e-bolsonaro.html",
+      "url": "https://www.boatos.org/ciencia/bolsonarista-afirma-que-ets-chegaram-em-ovni-em-porto-alegre-para-trocar-corpos-de-lula-e-bolsonaro.html",
+      "path": "artigos/vídeo-satírico-sobre-ets-em-porto-alegre-retorna-às-redes-dc28a02652.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.boatos.org/wp-content/uploads/2026/10/Bolsonarista-afirma-que-ETs-chegaram-em-OVNI-em-Porto-Alegre-para-trocar-corpos-de-Lula-e-Bolsonaro-diz-boato.jpg",
+      "image_source_url": "https://www.boatos.org/ciencia/bolsonarista-afirma-que-ets-chegaram-em-ovni-em-porto-alegre-para-trocar-corpos-de-lula-e-bolsonaro.html",
+      "image_alt": "Vídeo satírico sobre ETs em Porto Alegre retorna às redes",
+      "tags": [
+        "fact-checking",
+        "extraterrestres",
+        "politica",
+        "porto-alegre",
+        "satira"
       ]
     },
     {
