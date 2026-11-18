@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T18:30:31.688576+00:00",
+  "updated_at": "2026-11-18T01:15:23.234150+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 121,
@@ -7,39 +7,23 @@
   "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://fenomenum.com.br/ovni-deixou-marcas-em-ituporanga-sc",
+      "url": "https://fenomenum.com.br/um-caso-de-pouso-de-ovni-em-madagascar",
       "error": "Fenomenum Brasil: The read operation timed out"
     },
     {
-      "url": "https://www.dailygrail.com/2026/11/pat-robertson-widow-of-bigfoot-hunter-roger-patterson-dies-at-86",
-      "error": "The Daily Grail: The read operation timed out"
+      "url": "https://vigilantcitizen.com/latestnews/france-is-a-laboratory-of-the-elites-new-world-order",
+      "error": "Vigilant Citizen Symbolism: The read operation timed out"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: HTTP Error 429: Too Many Requests"
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
     },
     {
-      "url": "https://www.unexplained-mysteries.com/news/400216/avi-loeb-heads-up-plan-for-new-observatory-to-directly-image-ufos",
-      "error": "Unexplained Mysteries: The read operation timed out"
-    },
-    {
-      "url": "https://www.conspiracywatch.info/en/michigans-new-senator-campaigned-on-antisemitic-narratives-he-hasnt-stopped",
-      "error": "Conspiracy Watch: The read operation timed out"
-    },
-    {
-      "url": "https://www.space.com/space-exploration/satellites/could-there-be-an-ancient-alien-satellite-in-earths-orbit-how-the-black-knight-conspiracy-theory-has-survived-for-over-100-years",
-      "error": "Space.com: The read operation timed out"
-    },
-    {
-      "url": "https://www.theguardian.com/artanddesign/2026/nov/14/legendary-collection-sothebys-van-gogh-cezanne-blaquier-arrieta",
-      "error": "The Guardian — Space: The read operation timed out"
-    },
-    {
-      "url": "https://www.atlasobscura.com/places/st-patrick-s-church",
-      "error": "Atlas Obscura: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
+      "url": "https://www.conspiracywatch.info/en/the-conspiracy-sphere-live-with-rudy-reichstadt",
+      "error": "Conspiracy Watch: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
     }
   ],
   "candidate_count": 59,
-  "attempted_this_run": 8,
+  "attempted_this_run": 4,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
