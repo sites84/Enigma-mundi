@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T00:11:40.045657+00:00",
+  "updated_at": "2026-11-19T07:49:33.554453+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 122,
@@ -7,11 +7,11 @@
   "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://fenomenum.com.br/ovni-deixou-marcas-em-ituporanga-sc",
+      "url": "https://fenomenum.com.br/um-caso-de-pouso-de-ovni-em-madagascar",
       "error": "Fenomenum Brasil: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
     }
   ],
-  "candidate_count": 63,
+  "candidate_count": 66,
   "attempted_this_run": 1,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
