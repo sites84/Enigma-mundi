@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-11-19T07:49:33.550482+00:00",
-  "article_count": 122,
+  "generated_at": "2026-11-19T17:26:57.793329+00:00",
+  "article_count": 123,
   "articles": [
     {
       "id": "em-1d4ab1cbf6",
@@ -105,6 +105,33 @@
         "Bolidos",
         "Astronomia",
         "Ufologia"
+      ]
+    },
+    {
+      "id": "em-a1732c2992",
+      "title": "Pentágono divulga arquivo oficial sobre OVNI triangular visto por agentes",
+      "excerpt": "Documentos liberados pelo governo americano detalham a observação de um objeto triangular e silencioso por agentes federais no oeste dos Estados Unidos.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-11-08T22:01:11+00:00",
+      "generated_at": "2026-11-19T17:25:19.758559+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Revista UFO Brasil",
+      "source_url": "https://ufo.com.br/pentagono-revela-novo-caso-de-ovni-triangular-negro-observado-por-agentes-federais-nos-eua/",
+      "url": "https://ufo.com.br/pentagono-revela-novo-caso-de-ovni-triangular-negro-observado-por-agentes-federais-nos-eua/",
+      "path": "artigos/pentágono-divulga-arquivo-oficial-sobre-ovni-triangular-vist-a1732c2992.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://ufo.com.br/wp-content/uploads/2026/11/90a0bc6cc34c73edd4e5a159e2360a7c.webp",
+      "image_source_url": "https://ufo.com.br/pentagono-revela-novo-caso-de-ovni-triangular-negro-observado-por-agentes-federais-nos-eua/",
+      "image_alt": "Pentágono divulga arquivo oficial sobre OVNI triangular visto por agentes",
+      "tags": [
+        "Pentágono",
+        "OVNI",
+        "FBI",
+        "AARO",
+        "UAP",
+        "arquivos_oficiais"
       ]
     },
     {
