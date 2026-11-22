@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-11-22T14:58:13.397840+00:00",
-  "article_count": 125,
+  "generated_at": "2026-11-22T21:00:26.655355+00:00",
+  "article_count": 126,
   "articles": [
+    {
+      "id": "em-bbf2474bec",
+      "title": "O enigma do poltergeist de Rosenheim na Baviera",
+      "excerpt": "Em 1967, um escritório de advocacia na Alemanha registrou anomalias elétricas, objetos em movimento e ligações misteriosas.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-11-22T13:26:31+00:00",
+      "generated_at": "2026-11-22T20:59:35.795101+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Fenomenum Brasil",
+      "source_url": "https://fenomenum.com.br/o-poltergeist-de-rosenheim/",
+      "url": "https://fenomenum.com.br/o-poltergeist-de-rosenheim/",
+      "path": "artigos/o-enigma-do-poltergeist-de-rosenheim-na-baviera-bbf2474bec.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://fenomenum.com.br/wp-content/uploads/2026/11/3658a75c-0001-0004-0000-000000650914_w1024_r0.745411865130175_fpx44.98_fpy66.33.webp",
+      "image_source_url": "https://fenomenum.com.br/o-poltergeist-de-rosenheim/",
+      "image_alt": "O enigma do poltergeist de Rosenheim na Baviera",
+      "tags": [
+        "Rosenheim",
+        "Poltergeist",
+        "Parapsicologia",
+        "Alemanha",
+        "Fenômenos Incomuns"
+      ]
+    },
     {
       "id": "em-1a4338d0b2",
       "title": "A culpa das teorias da conspiração nas redes é nossa, e não de robôs",
