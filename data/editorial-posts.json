@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-11-23T01:30:51.150195+00:00",
-  "article_count": 126,
+  "generated_at": "2026-11-23T09:47:08.118384+00:00",
+  "article_count": 128,
   "articles": [
     {
       "id": "em-bbf2474bec",
@@ -53,6 +53,32 @@
         "comportamento humano",
         "desinformação",
         "internet"
+      ]
+    },
+    {
+      "id": "em-92ac9cf928",
+      "title": "A persistência histórica do mito do satélite alienígena Black Knight",
+      "excerpt": "Análise investigativa sobre a origem e a longevidade da teoria da conspiração do satélite oculto na órbita terrestre, segundo publicações especializadas.",
+      "category": "conspiracoes",
+      "category_label": "Teorias da conspiração",
+      "published_at": "2026-11-16T16:00:00+00:00",
+      "generated_at": "2026-11-23T09:46:57.844011+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Space.com",
+      "source_url": "https://www.space.com/space-exploration/satellites/could-there-be-an-ancient-alien-satellite-in-earths-orbit-how-the-black-knight-conspiracy-theory-has-survived-for-over-100-years",
+      "url": "https://www.space.com/space-exploration/satellites/could-there-be-an-ancient-alien-satellite-in-earths-orbit-how-the-black-knight-conspiracy-theory-has-survived-for-over-100-years",
+      "path": "artigos/a-persistência-histórica-do-mito-do-satélite-alienígena-blac-92ac9cf928.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://cdn.mos.cms.futurecdn.net/of5F852CDzKzs3wwHFrPxR-1920-80.jpg",
+      "image_source_url": "https://www.space.com/space-exploration/satellites/could-there-be-an-ancient-alien-satellite-in-earths-orbit-how-the-black-knight-conspiracy-theory-has-survived-for-over-100-years",
+      "image_alt": "A persistência histórica do mito do satélite alienígena Black Knight",
+      "tags": [
+        "black knight",
+        "teorias da conspiração",
+        "espaço",
+        "ufologia",
+        "astronomia"
       ]
     },
     {
@@ -1695,6 +1721,32 @@
         "Lendas",
         "Mistérios",
         "Curiosidades"
+      ]
+    },
+    {
+      "id": "em-c8f2a7c6f4",
+      "title": "Relatos sobrenaturais e lendas urbanas cercam as ruínas de Armero na Colômbia",
+      "excerpt": "Quatro décadas após a tragédia vulcânica de Armero, moradores e visitantes relatam avistamentos de entidades, desorientação temporal e aparições nas ruínas da cidade colombiana.",
+      "category": "misterios",
+      "category_label": "Mistérios",
+      "published_at": "2026-09-25T19:41:30+00:00",
+      "generated_at": "2026-11-23T09:42:12.172479+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Inexplicata — Journal of Hispanic Ufology",
+      "source_url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "path": "artigos/relatos-sobrenaturais-e-lendas-urbanas-cercam-as-ruínas-de-a-c8f2a7c6f4.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtVPFuV3aVfIfVBQ1Av865WZ_yTBIkjU82MSFTAnEf9hgCgiA1hsCqdbqwbDe1Pb27swFGPc81SAoF7A5N2N0b6mMTq3Gt2ZicFIL5S1txDjoGomxDc6dcXfKJok6nChDYN7scViejOWoPfRvxofBpaPLCIZIcRQxKyhi-D1iD4cBKySMLy-oH/s320/Colombian%20Test%20003%20FINAL.jpg",
+      "image_source_url": "https://inexplicata.blogspot.com/2026/09/colombia-paranormal-stories-of-armero.html",
+      "image_alt": "Relatos sobrenaturais e lendas urbanas cercam as ruínas de Armero na Colômbia",
+      "tags": [
+        "Armero",
+        "Colômbia",
+        "lendas urbanas",
+        "fenômenos paranormais",
+        "Nevado del Ruiz"
       ]
     },
     {
