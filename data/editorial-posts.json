@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-11-25T10:27:28.725920+00:00",
-  "article_count": 129,
+  "generated_at": "2026-11-25T20:06:03.311212+00:00",
+  "article_count": 130,
   "articles": [
+    {
+      "id": "em-44accd8c5b",
+      "title": "Pentágono libera arquivos sobre OVNIs e reacende debate global",
+      "excerpt": "Novos documentos do governo norte-americano sobre OVNIs trazem relatórios de militares e alimentam discussões públicas e científicas.",
+      "category": "ufologia",
+      "category_label": "Ufologia",
+      "published_at": "2026-11-23T22:35:22+00:00",
+      "generated_at": "2026-11-25T20:05:57.846797+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Revista UFO Brasil",
+      "source_url": "https://ufo.com.br/pentagono-divulga-novos-arquivos-secretos-sobre-ovnis-e-reacende-debate-mundial-sobre-fenomenos-inexplicados/",
+      "url": "https://ufo.com.br/pentagono-divulga-novos-arquivos-secretos-sobre-ovnis-e-reacende-debate-mundial-sobre-fenomenos-inexplicados/",
+      "path": "artigos/pentágono-libera-arquivos-sobre-ovnis-e-reacende-debate-glob-44accd8c5b.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://ufo.com.br/wp-content/uploads/2026/08/boeing_ufo_cockpit.png",
+      "image_source_url": "https://ufo.com.br/pentagono-divulga-novos-arquivos-secretos-sobre-ovnis-e-reacende-debate-mundial-sobre-fenomenos-inexplicados/",
+      "image_alt": "Pentágono libera arquivos sobre OVNIs e reacende debate global",
+      "tags": [
+        "OVNI",
+        "Pentágono",
+        "UAP",
+        "Arquivos Oficiais",
+        "Ufologia"
+      ]
+    },
     {
       "id": "em-bbf2474bec",
       "title": "O enigma do poltergeist de Rosenheim na Baviera",
