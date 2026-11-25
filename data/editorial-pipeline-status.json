@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T17:35:04.097103+00:00",
+  "updated_at": "2026-11-25T01:33:44.143132+00:00",
   "provider": "gemini",
   "model": "gemini-3.8-flash",
   "existing_articles": 128,
@@ -7,35 +7,15 @@
   "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://fenomenum.com.br/ovni-deixou-marcas-em-ituporanga-sc",
-      "error": "Fenomenum Brasil: The read operation timed out"
+      "url": "https://ufo.com.br/pentagono-divulga-novos-arquivos-secretos-sobre-ovnis-e-reacende-debate-mundial-sobre-fenomenos-inexplicados",
+      "error": "Revista UFO Brasil: The read operation timed out"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/09/argentina-ufo-sighting-in-barranqueras.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
-    },
-    {
-      "url": "https://www.unexplained-mysteries.com/news/400220/52-years-on-the-carbondale-ufo-incident-continues-to-intrigue",
-      "error": "Unexplained Mysteries: The read operation timed out"
-    },
-    {
-      "url": "https://www.snopes.com/news/2026/11/23/jellyfish-ufo-aliens",
-      "error": "Snopes Urban Legends: The read operation timed out"
-    },
-    {
-      "url": "https://www.metabunk.org/threads/dow-uap-pr166-release-08-middle-east-2020-small-boat-and-wake.15212",
-      "error": "Metabunk: The read operation timed out"
-    },
-    {
-      "url": "https://www.boatos.org/brasil/banco-do-brasil-liberou-r-256-bilhoes-em-emprestimos-para-112-fazendas-fantasmas-ligadas-a-um-cpf-inexistente.html",
-      "error": "Boatos.org: Nenhum dos modelos Gemini disponíveis produziu uma reportagem válida. gemini-3.8-flash: API gemini retornou HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a | gemini-2.5-flash: API gemini retornou HTTP 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flas"
-    },
-    {
-      "url": "https://www.skeptic.org.uk/2026/11/dont-let-reasonable-fear-about-ais-harms-slip-into-another-form-of-conspiracy-theories",
-      "error": "The Skeptic: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
+      "url": "https://fenomenum.com.br/um-caso-de-pouso-de-ovni-em-madagascar",
+      "error": "Fenomenum Brasil: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
     }
   ],
-  "candidate_count": 77,
-  "attempted_this_run": 7,
+  "candidate_count": 68,
+  "attempted_this_run": 2,
   "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
