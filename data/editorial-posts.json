@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-11-26T02:46:47.230580+00:00",
-  "article_count": 130,
+  "generated_at": "2026-11-26T12:18:32.386043+00:00",
+  "article_count": 133,
   "articles": [
     {
       "id": "em-44accd8c5b",
@@ -30,6 +30,31 @@
       ]
     },
     {
+      "id": "em-97f321e1e7",
+      "title": "O mistério dos OVNIs em formato de água-viva nas redes sociais",
+      "excerpt": "Investigação analisa vídeos virais de supostos objetos flutuantes em formato de água-viva, apontando conexões com pipas e inteligência artificial.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-11-23T20:51:00+00:00",
+      "generated_at": "2026-11-26T12:16:18.826605+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Snopes Urban Legends",
+      "source_url": "https://www.snopes.com/news/2026/11/23/jellyfish-ufo-aliens/",
+      "url": "https://www.snopes.com/news/2026/11/23/jellyfish-ufo-aliens/",
+      "path": "artigos/o-mistério-dos-ovnis-em-formato-de-água-viva-nas-redes-socia-97f321e1e7.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://mediaproxy.snopes.com/width/1200/https://media.snopes.com/2026/11/jellyfish_ufo_rumors_featured.jpg",
+      "image_source_url": "https://www.snopes.com/news/2026/11/23/jellyfish-ufo-aliens/",
+      "image_alt": "O mistério dos OVNIs em formato de água-viva nas redes sociais",
+      "tags": [
+        "ufologia",
+        "misterios",
+        "fact_checking",
+        "conspiracoes"
+      ]
+    },
+    {
       "id": "em-bbf2474bec",
       "title": "O enigma do poltergeist de Rosenheim na Baviera",
       "excerpt": "Em 1967, um escritório de advocacia na Alemanha registrou anomalias elétricas, objetos em movimento e ligações misteriosas.",
@@ -53,6 +78,32 @@
         "Parapsicologia",
         "Alemanha",
         "Fenômenos Incomuns"
+      ]
+    },
+    {
+      "id": "em-3478e59cd0",
+      "title": "Análise de vídeo militar de OVNI no Oriente Médio divide debatedores",
+      "excerpt": "Nova gravação liberada por órgãos governamentais dos Estados Unidos sobre um suposto fenômeno anômalo no Oriente Médio em 2020 gera intensos debates técnicos online.",
+      "category": "arquivos_oficiais",
+      "category_label": "Arquivos oficiais",
+      "published_at": "2026-11-21T15:29:51+00:00",
+      "generated_at": "2026-11-26T12:16:49.632487+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Metabunk",
+      "source_url": "https://www.metabunk.org/threads/dow-uap-pr166-release-08-middle-east-2020-small-boat-and-wake.15212/",
+      "url": "https://www.metabunk.org/threads/dow-uap-pr166-release-08-middle-east-2020-small-boat-and-wake.15212/",
+      "path": "artigos/análise-de-vídeo-militar-de-ovni-no-oriente-médio-divide-deb-3478e59cd0.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.metabunk.org/attachments/pr166-object-trail-waves-png.94526/?id=379632",
+      "image_source_url": "https://www.metabunk.org/threads/dow-uap-pr166-release-08-middle-east-2020-small-boat-and-wake.15212/",
+      "image_alt": "Análise de vídeo militar de OVNI no Oriente Médio divide debatedores",
+      "tags": [
+        "UFO",
+        "Metabunk",
+        "Marinha",
+        "Análise",
+        "Militar"
       ]
     },
     {
@@ -131,6 +182,32 @@
         "espaço",
         "ufologia",
         "astronomia"
+      ]
+    },
+    {
+      "id": "em-910aa9ed1d",
+      "title": "A Linha Tênue Entre a Preocupação com a Inteligência Artificial e as Teorias da Conspiração",
+      "excerpt": "Analistas alertam que o temor legítimo sobre os riscos da inteligência artificial pode abrir espaço para narrativas conspiratórias infundadas na sociedade.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-11-16T10:00:00+00:00",
+      "generated_at": "2026-11-26T12:18:31.385597+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "The Skeptic",
+      "source_url": "https://www.skeptic.org.uk/2026/11/dont-let-reasonable-fear-about-ais-harms-slip-into-another-form-of-conspiracy-theories/",
+      "url": "https://www.skeptic.org.uk/2026/11/dont-let-reasonable-fear-about-ais-harms-slip-into-another-form-of-conspiracy-theories/",
+      "path": "artigos/a-linha-tênue-entre-a-preocupação-com-a-inteligência-artific-910aa9ed1d.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.skeptic.org.uk/wp-content/uploads/2026/11/44337.jpg",
+      "image_source_url": "https://www.skeptic.org.uk/2026/11/dont-let-reasonable-fear-about-ais-harms-slip-into-another-form-of-conspiracy-theories/",
+      "image_alt": "A Linha Tênue Entre a Preocupação com a Inteligência Artificial e as Teorias da Conspiração",
+      "tags": [
+        "inteligencia_artificial",
+        "teorias_da_conspiracao",
+        "tecnologia",
+        "pensamento_critico",
+        "desinformacao"
       ]
     },
     {
