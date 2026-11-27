@@ -1,45 +1,37 @@
 {
-  "updated_at": "2026-11-27T13:50:05.243214+00:00",
+  "updated_at": "2026-11-27T22:40:27.751921+00:00",
   "provider": "gemini",
-  "model": "gemini-3.5-flash-lite",
+  "model": "gemini-3.8-flash",
   "existing_articles": 134,
-  "generated_this_run": 1,
-  "status": "completed",
+  "generated_this_run": 0,
+  "status": "quota_exhausted",
   "errors": [
     {
-      "url": "https://www.conspiracywatch.info/jeu-concours-5-exemplaires-de-complorama-a-gagner",
+      "url": "https://inexplicata.blogspot.com/2026/11/argentina-alleged-ufos-spotted-hovering_0194104768.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
+    },
+    {
+      "url": "https://fenomenum.com.br/ovni-deixou-marcas-em-ituporanga-sc",
+      "error": "Fenomenum Brasil: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+    },
+    {
+      "url": "https://www.conspiracywatch.info/en/nothing-they-said-made-sense-down-the-rabbit-hole-with-britains-sovereign-citizens",
       "error": "Conspiracy Watch: The read operation timed out"
     },
     {
-      "url": "https://fenomenum.com.br/um-caso-de-pouso-de-ovni-em-madagascar",
-      "error": "Fenomenum Brasil: The read operation timed out"
-    },
-    {
-      "url": "https://www.unexplained-mysteries.com/news/400216/avi-loeb-heads-up-plan-for-new-observatory-to-directly-image-ufos",
+      "url": "https://www.unexplained-mysteries.com/news/400212/fresh-doubts-surround-declassified-fbi-report-of-black-triangle-ufo",
       "error": "Unexplained Mysteries: The read operation timed out"
     },
     {
-      "url": "https://inexplicata.blogspot.com/2026/10/1973-ufo-flap-william-rosario-photo.html",
-      "error": "Inexplicata — Journal of Hispanic Ufology: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://www.globalresearch.ca/xi-trump-putin-meeting-new-world-order-what-was-actually-achieved/5946906",
+      "error": "Global Research Geopolitics: HTTP Error 403: Forbidden"
     },
     {
-      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
-      "error": "The Folklore Society UK: Texto da página insuficiente (775 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
-    },
-    {
-      "url": "https://www.theguardian.com/world/2026/nov/27/australian-pro-democracy-activist-detained-vietnam-united-nations-statement-ntwnfb",
-      "error": "The Guardian — Space: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
-    },
-    {
-      "url": "https://phys.org/news/2026-11-debunkbot-quash-emerging-conspiracy-theories.html",
-      "error": "Phys.org — Space: The read operation timed out"
-    },
-    {
-      "url": "https://earthsky.org/human-world/pentagon-uap-files-part-8-radar-track-analysis",
-      "error": "EarthSky: Título/resumo gerado não comprova aderência ao escopo do Enigma Mundi; artigo descartado"
+      "url": "https://www.boatos.org/espanol/una-joven-levito-y-fue-lanzada-por-una-fuerza-sobrenatural-en-un-aula.html",
+      "error": "Boatos.org: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
     }
   ],
-  "candidate_count": 86,
-  "attempted_this_run": 9,
-  "message": "Geração automática ativa: até 3 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
+  "candidate_count": 81,
+  "attempted_this_run": 6,
+  "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
 }
