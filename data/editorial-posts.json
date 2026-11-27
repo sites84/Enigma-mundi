@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-11-27T04:04:46.358873+00:00",
-  "article_count": 133,
+  "generated_at": "2026-11-27T13:50:05.240857+00:00",
+  "article_count": 134,
   "articles": [
     {
       "id": "em-44accd8c5b",
@@ -156,6 +156,32 @@
         "comportamento humano",
         "desinformação",
         "internet"
+      ]
+    },
+    {
+      "id": "em-d36266603d",
+      "title": "Investigação desmente boatos sobre bilhões do Banco do Brasil em fazendas fantasmas",
+      "excerpt": "Uma narrativa falsa viralizou nas redes sociais ao associar o Banco do Brasil a bilhões em empréstimos para propriedades inexistentes.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-11-18T17:11:44+00:00",
+      "generated_at": "2026-11-27T13:47:16.042054+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Boatos.org",
+      "source_url": "https://www.boatos.org/brasil/banco-do-brasil-liberou-r-256-bilhoes-em-emprestimos-para-112-fazendas-fantasmas-ligadas-a-um-cpf-inexistente.html",
+      "url": "https://www.boatos.org/brasil/banco-do-brasil-liberou-r-256-bilhoes-em-emprestimos-para-112-fazendas-fantasmas-ligadas-a-um-cpf-inexistente.html",
+      "path": "artigos/investigação-desmente-boatos-sobre-bilhões-do-banco-do-brasi-d36266603d.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.boatos.org/wp-content/uploads/2026/11/Banco-do-Brasil-liberou-R-256-bilhoes-para-fazendas-fantasmas-diz-boato.jpg",
+      "image_source_url": "https://www.boatos.org/brasil/banco-do-brasil-liberou-r-256-bilhoes-em-emprestimos-para-112-fazendas-fantasmas-ligadas-a-um-cpf-inexistente.html",
+      "image_alt": "Investigação desmente boatos sobre bilhões do Banco do Brasil em fazendas fantasmas",
+      "tags": [
+        "banco do brasil",
+        "fact checking",
+        "fraude rural",
+        "desinformação",
+        "economia"
       ]
     },
     {
