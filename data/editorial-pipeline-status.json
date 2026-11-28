@@ -1,17 +1,49 @@
 {
-  "updated_at": "2026-11-28T04:13:54.984617+00:00",
+  "updated_at": "2026-11-28T13:35:40.871337+00:00",
   "provider": "gemini",
-  "model": "gemini-3.5-flash-lite",
+  "model": "gemini-3.8-flash",
   "existing_articles": 135,
-  "generated_this_run": 1,
-  "status": "partial_quota_exhausted",
+  "generated_this_run": 0,
+  "status": "errors",
   "errors": [
     {
-      "url": "https://fenomenum.com.br/um-caso-de-pouso-de-ovni-em-madagascar",
-      "error": "Fenomenum Brasil: QUOTA_EXHAUSTED: API gemini retornou HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/gener"
+      "url": "https://inexplicata.blogspot.com/2026/11/argentina-alleged-ufos-spotted-hovering_0194104768.html",
+      "error": "Inexplicata — Journal of Hispanic Ufology: The read operation timed out"
+    },
+    {
+      "url": "https://fenomenum.com.br/ovni-deixou-marcas-em-ituporanga-sc",
+      "error": "Fenomenum Brasil: The read operation timed out"
+    },
+    {
+      "url": "https://www.conspiracywatch.info/en/nothing-they-said-made-sense-down-the-rabbit-hole-with-britains-sovereign-citizens",
+      "error": "Conspiracy Watch: The read operation timed out"
+    },
+    {
+      "url": "https://www.unexplained-mysteries.com/news/400216/avi-loeb-heads-up-plan-for-new-observatory-to-directly-image-ufos",
+      "error": "Unexplained Mysteries: The read operation timed out"
+    },
+    {
+      "url": "https://www.globalresearch.ca/xi-trump-putin-meeting-new-world-order-what-was-actually-achieved/5946906",
+      "error": "Global Research Geopolitics: HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.boatos.org/espanol/una-joven-levito-y-fue-lanzada-por-una-fuerza-sobrenatural-en-un-aula.html",
+      "error": "Boatos.org: The read operation timed out"
+    },
+    {
+      "url": "https://www.folklore-society.com/blog/post/folklore-exhibition-at-cambridge-museum",
+      "error": "The Folklore Society UK: Texto da página insuficiente (775 caracteres) e descrição RSS curta (46 caracteres); candidato preservado para próxima execução"
+    },
+    {
+      "url": "https://www.theguardian.com/us-news/2026/nov/27/bigfoot-enthusiasts-sightings",
+      "error": "The Guardian — Space: The read operation timed out"
+    },
+    {
+      "url": "https://phys.org/news/2026-11-debunkbot-quash-emerging-conspiracy-theories.html",
+      "error": "Phys.org — Space: The read operation timed out"
     }
   ],
-  "candidate_count": 83,
-  "attempted_this_run": 2,
-  "message": "Cota do Gemini atingida; geração interrompida para evitar tentativas inúteis. Reportagens válidas já geradas foram preservadas."
+  "candidate_count": 88,
+  "attempted_this_run": 9,
+  "message": "Geração automática ativa: até 3 artigo(s) por execução; no máximo uma tentativa por fonte em cada execução para diversificar os candidatos quando há bloqueios."
 }
