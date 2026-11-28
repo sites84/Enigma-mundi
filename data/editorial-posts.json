@@ -1,8 +1,34 @@
 {
   "version": 1,
-  "generated_at": "2026-11-27T22:40:27.748342+00:00",
-  "article_count": 134,
+  "generated_at": "2026-11-28T04:13:54.982114+00:00",
+  "article_count": 135,
   "articles": [
+    {
+      "id": "em-2980eaf29f",
+      "title": "Iniciativa editorial promove debate sobre teorias da conspiração na França",
+      "excerpt": "Projeto jornalístico lança campanha promocional em rede social para divulgar nova revista dedicada à análise crítica do conspiracionismo.",
+      "category": "fact_checking",
+      "category_label": "Investigação e checagem",
+      "published_at": "2026-11-25T17:18:50+00:00",
+      "generated_at": "2026-11-28T04:13:51.122596+00:00",
+      "source_name": "Enigma Mundi",
+      "primary_source_name": "Conspiracy Watch",
+      "source_url": "https://www.conspiracywatch.info/jeu-concours-5-exemplaires-de-complorama-a-gagner",
+      "url": "https://www.conspiracywatch.info/jeu-concours-5-exemplaires-de-complorama-a-gagner",
+      "path": "artigos/iniciativa-editorial-promove-debate-sobre-teorias-da-conspir-2980eaf29f.html",
+      "status": "published",
+      "post_type": "original_article",
+      "image_url": "https://www.conspiracywatch.info/wp-content/uploads/2026/11/Format-paysage-SITE-INTERNET-CW-telecharger-en-jpeg-8.jpg",
+      "image_source_url": "https://www.conspiracywatch.info/jeu-concours-5-exemplaires-de-complorama-a-gagner",
+      "image_alt": "Iniciativa editorial promove debate sobre teorias da conspiração na França",
+      "tags": [
+        "Conspiracy Watch",
+        "França",
+        "Desinformação",
+        "Mídia",
+        "Fact-checking"
+      ]
+    },
     {
       "id": "em-44accd8c5b",
       "title": "Pentágono libera arquivos sobre OVNIs e reacende debate global",
